@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DarkBallDas : MonoBehaviour {
 
-    float m_destroyCount = 5;
+    float m_destroyCount = 2;
+    
 	// Use this for initialization
 	void Start () {
 		
@@ -17,16 +18,16 @@ public class DarkBallDas : MonoBehaviour {
         if (m_destroyCount < 0)
         {
             Destroy(this.gameObject, 1f);
-            m_destroyCount = 5;
+            m_destroyCount = 2;
         }
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(this.gameObject, 1f);
-        if (collision.gameObject.tag == ("syoujo"))
+        if (collision.gameObject.tag == ("syoujo")|| collision.gameObject.tag == ("Ground"))
         {
-            Destroy(this.gameObject, 1f);
+            Destroy( gameObject, 0.1f);
         }
     }
+    
 }

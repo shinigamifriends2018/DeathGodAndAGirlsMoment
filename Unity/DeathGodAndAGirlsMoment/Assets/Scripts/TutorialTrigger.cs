@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class TutorialTrigger : MonoBehaviour {
-    [SerializeField]
-    float m_walk = 2f;
 
     public int m_textCounter = 0;
 
@@ -36,19 +34,6 @@ public class TutorialTrigger : MonoBehaviour {
     // Update is called once per frame
      void Update () {
 
-        Vector2 scale = transform.localScale;
-        Vector2 pos = transform.position;
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Translate(new Vector2(m_walk * Time.deltaTime, 0f));
-
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Translate(new Vector2(-m_walk * Time.deltaTime, 0f));
-
-        }
         if (Input.GetKeyDown(KeyCode.Return))
         {
             if (m_textCounter == 2)
@@ -116,8 +101,7 @@ public class TutorialTrigger : MonoBehaviour {
             m_returnCheck = false;
         }
 
-        transform.localScale = scale;
-    }
+     }
 
     public void TextDisPlay()
     {

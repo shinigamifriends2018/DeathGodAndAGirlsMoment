@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212169625070641054}
   - component: {fileID: 58730779598023874}
   - component: {fileID: 50264101175654504}
-  - component: {fileID: 114050956535519262}
+  - component: {fileID: 114315393740886368}
   m_Layer: 14
   m_Name: DarkShute
   m_TagString: Untagged
@@ -78,7 +78,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &114050956535519262
+--- !u!114 &114315393740886368
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502f4a249f7b74f428108590a2ca7cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_noDestroy: []
 --- !u!212 &212169625070641054
 SpriteRenderer:
   m_ObjectHideFlags: 1
