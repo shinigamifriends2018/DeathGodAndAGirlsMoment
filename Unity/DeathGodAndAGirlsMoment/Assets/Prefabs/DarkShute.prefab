@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 58730779598023874}
   - component: {fileID: 50264101175654504}
   - component: {fileID: 114050956535519262}
-  m_Layer: 30
+  m_Layer: 14
   m_Name: DarkShute
   m_TagString: Untagged
   m_Icon: {fileID: 0}
