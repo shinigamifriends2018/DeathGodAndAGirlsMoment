@@ -4839,11 +4839,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 644389897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b14a05f035ac5234d8875835074c95cf, type: 3}
+  m_Script: {fileID: 11500000, guid: 5640cb87ad4ed1147b119eca64a27795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 6
+  m_hitPoint: 0
   shinigami: {fileID: 879722898}
   m_efect:
   - {fileID: 323879578}
@@ -6334,7 +6334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7dee4e5209493344b019f8189c03d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_moveSpeed: 0
+  m_moveSpeed: 4
   m_hitPoint: 0
   m_sickle: {fileID: 1498058727}
   syoujo: {fileID: 644389900}
@@ -7715,7 +7715,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1096122016}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc2d4eba83fe04548a99d1dd21c97706, type: 3}
+  m_Script: {fileID: 11500000, guid: 39632b88d0496f74d8023e396203e659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shinigami: {fileID: 879722898}

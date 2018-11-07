@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -32,12 +32,12 @@ public class SyoujoController : CharacterBase
     // Update is called once per frame
     void Update()
     {
-        if(m_hitPoint <= 0)
+        if (m_hitPoint <= 0)
         {
             SceneManager.LoadScene("GameOver");
         }
 
-        if(m_aFeelingOfBelieve >= 3)
+        if (m_aFeelingOfBelieve >= 3)
         {
             m_efect[1].SetActive(true);
         }
@@ -46,14 +46,14 @@ public class SyoujoController : CharacterBase
             m_efect[1].SetActive(false);
         }
 
-        if(m_onConnectHands == false)
+        if (m_onConnectHands == false)
         {
             m_efect[0].SetActive(false);
             m_moveSpeed = 3.0f;
         }
         else
         {
-            if(Mathf.Abs(transform.position.y - shinigami.Posinvestigate.y) > 1.35f)
+            if (Mathf.Abs(transform.position.y - shinigami.Posinvestigate.y) > 1.35f)
             {
                 m_onConnectHands = false;
             }
@@ -62,7 +62,7 @@ public class SyoujoController : CharacterBase
         }
         if (Input.GetButtonDown("Jump"))
         {
-            if(m_onConnectHands == true)
+            if (m_onConnectHands == true)
             {
                 Jump(rb);
             }
@@ -200,7 +200,7 @@ public class SyoujoController : CharacterBase
     }
 
     private void OnTriggerStay2D(Collider2D collision)
-     {
+    {
         if (m_followSwitch == true)
         {
             if (collision.gameObject.tag == "YJump")
@@ -218,8 +218,8 @@ public class SyoujoController : CharacterBase
                 }
             }
         }
-     }
-     
+    }
+
     void Damage()
     {
         m_life[m_hitPoint - 1].SetActive(false);
