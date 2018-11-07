@@ -2,34 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NearController : MonoBehaviour{
+public class ChaseEnemyController : GhostController{
 
-    public int m_enemyHP = 2;
-    public GameObject m_testmove;
+    [SerializeField]
+    GameObject m_tutorialToriger;
 
     // Use this for initialization
     void Start () {
-       
+        m_hitPoint = 2;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-
-        if (m_enemyHP == 0)
+        base.m_moveSpeed = 3f;
+        base.Chase();
+        
+        if (m_hitPoint == 0)
         {
-            TutorialTrigger testMove = m_testmove.GetComponent<TutorialTrigger>();
-            testMove.m_returnCheck = true;
+            TutorialTrigger tutorialToriger = m_tutorialToriger.GetComponent<TutorialTrigger>();
+            tutorialToriger.m_returnCheck = true;
             Destroy(this.gameObject, 0.3f);
         }
     }
-
-
-    public void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == ("sinigami"))
+        if (collision.gameObject.tag == ("Sickle"))//鎌に当たるとダメージ
         {
-            --m_enemyHP;
+            --m_hitPoint;
+            Debug.Log("hit");
         }
     }
 }

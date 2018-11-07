@@ -27,7 +27,7 @@ public class TutorialTrigger : MonoBehaviour {
 
     bool m_enemyTextCounter = true;
 
-    public NearController nearController;
+    
     // Use this for initialization
     void Start () {
         m_textUI.text = m_text[m_textCounter];
@@ -54,15 +54,15 @@ public class TutorialTrigger : MonoBehaviour {
             if (m_textCounter == 2)
             {
                 TextDisPlay();
-                m_ImageDis[0].SetActive(m_imageCheck);    
+                m_ImageDis[0].SetActive(m_imageCheck);//左向き矢印
             }
             else if (m_textCounter == 3)
             {
                 Time.timeScale = 1;
                 TextDisPlay();
                 m_imageCheck = false;
-                m_ImageDis[0].SetActive(m_imageCheck);
-                m_ImageDis[3].SetActive(m_imageCheck);
+                m_ImageDis[0].SetActive(m_imageCheck);//左向き矢印
+                m_ImageDis[2].SetActive(m_imageCheck);//テキスト三角
 
             }
             else if(m_textCounter == 5 || m_textCounter == 6 || m_textCounter == 9 )
@@ -73,18 +73,18 @@ public class TutorialTrigger : MonoBehaviour {
             {
                 TextDisPlay();
                 m_imageCheck = false;
-                m_ImageDis[3].SetActive(m_imageCheck);
+                m_ImageDis[1].SetActive(m_imageCheck);//右向き矢印
                 Time.timeScale = 1;
                 if(m_enemyTextCheck == true)
                 {
-                    m_ImageDis[2].SetActive(m_imageCheck);
+                    m_ImageDis[3].SetActive(m_imageCheck);//表示オフ
                     Time.timeScale = 1;
                 }
             }
             else if (m_textCounter == 10)
             {
                 m_imageCheck = false;
-                m_ImageDis[2].SetActive(m_imageCheck);
+                m_ImageDis[3].SetActive(m_imageCheck);//表示オフ
                 Time.timeScale = 1;
             }
         }
@@ -96,7 +96,7 @@ public class TutorialTrigger : MonoBehaviour {
                 if (m_textCounter == 4)
                 {
                     m_imageCheck = true;
-                    m_ImageDis[3].SetActive(m_imageCheck);
+                    m_ImageDis[1].SetActive(m_imageCheck);//右向き矢印
                     Invoke("TimeDestroy", 0.3f);
                     TextDisPlay();
                     m_enemyTextCounter = false;
@@ -104,8 +104,8 @@ public class TutorialTrigger : MonoBehaviour {
                 else if (m_textCounter > 5)
                 {
                     m_imageCheck = true;
-                    m_ImageDis[2].SetActive(m_imageCheck);
-                    m_ImageDis[3].SetActive(m_imageCheck);
+                    m_ImageDis[1].SetActive(m_imageCheck);//右向き矢印
+                    m_ImageDis[3].SetActive(m_imageCheck);//表示オフ
                     Invoke("TimeDestroy", 0.3f);
                     m_textCounter = 4;
                     TextDisPlay();
@@ -144,10 +144,10 @@ public class TutorialTrigger : MonoBehaviour {
             if (m_textCounter == 1)
             {
                 TextDisPlay();
-                m_enemyDisPlay[0].SetActive(m_imageCheck);
-                m_enemyDisPlay[1].SetActive(m_imageCheck);
-                m_enemyDisPlay[2].SetActive(m_imageCheck);
-                m_ImageDis[3].SetActive(m_imageCheck);
+                m_enemyDisPlay[0].SetActive(m_imageCheck);//悪霊(近)
+                m_enemyDisPlay[1].SetActive(m_imageCheck);//悪霊(近)
+                m_enemyDisPlay[2].SetActive(m_imageCheck);//悪霊(近)
+                m_ImageDis[2].SetActive(m_imageCheck);    //テキスト三角
                 Time.timeScale = 0;
             }
         }
@@ -159,9 +159,9 @@ public class TutorialTrigger : MonoBehaviour {
                 {
                     TextDisPlay();
                     m_imageCheck = true;
-                    m_enemyDisPlay[3].SetActive(m_imageCheck);
-                    m_enemyDisPlay[4].SetActive(m_imageCheck);
-                    m_ImageDis[3].SetActive(m_imageCheck);
+                    m_enemyDisPlay[3].SetActive(m_imageCheck);//悪霊(遠)
+                    m_enemyDisPlay[4].SetActive(m_imageCheck);//悪霊(遠)
+                    m_ImageDis[2].SetActive(m_imageCheck);　　//テキスト三角
                     Time.timeScale = 0;
                     m_pointCheck = false; 
                 }
@@ -170,9 +170,9 @@ public class TutorialTrigger : MonoBehaviour {
                     m_textCounter = 8;
                     TextDisPlay();
                     m_imageCheck = true;
-                    m_enemyDisPlay[3].SetActive(m_imageCheck);
-                    m_enemyDisPlay[4].SetActive(m_imageCheck);
-                    m_ImageDis[3].SetActive(m_imageCheck);
+                    m_enemyDisPlay[3].SetActive(m_imageCheck);//悪霊(遠)
+                    m_enemyDisPlay[4].SetActive(m_imageCheck);//悪霊(遠)
+                    m_ImageDis[2].SetActive(m_imageCheck);    //テキスト三角
                     Time.timeScale = 0;
                     m_pointCheck = false;
                 }

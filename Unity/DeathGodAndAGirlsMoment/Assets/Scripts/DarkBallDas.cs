@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class DarkBallDas : MonoBehaviour {
 
-    private int m_desCount = 0;
-
+    float m_destroyCount = 5;
 	// Use this for initialization
 	void Start () {
 		
@@ -13,12 +12,19 @@ public class DarkBallDas : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        m_destroyCount -= Time.deltaTime;
+        Debug.Log((int)m_destroyCount);
+        if (m_destroyCount < 0)
+        {
+            Destroy(this.gameObject, 1f);
+            m_destroyCount = 5;
+        }
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == ("syoujo"))
+        Destroy(this.gameObject, 1f);
+        if (collision.gameObject.tag == ("syoujo"))
         {
             Destroy(this.gameObject, 1f);
         }
