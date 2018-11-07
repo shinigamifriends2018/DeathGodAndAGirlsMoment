@@ -17,12 +17,11 @@ public class CameraController : MonoBehaviour {
 	void Update () {
 		if(shinigami.Scale > 0)
         {
-          //  pos = Vector3.Lerp(new Vector3(pos.y, pos.x, pos.z), new Vector3(pos.y, shinigami.Posinvestigate.x + 2.4f, pos.z), 1f);
-            pos.x = shinigami.Posinvestigate.x + 2.4f;
+            pos = Vector3.Lerp(pos, new Vector3(shinigami.Posinvestigate.x + 2.4f, pos.y, pos.z), 0.05f);
         }
         else
         {
-            pos.x = shinigami.Posinvestigate.x - 2.4f;
+            pos = Vector3.Lerp(pos, new Vector3(shinigami.Posinvestigate.x - 2.4f, pos.y, pos.z), 0.05f);
         }
 
         if (pos.y > shinigami.Posinvestigate.y)
