@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChaseEnemyController : MonoBehaviour{
+public class NearController : MonoBehaviour{
 
     public int m_enemyHP = 2;
     public GameObject m_testmove;

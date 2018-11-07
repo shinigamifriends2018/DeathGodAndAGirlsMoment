@@ -16,6 +16,8 @@ TagManager:
   - Tutorial3
   - Ground
   - Wall
+  - YJump
+  - XJump
   layers:
   - Default
   - TransparentFX
@@ -27,11 +29,11 @@ TagManager:
   - 
   - Floating floor
   - S
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Shinigami
+  - Syoujo
+  - Syoujoch
+  - Ground
+  - Enemies
   - 
   - 
   - 
