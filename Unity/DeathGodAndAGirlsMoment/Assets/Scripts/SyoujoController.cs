@@ -193,9 +193,13 @@ public class SyoujoController : CharacterBase
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "akuryou")
+        if(collision.gameObject.tag == "Heart")
         {
-            Damage();
+            if(m_hitPoint < 6)
+            {
+                m_hitPoint++;
+            }
+            Destroy(collision.gameObject);
         }
     }
 
@@ -217,6 +221,12 @@ public class SyoujoController : CharacterBase
                     Jump(rb);
                 }
             }
+        }
+
+        if (collision.gameObject.tag == "akuryou")
+        {
+            
+            Damage();
         }
     }
 

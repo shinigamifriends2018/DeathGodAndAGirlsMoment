@@ -18,6 +18,7 @@ TagManager:
   - Wall
   - YJump
   - XJump
+  - Heart
   layers:
   - Default
   - TransparentFX
