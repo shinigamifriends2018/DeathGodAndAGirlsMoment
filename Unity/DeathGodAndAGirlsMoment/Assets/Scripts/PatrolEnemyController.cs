@@ -7,7 +7,7 @@ public class PatrolEnemyController : GhostController {
     // Use this for initialization
     void Start()
     {
-        m_hitPoint = 2;
+        m_hitPoint = 3;
     }
     // Update is called once per frame
     void Update()

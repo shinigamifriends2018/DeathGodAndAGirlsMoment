@@ -9,6 +9,7 @@ public class EnemyDisPlay : GhostController {
     public GameObject[] m_ChaseEnemy;
     [SerializeField]
     int m_arrayCheck;
+    bool m_switchCheck = true;
 	// Use this for initialization
 	void Start () {
 
@@ -20,6 +21,7 @@ public class EnemyDisPlay : GhostController {
         Vector2 akuryouPos = m_akuryou.transform.position;
         if (akuryouPos.x - syoujoPos.x <= 5 && akuryouPos.x - syoujoPos.x >= -5)
         {
+            if(m_switchCheck == true)
             switch (m_arrayCheck)
             {
                 case 2:
@@ -32,6 +34,7 @@ public class EnemyDisPlay : GhostController {
                     break;
                 case 0:
                     m_ChaseEnemy[0].SetActive(m_enemyDisCheck);
+                    m_switchCheck = false;
                     break;
             }
 

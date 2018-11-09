@@ -15,7 +15,7 @@ public class FarEnemyContoller : GhostController {
     
     // Use this for initialization
     void Start () {
-        m_hitPoint = 2;
+        m_hitPoint = 3;
     }
 
     // Update is called once per frame
@@ -30,20 +30,21 @@ public class FarEnemyContoller : GhostController {
         base.Chase();
         m_shuteCount -= Time.deltaTime;
 
+
         if (akuryouPos.x > syoujoPos.x)
+        {
+            if (scale.x < 0)
             {
-                if (scale.x < 0)
-                {
-                    scale.x *= -1f;
-                }
+                scale.x *= -1f;
             }
-            else
+        }
+        else
+        {
+            if (scale.x > 0)
             {
-                if (scale.x > 0)
-                {
-                    scale.x *= -1f;
-                }
+                scale.x *= -1f;
             }
+        }
         if (m_shuteCount < 0)
         {
             m_shuteCount = 3f;
@@ -52,6 +53,8 @@ public class FarEnemyContoller : GhostController {
             rb.AddForce(obj.transform.right * -m_shutePower, ForceMode2D.Impulse);
         }
         transform.localScale = scale;
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
