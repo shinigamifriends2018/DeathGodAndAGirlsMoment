@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class DarkBallDas : MonoBehaviour {
 
-    float m_destroyCount = 2;
+    float m_destroyCount = 1.5f;
     
+
 	// Use this for initialization
 	void Start () {
-		
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
         m_destroyCount -= Time.deltaTime;
-        Debug.Log((int)m_destroyCount);
+      //  Debug.Log(m_destroyCount);
         if (m_destroyCount < 0)
         {
             Destroy(this.gameObject, 1f);
-            m_destroyCount = 2;
+            m_destroyCount = 1;
         }
 	}
 
