@@ -70,7 +70,11 @@ public class ShinigamiController : CharacterBase {
                 scale.x *= -1f;
             }
         }
-
+        float s = Input.GetAxisRaw("S");
+        if(s < 0)
+        {
+            Fall();
+        }
         if (Input.GetButtonDown("S"))
         {
             Fall();

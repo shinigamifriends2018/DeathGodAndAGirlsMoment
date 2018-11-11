@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114315393740886368}
   m_Layer: 14
   m_Name: DarkShute
-  m_TagString: Untagged
+  m_TagString: akuryou
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,7 +89,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502f4a249f7b74f428108590a2ca7cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_noDestroy: []
 --- !u!212 &212169625070641054
 SpriteRenderer:
   m_ObjectHideFlags: 1
