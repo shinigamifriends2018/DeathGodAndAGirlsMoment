@@ -25,7 +25,10 @@ public class TutorialTrigger : MonoBehaviour {
 
     bool m_enemyTextCounter = true;
 
-    
+    [SerializeField]
+    FarEnemyContoller farEnemyContoller;
+
+
     // Use this for initialization
     void Start () {
         m_textUI.text = m_text[m_textCounter];
@@ -155,6 +158,7 @@ public class TutorialTrigger : MonoBehaviour {
                     TextDisPlay();
                     m_imageCheck = true;
                     m_enemyDisPlay[3].SetActive(m_imageCheck);//悪霊(遠)
+
                     m_enemyDisPlay[4].SetActive(m_imageCheck);//悪霊(遠)
                     m_ImageDis[2].SetActive(m_imageCheck);    //テキスト三角
                     Time.timeScale = 0;
@@ -163,4 +167,5 @@ public class TutorialTrigger : MonoBehaviour {
             }
         }
     }
+   
 }

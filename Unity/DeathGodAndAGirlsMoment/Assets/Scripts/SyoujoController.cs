@@ -18,6 +18,10 @@ public class SyoujoController : CharacterBase
     GameObject[] m_efect;
     [SerializeField]
     GameObject[] m_life;
+    bool m_onDamage = false;
+    [SerializeField]
+    LayerMask m_layer;
+  
 
     // Use this for initialization
 
@@ -27,11 +31,17 @@ public class SyoujoController : CharacterBase
         scale = gameObject.transform.localScale;
         rb = GetComponent<Rigidbody2D>();
         m_jumpPower = 10.5f;
+        m_simpleAnimation = GetComponent<SimpleAnimation>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(m_onDamage == true)
+        {
+            Debug.Log("a");
+        }
+
         if (m_hitPoint <= 0)
         {
             SceneManager.LoadScene("GameOver");
@@ -65,6 +75,14 @@ public class SyoujoController : CharacterBase
             if (m_onConnectHands == true)
             {
                 Jump(rb);
+            }
+        }
+        float s = Input.GetAxisRaw("S");
+        if (s < 0)
+        {
+            if (m_onConnectHands == true)
+            {
+                Fall();
             }
         }
         if (Input.GetButtonDown("S"))
@@ -189,6 +207,14 @@ public class SyoujoController : CharacterBase
         {
             m_jump = true;
         }
+
+        if (collision.gameObject.tag == "akuryou")
+        {           
+            if (m_onDamage == false)
+            {
+                Damage();
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -197,6 +223,7 @@ public class SyoujoController : CharacterBase
         {
             if(m_hitPoint < 6)
             {
+                m_life[m_hitPoint].SetActive(true);
                 m_hitPoint++;
             }
             Destroy(collision.gameObject);
@@ -222,19 +249,43 @@ public class SyoujoController : CharacterBase
                 }
             }
         }
-
+/*
         if (collision.gameObject.tag == "akuryou")
         {
-            
             Damage();
         }
+        */
     }
 
     void Damage()
     {
+        Debug.Log(m_onDamage);
         m_life[m_hitPoint - 1].SetActive(false);
         m_hitPoint--;
         m_aFeelingOfBelieve--;
+        if(m_aFeelingOfBelieve < 3)
+        {
+            m_simpleAnimation.CrossFade("Frightening", 0.02f);
+        }
+        m_simpleAnimation.Play("Damage");
     }
 
+    public int FeelingOfBelieve
+    {
+        set
+        {
+            m_aFeelingOfBelieve = value;
+        }
+    }
+    void OnDamage()
+    {
+        Debug.Log("oooo");
+        m_onDamage = true;
+    }
+    void FinishDamage()
+    {        
+        m_simpleAnimation.Play("Default");       
+        m_onDamage = false;
+        Debug.Log(m_onDamage);
+    }
 }

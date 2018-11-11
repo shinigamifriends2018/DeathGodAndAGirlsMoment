@@ -4697,6 +4697,8 @@ GameObject:
   - component: {fileID: 644389899}
   - component: {fileID: 644389900}
   - component: {fileID: 644389901}
+  - component: {fileID: 644389903}
+  - component: {fileID: 644389902}
   m_Layer: 11
   m_Name: syoujo
   m_TagString: syoujo
@@ -4779,6 +4781,50 @@ CapsuleCollider2D:
   m_Offset: {x: 0.01, y: 0.13}
   m_Size: {x: 0.45, y: 1.36}
   m_Direction: 0
+--- !u!114 &644389902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 644389897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3759e2aae0f7b9a47bb98fc64bf3c543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingMode: 1
+  m_WrapMode: 0
+  m_Clip: {fileID: 7400000, guid: f0bdb30eb0567294b9f242ab4a6a5536, type: 2}
+  m_States:
+  - clip: {fileID: 7400000, guid: f0bdb30eb0567294b9f242ab4a6a5536, type: 2}
+    name: Default
+    defaultState: 1
+  - clip: {fileID: 7400000, guid: ccd8dde57a10d774db87e35e0f24f0ad, type: 2}
+    name: Damage
+    defaultState: 0
+  - clip: {fileID: 7400000, guid: dc7ef4dd8eaf99641ab707e8e9555341, type: 2}
+    name: Frightening
+    defaultState: 0
+--- !u!95 &644389903
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 644389897}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &651491337
 GameObject:
   m_ObjectHideFlags: 0
@@ -6277,7 +6323,7 @@ Animator:
   m_GameObject: {fileID: 879722895}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c85a88e0adf6eb74a9e3ade97d53e411, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6323,7 +6369,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad4822ff893fd1438be3a1a7369603e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_walk: 0
   m_textCounter: 0
   m_ImageDis:
   - {fileID: 954551147}
@@ -6365,6 +6410,7 @@ MonoBehaviour:
     \ "
   m_textUI: {fileID: 449621592}
   m_returnCheck: 0
+  farEnemyContoller: {fileID: 1957788779}
 --- !u!1 &886187932
 GameObject:
   m_ObjectHideFlags: 0
@@ -11532,7 +11578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
+  m_hitPoint: 2
   m_canMove: 1
   m_syoujo: {fileID: 644389897}
   m_akuryou: {fileID: 1785740848}

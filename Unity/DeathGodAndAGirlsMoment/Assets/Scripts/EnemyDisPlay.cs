@@ -9,9 +9,10 @@ public class EnemyDisPlay : GhostController {
     public GameObject[] m_ChaseEnemy;
     [SerializeField]
     int m_arrayCheck;
-	// Use this for initialization
-	void Start () {
-
+    
+    // Use this for initialization
+    void Start () {
+        
     }
 	
 	// Update is called once per frame
