@@ -46,6 +46,7 @@ public class GhostController : CharacterBase {
 
     public GameObject m_syoujo;
     public GameObject m_akuryou;
+    public GameObject m_tutorialToriger;
     // Use this for initialization
     void Start()
     {

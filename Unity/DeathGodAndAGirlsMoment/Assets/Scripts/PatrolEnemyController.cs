@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PatrolEnemyController : GhostController {
 
+    [SerializeField]
+    ShinigamiController shinigami;
     // Use this for initialization
     void Start()
     {
@@ -21,6 +23,17 @@ public class PatrolEnemyController : GhostController {
         if (collision.gameObject.tag == ("Sickle"))//鎌に当たるとダメージ
         {
             --m_hitPoint;
+            if (m_hitPoint == 0)
+            {
+                int a = shinigami.GetFeelingBelieve;
+                if (a < 5)
+                {
+                    a++;
+                }
+                shinigami.SetFeelingBelieve = a;
+                Destroy(this.gameObject, 0.3f);
+            }
+            
         }
     }
 
