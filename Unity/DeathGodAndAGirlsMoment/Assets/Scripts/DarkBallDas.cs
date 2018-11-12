@@ -15,7 +15,6 @@ public class DarkBallDas : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         m_destroyCount -= Time.deltaTime;
-      //  Debug.Log(m_destroyCount);
         if (m_destroyCount < 0)
         {
             Destroy(this.gameObject, 1f);
