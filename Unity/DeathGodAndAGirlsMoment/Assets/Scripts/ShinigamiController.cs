@@ -18,7 +18,8 @@ public class ShinigamiController : CharacterBase {
     bool m_onSetAvtive = false;
     float m_setActiveTime = 0f;
 
-
+    [SerializeField]
+    int m_feelingbelieve = 0;
 
     Vector3 m_shinigamisPos;
 
@@ -223,6 +224,20 @@ public class ShinigamiController : CharacterBase {
         get
         {
             return scale.x;
+        }
+    }
+    public int GetFeelingBelieve
+    {
+        get
+        {
+            return m_feelingbelieve;
+        }
+    }
+    public int SetFeelingBelieve
+    {
+        set
+        {
+            m_feelingbelieve = value;
         }
     }
 }

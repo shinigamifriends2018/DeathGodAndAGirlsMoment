@@ -12,10 +12,12 @@ public class FarEnemyContoller : GhostController {
     public GameObject m_bulletPrefab;
     public Transform m_spawnPoint;
     float m_shuteCount = 3f;
-    
+    [SerializeField]
+    ShinigamiController shinigami;
+
     // Use this for initialization
     void Start () {
-        m_hitPoint = 3;
+        m_hitPoint = 2;
     }
 
     // Update is called once per frame
@@ -64,6 +66,14 @@ public class FarEnemyContoller : GhostController {
             --m_hitPoint;
             if (m_hitPoint == 0)
             {
+                TutorialTrigger tutorialToriger = m_tutorialToriger.GetComponent<TutorialTrigger>();
+                tutorialToriger.m_returnCheck = true;
+                int a = shinigami.GetFeelingBelieve;
+                if(a < 5)
+                {
+                    a++;
+                }
+                shinigami.SetFeelingBelieve = a;
                 Destroy(this.gameObject,0.3f);
                 Instantiate(m_heart, transform.position, transform.rotation);
             }
