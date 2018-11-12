@@ -20,6 +20,12 @@ public class PatrolEnemyController : GhostController {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == ("Wall"))
+        {
+            Vector2 scale = gameObject.transform.localScale;
+            scale.x *= -1f;
+            gameObject.transform.localScale = scale;
+        }
         if (collision.gameObject.tag == ("Sickle"))//鎌に当たるとダメージ
         {
             --m_hitPoint;
@@ -34,16 +40,6 @@ public class PatrolEnemyController : GhostController {
                 Destroy(this.gameObject, 0.3f);
             }
             
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == ("Wall"))
-        {
-            Vector2 scale = gameObject.transform.localScale;
-            scale.x *= -1f;
-            gameObject.transform.localScale = scale;
         }
     }
 }
