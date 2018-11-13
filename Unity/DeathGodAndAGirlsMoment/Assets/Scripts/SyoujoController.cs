@@ -207,21 +207,20 @@ public class SyoujoController : CharacterBase
         {
             m_jump = true;
         }
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.gameObject.tag == "akuryou")
-        {           
+        {
             if (m_onDamage == false)
             {
                 Damage();
             }
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Heart")
+        if (collision.gameObject.tag == "Heart")
         {
-            if(m_hitPoint < 6)
+            if (m_hitPoint < 6)
             {
                 m_life[m_hitPoint].SetActive(true);
                 m_hitPoint++;

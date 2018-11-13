@@ -25,13 +25,11 @@ public class FarEnemyContoller : GhostController {
     {
         Vector2 syoujoPos   = m_syoujo.transform.position;
         Vector2 akuryouPos  = m_akuryou.transform.position;
-        Vector2 darkBollPos = m_bulletPrefab.transform.position;
         Vector2 scale = transform.localScale;
         
         base.m_moveSpeed = 2f;
         base.Chase();
         m_shuteCount -= Time.deltaTime;
-
 
         if (akuryouPos.x > syoujoPos.x)
         {

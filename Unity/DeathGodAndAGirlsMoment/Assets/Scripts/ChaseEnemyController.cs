@@ -6,6 +6,7 @@ public class ChaseEnemyController : GhostController{
 
     [SerializeField]
     ShinigamiController shinigami;
+  
     // Use this for initialization
     void Start () {
         m_hitPoint = 2;
@@ -21,8 +22,9 @@ public class ChaseEnemyController : GhostController{
     {
         if (collision.gameObject.tag == ("Sickle"))//鎌に当たるとダメージ
         {
-            --m_hitPoint;
+            
 
+            --m_hitPoint;
             if (m_hitPoint == 0)
             {
                 TutorialTrigger tutorialToriger = m_tutorialToriger.GetComponent<TutorialTrigger>();
