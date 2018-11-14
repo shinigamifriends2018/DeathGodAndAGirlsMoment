@@ -48,8 +48,11 @@ public class ChaseEnemyController : GhostController{
             {
                 TutorialTrigger tutorialToriger = m_tutorialToriger.GetComponent<TutorialTrigger>();
                 tutorialToriger.m_returnCheck = true;
-   
-                syoujoController.AddFeelingOfBelieve = feelingofBellive;
+                if (damageCheck == false)
+                {
+                    syoujoController.AddFeelingOfBelieve = m_feelingBelieve;
+                    damageCheck = true; 
+                }
                 Destroy(this.gameObject, 0.3f);
             }
 
