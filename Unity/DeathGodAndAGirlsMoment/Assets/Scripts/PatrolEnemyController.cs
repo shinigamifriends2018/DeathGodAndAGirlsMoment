@@ -47,7 +47,11 @@ public class PatrolEnemyController : GhostController {
             }
             if (m_hitPoint == 0)
             {
-
+                if (damageCheck == false)
+                {
+                    syoujoController.AddFeelingOfBelieve = m_feelingBelieve;
+                    damageCheck = true;
+                }
                 Destroy(this.gameObject, 0.3f);
             }
             

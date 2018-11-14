@@ -358,7 +358,7 @@ public class SyoujoController : CharacterBase
             if (m_aFeelingOfBelieve < 5)
             {
                 m_aFeelingOfBelieve++;
-                
+                Debug.Log(m_aFeelingOfBelieve);
             }
         }
     }

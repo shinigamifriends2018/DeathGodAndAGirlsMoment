@@ -81,7 +81,11 @@ public class FarEnemyContoller : GhostController {
             {
                 TutorialTrigger tutorialToriger = m_tutorialToriger.GetComponent<TutorialTrigger>();
                 tutorialToriger.m_returnCheck = true;
-
+                if (damageCheck == false)
+                {
+                    syoujoController.AddFeelingOfBelieve = m_feelingBelieve;
+                    damageCheck = true;
+                }
                 Destroy(this.gameObject,0.3f);
                 Instantiate(m_heart, transform.position, transform.rotation);
             }
