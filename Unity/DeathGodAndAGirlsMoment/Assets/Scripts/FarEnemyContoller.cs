@@ -13,8 +13,11 @@ public class FarEnemyContoller : GhostController {
     public Transform m_spawnPoint;
     float m_shuteCount = 3f;
     [SerializeField]
-    ShinigamiController shinigami;
+    SyoujoController syoujoController;
 
+    float damageCounter = 0.3f;
+    bool damageCheck = true;
+    int m_feelingBelieve = 0;
     // Use this for initialization
     void Start () {
         m_hitPoint = 2;
@@ -25,13 +28,11 @@ public class FarEnemyContoller : GhostController {
     {
         Vector2 syoujoPos   = m_syoujo.transform.position;
         Vector2 akuryouPos  = m_akuryou.transform.position;
-        Vector2 darkBollPos = m_bulletPrefab.transform.position;
         Vector2 scale = transform.localScale;
         
         base.m_moveSpeed = 2f;
         base.Chase();
         m_shuteCount -= Time.deltaTime;
-
 
         if (akuryouPos.x > syoujoPos.x)
         {
@@ -55,7 +56,15 @@ public class FarEnemyContoller : GhostController {
             rb.AddForce(obj.transform.right * -m_shutePower, ForceMode2D.Impulse);
         }
         transform.localScale = scale;
-
+        if (damageCheck == false)
+        {
+            damageCounter -= Time.deltaTime;
+        }
+        if (damageCounter < 0)
+        {
+            damageCounter = 1f;
+            damageCheck = true;
+        }
 
     }
 
@@ -63,17 +72,21 @@ public class FarEnemyContoller : GhostController {
     {
         if (collision.gameObject.tag == ("Sickle"))
         {
-            --m_hitPoint;
+            if (damageCheck == true)
+            {
+                --m_hitPoint;
+                damageCheck = false;
+            }
             if (m_hitPoint == 0)
             {
                 TutorialTrigger tutorialToriger = m_tutorialToriger.GetComponent<TutorialTrigger>();
                 tutorialToriger.m_returnCheck = true;
-                int a = shinigami.GetFeelingBelieve;
-                if(a < 5)
+                m_feelingBelieve = syoujoController.FeelingOfBelieve;
+                if (m_feelingBelieve < 5)
                 {
-                    a++;
+                    ++m_feelingBelieve;
                 }
-                shinigami.SetFeelingBelieve = a;
+                syoujoController.FeelingOfBelieve = m_feelingBelieve;
                 Destroy(this.gameObject,0.3f);
                 Instantiate(m_heart, transform.position, transform.rotation);
             }

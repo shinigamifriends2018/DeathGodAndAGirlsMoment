@@ -5,7 +5,10 @@ using UnityEngine;
 public class PatrolEnemyController : GhostController {
 
     [SerializeField]
-    ShinigamiController shinigami;
+    SyoujoController syoujoController;
+    int m_feelingBelieve = 0;
+    float damageCounter = 0.3f;
+    bool damageCheck = true;
     // Use this for initialization
     void Start()
     {
@@ -14,6 +17,15 @@ public class PatrolEnemyController : GhostController {
     // Update is called once per frame
     void Update()
     {
+        if (damageCheck == false)
+        {
+            damageCounter -= Time.deltaTime;
+        }
+        if (damageCounter < 0)
+        {
+            damageCounter = 1f;
+            damageCheck = true;
+        }
         base.m_moveSpeed = 3f;
         base.Patrol();
     }
@@ -28,15 +40,19 @@ public class PatrolEnemyController : GhostController {
         }
         if (collision.gameObject.tag == ("Sickle"))//鎌に当たるとダメージ
         {
-            --m_hitPoint;
+            if (damageCheck == true)
+            {
+                --m_hitPoint;
+                damageCheck = false;
+            }
             if (m_hitPoint == 0)
             {
-                int a = shinigami.GetFeelingBelieve;
-                if (a < 5)
+                m_feelingBelieve = syoujoController.FeelingOfBelieve;
+                if (m_feelingBelieve < 5)
                 {
-                    a++;
+                    ++m_feelingBelieve;
                 }
-                shinigami.SetFeelingBelieve = a;
+                syoujoController.FeelingOfBelieve = m_feelingBelieve;
                 Destroy(this.gameObject, 0.3f);
             }
             

@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DarkBallDas : MonoBehaviour {
-
-    float m_destroyCount = 1.5f;
     
-
-	// Use this for initialization
-	void Start () {
-
+    Vector2 m_farstPosition;
+    // Use this for initialization
+    void Start () {
+       m_farstPosition = this.transform.position;
     }
 	
 	// Update is called once per frame
-	void Update () {
-        m_destroyCount -= Time.deltaTime;
-        if (m_destroyCount < 0)
+	void Update ()
+    {
+        Vector2 m_darkBollPos = this.transform.position;
+        float m_destroyPos = m_farstPosition.x - m_darkBollPos.x;
+
+        if (m_destroyPos > 12)
         {
-            Destroy(this.gameObject, 1f);
-            m_destroyCount = 1;
+            Destroy(this.gameObject, 0.1f);
         }
 	}
 
