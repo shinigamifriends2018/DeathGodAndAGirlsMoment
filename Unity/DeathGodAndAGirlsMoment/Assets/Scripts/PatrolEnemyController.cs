@@ -47,12 +47,7 @@ public class PatrolEnemyController : GhostController {
             }
             if (m_hitPoint == 0)
             {
-                m_feelingBelieve = syoujoController.FeelingOfBelieve;
-                if (m_feelingBelieve < 5)
-                {
-                    ++m_feelingBelieve;
-                }
-                syoujoController.FeelingOfBelieve = m_feelingBelieve;
+
                 Destroy(this.gameObject, 0.3f);
             }
             
