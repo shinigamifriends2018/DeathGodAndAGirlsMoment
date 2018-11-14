@@ -43,6 +43,7 @@ public class SyoujoController : CharacterBase
     // Update is called once per frame
     void Update()
     {
+     
         if (Input.GetKeyDown(KeyCode.Y))
         {
             m_onAI = true;
@@ -354,7 +355,11 @@ public class SyoujoController : CharacterBase
     {
         set
         {
-            m_aFeelingOfBelieve++;
+            if (m_aFeelingOfBelieve < 5)
+            {
+                m_aFeelingOfBelieve++;
+                
+            }
         }
     }
     void OnDamage()

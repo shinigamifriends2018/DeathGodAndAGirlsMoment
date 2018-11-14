@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 58746628956404846}
   - component: {fileID: 50053871456284592}
   - component: {fileID: 114062106561708358}
-  m_Layer: 14
-  m_Name: DarkShute 1
+  m_Layer: 16
+  m_Name: DarkMass
   m_TagString: akuryou
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
