@@ -706,7 +706,7 @@ MonoBehaviour:
   m_syoujo: {fileID: 644389897}
   m_akuryou: {fileID: 76803860}
   m_tutorialToriger: {fileID: 879722895}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!50 &76803864
 Rigidbody2D:
   serializedVersion: 4
@@ -1169,7 +1169,7 @@ MonoBehaviour:
   m_syoujo: {fileID: 644389897}
   m_akuryou: {fileID: 131560711}
   m_tutorialToriger: {fileID: 879722895}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!50 &131560715
 Rigidbody2D:
   serializedVersion: 4
@@ -1887,7 +1887,7 @@ MonoBehaviour:
   m_syoujo: {fileID: 644389897}
   m_akuryou: {fileID: 176702737}
   m_tutorialToriger: {fileID: 879722895}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!50 &176702740
 Rigidbody2D:
   serializedVersion: 4
@@ -2603,10 +2603,10 @@ MonoBehaviour:
   m_tutorialToriger: {fileID: 879722895}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
-  m_bulletPrefab: {fileID: 1777426231533104, guid: ca4829131c619fd468bb87c14089d97b,
+  m_bulletPrefab: {fileID: 1824164674557216, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
     type: 2}
   m_spawnPoint: {fileID: 1904109991}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!1 &323879578
 GameObject:
   m_ObjectHideFlags: 0
@@ -3217,7 +3217,7 @@ MonoBehaviour:
   m_syoujo: {fileID: 644389897}
   m_akuryou: {fileID: 360542198}
   m_tutorialToriger: {fileID: 879722895}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!50 &360542201
 Rigidbody2D:
   serializedVersion: 4
@@ -4941,7 +4941,7 @@ MonoBehaviour:
   m_syoujo: {fileID: 644389897}
   m_akuryou: {fileID: 616443111}
   m_tutorialToriger: {fileID: 879722895}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!1 &620202166
 GameObject:
   m_ObjectHideFlags: 0
@@ -5068,6 +5068,7 @@ Transform:
   - {fileID: 125400674}
   - {fileID: 323879580}
   - {fileID: 1386615026}
+  - {fileID: 800224687}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5118,6 +5119,7 @@ MonoBehaviour:
   m_layer:
     serializedVersion: 2
     m_Bits: 0
+  m_ray: {fileID: 800224687}
 --- !u!70 &644389901
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -6201,6 +6203,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &800224686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 800224687}
+  m_Layer: 11
+  m_Name: Ray
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &800224687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 800224686}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 644389898}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
 --- !u!1 &800227916
 GameObject:
   m_ObjectHideFlags: 0
@@ -6616,7 +6646,6 @@ MonoBehaviour:
   - {fileID: 668256529}
   - {fileID: 433286968}
   - {fileID: 551830417}
-  m_feelingbelieve: 0
 --- !u!4 &879722899
 Transform:
   m_ObjectHideFlags: 0
@@ -6987,7 +7016,7 @@ MonoBehaviour:
   m_syoujo: {fileID: 644389897}
   m_akuryou: {fileID: 912832999}
   m_tutorialToriger: {fileID: 879722895}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!50 &912833002
 Rigidbody2D:
   serializedVersion: 4
@@ -7429,7 +7458,7 @@ MonoBehaviour:
   m_syoujo: {fileID: 644389897}
   m_akuryou: {fileID: 1740173195}
   m_tutorialToriger: {fileID: 879722895}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!1 &955524425
 GameObject:
   m_ObjectHideFlags: 0
@@ -7629,10 +7658,10 @@ MonoBehaviour:
   m_tutorialToriger: {fileID: 879722895}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
-  m_bulletPrefab: {fileID: 1777426231533104, guid: ca4829131c619fd468bb87c14089d97b,
+  m_bulletPrefab: {fileID: 1824164674557216, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
     type: 2}
   m_spawnPoint: {fileID: 800227917}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!1 &1011896527
 GameObject:
   m_ObjectHideFlags: 0
@@ -8088,7 +8117,7 @@ MonoBehaviour:
   m_syoujo: {fileID: 644389897}
   m_akuryou: {fileID: 1076747917}
   m_tutorialToriger: {fileID: 879722895}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!50 &1076747920
 Rigidbody2D:
   serializedVersion: 4
@@ -8429,7 +8458,7 @@ MonoBehaviour:
   m_bulletPrefab: {fileID: 1777426231533104, guid: ca4829131c619fd468bb87c14089d97b,
     type: 2}
   m_spawnPoint: {fileID: 1570260578}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!1 &1109991901
 GameObject:
   m_ObjectHideFlags: 0
@@ -8820,7 +8849,7 @@ MonoBehaviour:
   m_syoujo: {fileID: 644389897}
   m_akuryou: {fileID: 1171012563}
   m_tutorialToriger: {fileID: 879722895}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!50 &1171012566
 Rigidbody2D:
   serializedVersion: 4
@@ -12248,10 +12277,10 @@ MonoBehaviour:
   m_tutorialToriger: {fileID: 879722895}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
-  m_bulletPrefab: {fileID: 1777426231533104, guid: ca4829131c619fd468bb87c14089d97b,
+  m_bulletPrefab: {fileID: 1824164674557216, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
     type: 2}
   m_spawnPoint: {fileID: 1190388419}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!1 &1630355943
 GameObject:
   m_ObjectHideFlags: 0
@@ -12609,7 +12638,7 @@ MonoBehaviour:
   m_syoujo: {fileID: 644389897}
   m_akuryou: {fileID: 1670283751}
   m_tutorialToriger: {fileID: 879722895}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!50 &1670283755
 Rigidbody2D:
   serializedVersion: 4
@@ -13304,10 +13333,10 @@ MonoBehaviour:
   m_tutorialToriger: {fileID: 879722895}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
-  m_bulletPrefab: {fileID: 1777426231533104, guid: ca4829131c619fd468bb87c14089d97b,
+  m_bulletPrefab: {fileID: 1824164674557216, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
     type: 2}
   m_spawnPoint: {fileID: 1395043687}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!1 &1799788958
 GameObject:
   m_ObjectHideFlags: 0
@@ -13397,7 +13426,7 @@ MonoBehaviour:
   m_syoujo: {fileID: 644389897}
   m_akuryou: {fileID: 1799788958}
   m_tutorialToriger: {fileID: 879722895}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!1 &1803823767
 GameObject:
   m_ObjectHideFlags: 0
@@ -14470,7 +14499,7 @@ MonoBehaviour:
   m_syoujo: {fileID: 644389897}
   m_akuryou: {fileID: 1914788866}
   m_tutorialToriger: {fileID: 879722895}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!50 &1914788869
 Rigidbody2D:
   serializedVersion: 4
@@ -14684,7 +14713,7 @@ MonoBehaviour:
   m_syoujo: {fileID: 644389897}
   m_akuryou: {fileID: 1926065319}
   m_tutorialToriger: {fileID: 879722895}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!50 &1926065323
 Rigidbody2D:
   serializedVersion: 4
@@ -15038,7 +15067,7 @@ MonoBehaviour:
   m_bulletPrefab: {fileID: 1777426231533104, guid: ca4829131c619fd468bb87c14089d97b,
     type: 2}
   m_spawnPoint: {fileID: 905127066}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!1 &2011559193
 GameObject:
   m_ObjectHideFlags: 0
@@ -15914,7 +15943,7 @@ MonoBehaviour:
   m_bulletPrefab: {fileID: 1777426231533104, guid: ca4829131c619fd468bb87c14089d97b,
     type: 2}
   m_spawnPoint: {fileID: 176801632}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!4 &2096874085
 Transform:
   m_ObjectHideFlags: 0
@@ -16179,7 +16208,7 @@ MonoBehaviour:
   m_syoujo: {fileID: 644389897}
   m_akuryou: {fileID: 2132930465}
   m_tutorialToriger: {fileID: 879722895}
-  shinigami: {fileID: 879722898}
+  syoujoController: {fileID: 0}
 --- !u!50 &2132930469
 Rigidbody2D:
   serializedVersion: 4
