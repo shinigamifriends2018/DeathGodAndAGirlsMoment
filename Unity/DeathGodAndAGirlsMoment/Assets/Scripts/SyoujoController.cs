@@ -158,7 +158,6 @@ public class SyoujoController : CharacterBase
         Ray mray = new Ray(m_ray.position, m_ray.transform.forward);
         RaycastHit2D mhit = Physics2D.Raycast(mray.origin, mray.direction, 1.0f, m_layer);
         Debug.DrawRay(mray.origin, mray.direction, Color.red);
-    //    while (mhit.collider != null) { 
             if (m_rightCount > m_leftCount)
             {
                 transform.Translate(new Vector2(-m_moveSpeed * Time.deltaTime, 0f));
@@ -175,7 +174,6 @@ public class SyoujoController : CharacterBase
                     scale.x *= -1;
                 }
             }
-      //  }
         Debug.Log(m_rightCount);
         Debug.Log(m_leftCount);
         m_rightCount = 0;
