@@ -29,6 +29,7 @@ public class SyoujoController : CharacterBase
     bool m_onAI = false;
     [SerializeField]
     GameObject[] m_AFeelingOfBelieveUI;
+    bool m_onFrightening = false;
 
     // Use this for initialization
 
@@ -45,7 +46,7 @@ public class SyoujoController : CharacterBase
     // Update is called once per frame
     void Update()
     {
-     
+        Debug.Log(m_onDamage);
         if (Input.GetKeyDown(KeyCode.Y))
         {
             m_onAI = true;
@@ -347,16 +348,26 @@ public class SyoujoController : CharacterBase
 
     void Damage()
     {
-        Debug.Log(m_onDamage);
         m_life[m_hitPoint - 1].SetActive(false);
         m_hitPoint--;
-        m_AFeelingOfBelieveUI[m_aFeelingOfBelieve - 1].SetActive(false);
-        m_aFeelingOfBelieve--;
-        if(m_aFeelingOfBelieve < 3)
+        if (m_aFeelingOfBelieve > 0)
         {
+            m_AFeelingOfBelieveUI[m_aFeelingOfBelieve - 1].SetActive(false);
+            m_aFeelingOfBelieve--;
+        }
+        if (m_aFeelingOfBelieve < 3)
+        {
+            if(m_onConnectHands == true)
+            {
+                m_onConnectHands = false;
+            }
+            m_onFrightening = true;
             m_simpleAnimation.CrossFade("Frightening", 0.02f);
         }
-        m_simpleAnimation.Play("Damage");
+        else
+        {
+            m_simpleAnimation.Play("Damage");
+        }
     }
 
     public int GetAFeelingOfBelieve
@@ -381,6 +392,25 @@ public class SyoujoController : CharacterBase
     {        
         m_simpleAnimation.Play("Default");       
         m_onDamage = false;
+    }
+    void FFinishDamage()
+    {
+        Debug.Log("HHDHD");
+        m_onDamage = false;
         Debug.Log(m_onDamage);
+    }
+
+    void FinishFrightening()
+    {
+        m_simpleAnimation.Play("Default");
+        m_onFrightening = false;
+    }
+
+    public bool GetOnFrightening
+    {
+        get
+        {
+            return m_onFrightening;
+        }
     }
 }

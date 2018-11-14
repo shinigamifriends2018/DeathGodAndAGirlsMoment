@@ -30,7 +30,7 @@ public class ShinigamiController : CharacterBase {
     }
 
 	// Update is called once per frame
-	void Update () {
+	void Update () {       
         if(m_setActiveTime >= 0)
         {
             m_setActiveTime -= Time.deltaTime;
@@ -105,7 +105,10 @@ public class ShinigamiController : CharacterBase {
             {
                 if (m_toConnectHands == true)
                 {
-                    syoujo.OnConnectHands = true;
+                    if (syoujo.GetOnFrightening == false)
+                    {
+                        syoujo.OnConnectHands = true;
+                    }
                 }
             }
             else
