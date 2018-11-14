@@ -19,6 +19,7 @@ TagManager:
   - YJump
   - XJump
   - Heart
+  - Piece of memory
   layers:
   - Default
   - TransparentFX

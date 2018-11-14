@@ -27,6 +27,8 @@ public class SyoujoController : CharacterBase
     int m_rightCount = 0;
     int m_leftCount = 0;
     bool m_onAI = false;
+    [SerializeField]
+    GameObject[] m_AFeelingOfBelieveUI;
 
     // Use this for initialization
 
@@ -288,14 +290,6 @@ public class SyoujoController : CharacterBase
         {
             m_jump = true;
         }
-
-        if (collision.gameObject.tag == "akuryou")
-        {           
-            if (m_onDamage == false)
-            {
-                Damage();
-            }
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -306,6 +300,15 @@ public class SyoujoController : CharacterBase
             {
                 m_life[m_hitPoint].SetActive(true);
                 m_hitPoint++;
+            }
+            Destroy(collision.gameObject);
+        }
+        if(collision.gameObject.tag == "Piece of memory")
+        {
+            m_hitPoint = 6;
+            for(int i = 0; i < 6; i++)
+            {
+                m_life[i].SetActive(true);
             }
             Destroy(collision.gameObject);
         }
@@ -329,13 +332,17 @@ public class SyoujoController : CharacterBase
                     Jump(rb);
                 }
             }
+
         }
-/*
-        if (collision.gameObject.tag == "akuryou")
+
+      if (collision.gameObject.tag == "akuryou")
         {
-            Damage();
+            if (m_onDamage == false)
+            {
+                m_onDamage = true;
+                Damage();
+            }
         }
-        */
     }
 
     void Damage()
@@ -343,6 +350,7 @@ public class SyoujoController : CharacterBase
         Debug.Log(m_onDamage);
         m_life[m_hitPoint - 1].SetActive(false);
         m_hitPoint--;
+        m_AFeelingOfBelieveUI[m_aFeelingOfBelieve - 1].SetActive(false);
         m_aFeelingOfBelieve--;
         if(m_aFeelingOfBelieve < 3)
         {
@@ -351,6 +359,13 @@ public class SyoujoController : CharacterBase
         m_simpleAnimation.Play("Damage");
     }
 
+    public int GetAFeelingOfBelieve
+    {
+        get
+        {
+            return m_aFeelingOfBelieve;
+        }
+    }
     public int AddFeelingOfBelieve
     {
         set
@@ -361,11 +376,6 @@ public class SyoujoController : CharacterBase
                 
             }
         }
-    }
-    void OnDamage()
-    {
-        Debug.Log("oooo");
-        m_onDamage = true;
     }
     void FinishDamage()
     {        
