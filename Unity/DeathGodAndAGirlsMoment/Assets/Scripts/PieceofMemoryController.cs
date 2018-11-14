@@ -21,7 +21,6 @@ public class PieceofMemoryController : MonoBehaviour {
     {
         if (collision.gameObject.tag == "syoujo")
         {
-            Destroy(this.gameObject);
             m_pieceofMemory.SetActive(true);
         }
     }

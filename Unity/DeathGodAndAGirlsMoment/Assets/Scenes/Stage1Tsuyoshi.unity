@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 24163379}
   - component: {fileID: 24163378}
   - component: {fileID: 24163377}
-  - component: {fileID: 24163376}
+  - component: {fileID: 24163381}
   m_Layer: 15
   m_Name: Swich (2)
   m_TagString: Untagged
@@ -241,29 +241,6 @@ Transform:
   m_Father: {fileID: 825982148}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &24163376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 24163374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3759e2aae0f7b9a47bb98fc64bf3c543, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingMode: 1
-  m_WrapMode: 0
-  m_Clip: {fileID: 7400000, guid: ac40d31604e810e4b8f1d2b37bf12a8c, type: 2}
-  m_States:
-  - clip: {fileID: 7400000, guid: ac40d31604e810e4b8f1d2b37bf12a8c, type: 2}
-    name: Default
-    defaultState: 1
-  - clip: {fileID: 7400000, guid: 94df058fe37372045b29e8fc1d4d197d, type: 2}
-    name: Change
-    defaultState: 0
 --- !u!95 &24163377
 Animator:
   serializedVersion: 3
@@ -273,7 +250,7 @@ Animator:
   m_GameObject: {fileID: 24163374}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 09c0b580e7437cc4383e5cafb7fe935f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1b3294b071dec1648a91a4bd47708614, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -406,6 +383,17 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 2, y: 2, z: 0}
+--- !u!114 &24163381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 24163374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ab108a16940394ca47d9cb20a8a982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &46473306
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,6 +906,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 76803860}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &76803864
 Rigidbody2D:
   serializedVersion: 4
@@ -1381,6 +1370,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 131560711}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &131560715
 Rigidbody2D:
   serializedVersion: 4
@@ -2112,6 +2102,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 176702737}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &176702740
 Rigidbody2D:
   serializedVersion: 4
@@ -3393,6 +3384,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 360542198}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &360542201
 Rigidbody2D:
   serializedVersion: 4
@@ -5482,6 +5474,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   m_ray: {fileID: 2130979351}
+  m_AFeelingOfBelieveUI: []
 --- !u!70 &644389901
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -6788,7 +6781,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 850341492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.55, y: 0.66, z: 0}
+  m_LocalPosition: {x: 59.576, y: 0.66, z: 0}
   m_LocalScale: {x: 0.3457128, y: 0.0849, z: 0}
   m_Children: []
   m_Father: {fileID: 825982148}
@@ -7000,7 +6993,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 879722895}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 79.1, y: 0.82, z: 0}
+  m_LocalPosition: {x: 84.54, y: 0.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1405653988}
@@ -7360,6 +7353,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 912832999}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &912833002
 Rigidbody2D:
   serializedVersion: 4
@@ -8504,6 +8498,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 1076747917}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &1076747920
 Rigidbody2D:
   serializedVersion: 4
@@ -9249,6 +9244,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 1171012563}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &1171012566
 Rigidbody2D:
   serializedVersion: 4
@@ -11619,7 +11615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1498058728
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13172,6 +13168,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 1670283751}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &1670283755
 Rigidbody2D:
   serializedVersion: 4
@@ -15172,7 +15169,7 @@ GameObject:
   - component: {fileID: 1914453149}
   - component: {fileID: 1914453148}
   - component: {fileID: 1914453151}
-  - component: {fileID: 1914453152}
+  - component: {fileID: 1914453153}
   m_Layer: 15
   m_Name: Swich (1)
   m_TagString: Untagged
@@ -15326,7 +15323,7 @@ Animator:
   m_GameObject: {fileID: 1914453146}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 09c0b580e7437cc4383e5cafb7fe935f, type: 2}
+  m_Controller: {fileID: 9100000, guid: b780e65fb5a4bbc4687a55a519259fc4, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -15335,7 +15332,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1914453152
+--- !u!114 &1914453153
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15343,21 +15340,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1914453146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3759e2aae0f7b9a47bb98fc64bf3c543, type: 3}
+  m_Script: {fileID: 11500000, guid: 49ab108a16940394ca47d9cb20a8a982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingMode: 1
-  m_WrapMode: 0
-  m_Clip: {fileID: 7400000, guid: 6c85716d9ce59e340b3ad36a531a46bd, type: 2}
-  m_States:
-  - clip: {fileID: 7400000, guid: 6c85716d9ce59e340b3ad36a531a46bd, type: 2}
-    name: Default
-    defaultState: 1
-  - clip: {fileID: 7400000, guid: 6427f29b9178ca845bb07d89ab3dd760, type: 2}
-    name: Change
-    defaultState: 0
 --- !u!1 &1914788866
 GameObject:
   m_ObjectHideFlags: 0
@@ -15412,6 +15397,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 1914788866}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &1914788869
 Rigidbody2D:
   serializedVersion: 4
@@ -15626,6 +15612,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 1926065319}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &1926065323
 Rigidbody2D:
   serializedVersion: 4
@@ -16978,6 +16965,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 2132930465}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &2132930469
 Rigidbody2D:
   serializedVersion: 4

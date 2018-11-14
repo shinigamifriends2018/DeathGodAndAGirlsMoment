@@ -288,6 +288,7 @@ GameObject:
   - component: {fileID: 59739001}
   - component: {fileID: 59739000}
   - component: {fileID: 59739002}
+  - component: {fileID: 59739003}
   m_Layer: 13
   m_Name: Piece of memory2
   m_TagString: Piece of memory
@@ -435,6 +436,18 @@ PolygonCollider2D:
       - {x: -1, y: 1}
       - {x: -2, y: -2}
       - {x: 1, y: -1}
+--- !u!114 &59739003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 59738998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808715c6a3c9d094b9a05c4d02b289e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pieceofMemory: {fileID: 367926494}
 --- !u!1 &62451600
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,6 +720,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 76803860}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 0}
+  m_feelingOfBelieve: []
 --- !u!50 &76803864
 Rigidbody2D:
   serializedVersion: 4
@@ -1170,6 +1184,12 @@ MonoBehaviour:
   m_akuryou: {fileID: 131560711}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!50 &131560715
 Rigidbody2D:
   serializedVersion: 4
@@ -1256,6 +1276,7 @@ GameObject:
   - component: {fileID: 139419200}
   - component: {fileID: 139419199}
   - component: {fileID: 139419201}
+  - component: {fileID: 139419202}
   m_Layer: 13
   m_Name: Piece of memory5
   m_TagString: Piece of memory
@@ -1403,6 +1424,18 @@ PolygonCollider2D:
       - {x: -1, y: 1}
       - {x: -2, y: -2}
       - {x: 1, y: -1}
+--- !u!114 &139419202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 139419197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808715c6a3c9d094b9a05c4d02b289e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pieceofMemory: {fileID: 1574049143}
 --- !u!1 &141092104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1888,6 +1921,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 176702737}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &176702740
 Rigidbody2D:
   serializedVersion: 4
@@ -3428,6 +3462,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 360542198}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &360542201
 Rigidbody2D:
   serializedVersion: 4
@@ -3481,7 +3516,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &367926495
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5624,7 +5659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &699977473
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7293,7 +7328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &905442621
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7403,6 +7438,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 912832999}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &912833002
 Rigidbody2D:
   serializedVersion: 4
@@ -7969,7 +8005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &960125608
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8727,7 +8763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1045334085
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8957,6 +8993,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 1076747917}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &1076747920
 Rigidbody2D:
   serializedVersion: 4
@@ -9309,6 +9346,7 @@ GameObject:
   - component: {fileID: 1109991904}
   - component: {fileID: 1109991903}
   - component: {fileID: 1109991905}
+  - component: {fileID: 1109991906}
   m_Layer: 13
   m_Name: Piece of memory4
   m_TagString: Piece of memory
@@ -9456,6 +9494,18 @@ PolygonCollider2D:
       - {x: -1, y: 1}
       - {x: -2, y: -2}
       - {x: 1, y: -1}
+--- !u!114 &1109991906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1109991901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808715c6a3c9d094b9a05c4d02b289e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pieceofMemory: {fileID: 699977472}
 --- !u!1 &1115139089
 GameObject:
   m_ObjectHideFlags: 0
@@ -9794,6 +9844,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 1171012563}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &1171012566
 Rigidbody2D:
   serializedVersion: 4
@@ -11880,7 +11931,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1423101929
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13196,7 +13247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1574049144
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13862,6 +13913,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 1670283751}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &1670283755
 Rigidbody2D:
   serializedVersion: 4
@@ -15422,6 +15474,7 @@ GameObject:
   - component: {fileID: 1900249999}
   - component: {fileID: 1900249998}
   - component: {fileID: 1900250000}
+  - component: {fileID: 1900250001}
   m_Layer: 13
   m_Name: Piece of memory1
   m_TagString: Piece of memory
@@ -15569,6 +15622,18 @@ PolygonCollider2D:
       - {x: -1, y: 1}
       - {x: -2, y: -2}
       - {x: 1, y: -1}
+--- !u!114 &1900250001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1900249996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808715c6a3c9d094b9a05c4d02b289e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pieceofMemory: {fileID: 2129605101}
 --- !u!1 &1903170016
 GameObject:
   m_ObjectHideFlags: 0
@@ -15828,6 +15893,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 1914788866}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &1914788869
 Rigidbody2D:
   serializedVersion: 4
@@ -16042,6 +16108,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 1926065319}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 644389900}
+  m_feelingOfBelieve: []
 --- !u!50 &1926065323
 Rigidbody2D:
   serializedVersion: 4
@@ -16742,7 +16809,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2038003826
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17231,6 +17298,7 @@ GameObject:
   - component: {fileID: 2091884513}
   - component: {fileID: 2091884512}
   - component: {fileID: 2091884514}
+  - component: {fileID: 2091884515}
   m_Layer: 13
   m_Name: Piece of memory3
   m_TagString: Piece of memory
@@ -17378,6 +17446,18 @@ PolygonCollider2D:
       - {x: -1, y: 1}
       - {x: -2, y: -2}
       - {x: 1, y: -1}
+--- !u!114 &2091884515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2091884510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808715c6a3c9d094b9a05c4d02b289e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pieceofMemory: {fileID: 905442620}
 --- !u!1 &2096874081
 GameObject:
   m_ObjectHideFlags: 0
@@ -17543,7 +17623,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2128698895
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17613,7 +17693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2129605102
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17792,6 +17872,7 @@ MonoBehaviour:
   m_akuryou: {fileID: 2132930465}
   m_tutorialToriger: {fileID: 879722895}
   syoujoController: {fileID: 0}
+  m_feelingOfBelieve: []
 --- !u!50 &2132930469
 Rigidbody2D:
   serializedVersion: 4
