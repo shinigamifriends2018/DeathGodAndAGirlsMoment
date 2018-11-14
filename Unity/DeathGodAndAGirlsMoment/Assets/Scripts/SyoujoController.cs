@@ -37,7 +37,7 @@ public class SyoujoController : CharacterBase
     // Update is called once per frame
     void Update()
     {
-        if(m_onDamage == true)
+        if (m_onDamage == true)
         {
             Debug.Log("a");
         }
@@ -271,6 +271,10 @@ public class SyoujoController : CharacterBase
 
     public int FeelingOfBelieve
     {
+        get
+        {
+            return m_aFeelingOfBelieve;
+        }
         set
         {
             m_aFeelingOfBelieve = value;
