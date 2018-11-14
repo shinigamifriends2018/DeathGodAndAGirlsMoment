@@ -21,7 +21,12 @@ public class SyoujoController : CharacterBase
     bool m_onDamage = false;
     [SerializeField]
     LayerMask m_layer;
-  
+    [SerializeField]
+    Transform m_ray;
+    Vector3 m_rayRot;
+    int m_rightCount = 0;
+    int m_leftCount = 0;
+    bool m_onAI = false;
 
     // Use this for initialization
 
@@ -32,11 +37,20 @@ public class SyoujoController : CharacterBase
         rb = GetComponent<Rigidbody2D>();
         m_jumpPower = 10.5f;
         m_simpleAnimation = GetComponent<SimpleAnimation>();
+        m_rayRot = m_ray.transform.rotation.eulerAngles;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            m_onAI = true;
+        }
+        if (m_onAI == true)
+        {
+            AI();
+        }
         if(m_onDamage == true)
         {
             Debug.Log("a");
@@ -102,7 +116,72 @@ public class SyoujoController : CharacterBase
         }
     }
 
+    void AI()
+    {
+        for(; ; )
+        {
+            Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 5.0f, m_layer);
+            Debug.DrawRay(ray.origin, ray.direction, Color.red);       
+            if (hit.collider)
+            {                    
+                m_rightCount++;               
+            }
+            else
+            {
+                break;
+            }
+            m_rayRot.x -= 5f;
+            m_ray.transform.eulerAngles = m_rayRot;
+        }
+        m_rayRot.x = 90f;
+        m_ray.transform.eulerAngles = m_rayRot;
+        for (; ; )
+        {
+            Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 5.0f, m_layer);
+            Debug.DrawRay(ray.origin, ray.direction, Color.red);
 
+            if (hit.collider)
+            {               
+                m_leftCount++;                
+            }
+            else
+            {
+                break;
+            }
+            m_rayRot.x += 5f;
+            m_ray.transform.eulerAngles = m_rayRot;
+        }
+        m_rayRot.x = 90f;
+        m_ray.transform.eulerAngles = m_rayRot;
+        Ray mray = new Ray(m_ray.position, m_ray.transform.forward);
+        RaycastHit2D mhit = Physics2D.Raycast(mray.origin, mray.direction, 1.0f, m_layer);
+        Debug.DrawRay(mray.origin, mray.direction, Color.red);
+    //    while (mhit.collider != null) { 
+            if (m_rightCount > m_leftCount)
+            {
+                transform.Translate(new Vector2(-m_moveSpeed * Time.deltaTime, 0f));
+                if (scale.x > 0)
+                {
+                    scale.x *= -1;
+                }
+            }
+            else
+            {
+                Move();
+                if (scale.x < 0)
+                {
+                    scale.x *= -1;
+                }
+            }
+      //  }
+        Debug.Log(m_rightCount);
+        Debug.Log(m_leftCount);
+        m_rightCount = 0;
+        m_leftCount = 0;  
+        m_onAI = false;       
+    }
 
     void Follow()
     {
@@ -119,25 +198,28 @@ public class SyoujoController : CharacterBase
         {
             if (m_followSwitch == true)
             {
-                if (Mathf.Abs(transform.position.x - shinigami.Posinvestigate.x) > 2f)
+                if (m_onAI == false)
                 {
-                    if (shinigami.Posinvestigate.x > transform.position.x)
+                    if (Mathf.Abs(transform.position.x - shinigami.Posinvestigate.x) > 2f)
                     {
-                        Move();
-                        if (scale.x < 0)
+                        if (shinigami.Posinvestigate.x > transform.position.x)
                         {
-                            scale.x *= -1;
+                            Move();
+                            if (scale.x < 0)
+                            {
+                                scale.x *= -1;
+                            }
                         }
-                    }
-                    else if (shinigami.Posinvestigate.x < transform.position.x)
-                    {
-                        transform.Translate(new Vector2(-m_moveSpeed * Time.deltaTime, 0f));
-                        if (scale.x > 0)
+                        else if (shinigami.Posinvestigate.x < transform.position.x)
                         {
-                            scale.x *= -1;
+                            transform.Translate(new Vector2(-m_moveSpeed * Time.deltaTime, 0f));
+                            if (scale.x > 0)
+                            {
+                                scale.x *= -1;
+                            }
                         }
+                        gameObject.transform.localScale = scale;
                     }
-                    gameObject.transform.localScale = scale;
                 }
             }
         }
@@ -270,11 +352,11 @@ public class SyoujoController : CharacterBase
         m_simpleAnimation.Play("Damage");
     }
 
-    public int FeelingOfBelieve
+    public int AddFeelingOfBelieve
     {
         set
         {
-            m_aFeelingOfBelieve = value;
+            m_aFeelingOfBelieve++;
         }
     }
     void OnDamage()
