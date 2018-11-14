@@ -12,6 +12,8 @@ public class ChaseEnemyController : GhostController{
     float damageCounter = 0.3f;
     bool  damageCheck  = true;
     int feelingofBellive = 0;
+    [SerializeField]
+    GameObject[] m_feelingOfBelieve;
     // Use this for initialization
     void Start () {
         m_hitPoint = 2;
@@ -37,8 +39,6 @@ public class ChaseEnemyController : GhostController{
     {
         if (collision.gameObject.tag == ("Sickle"))//鎌に当たるとダメージ
         {
-            
-        
             if (damageCheck == true)
             {
                 --m_hitPoint;

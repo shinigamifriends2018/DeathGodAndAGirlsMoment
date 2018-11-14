@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class SyoujoController : CharacterBase
 {
     Vector2 scale;
-    int m_aFeelingOfBelieve = 3;
+    int m_aFeelingOfBelieve = 0;
     bool m_followMode;
     bool m_followSwitch = true;
     [SerializeField]
@@ -384,6 +384,7 @@ public class SyoujoController : CharacterBase
             if (m_aFeelingOfBelieve < 5)
             {
                 m_aFeelingOfBelieve++;
+                m_AFeelingOfBelieveUI[m_aFeelingOfBelieve - 1].SetActive(true);
                 Debug.Log(m_aFeelingOfBelieve);
             }
         }
