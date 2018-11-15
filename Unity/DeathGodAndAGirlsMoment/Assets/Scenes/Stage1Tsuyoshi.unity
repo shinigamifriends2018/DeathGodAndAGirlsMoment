@@ -218,12 +218,13 @@ GameObject:
   - component: {fileID: 24163375}
   - component: {fileID: 24163380}
   - component: {fileID: 24163379}
-  - component: {fileID: 24163378}
-  - component: {fileID: 24163377}
   - component: {fileID: 24163381}
+  - component: {fileID: 24163377}
+  - component: {fileID: 24163376}
+  - component: {fileID: 24163378}
   m_Layer: 15
   m_Name: Swich (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -241,6 +242,32 @@ Transform:
   m_Father: {fileID: 825982148}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &24163376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 24163374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3759e2aae0f7b9a47bb98fc64bf3c543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingMode: 1
+  m_WrapMode: 0
+  m_Clip: {fileID: 7400000, guid: ac40d31604e810e4b8f1d2b37bf12a8c, type: 2}
+  m_States:
+  - clip: {fileID: 7400000, guid: ac40d31604e810e4b8f1d2b37bf12a8c, type: 2}
+    name: Default
+    defaultState: 1
+  - clip: {fileID: 7400000, guid: 94df058fe37372045b29e8fc1d4d197d, type: 2}
+    name: Change
+    defaultState: 0
+  - clip: {fileID: 7400000, guid: 77a409e75ca2c2649aca93a20b108efd, type: 2}
+    name: ReverseChange
+    defaultState: 0
 --- !u!95 &24163377
 Animator:
   serializedVersion: 3
@@ -282,7 +309,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 4.0000005}
+  m_Size: {x: 2.79, y: 4}
   m_EdgeRadius: 0
 --- !u!114 &24163379
 MonoBehaviour:
@@ -4957,7 +4984,7 @@ GameObject:
   - component: {fileID: 582951720}
   m_Layer: 15
   m_Name: SwichBase(1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6769,7 +6796,7 @@ GameObject:
   - component: {fileID: 850341494}
   m_Layer: 15
   m_Name: SwichBase(2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6781,7 +6808,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 850341492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.576, y: 0.66, z: 0}
+  m_LocalPosition: {x: 59.6, y: 0.66, z: 0}
   m_LocalScale: {x: 0.3457128, y: 0.0849, z: 0}
   m_Children: []
   m_Father: {fileID: 825982148}
@@ -15169,10 +15196,10 @@ GameObject:
   - component: {fileID: 1914453149}
   - component: {fileID: 1914453148}
   - component: {fileID: 1914453151}
-  - component: {fileID: 1914453153}
+  - component: {fileID: 1914453152}
   m_Layer: 15
   m_Name: Swich (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15213,7 +15240,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 4.0000005}
+  m_Size: {x: 2.97, y: 4.0000005}
   m_EdgeRadius: 0
 --- !u!114 &1914453149
 MonoBehaviour:
@@ -15332,7 +15359,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1914453153
+--- !u!114 &1914453152
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15340,9 +15367,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1914453146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49ab108a16940394ca47d9cb20a8a982, type: 3}
+  m_Script: {fileID: 11500000, guid: 3759e2aae0f7b9a47bb98fc64bf3c543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingMode: 1
+  m_WrapMode: 0
+  m_Clip: {fileID: 7400000, guid: 6c85716d9ce59e340b3ad36a531a46bd, type: 2}
+  m_States:
+  - clip: {fileID: 7400000, guid: 6c85716d9ce59e340b3ad36a531a46bd, type: 2}
+    name: Default
+    defaultState: 1
+  - clip: {fileID: 7400000, guid: 6427f29b9178ca845bb07d89ab3dd760, type: 2}
+    name: Change
+    defaultState: 0
+  - clip: {fileID: 7400000, guid: 4ca1832468c755441b287a75759d11cf, type: 2}
+    name: ReverseChange
+    defaultState: 0
 --- !u!1 &1914788866
 GameObject:
   m_ObjectHideFlags: 0
