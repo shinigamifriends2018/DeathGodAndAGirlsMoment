@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class SyoujoController : CharacterBase
 {
     Vector2 scale;
+    [SerializeField]
     int m_aFeelingOfBelieve = 0;
     bool m_followMode;
     bool m_followSwitch = true;
@@ -339,33 +340,25 @@ public class SyoujoController : CharacterBase
       if (collision.gameObject.tag == "akuryou")
         {
             if (m_onDamage == false)
-            {
-                m_onDamage = true;
+            {                
                 Damage();
             }
         }
     }
 
     void Damage()
-    {
-        m_life[m_hitPoint - 1].SetActive(false);
-        m_hitPoint--;
-        if (m_aFeelingOfBelieve > 0)
-        {
-            m_AFeelingOfBelieveUI[m_aFeelingOfBelieve - 1].SetActive(false);
-            m_aFeelingOfBelieve--;
-        }
+    {    
         if (m_aFeelingOfBelieve < 3)
         {
             if(m_onConnectHands == true)
             {
                 m_onConnectHands = false;
-            }
+            }            
             m_onFrightening = true;
-            m_simpleAnimation.CrossFade("Frightening", 0.02f);
+            m_simpleAnimation.Play("Frightening");
         }
         else
-        {
+        {            
             m_simpleAnimation.Play("Damage");
         }
     }
@@ -389,14 +382,28 @@ public class SyoujoController : CharacterBase
             }
         }
     }
+
+    void OnDamage()
+    {
+        Debug.Log("yoyoyoyoyoyoyo");
+        m_life[m_hitPoint - 1].SetActive(false);
+        m_hitPoint--;
+        if (m_aFeelingOfBelieve > 0)
+        {
+            m_AFeelingOfBelieveUI[m_aFeelingOfBelieve - 1].SetActive(false);
+            m_aFeelingOfBelieve--;
+        }
+        m_onDamage = true;       
+    }
+
     void FinishDamage()
     {        
         m_simpleAnimation.Play("Default");       
         m_onDamage = false;
     }
-    void FFinishDamage()
-    {
-        Debug.Log("HHDHD");
+
+    void FinishFlashing()
+    {       
         m_onDamage = false;
         Debug.Log(m_onDamage);
     }

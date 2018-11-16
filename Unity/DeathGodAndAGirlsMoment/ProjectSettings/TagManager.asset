@@ -20,6 +20,7 @@ TagManager:
   - XJump
   - Heart
   - Piece of memory
+  - Goal
   layers:
   - Default
   - TransparentFX
