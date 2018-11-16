@@ -362,7 +362,7 @@ public class SyoujoController : CharacterBase
                 m_onConnectHands = false;
             }
             m_onFrightening = true;
-            m_simpleAnimation.CrossFade("Frightening", 0.02f);
+           // m_simpleAnimation.CrossFade("Frightening", 0.02f);
         }
         else
         {

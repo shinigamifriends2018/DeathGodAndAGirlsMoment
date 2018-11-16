@@ -19,14 +19,19 @@ public class EnemyDisPlayGimmick :GhostController {
         Vector2 akuryouPos = m_akuryou.transform.position;
         if (cage == null)
         {
-            if (akuryouPos.x > syoujoPos.x)
+            if (m_enemyDisCheck == true)
             {
+                if (akuryouPos.x > syoujoPos.x)
+                {
+                    m_enemyDisCheck = false;
+                    m_ChaseEnemy[0].SetActive(true);
 
-                m_ChaseEnemy[0].SetActive(m_enemyDisCheck);
-            }
-            else
-            {
-                m_ChaseEnemy[1].SetActive(m_enemyDisCheck);
+                }
+                else
+                {
+                    m_enemyDisCheck = false;
+                    m_ChaseEnemy[1].SetActive(true);
+                }
             }
         }
     }
