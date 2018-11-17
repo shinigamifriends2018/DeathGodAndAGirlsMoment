@@ -355,6 +355,13 @@ public class SyoujoController : CharacterBase
                 Damage();
             }
         }
+        if (collision.gameObject.tag == "Goal")
+        {
+            if (m_onConnectHands == true)
+            {
+                Invoke("Clear", 0.5f);
+            }
+        }
     }
 
     void Da()
@@ -368,13 +375,13 @@ public class SyoujoController : CharacterBase
         m_hitPoint--;
         if (m_aFeelingOfBelieve > 0)
         {
-     //       m_AFeelingOfBelieveUI[m_aFeelingOfBelieve - 1].SetActive(false);
+            //       m_AFeelingOfBelieveUI[m_aFeelingOfBelieve - 1].SetActive(false);
             m_aFeelingOfBelieve--;
         }
     }
 
     void FinishDamage()
-    {       
+    {
         m_simpleAnimation.Play("Default");
         if (m_onFrightening == true)
         {
@@ -411,12 +418,15 @@ public class SyoujoController : CharacterBase
             if (m_aFeelingOfBelieve < 5)
             {
                 m_aFeelingOfBelieve++;
-                m_AFeelingOfBelieveUI[m_aFeelingOfBelieve - 1].SetActive(true);              
+                m_AFeelingOfBelieveUI[m_aFeelingOfBelieve - 1].SetActive(true);
             }
         }
     }
 
-   
+    void Clear()
+    {
+        SceneManager.LoadScene("Clear");
+    }
 
     public bool GetOnFrightening
     {
