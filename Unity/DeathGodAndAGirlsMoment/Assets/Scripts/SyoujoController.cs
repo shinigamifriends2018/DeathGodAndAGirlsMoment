@@ -46,8 +46,7 @@ public class SyoujoController : CharacterBase
 
     // Update is called once per frame
     void Update()
-    {
-        Debug.Log(m_onDamage);
+    {       
         if (Input.GetKeyDown(KeyCode.Y))
         {
             m_onAI = true;
@@ -55,11 +54,7 @@ public class SyoujoController : CharacterBase
         if (m_onAI == true)
         {
             AI();
-        }
-        if(m_onDamage == true)
-        {
-            Debug.Log("a");
-        }
+        }        
 
         if (m_hitPoint <= 0)
         {
@@ -320,48 +315,87 @@ public class SyoujoController : CharacterBase
     {
         if (m_followSwitch == true)
         {
-            if (collision.gameObject.tag == "YJump")
+            if (m_aFeelingOfBelieve >= 3)
             {
-                if (shinigami.Posinvestigate.y - transform.position.y > 0.5f)
+                if (collision.gameObject.tag == "YJump")
                 {
-                    Jump(rb);
+                    if (shinigami.Posinvestigate.y - transform.position.y > 0.5f)
+                    {
+                        Jump(rb);
+                    }
+                }
+                else if (collision.gameObject.tag == "XJump")
+                {
+                    if (Mathf.Abs(transform.position.x - shinigami.Posinvestigate.x) > 2.5f)
+                    {
+                        Jump(rb);
+                    }
                 }
             }
-            else if (collision.gameObject.tag == "XJump")
-            {
-                if (Mathf.Abs(transform.position.x - shinigami.Posinvestigate.x) > 2.5f)
-                {
-                    Jump(rb);
-                }
-            }
-
         }
-
-      if (collision.gameObject.tag == "akuryou")
+        if (collision.gameObject.tag == "akuryou")
         {
             if (m_onDamage == false)
-            {                
+            {
+                m_onDamage = true;
+                if(m_aFeelingOfBelieve <= 3)
+                {
+                    m_onFrightening = true;
+                    if (m_onConnectHands == true)
+                    {
+                        m_onConnectHands = false;
+                    }                    
+                    m_simpleAnimation.CrossFade("Frightening", 0.02f);
+                }
+                else
+                {
+                    Debug.Log("EEEEEEEEEEEEEEEEEEEEEEEE");
+                    m_simpleAnimation.Play("Damage");
+                }
                 Damage();
             }
         }
     }
 
+    void Da()
+    {
+        Debug.Log("DaddaDASdsadfd");
+    }
+
     void Damage()
-    {    
-        if (m_aFeelingOfBelieve < 3)
+    {
+        m_life[m_hitPoint - 1].SetActive(false);
+        m_hitPoint--;
+        if (m_aFeelingOfBelieve > 0)
         {
-            if(m_onConnectHands == true)
-            {
-                m_onConnectHands = false;
-            }            
-            m_onFrightening = true;
-            m_simpleAnimation.Play("Frightening");
-        }
-        else
-        {            
-            m_simpleAnimation.Play("Damage");
+     //       m_AFeelingOfBelieveUI[m_aFeelingOfBelieve - 1].SetActive(false);
+            m_aFeelingOfBelieve--;
         }
     }
+
+    void FinishDamage()
+    {       
+        m_simpleAnimation.Play("Default");
+        if (m_onFrightening == true)
+        {
+            m_onFrightening = false;
+        }
+        m_onDamage = false;
+    }
+
+    void FinishFlashing()
+    {
+        Debug.Log("HA?");
+        m_onDamage = false;
+    }
+
+    void FinishFrightening()
+    {
+        Debug.Log("TETEFRA");
+        m_simpleAnimation.Play("Default");
+        m_onFrightening = false;
+    }
+
 
     public int GetAFeelingOfBelieve
     {
@@ -377,42 +411,12 @@ public class SyoujoController : CharacterBase
             if (m_aFeelingOfBelieve < 5)
             {
                 m_aFeelingOfBelieve++;
-                m_AFeelingOfBelieveUI[m_aFeelingOfBelieve - 1].SetActive(true);
-                Debug.Log(m_aFeelingOfBelieve);
+                m_AFeelingOfBelieveUI[m_aFeelingOfBelieve - 1].SetActive(true);              
             }
         }
     }
 
-    void OnDamage()
-    {
-        Debug.Log("yoyoyoyoyoyoyo");
-        m_life[m_hitPoint - 1].SetActive(false);
-        m_hitPoint--;
-        if (m_aFeelingOfBelieve > 0)
-        {
-            m_AFeelingOfBelieveUI[m_aFeelingOfBelieve - 1].SetActive(false);
-            m_aFeelingOfBelieve--;
-        }
-        m_onDamage = true;       
-    }
-
-    void FinishDamage()
-    {        
-        m_simpleAnimation.Play("Default");       
-        m_onDamage = false;
-    }
-
-    void FinishFlashing()
-    {       
-        m_onDamage = false;
-        Debug.Log(m_onDamage);
-    }
-
-    void FinishFrightening()
-    {
-        m_simpleAnimation.Play("Default");
-        m_onFrightening = false;
-    }
+   
 
     public bool GetOnFrightening
     {
