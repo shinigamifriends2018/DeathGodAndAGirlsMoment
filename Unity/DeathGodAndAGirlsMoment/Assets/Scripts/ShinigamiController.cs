@@ -94,6 +94,7 @@ public class ShinigamiController : CharacterBase {
         if (Input.GetButtonDown("Jump"))
         {
             Jump(rb);
+            Invoke("Returnlayer", 0.5f);
         }
         if (Input.GetButtonDown("Attack"))
         {
