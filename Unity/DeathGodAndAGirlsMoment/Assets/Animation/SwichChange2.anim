@@ -19,7 +19,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 59.6, y: 1.03, z: 0}
+        value: {x: 59.6, y: 1.025, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -29,8 +29,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.083333336
         value: {x: 59.6, y: 1.02, z: 0}
-        inSlope: {x: 0, y: -0.23999977, z: 0}
-        outSlope: {x: 0, y: -0.23999977, z: 0}
+        inSlope: {x: 0, y: -0.11999989, z: 0}
+        outSlope: {x: 0, y: -0.11999989, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -136,15 +136,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.41666666
         value: {x: 0.16, y: 0.02, z: 0}
-        inSlope: {x: 0, y: -0.17400001, z: 0}
-        outSlope: {x: 0, y: -0.17400001, z: 0}
+        inSlope: {x: 0, y: -0.15, z: 0}
+        outSlope: {x: 0, y: -0.15, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 0.16, y: 0.001, z: 0}
+        value: {x: 0.16, y: 0.005, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -278,7 +278,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1.03
+        value: 1.025
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -288,8 +288,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.083333336
         value: 1.02
-        inSlope: -0.23999977
-        outSlope: -0.23999977
+        inSlope: -0.11999989
+        outSlope: -0.11999989
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -543,15 +543,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.41666666
         value: 0.02
-        inSlope: -0.17400001
-        outSlope: -0.17400001
+        inSlope: -0.15
+        outSlope: -0.15
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 0.001
+        value: 0.005
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -642,4 +642,11 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.5
+    functionName: PushCheck2
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

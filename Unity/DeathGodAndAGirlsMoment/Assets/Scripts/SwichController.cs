@@ -6,13 +6,10 @@ public class SwichController : MonoBehaviour {
     
     SimpleAnimation m_simpleAnimation;
 
-    public bool m_syoujoPush;
-    public bool m_shinigamiPush;
-
     [SerializeField]
-    CageDestroy cage;
+    CageDestroy m_cage;
 
-    bool pushCheck;
+    bool m_switchCheck = false;
     // Use this for initialization
     void Start () {
         m_simpleAnimation = GetComponent<SimpleAnimation>();
@@ -20,22 +17,31 @@ public class SwichController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        Debug.LogWarning(m_switchCheck);
 	}
+
+    void PushCheck()
+    {
+        m_cage.PushCheck = true;
+    }
+    void PushCheck2()
+    {
+        m_cage.PushCheck2 = true;
+    }
+    void ReversePushCheck()
+    {
+        m_cage.PushCheck = false;
+    }
+    void ReversePushCheck2()
+    {
+        m_cage.PushCheck2 = false;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == ("shinigami"))
+        if(collision.gameObject.tag == ("shinigami") || collision.gameObject.tag == ("syoujo"))
         {
             m_simpleAnimation.Play("Change");
-            m_shinigamiPush = true;
-            cage.shinigamiPush = m_shinigamiPush;
-        }
-        else if (collision.gameObject.tag == ("syoujo"))
-        {
-            m_simpleAnimation.Play("Change");
-            m_syoujoPush = true;
-            cage.syoujoPush = m_syoujoPush;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -43,12 +49,7 @@ public class SwichController : MonoBehaviour {
         if (collision.gameObject.tag == ("shinigami") || collision.gameObject.tag == ("syoujo"))
         {
             m_simpleAnimation.CrossFade("Reverse", 1f);
-            m_shinigamiPush = false;
-            cage.shinigamiPush = m_shinigamiPush;
-            m_syoujoPush = false;
-            cage.syoujoPush = m_syoujoPush;
         }
-
     }
 
 }
