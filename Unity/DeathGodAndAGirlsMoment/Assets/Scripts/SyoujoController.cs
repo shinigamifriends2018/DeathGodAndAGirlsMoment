@@ -31,6 +31,8 @@ public class SyoujoController : CharacterBase
     [SerializeField]
     GameObject[] m_AFeelingOfBelieveUI;
     bool m_onFrightening = false;
+    [SerializeField]
+    GameObject[] m_hints;
 
     // Use this for initialization
 
@@ -46,7 +48,7 @@ public class SyoujoController : CharacterBase
 
     // Update is called once per frame
     void Update()
-    {       
+    {        
         if (Input.GetKeyDown(KeyCode.Y))
         {
             m_onAI = true;
@@ -97,6 +99,7 @@ public class SyoujoController : CharacterBase
             if (m_onConnectHands == true)
             {
                 Fall();
+                Invoke("Returnlayer", 0.35f);
             }
         }
         if (Input.GetButtonDown("S"))
@@ -104,6 +107,7 @@ public class SyoujoController : CharacterBase
             if (m_onConnectHands == true)
             {
                 Fall();
+                Invoke("Returnlayer", 0.35f);
             }
         }
         if (m_onConnectHands == true)
@@ -308,7 +312,7 @@ public class SyoujoController : CharacterBase
                 m_life[i].SetActive(true);
             }
             Destroy(collision.gameObject);
-        }
+        }       
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -344,12 +348,11 @@ public class SyoujoController : CharacterBase
                     if (m_onConnectHands == true)
                     {
                         m_onConnectHands = false;
-                    }                    
-                    m_simpleAnimation.CrossFade("Frightening", 0.02f);
+                    }                 
+                    m_simpleAnimation.Play ("Frightening");
                 }
                 else
-                {
-                    Debug.Log("EEEEEEEEEEEEEEEEEEEEEEEE");
+                {                  
                     m_simpleAnimation.Play("Damage");
                 }
                 Damage();
@@ -362,6 +365,39 @@ public class SyoujoController : CharacterBase
                 Invoke("Clear", 0.5f);
             }
         }
+        if (m_onConnectHands == true)
+        {
+            if (m_aFeelingOfBelieve >= 5)
+            {
+                if (collision.gameObject.tag == "HintTrigger")
+                {
+                    Destroy(collision.gameObject);
+                    StartCoroutine("SetActiveHint", m_hints[0]);
+                }
+                else if (collision.gameObject.tag == "Hint2Trigger")
+                {
+                    Destroy(collision.gameObject);
+                    StartCoroutine("SetActiveHint", m_hints[1]);
+                }
+                else if (collision.gameObject.tag == "Hint4Trigger")
+                {
+                    Destroy(collision.gameObject);
+                    StartCoroutine("SetActiveHint", m_hints[3]);
+                }
+            }
+        }
+    }
+
+    IEnumerator SetActiveHint(GameObject m_hint)
+    {
+        m_hint.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        m_hint.SetActive(false);     
+    }
+
+    void Returnlayer()
+    {
+        gameObject.layer = LayerName.Syoujo;
     }
 
     void Da()
@@ -375,7 +411,7 @@ public class SyoujoController : CharacterBase
         m_hitPoint--;
         if (m_aFeelingOfBelieve > 0)
         {
-            //       m_AFeelingOfBelieveUI[m_aFeelingOfBelieve - 1].SetActive(false);
+            m_AFeelingOfBelieveUI[m_aFeelingOfBelieve - 1].SetActive(false);
             m_aFeelingOfBelieve--;
         }
     }
@@ -397,8 +433,7 @@ public class SyoujoController : CharacterBase
     }
 
     void FinishFrightening()
-    {
-        Debug.Log("TETEFRA");
+    {      
         m_simpleAnimation.Play("Default");
         m_onFrightening = false;
     }

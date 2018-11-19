@@ -17,6 +17,8 @@ public class ShinigamiController : CharacterBase {
     GameObject[] m_efect;
     bool m_onSetAvtive = false;
     float m_setActiveTime = 0f;
+    [SerializeField]
+    CameraController camera;
 
     Vector3 m_shinigamisPos;
 
@@ -72,10 +74,12 @@ public class ShinigamiController : CharacterBase {
         if(s < 0)
         {
             Fall();
+            Invoke("Returnlayer", 0.35f);
         }
         if (Input.GetButtonDown("S"))
         {
             Fall();
+            Invoke("Returnlayer", 0.35f);
         }
         if (Input.GetButtonDown("FollowSwitch"))
         {
@@ -162,6 +166,15 @@ public class ShinigamiController : CharacterBase {
         {
             m_toConnectHands = true;
         }
+        if (collision.gameObject.tag == "Hint2Trigger")
+        {
+            Destroy(collision.gameObject);
+            camera.FixedSet = true;
+        }
+        if(collision.gameObject.tag == "FixedRelease")
+        {
+            camera.FixedSet = false;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -210,6 +223,11 @@ public class ShinigamiController : CharacterBase {
                 m_efect[1].SetActive(true);
             }
         }
+    }
+
+    void Returnlayer()
+    {
+        gameObject.layer = LayerName.Shinigami;
     }
 
     public Vector3 Posinvestigate

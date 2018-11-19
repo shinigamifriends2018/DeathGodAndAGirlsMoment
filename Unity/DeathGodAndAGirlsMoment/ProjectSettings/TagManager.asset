@@ -21,6 +21,10 @@ TagManager:
   - Heart
   - Piece of memory
   - Goal
+  - HintTrigger
+  - Hint2Trigger
+  - Hint4Trigger
+  - FixedRelease
   layers:
   - Default
   - TransparentFX

@@ -9,8 +9,8 @@ public class CharacterBase : MonoBehaviour {
     [SerializeField]
     protected int m_hitPoint;
     protected SimpleAnimation m_simpleAnimation;
-    protected bool m_jump = true;
-    protected float m_layerReturnTime = 0.35f;
+    protected bool m_jump = true;   
+    LayerMask m_layerName;
 
     // Use this for initialization
     void Start () {
@@ -28,8 +28,7 @@ public class CharacterBase : MonoBehaviour {
     }
     protected void Fall()
     {
-        gameObject.layer = LayerName.S;
-        Invoke("Returnlayer", m_layerReturnTime);
+        gameObject.layer = LayerName.S;       
     }
     protected void Jump(Rigidbody2D rb)
     {
@@ -42,9 +41,5 @@ public class CharacterBase : MonoBehaviour {
     protected void Damage()
     {
         m_hitPoint--;
-    }
-    void Returnlayer()
-    {
-        gameObject.layer = LayerName.Shinigami;
-    }
+    }    
 }
