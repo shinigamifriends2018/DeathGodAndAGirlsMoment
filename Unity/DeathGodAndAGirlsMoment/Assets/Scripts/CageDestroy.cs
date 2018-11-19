@@ -5,9 +5,7 @@ using UnityEngine;
 public class CageDestroy : MonoBehaviour {
 
     [SerializeField]
-    bool m_shinigamiPush;
-    [SerializeField]
-    bool m_syoujoPush;
+    bool[] m_swichCheck;
 
     // Use this for initialization
     void Start () {
@@ -16,25 +14,26 @@ public class CageDestroy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-       
-		if(m_shinigamiPush == true && m_syoujoPush == true)
+
+		if(m_swichCheck[0] == true && m_swichCheck[1] == true)
         {
             Destroy(this.gameObject);
         }
     }
 
-    public bool syoujoPush
+    public bool PushCheck
     {
         set
         {
-            m_syoujoPush = value;
+            m_swichCheck[0] = value;
         }
     }
-    public bool shinigamiPush
+    public bool PushCheck2
+
     {
         set
         {
-            m_shinigamiPush = value;
+            m_swichCheck[1] = value;
         }
     }
 }

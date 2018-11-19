@@ -56,15 +56,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.33333334
         value: {x: 59.6, y: 0.99, z: 0}
-        inSlope: {x: 0, y: 0.29999974, z: 0}
-        outSlope: {x: 0, y: 0.29999974, z: 0}
+        inSlope: {x: 0, y: 0.23999979, z: 0}
+        outSlope: {x: 0, y: 0.23999979, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.41666666
-        value: {x: 59.6, y: 1.02, z: 0}
+        value: {x: 59.6, y: 1.01, z: 0}
         inSlope: {x: 0, y: 0.23999979, z: 0}
         outSlope: {x: 0, y: 0.23999979, z: 0}
         tangentMode: 0
@@ -315,15 +315,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.33333334
         value: 0.99
-        inSlope: 0.29999974
-        outSlope: 0.29999974
+        inSlope: 0.23999979
+        outSlope: 0.23999979
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.41666666
-        value: 1.02
+        value: 1.01
         inSlope: 0.23999979
         outSlope: 0.23999979
         tangentMode: 136
@@ -642,4 +642,11 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.5
+    functionName: ReversePushCheck2
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

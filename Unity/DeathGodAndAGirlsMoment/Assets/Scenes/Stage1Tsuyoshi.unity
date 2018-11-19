@@ -309,7 +309,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.5, y: 4.5}
+  m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
 --- !u!114 &24163379
 MonoBehaviour:
@@ -421,9 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ab108a16940394ca47d9cb20a8a982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujoPush: 0
-  m_shinigamiPush: 0
-  cage: {fileID: 335640618}
+  m_cage: {fileID: 335640618}
 --- !u!1 &46473306
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,8 +3100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6862ce4240c026e4583d87206abd7665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_shinigamiPush: 0
-  m_syoujoPush: 0
+  m_swichCheck: 0000
 --- !u!60 &335640619
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5503,6 +5500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
   m_hitPoint: 0
+  m_aFeelingOfBelieve: 0
   shinigami: {fileID: 879722898}
   m_efect:
   - {fileID: 323879578}
@@ -15230,7 +15228,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1914453146}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 52.355, y: 1.03, z: 0}
+  m_LocalPosition: {x: 52.355, y: 1, z: 0}
   m_LocalScale: {x: 0.16, y: 0.07, z: 0}
   m_Children: []
   m_Father: {fileID: 825982148}
@@ -15415,9 +15413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ab108a16940394ca47d9cb20a8a982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujoPush: 0
-  m_shinigamiPush: 0
-  cage: {fileID: 335640618}
+  m_cage: {fileID: 335640618}
 --- !u!1 &1914788866
 GameObject:
   m_ObjectHideFlags: 0
