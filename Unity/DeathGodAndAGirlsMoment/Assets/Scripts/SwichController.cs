@@ -17,7 +17,7 @@ public class SwichController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.LogWarning(m_switchCheck);
+       
 	}
 
     void PushCheck()
