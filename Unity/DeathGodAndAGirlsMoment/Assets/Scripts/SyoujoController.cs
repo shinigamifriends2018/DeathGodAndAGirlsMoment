@@ -51,11 +51,12 @@ public class SyoujoController : CharacterBase
     {        
         if (Input.GetKeyDown(KeyCode.Y))
         {
+            Debug.Log("EE?");
             m_onAI = true;
         }
         if (m_onAI == true)
         {
-            AI();
+            StartCoroutine("AI");
         }        
 
         if (m_hitPoint <= 0)
@@ -91,6 +92,7 @@ public class SyoujoController : CharacterBase
             if (m_onConnectHands == true)
             {
                 Jump(rb);
+                Invoke("Returnlayer", 0.5f);
             }
         }
         float s = Input.GetAxisRaw("S");
@@ -120,9 +122,10 @@ public class SyoujoController : CharacterBase
         }
     }
 
-    void AI()
+    IEnumerator AI()
     {
-        for(; ; )
+        Debug.Log("a");
+        for(int i = 0; i < 18; ++i)
         {
             Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 5.0f, m_layer);
@@ -140,7 +143,7 @@ public class SyoujoController : CharacterBase
         }
         m_rayRot.x = 90f;
         m_ray.transform.eulerAngles = m_rayRot;
-        for (; ; )
+        for (int i = 0; i < 18; ++i)
         {
             Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 5.0f, m_layer);
@@ -158,10 +161,12 @@ public class SyoujoController : CharacterBase
             m_ray.transform.eulerAngles = m_rayRot;
         }
         m_rayRot.x = 90f;
-        m_ray.transform.eulerAngles = m_rayRot;
-        Ray mray = new Ray(m_ray.position, m_ray.transform.forward);
-        RaycastHit2D mhit = Physics2D.Raycast(mray.origin, mray.direction, 1.0f, m_layer);
-        Debug.DrawRay(mray.origin, mray.direction, Color.red);
+        m_ray.transform.eulerAngles = m_rayRot;        
+        for(; ; )
+        {
+            Ray mray = new Ray(m_ray.position, m_ray.transform.forward);
+            RaycastHit2D mhit = Physics2D.Raycast(mray.origin, mray.direction, 1.0f, m_layer);
+            Debug.DrawRay(mray.origin, mray.direction, Color.red);
             if (m_rightCount > m_leftCount)
             {
                 transform.Translate(new Vector2(-m_moveSpeed * Time.deltaTime, 0f));
@@ -178,11 +183,15 @@ public class SyoujoController : CharacterBase
                     scale.x *= -1;
                 }
             }
-        Debug.Log(m_rightCount);
-        Debug.Log(m_leftCount);
+            if (mhit.collider == null)
+            {
+                break;
+            }
+                yield return null;
+        }
         m_rightCount = 0;
         m_leftCount = 0;  
-        m_onAI = false;       
+        m_onAI = false;  
     }
 
     void Follow()
@@ -326,6 +335,7 @@ public class SyoujoController : CharacterBase
                     if (shinigami.Posinvestigate.y - transform.position.y > 0.5f)
                     {
                         Jump(rb);
+                        Invoke("Returnlayer", 0.5f);
                     }
                 }
                 else if (collision.gameObject.tag == "XJump")
@@ -333,6 +343,7 @@ public class SyoujoController : CharacterBase
                     if (Mathf.Abs(transform.position.x - shinigami.Posinvestigate.x) > 2.5f)
                     {
                         Jump(rb);
+                        Invoke("Returnlayer", 0.5f);
                     }
                 }
             }
