@@ -25,6 +25,7 @@ TagManager:
   - Hint2Trigger
   - Hint4Trigger
   - FixedRelease
+  - Swich
   layers:
   - Default
   - TransparentFX
