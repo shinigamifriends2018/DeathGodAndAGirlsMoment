@@ -367,7 +367,7 @@ public class SyoujoController : CharacterBase
             {
                 m_life[i].SetActive(true);
             }
-            Destroy(collision.gameObject);
+            Destroy(collision.gameObject);          
         }       
     }
 
@@ -497,8 +497,7 @@ public class SyoujoController : CharacterBase
         m_simpleAnimation.Play("Default");
         m_onFrightening = false;
     }
-
-
+    
     public int GetAFeelingOfBelieve
     {
         get

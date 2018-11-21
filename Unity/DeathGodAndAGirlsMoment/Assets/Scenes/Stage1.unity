@@ -448,6 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_pieceofMemory: {fileID: 367926494}
+  m_trigger: {fileID: 1801754152}
 --- !u!1 &62451600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1596,6 +1597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_pieceofMemory: {fileID: 1574049143}
+  m_trigger: {fileID: 1000705822}
 --- !u!1 &141092104
 GameObject:
   m_ObjectHideFlags: 0
@@ -10638,6 +10640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_pieceofMemory: {fileID: 699977472}
+  m_trigger: {fileID: 1099111165}
 --- !u!1 &1115139089
 GameObject:
   m_ObjectHideFlags: 0
@@ -17139,6 +17142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_pieceofMemory: {fileID: 2129605101}
+  m_trigger: {fileID: 1024432001}
 --- !u!1 &1903170016
 GameObject:
   m_ObjectHideFlags: 0
@@ -19382,6 +19386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_pieceofMemory: {fileID: 905442620}
+  m_trigger: {fileID: 0}
 --- !u!1 &2096874081
 GameObject:
   m_ObjectHideFlags: 0
