@@ -6,6 +6,8 @@ public class PieceofMemoryController : MonoBehaviour {
 
     [SerializeField]
     GameObject m_pieceofMemory;
+    [SerializeField]
+    GameObject m_trigger = null;
 
     // Use this for initialization
     void Start () {
@@ -21,6 +23,7 @@ public class PieceofMemoryController : MonoBehaviour {
     {
         if (collision.gameObject.tag == "syoujo")
         {
+            Destroy(m_trigger);
             m_pieceofMemory.SetActive(true);
         }
     }
