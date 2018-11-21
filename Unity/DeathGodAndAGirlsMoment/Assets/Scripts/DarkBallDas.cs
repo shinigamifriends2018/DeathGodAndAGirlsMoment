@@ -16,7 +16,7 @@ public class DarkBallDas : MonoBehaviour {
         Vector2 m_darkBollPos = this.transform.position;
         float m_destroyPos = m_farstPosition.x - m_darkBollPos.x;
 
-        if (m_destroyPos >= 12)
+        if (m_destroyPos >= 12||m_destroyPos <= -12)
         {
             Destroy(this.gameObject, 0.1f);
         }
