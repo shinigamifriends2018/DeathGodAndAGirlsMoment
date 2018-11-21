@@ -19,6 +19,7 @@ public class ShinigamiController : CharacterBase {
     float m_setActiveTime = 0f;
     [SerializeField]
     CameraController camera;
+    bool m_canHint = true;
 
     Vector3 m_shinigamisPos;
 
@@ -121,9 +122,7 @@ public class ShinigamiController : CharacterBase {
                 syoujo.OnConnectHands = false;
             }
         }       
-
-        transform.localScale = scale;
-      
+        transform.localScale = scale;      
 	}
 
     void Attack()
@@ -160,7 +159,21 @@ public class ShinigamiController : CharacterBase {
         {
             m_jump = true;
         }
+        if(collision.gameObject.tag == "Switch")
+        {
+            if (m_canHint == true)
+            {
+                if(syoujo.GetAFeelingOfBelieve >= 5)
+                {
+                    if(syoujo.ConnectHandsTF == true)
+                    {
+                        syoujo.StartCoroutine("SetActiveHint", 2);
+                    }
+                }
+            }
+        }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "syoujo")

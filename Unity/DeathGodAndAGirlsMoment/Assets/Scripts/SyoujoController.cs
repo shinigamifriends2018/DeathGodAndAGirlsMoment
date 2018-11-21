@@ -28,11 +28,13 @@ public class SyoujoController : CharacterBase
     int m_rightCount = 0;
     int m_leftCount = 0;
     bool m_onAI = false;
+    bool m_canAI = false;
     [SerializeField]
     GameObject[] m_AFeelingOfBelieveUI;
     bool m_onFrightening = false;
     [SerializeField]
     GameObject[] m_hints;
+    bool m_rightDirection;
 
     // Use this for initialization
 
@@ -48,14 +50,17 @@ public class SyoujoController : CharacterBase
 
     // Update is called once per frame
     void Update()
-    {        
+    {       
+        /*
         if (Input.GetKeyDown(KeyCode.Y))
         {
             Debug.Log("EE?");
-            m_onAI = true;
+            m_canAI = true;
         }
-        if (m_onAI == true)
+        */
+        if (m_canAI == true)
         {
+            m_canAI = false;
             StartCoroutine("AI");
         }        
 
@@ -122,17 +127,19 @@ public class SyoujoController : CharacterBase
         }
     }
 
-    IEnumerator AI()
+    void Direction()
     {
         Debug.Log("a");
-        for(int i = 0; i < 18; ++i)
+        m_rayRot.x = 90f;
+        m_ray.transform.eulerAngles = m_rayRot;
+        for (int i = 0; i < 18; ++i)
         {
             Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 5.0f, m_layer);
-            Debug.DrawRay(ray.origin, ray.direction, Color.red);       
+            Debug.DrawRay(ray.origin, ray.direction, Color.red);
             if (hit.collider)
-            {                    
-                m_rightCount++;               
+            {
+                m_rightCount++;
             }
             else
             {
@@ -150,8 +157,8 @@ public class SyoujoController : CharacterBase
             Debug.DrawRay(ray.origin, ray.direction, Color.red);
 
             if (hit.collider)
-            {               
-                m_leftCount++;                
+            {
+                m_leftCount++;
             }
             else
             {
@@ -160,37 +167,64 @@ public class SyoujoController : CharacterBase
             m_rayRot.x += 5f;
             m_ray.transform.eulerAngles = m_rayRot;
         }
-        m_rayRot.x = 90f;
-        m_ray.transform.eulerAngles = m_rayRot;        
-        for(; ; )
+        Debug.Log(m_rightCount);
+        Debug.Log(m_leftCount);
+        if (m_rightCount > m_leftCount)
         {
-            Ray mray = new Ray(m_ray.position, m_ray.transform.forward);
-            RaycastHit2D mhit = Physics2D.Raycast(mray.origin, mray.direction, 1.0f, m_layer);
-            Debug.DrawRay(mray.origin, mray.direction, Color.red);
-            if (m_rightCount > m_leftCount)
+            m_rightDirection = false;
+        }
+        else
+        {
+            m_rightDirection = true;
+        }
+        m_rightCount = 0;
+        m_leftCount = 0;
+    }
+
+    IEnumerator AI()
+    {
+        Direction();
+        if(m_rightDirection == true)
+        {
+            m_rayRot.x = 110f;
+            m_ray.transform.eulerAngles = m_rayRot;
+            if (scale.x < 0)
             {
-                transform.Translate(new Vector2(-m_moveSpeed * Time.deltaTime, 0f));
-                if (scale.x > 0)
-                {
-                    scale.x *= -1;
-                }
+                scale.x *= -1;
+            }
+        }
+        else
+        {
+            m_rayRot.x = 110f;
+            m_ray.transform.eulerAngles = m_rayRot;
+            if (scale.x > 0)
+            {
+                scale.x *= -1;
+            }
+        }
+        gameObject.transform.localScale = scale;
+        for (; ; )
+        {
+            Vector2 pos = transform.position;            
+            if (m_rightDirection == false)
+            {
+                pos.x -= m_moveSpeed * Time.deltaTime;               
             }
             else
             {
-                Move();
-                if (scale.x < 0)
-                {
-                    scale.x *= -1;
-                }
-            }
+                pos.x += m_moveSpeed * Time.deltaTime;               
+            }            
+            transform.position = pos;
+
+            Ray mray = new Ray(m_ray.position, m_ray.transform.forward);
+            RaycastHit2D mhit = Physics2D.Raycast(mray.origin, mray.direction, 1.0f, m_layer);
+            Debug.DrawRay(mray.origin, mray.direction, Color.red);
             if (mhit.collider == null)
             {
                 break;
             }
                 yield return null;
-        }
-        m_rightCount = 0;
-        m_leftCount = 0;  
+        }      
         m_onAI = false;  
     }
 
@@ -208,7 +242,7 @@ public class SyoujoController : CharacterBase
         if (m_followMode == true)
         {
             if (m_followSwitch == true)
-            {
+            {               
                 if (m_onAI == false)
                 {
                     if (Mathf.Abs(transform.position.x - shinigami.Posinvestigate.x) > 2f)
@@ -230,6 +264,19 @@ public class SyoujoController : CharacterBase
                             }
                         }
                         gameObject.transform.localScale = scale;
+                    }
+                    else
+                    {
+                        if(transform.position.y - shinigami.Posinvestigate.y > 1f)
+                        {
+                            Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
+                            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 1.0f, m_layer);
+                            if (hit.collider)
+                            {
+                                m_canAI = true;
+                                m_onAI = true;
+                            }
+                        }
                     }
                 }
             }
@@ -296,7 +343,7 @@ public class SyoujoController : CharacterBase
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Switch")
         {
             m_jump = true;
         }
@@ -383,27 +430,27 @@ public class SyoujoController : CharacterBase
                 if (collision.gameObject.tag == "HintTrigger")
                 {
                     Destroy(collision.gameObject);
-                    StartCoroutine("SetActiveHint", m_hints[0]);
+                    StartCoroutine("SetActiveHint", 0);
                 }
                 else if (collision.gameObject.tag == "Hint2Trigger")
                 {
                     Destroy(collision.gameObject);
-                    StartCoroutine("SetActiveHint", m_hints[1]);
+                    StartCoroutine("SetActiveHint", 1);
                 }
                 else if (collision.gameObject.tag == "Hint4Trigger")
                 {
                     Destroy(collision.gameObject);
-                    StartCoroutine("SetActiveHint", m_hints[3]);
+                    StartCoroutine("SetActiveHint", 3);
                 }
             }
         }
     }
 
-    IEnumerator SetActiveHint(GameObject m_hint)
+    public IEnumerator SetActiveHint(int num)
     {
-        m_hint.SetActive(true);
+        m_hints[num].SetActive(true);
         yield return new WaitForSeconds(3f);
-        m_hint.SetActive(false);     
+        m_hints[num].SetActive(false);     
     }
 
     void Returnlayer()
