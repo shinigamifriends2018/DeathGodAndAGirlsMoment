@@ -406,8 +406,10 @@ public class SyoujoController : CharacterBase
                     if (m_onConnectHands == true)
                     {
                         m_onConnectHands = false;
-                    }                 
-                    m_simpleAnimation.Play ("Frightening");
+                    }
+                    Debug.Log("aaa");
+                    m_simpleAnimation.Stop();
+                    m_simpleAnimation.Play ("Frightening");                    
                 }
                 else
                 {                  

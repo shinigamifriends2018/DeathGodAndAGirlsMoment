@@ -27,8 +27,14 @@ public class CameraController : MonoBehaviour
         }
         else
         {
-
-            if(Camera.main.orthographicSize != 3f)
+            if (pos.x <= -5.6f)
+            {
+                pos.x = -5.6f;
+            }else if(pos.x >= 126.6)
+            {
+                pos.x = 126.6f;
+            }
+            if (Camera.main.orthographicSize != 3f)
             {
                 Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 3f, 0.1f);
             }
@@ -54,8 +60,7 @@ public class CameraController : MonoBehaviour
                 {
                     pos.y = shinigami.Posinvestigate.y - 0.5f;
                 }
-            }            
-
+            }
         }
         transform.position = pos;
     }
