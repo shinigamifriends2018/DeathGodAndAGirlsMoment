@@ -17,7 +17,7 @@ public class CageDestroy : MonoBehaviour {
 
 		if(m_swichCheck[0] == true && m_swichCheck[1] == true)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 
@@ -27,6 +27,10 @@ public class CageDestroy : MonoBehaviour {
         {
             m_swichCheck[0] = value;
         }
+        get
+        {
+            return m_swichCheck[0];
+        }
     }
     public bool PushCheck2
 
@@ -34,6 +38,10 @@ public class CageDestroy : MonoBehaviour {
         set
         {
             m_swichCheck[1] = value;
+        }
+        get
+        {
+            return m_swichCheck[1];
         }
     }
 }
