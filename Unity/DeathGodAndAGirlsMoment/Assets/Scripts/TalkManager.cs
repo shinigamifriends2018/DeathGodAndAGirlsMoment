@@ -36,7 +36,7 @@ public class TalkManager : MonoBehaviour {
             m_line++;
             if (m_line >= m_talkArray.Length)
             {
-                SceneManager.LoadScene("LoadScene");
+                SceneManager.LoadScene("Stage1");
             }
             else
             {
