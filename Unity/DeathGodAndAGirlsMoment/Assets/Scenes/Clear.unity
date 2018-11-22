@@ -364,9 +364,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 521717936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2566178ffbb9d7643a0b625e0ab8bcde, type: 3}
+  m_Script: {fileID: 11500000, guid: dbd977e0f58798a4f8bd7732e4526357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_scoreText: {fileID: 1132534571}
 --- !u!1 &797500289
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,7 +512,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: recovery      100%
+  m_Text: 
 --- !u!222 &1132534572
 CanvasRenderer:
   m_ObjectHideFlags: 0

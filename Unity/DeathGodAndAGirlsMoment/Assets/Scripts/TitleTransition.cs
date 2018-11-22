@@ -2,13 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TitleTransition : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    [SerializeField]
+    Text m_scoreText;
+
+    // Use this for initialization
+    void Start () {
+        int score = PlayerPrefs.GetInt("m_acquisitions", 0);
+        m_scoreText.text = "recovery" + "   " + score + "%";
+    }
 	
 	// Update is called once per frame
 	void Update () {

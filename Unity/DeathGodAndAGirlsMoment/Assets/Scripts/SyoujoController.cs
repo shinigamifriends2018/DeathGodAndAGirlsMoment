@@ -35,7 +35,8 @@ public class SyoujoController : CharacterBase
     [SerializeField]
     GameObject[] m_hints;
     bool m_rightDirection;
-
+    [SerializeField]
+    int m_acquisitions = 0;
     // Use this for initialization
 
     void Start()
@@ -363,6 +364,7 @@ public class SyoujoController : CharacterBase
         if(collision.gameObject.tag == "Piece of memory")
         {
             m_hitPoint = 6;
+            m_acquisitions += 20;
             for(int i = 0; i < 6; i++)
             {
                 m_life[i].SetActive(true);
@@ -422,6 +424,8 @@ public class SyoujoController : CharacterBase
         {
             if (m_onConnectHands == true)
             {
+                PlayerPrefs.SetInt("m_acquisitions", m_acquisitions);
+                //PlayerPrefs.Save();
                 Invoke("Clear", 0.5f);
             }
         }
