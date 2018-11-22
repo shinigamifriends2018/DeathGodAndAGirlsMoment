@@ -37,7 +37,26 @@ public class SyoujoController : CharacterBase
     bool m_rightDirection;
     [SerializeField]
     int m_acquisitions = 0;
+    [SerializeField]
+    int[] m_getcheck;
+    [SerializeField]
+    int[] pieceCheck;
+    [SerializeField]
+    GameObject[] m_pieceofMemory;
     // Use this for initialization
+    private void Awake()
+    {
+        pieceCheck[0] = PlayerPrefs.GetInt("m_getcheck[0]", 0);
+        pieceCheck[1] = PlayerPrefs.GetInt("m_getcheck[1]", 0);
+        pieceCheck[2] = PlayerPrefs.GetInt("m_getcheck[2]", 0);
+        pieceCheck[3] = PlayerPrefs.GetInt("m_getcheck[3]", 0);
+        pieceCheck[4] = PlayerPrefs.GetInt("m_getcheck[4]", 0);
+        PlayerPrefs.SetInt("pieceCheck[0]", pieceCheck[0]);
+        PlayerPrefs.SetInt("pieceCheck[1]", pieceCheck[1]);
+        PlayerPrefs.SetInt("pieceCheck[2]", pieceCheck[2]);
+        PlayerPrefs.SetInt("pieceCheck[3]", pieceCheck[3]);
+        PlayerPrefs.SetInt("pieceCheck[4]", pieceCheck[4]);
+    }
 
     void Start()
     {
@@ -47,11 +66,37 @@ public class SyoujoController : CharacterBase
         m_jumpPower = 10.5f;
         m_simpleAnimation = GetComponent<SimpleAnimation>();
         m_rayRot = m_ray.transform.rotation.eulerAngles;
+        m_acquisitions = PlayerPrefs.GetInt("score",0);
+        m_getcheck[0] = PlayerPrefs.GetInt("pieceCheck[0]",0);
+        m_getcheck[1] = PlayerPrefs.GetInt("pieceCheck[1]",0);
+        m_getcheck[2] = PlayerPrefs.GetInt("pieceCheck[2]",0);
+        m_getcheck[3] = PlayerPrefs.GetInt("pieceCheck[3]",0);
+        m_getcheck[4] = PlayerPrefs.GetInt("pieceCheck[4]",0);
+        if(m_getcheck[0] == 1)
+        {
+            m_pieceofMemory[0].SetActive(true);
+        }
+        if (m_getcheck[1] == 1)
+        {
+            m_pieceofMemory[1].SetActive(true);
+        }
+        if (m_getcheck[2] == 1)
+        {
+            m_pieceofMemory[2].SetActive(true);
+        }
+        if (m_getcheck[3] == 1)
+        {
+            m_pieceofMemory[3].SetActive(true);
+        }
+        if (m_getcheck[4] == 1)
+        {
+            m_pieceofMemory[4].SetActive(true);
+        }
     }
 
     // Update is called once per frame
     void Update()
-    {       
+    {
         /*
         if (Input.GetKeyDown(KeyCode.Y))
         {
@@ -63,7 +108,7 @@ public class SyoujoController : CharacterBase
         {
             m_canAI = false;
             StartCoroutine("AI");
-        }        
+        }
 
         if (m_hitPoint <= 0)
         {
@@ -185,7 +230,7 @@ public class SyoujoController : CharacterBase
     IEnumerator AI()
     {
         Direction();
-        if(m_rightDirection == true)
+        if (m_rightDirection == true)
         {
             m_rayRot.x = 110f;
             m_ray.transform.eulerAngles = m_rayRot;
@@ -206,15 +251,15 @@ public class SyoujoController : CharacterBase
         gameObject.transform.localScale = scale;
         for (; ; )
         {
-            Vector2 pos = transform.position;            
+            Vector2 pos = transform.position;
             if (m_rightDirection == false)
             {
-                pos.x -= m_moveSpeed * Time.deltaTime;               
+                pos.x -= m_moveSpeed * Time.deltaTime;
             }
             else
             {
-                pos.x += m_moveSpeed * Time.deltaTime;               
-            }            
+                pos.x += m_moveSpeed * Time.deltaTime;
+            }
             transform.position = pos;
 
             Ray mray = new Ray(m_ray.position, m_ray.transform.forward);
@@ -224,9 +269,9 @@ public class SyoujoController : CharacterBase
             {
                 break;
             }
-                yield return null;
-        }      
-        m_onAI = false;  
+            yield return null;
+        }
+        m_onAI = false;
     }
 
     void Follow()
@@ -243,7 +288,7 @@ public class SyoujoController : CharacterBase
         if (m_followMode == true)
         {
             if (m_followSwitch == true)
-            {               
+            {
                 if (m_onAI == false)
                 {
                     if (Mathf.Abs(transform.position.x - shinigami.Posinvestigate.x) > 2f)
@@ -268,7 +313,7 @@ public class SyoujoController : CharacterBase
                     }
                     else
                     {
-                        if(transform.position.y - shinigami.Posinvestigate.y > 1f)
+                        if (transform.position.y - shinigami.Posinvestigate.y > 1f)
                         {
                             Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
                             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 1.0f, m_layer);
@@ -352,27 +397,127 @@ public class SyoujoController : CharacterBase
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Heart")
+        if (collision.gameObject.tag == "Heart")
         {
-            if(m_hitPoint < 6)
+            if (m_hitPoint < 6)
             {
                 m_life[m_hitPoint].SetActive(true);
                 m_hitPoint++;
             }
             Destroy(collision.gameObject);
         }
-        if(collision.gameObject.tag == "Piece of memory")
+        if (collision.gameObject.tag == "Piece of memory")
         {
+
             m_hitPoint = 6;
-            m_acquisitions += 20;
-            for(int i = 0; i < 6; i++)
+            for (int i = 0; i < 6; i++)
             {
                 m_life[i].SetActive(true);
             }
-            Destroy(collision.gameObject);          
-        }       
+            Destroy(collision.gameObject);
+        }
     }
 
+    public int GetPieceCheck
+    {
+        set
+        {
+            m_getcheck[0] = value;
+        }
+    }
+    public int PiecePercent
+    {
+        set
+        {
+            if (m_acquisitions < 100)
+            {
+                if (m_getcheck[0] == 0)
+                {
+                    m_acquisitions += 20;
+                }
+            }
+        }
+    }
+    public int GetPieceCheck2
+    {
+        set
+        {
+            m_getcheck[1] = value;
+        }
+    }
+    public int PiecePercent2
+    {
+        set
+        {
+            if (m_acquisitions < 100)
+            {
+                if (m_getcheck[1] == 0)
+                {
+                    m_acquisitions += 20;
+                }
+            }
+        }
+    }
+    public int GetPieceCheck3
+    {
+        set
+        {
+            m_getcheck[2] = value;
+        }
+    }
+    public int PiecePercent3
+    {
+        set
+        {
+            if (m_acquisitions < 100)
+            {
+                if (m_getcheck[2] == 0)
+                {
+                    m_acquisitions += 20;
+                }
+            }
+        }
+    }
+    public int GetPieceCheck4
+    {
+        set
+        {
+            m_getcheck[3] = value;
+        }
+    }
+    public int PiecePercent4
+    {
+        set
+        {
+            if (m_acquisitions < 100)
+            {
+                if (m_getcheck[3] == 0)
+                {
+                    m_acquisitions += 20;
+                }
+            }
+        }
+    }
+    public int GetPieceCheck5
+    {
+        set
+        {
+            m_getcheck[4] = value;
+        }
+    }
+    public int PiecePercent5
+    {
+        set
+        {
+            if (m_acquisitions < 100)
+            {
+                if (m_getcheck[4] == 0)
+                {
+                    m_acquisitions += 20;
+                }
+            }
+        }
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (m_followSwitch == true)
@@ -424,8 +569,6 @@ public class SyoujoController : CharacterBase
         {
             if (m_onConnectHands == true)
             {
-                PlayerPrefs.SetInt("m_acquisitions", m_acquisitions);
-                //PlayerPrefs.Save();
                 Invoke("Clear", 0.5f);
             }
         }
@@ -523,6 +666,12 @@ public class SyoujoController : CharacterBase
 
     void Clear()
     {
+        PlayerPrefs.SetInt("m_acquisitions", m_acquisitions);
+        PlayerPrefs.SetInt("m_getcheck[0]", m_getcheck[0]);
+        PlayerPrefs.SetInt("m_getcheck[1]", m_getcheck[1]);
+        PlayerPrefs.SetInt("m_getcheck[2]", m_getcheck[2]);
+        PlayerPrefs.SetInt("m_getcheck[3]", m_getcheck[3]);
+        PlayerPrefs.SetInt("m_getcheck[4]", m_getcheck[4]);
         SceneManager.LoadScene("Clear");
     }
 

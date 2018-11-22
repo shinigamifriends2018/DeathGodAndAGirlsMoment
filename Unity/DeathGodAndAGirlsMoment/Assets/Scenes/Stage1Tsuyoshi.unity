@@ -449,6 +449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_pieceofMemory: {fileID: 367926494}
   m_trigger: {fileID: 0}
+  syoujo: {fileID: 0}
 --- !u!1 &62451600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1598,6 +1599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_pieceofMemory: {fileID: 1574049143}
   m_trigger: {fileID: 0}
+  syoujo: {fileID: 0}
 --- !u!1 &141092104
 GameObject:
   m_ObjectHideFlags: 0
@@ -5983,7 +5985,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 644389897}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 119.6, y: 8, z: 0}
+  m_LocalPosition: {x: 31.3, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 125400674}
@@ -6054,6 +6056,7 @@ MonoBehaviour:
   - {fileID: 1972634295}
   - {fileID: 1923236018}
   m_acquisitions: 0
+  m_getcheck: 
 --- !u!70 &644389901
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -7716,7 +7719,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 879722895}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 121.59999, y: 8.200008, z: 0}
+  m_LocalPosition: {x: 33.299988, y: -3.7999916, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1405653988}
@@ -10642,6 +10645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_pieceofMemory: {fileID: 699977472}
   m_trigger: {fileID: 0}
+  syoujo: {fileID: 0}
 --- !u!1 &1115139089
 GameObject:
   m_ObjectHideFlags: 0
@@ -17144,6 +17148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_pieceofMemory: {fileID: 2129605101}
   m_trigger: {fileID: 0}
+  syoujo: {fileID: 0}
 --- !u!1 &1903170016
 GameObject:
   m_ObjectHideFlags: 0
@@ -19388,6 +19393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_pieceofMemory: {fileID: 905442620}
   m_trigger: {fileID: 0}
+  syoujo: {fileID: 0}
 --- !u!1 &2096874081
 GameObject:
   m_ObjectHideFlags: 0
