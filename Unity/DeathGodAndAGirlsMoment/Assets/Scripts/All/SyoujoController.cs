@@ -42,7 +42,8 @@ public class SyoujoController : CharacterBase
     [SerializeField]
     int[] pieceCheck;
     [SerializeField]
-    GameObject[] m_pieceofMemory;
+    GameObject[] m_pieceofMemory; 
+
     // Use this for initialization
     private void Awake()
     {
@@ -672,6 +673,18 @@ public class SyoujoController : CharacterBase
         PlayerPrefs.SetInt("m_getcheck[2]", m_getcheck[2]);
         PlayerPrefs.SetInt("m_getcheck[3]", m_getcheck[3]);
         PlayerPrefs.SetInt("m_getcheck[4]", m_getcheck[4]);
+        if (ProgressManager.m_nowStage == 3)
+        {
+            ProgressManager.m_clearedStage3 = true;
+        }
+        else if (ProgressManager.m_nowStage == 2)
+        {
+            ProgressManager.m_clearedStage2 = true;
+        }
+        else if (ProgressManager.m_nowStage == 1)
+        {
+            ProgressManager.m_clearedStage1 = true;
+        }   
         SceneManager.LoadScene("Clear");
     }
 

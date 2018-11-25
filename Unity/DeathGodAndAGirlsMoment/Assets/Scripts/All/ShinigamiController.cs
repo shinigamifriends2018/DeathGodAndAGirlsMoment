@@ -259,4 +259,9 @@ public class ShinigamiController : CharacterBase {
         }
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        Debug.Log(collision.gameObject.name);
+    }
+
 }

@@ -21,6 +21,7 @@ public class TitleTransition : MonoBehaviour {
 	}
     public void loadscene()
     {
+        ProgressManager.m_nowStage = 1;
         Invoke("transition", 2f);
     }
     void transition()

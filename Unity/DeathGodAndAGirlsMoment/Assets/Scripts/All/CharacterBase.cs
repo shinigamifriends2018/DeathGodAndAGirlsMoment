@@ -9,6 +9,7 @@ public class CharacterBase : MonoBehaviour {
     [SerializeField]
     protected int m_hitPoint;
     protected SimpleAnimation m_simpleAnimation;
+    [SerializeField]
     protected bool m_jump = true;   
     LayerMask m_layerName;
 
