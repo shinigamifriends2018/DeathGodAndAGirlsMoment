@@ -97,14 +97,7 @@ public class SyoujoController : CharacterBase
 
     // Update is called once per frame
     void Update()
-    {
-        /*
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            Debug.Log("EE?");
-            m_canAI = true;
-        }
-        */
+    {        
         if (m_canAI == true)
         {
             m_canAI = false;
@@ -175,15 +168,13 @@ public class SyoujoController : CharacterBase
     }
 
     void Direction()
-    {
-        Debug.Log("a");
+    {      
         m_rayRot.x = 90f;
         m_ray.transform.eulerAngles = m_rayRot;
         for (int i = 0; i < 18; ++i)
         {
             Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 5.0f, m_layer);
-            Debug.DrawRay(ray.origin, ray.direction, Color.red);
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 5.0f, m_layer);           
             if (hit.collider)
             {
                 m_rightCount++;
@@ -200,8 +191,7 @@ public class SyoujoController : CharacterBase
         for (int i = 0; i < 18; ++i)
         {
             Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 5.0f, m_layer);
-            Debug.DrawRay(ray.origin, ray.direction, Color.red);
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 5.0f, m_layer);           
 
             if (hit.collider)
             {
@@ -213,9 +203,7 @@ public class SyoujoController : CharacterBase
             }
             m_rayRot.x += 5f;
             m_ray.transform.eulerAngles = m_rayRot;
-        }
-        Debug.Log(m_rightCount);
-        Debug.Log(m_leftCount);
+        }     
         if (m_rightCount > m_leftCount)
         {
             m_rightDirection = false;
@@ -264,8 +252,7 @@ public class SyoujoController : CharacterBase
             transform.position = pos;
 
             Ray mray = new Ray(m_ray.position, m_ray.transform.forward);
-            RaycastHit2D mhit = Physics2D.Raycast(mray.origin, mray.direction, 1.0f, m_layer);
-            Debug.DrawRay(mray.origin, mray.direction, Color.red);
+            RaycastHit2D mhit = Physics2D.Raycast(mray.origin, mray.direction, 1.0f, m_layer);          
             if (mhit.collider == null)
             {
                 break;
@@ -554,8 +541,7 @@ public class SyoujoController : CharacterBase
                     if (m_onConnectHands == true)
                     {
                         m_onConnectHands = false;
-                    }
-                    Debug.Log("aaa");
+                    }                   
                     m_simpleAnimation.Stop();
                     m_simpleAnimation.Play ("Frightening");                    
                 }
@@ -606,12 +592,7 @@ public class SyoujoController : CharacterBase
     void Returnlayer()
     {
         gameObject.layer = LayerName.Syoujo;
-    }
-
-    void Da()
-    {
-        Debug.Log("DaddaDASdsadfd");
-    }
+    }  
 
     void Damage()
     {
@@ -635,8 +616,7 @@ public class SyoujoController : CharacterBase
     }
 
     void FinishFlashing()
-    {
-        Debug.Log("HA?");
+    {     
         m_onDamage = false;
     }
 
