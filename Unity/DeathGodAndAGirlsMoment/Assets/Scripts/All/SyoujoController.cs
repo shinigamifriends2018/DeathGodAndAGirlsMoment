@@ -42,7 +42,9 @@ public class SyoujoController : CharacterBase
     [SerializeField]
     int[] pieceCheck;
     [SerializeField]
-    GameObject[] m_pieceofMemory; 
+    GameObject[] m_pieceofMemory;
+    [SerializeField]
+    GameObject m_getPieceOfMemory;
 
     // Use this for initialization
     private void Awake()
@@ -396,7 +398,7 @@ public class SyoujoController : CharacterBase
         }
         if (collision.gameObject.tag == "Piece of memory")
         {
-
+            StartCoroutine("SetActiveEfect");
             m_hitPoint = 6;
             for (int i = 0; i < 6; i++)
             {
@@ -587,6 +589,13 @@ public class SyoujoController : CharacterBase
         m_hints[num].SetActive(true);
         yield return new WaitForSeconds(3f);
         m_hints[num].SetActive(false);     
+    }
+
+    IEnumerator SetActiveEfect()
+    {
+        m_getPieceOfMemory.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        m_getPieceOfMemory.SetActive(false);
     }
 
     void Returnlayer()
