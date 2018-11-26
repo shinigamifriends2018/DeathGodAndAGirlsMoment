@@ -594,7 +594,7 @@ public class SyoujoController : CharacterBase
     IEnumerator SetActiveEfect()
     {
         m_getPieceOfMemory.SetActive(true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         m_getPieceOfMemory.SetActive(false);
     }
 

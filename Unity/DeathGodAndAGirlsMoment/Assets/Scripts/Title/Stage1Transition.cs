@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class TitleTransition : MonoBehaviour {
+public class Stage1Transition : MonoBehaviour {
 
     [SerializeField]
     Text m_scoreText;
