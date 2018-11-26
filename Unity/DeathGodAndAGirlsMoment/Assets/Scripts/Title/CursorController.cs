@@ -50,6 +50,19 @@ public class CursorController : MonoBehaviour {
                 m_cursor.GetComponent<RectTransform>().localPosition = cursorPos;
             }
         }
+        float w = Input.GetAxisRaw("Down");
+        if (w > 0)
+        {
+            if (cursorPos.y <= 0)
+            {
+                index--;
+                button[index].Select();
+                cursorPos = m_cursor.GetComponent<RectTransform>().localPosition;
+                cursorPos.y += 40f;
+                m_cursor.GetComponent<RectTransform>().localPosition = cursorPos;
+            }
+        }
+
         if (Input.GetButtonDown("Down"))
         {
             if (cursorPos.y >= length)
@@ -60,6 +73,18 @@ public class CursorController : MonoBehaviour {
                 cursorPos.y -= 40f;
                 m_cursor.GetComponent<RectTransform>().localPosition = cursorPos;
             }
-        }       
+        }
+        float s = Input.GetAxisRaw("Down");
+        if (s < 0)
+        {
+            if (cursorPos.y >= length)
+            {
+                index++;
+                button[index].Select();
+                cursorPos = m_cursor.GetComponent<RectTransform>().localPosition;
+                cursorPos.y -= 40f;
+                m_cursor.GetComponent<RectTransform>().localPosition = cursorPos;
+            }
+        }
     }
 }
