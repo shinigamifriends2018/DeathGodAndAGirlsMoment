@@ -64,7 +64,7 @@ public class CursorController : MonoBehaviour {
             UpSetSelect();           
         }
         float w = Input.GetAxisRaw("Up");        
-        if (w < 0 && w == beforeW)
+        if (w < 0 && beforeW == 0)
         {
             UpSetSelect();          
         }
@@ -74,7 +74,7 @@ public class CursorController : MonoBehaviour {
             DownSetSelect();
         }
         float s = Input.GetAxisRaw("Down");        
-        if (s < 0 && s == beforeS)
+        if (s < 0 && beforeS == 0)
         {            
             DownSetSelect();
         }
