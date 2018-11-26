@@ -26,7 +26,7 @@ public class CursorController : MonoBehaviour {
         index = 0;
         Xindex = 0;
         cursorPos = m_cursor.GetComponent<RectTransform>().localPosition;
-        cursorPos.y = 10f;
+        cursorPos.y = -10f;
         m_cursor.GetComponent<RectTransform>().localPosition = cursorPos;   
         if(ProgressManager.m_clearedStage3 == true)
         {
@@ -85,11 +85,11 @@ public class CursorController : MonoBehaviour {
 
     void UpSetSelect()
     {       
-        if (cursorPos.y <= 0)
+        if (cursorPos.y <= -20)
         {
             index--;
             cursorPos = m_cursor.GetComponent<RectTransform>().localPosition;
-            cursorPos.y += 40f;
+            cursorPos.y += 60f;
             m_cursor.GetComponent<RectTransform>().localPosition = cursorPos;
         }     
         if (m_canSelect[index] == true)
@@ -106,11 +106,11 @@ public class CursorController : MonoBehaviour {
     }
     void DownSetSelect()
     {        
-        if (cursorPos.y >= -100)
+        if (cursorPos.y >= -180)
         {
             index++;
             cursorPos = m_cursor.GetComponent<RectTransform>().localPosition;
-            cursorPos.y -= 40f;
+            cursorPos.y -= 60f;
             m_cursor.GetComponent<RectTransform>().localPosition = cursorPos;
         }
 
