@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class CursorController : MonoBehaviour {
 
-    float w = 0f;
-    float s = 0f;
+    float beforeW = 0f;
+    float beforeS = 0f;
 
     [SerializeField]
     Image m_cursor;
@@ -57,20 +57,14 @@ public class CursorController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {  
-        if(w < 0f || s < 0f)
-        {
-            cancel = false;
-        }
+       
 
         if (Input.GetButtonDown("Up"))
         {
             UpSetSelect();           
         }
-        if (cancel == true)
-        {
-            w = Input.GetAxisRaw("Up");
-        }
-        if (w < 0)
+        float w = Input.GetAxisRaw("Up");        
+        if (w < 0 && w == beforeW)
         {
             UpSetSelect();          
         }
@@ -79,15 +73,16 @@ public class CursorController : MonoBehaviour {
         {           
             DownSetSelect();
         }
-        if (cancel == true)
-        {
-            s = Input.GetAxisRaw("Down");
-        }
-        if (s < 0)
+        float s = Input.GetAxisRaw("Down");        
+        if (s < 0 && s == beforeS)
         {            
             DownSetSelect();
         }
+
+        beforeW = w;
+        beforeS = s;
     }
+
     void UpSetSelect()
     {       
         if (cursorPos.y <= 0)
