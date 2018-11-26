@@ -6086,6 +6086,12 @@ MonoBehaviour:
   m_getcheck: 0000000000000000000000000000000000000000
   pieceCheck: 0000000000000000000000000000000000000000
   m_pieceofMemory:
+  - {fileID: 1900249996}
+  - {fileID: 59738998}
+  - {fileID: 2091884510}
+  - {fileID: 1109991901}
+  - {fileID: 139419197}
+  m_pieceofMemoryUI:
   - {fileID: 2129605101}
   - {fileID: 367926494}
   - {fileID: 905442620}

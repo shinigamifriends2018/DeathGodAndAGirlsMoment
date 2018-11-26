@@ -44,6 +44,8 @@ public class SyoujoController : CharacterBase
     [SerializeField]
     GameObject[] m_pieceofMemory;
     [SerializeField]
+    GameObject[] m_pieceofMemoryUI;
+    [SerializeField]
     GameObject m_getPieceOfMemory;
 
     // Use this for initialization
@@ -77,23 +79,28 @@ public class SyoujoController : CharacterBase
         m_getcheck[4] = PlayerPrefs.GetInt("pieceCheck[4]",0);
         if(m_getcheck[0] == 1)
         {
-            m_pieceofMemory[0].SetActive(true);
+            m_pieceofMemoryUI[0].SetActive(true);
+            m_pieceofMemory[0].SetActive(false);
         }
         if (m_getcheck[1] == 1)
         {
-            m_pieceofMemory[1].SetActive(true);
+            m_pieceofMemoryUI[1].SetActive(true);
+            m_pieceofMemory[1].SetActive(false);
         }
         if (m_getcheck[2] == 1)
         {
-            m_pieceofMemory[2].SetActive(true);
+            m_pieceofMemoryUI[2].SetActive(true);
+            m_pieceofMemory[2].SetActive(false);
         }
         if (m_getcheck[3] == 1)
         {
-            m_pieceofMemory[3].SetActive(true);
+            m_pieceofMemoryUI[3].SetActive(true);
+            m_pieceofMemory[3].SetActive(false);
         }
         if (m_getcheck[4] == 1)
         {
-            m_pieceofMemory[4].SetActive(true);
+            m_pieceofMemoryUI[4].SetActive(true);
+            m_pieceofMemory[4].SetActive(false);
         }
     }
 
