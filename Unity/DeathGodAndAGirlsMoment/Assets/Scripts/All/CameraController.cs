@@ -9,11 +9,14 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     ShinigamiController shinigami;
     bool m_fixedTF = false;
+    [SerializeField]
+    float m_size;
 
     // Use this for initialization
     void Start()
     {
-        pos = transform.position;        
+        pos = transform.position;
+        m_size = 3.5f;
     }
 
     // Update is called once per frame
@@ -34,9 +37,9 @@ public class CameraController : MonoBehaviour
             {
                 pos.x = 126.6f;
             }
-            if (Camera.main.orthographicSize != 3f)
+            if (Camera.main.orthographicSize != m_size)
             {
-                Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 3f, 0.1f);
+                Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, m_size, 0.1f);
             }
             if (shinigami.Scale > 0)
             {
@@ -49,9 +52,9 @@ public class CameraController : MonoBehaviour
 
             if (pos.y > shinigami.Posinvestigate.y)
             {
-                if (Mathf.Abs(pos.y - shinigami.Posinvestigate.y) > 0.745f)
+                if (Mathf.Abs(pos.y - shinigami.Posinvestigate.y) > 1.145f)
                 {
-                    pos.y = shinigami.Posinvestigate.y + 0.745f;
+                    pos.y = shinigami.Posinvestigate.y + 1.145f;
                 }
             }
             else

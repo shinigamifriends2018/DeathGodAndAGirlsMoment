@@ -31,7 +31,7 @@ public class TalkManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.Return))
+		if(Input.GetButtonDown("Decision"))
         {
             m_line++;
             if (m_line >= m_talkArray.Length)
