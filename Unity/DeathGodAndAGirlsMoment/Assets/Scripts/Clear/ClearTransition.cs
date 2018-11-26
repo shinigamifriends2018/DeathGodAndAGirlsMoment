@@ -17,7 +17,7 @@ public class ClearTransition : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetButtonDown("Decision"))
         {
                 SceneManager.LoadScene("Title");
         }
