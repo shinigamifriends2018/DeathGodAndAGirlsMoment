@@ -52,8 +52,7 @@ public class CursorController : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
-        Debug.Log(Xindex);
+	void Update () {       
         if (Input.GetButtonDown("Up"))
         {
             UpSetSelect();           
@@ -82,8 +81,7 @@ public class CursorController : MonoBehaviour {
             cursorPos = m_cursor.GetComponent<RectTransform>().localPosition;
             cursorPos.y += 40f;
             m_cursor.GetComponent<RectTransform>().localPosition = cursorPos;
-        }
-        Debug.Log(index);
+        }     
         if (m_canSelect[index] == true)
         {
             Xindex = index;
