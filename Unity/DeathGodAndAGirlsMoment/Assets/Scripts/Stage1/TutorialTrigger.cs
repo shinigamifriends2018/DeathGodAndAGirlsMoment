@@ -132,8 +132,7 @@ public class TutorialTrigger : MonoBehaviour {
             {
                 TextDisPlay();
                 m_enemyDisPlay[0].SetActive(m_imageCheck);//悪霊(近)
-                m_enemyDisPlay[1].SetActive(m_imageCheck);//悪霊(近)
-                m_enemyDisPlay[2].SetActive(m_imageCheck);//悪霊(近)
+                m_enemyDisPlay[1].SetActive(m_imageCheck);//悪霊(近)             
                 m_ImageDis[2].SetActive(m_imageCheck);    //テキスト三角
                 Time.timeScale = 0;
             }

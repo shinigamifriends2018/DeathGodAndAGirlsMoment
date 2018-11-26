@@ -7798,7 +7798,7 @@ MonoBehaviour:
   m_enemyDisPlay:
   - {fileID: 131560711}
   - {fileID: 1926065319}
-  - {fileID: 1670283751}
+  - {fileID: 0}
   - {fileID: 1996384872}
   - {fileID: 1100940718}
   m_text:

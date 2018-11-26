@@ -12,79 +12,109 @@ public class CursorController : MonoBehaviour {
     [SerializeField]
     Button[] button;
 
-    int length = 0;
-    int index = 0;
+    int index;
+    int Xindex;
+    [SerializeField]
+    bool[] m_canSelect; 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
+        index = 0;
+        Xindex = 0;
         cursorPos = m_cursor.GetComponent<RectTransform>().localPosition;
         cursorPos.y = 10f;
         m_cursor.GetComponent<RectTransform>().localPosition = cursorPos;   
         if(ProgressManager.m_clearedStage3 == true)
         {
-            length = -100;
+            m_canSelect[1] = true;
+            m_canSelect[2] = true;
+            m_canSelect[3] = true;
         }else if(ProgressManager.m_clearedStage2 == true)
         {
-            length = -60;
-        }else if(ProgressManager.m_clearedStage1 == true)
+            m_canSelect[1] = true;
+            m_canSelect[2] = true;
+            m_canSelect[3] = false;
+        }
+        else if(ProgressManager.m_clearedStage1 == true)
         {
-            length = -20;
+            m_canSelect[1] = true;
+            m_canSelect[2] = false;
+            m_canSelect[3] = false;
         }
         else
         {
-            length = 20;
+            m_canSelect[1] = false;
+            m_canSelect[2] = false;
+            m_canSelect[3] = false;
         }
+        m_canSelect[0] = true;
         button[index].Select();
     }
 	
 	// Update is called once per frame
-	void Update () {       
+	void Update () {
+        Debug.Log(Xindex);
         if (Input.GetButtonDown("Up"))
         {
-            if (cursorPos.y <= 0)
-            {
-                index--;
-                button[index].Select();
-                cursorPos = m_cursor.GetComponent<RectTransform>().localPosition;
-                cursorPos.y += 40f;
-                m_cursor.GetComponent<RectTransform>().localPosition = cursorPos;
-            }
+            UpSetSelect();           
         }
-        float w = Input.GetAxisRaw("Down");
-        if (w > 0)
+        float w = Input.GetAxisRaw("Up");
+        if (w < 0)
         {
-            if (cursorPos.y <= 0)
-            {
-                index--;
-                button[index].Select();
-                cursorPos = m_cursor.GetComponent<RectTransform>().localPosition;
-                cursorPos.y += 40f;
-                m_cursor.GetComponent<RectTransform>().localPosition = cursorPos;
-            }
+            UpSetSelect();          
         }
 
         if (Input.GetButtonDown("Down"))
-        {
-            if (cursorPos.y >= length)
-            {
-                index++;
-                button[index].Select();
-                cursorPos = m_cursor.GetComponent<RectTransform>().localPosition;
-                cursorPos.y -= 40f;
-                m_cursor.GetComponent<RectTransform>().localPosition = cursorPos;
-            }
+        {           
+            DownSetSelect();
         }
         float s = Input.GetAxisRaw("Down");
         if (s < 0)
-        {
-            if (cursorPos.y >= length)
-            {
-                index++;
-                button[index].Select();
-                cursorPos = m_cursor.GetComponent<RectTransform>().localPosition;
-                cursorPos.y -= 40f;
-                m_cursor.GetComponent<RectTransform>().localPosition = cursorPos;
-            }
+        {            
+            DownSetSelect();
         }
+    }
+    void UpSetSelect()
+    {       
+        if (cursorPos.y <= 0)
+        {
+            index--;
+            cursorPos = m_cursor.GetComponent<RectTransform>().localPosition;
+            cursorPos.y += 40f;
+            m_cursor.GetComponent<RectTransform>().localPosition = cursorPos;
+        }
+        Debug.Log(index);
+        if (m_canSelect[index] == true)
+        {
+            Xindex = index;
+            button[Xindex].Select();
+        }
+        else
+        {           
+            Xindex = 4;
+            button[Xindex].Select();
+        }
+    }
+    void DownSetSelect()
+    {        
+        if (cursorPos.y >= -100)
+        {
+            index++;
+            cursorPos = m_cursor.GetComponent<RectTransform>().localPosition;
+            cursorPos.y -= 40f;
+            m_cursor.GetComponent<RectTransform>().localPosition = cursorPos;
+        }
+
+        if (m_canSelect[index] == true)
+        {
+            Xindex = index;
+            button[Xindex].Select();
+        }
+        else
+        {          
+            Xindex = 4;
+            button[Xindex].Select();
+        }
+
     }
 }
