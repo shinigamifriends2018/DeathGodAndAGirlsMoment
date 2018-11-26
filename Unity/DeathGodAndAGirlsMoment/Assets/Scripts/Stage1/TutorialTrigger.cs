@@ -25,6 +25,10 @@ public class TutorialTrigger : MonoBehaviour {
 
     bool m_enemyTextCounter = true;
 
+
+    bool m_canGo = false;
+
+
     [SerializeField]
     FarEnemyContoller farEnemyContoller;
 
@@ -36,9 +40,13 @@ public class TutorialTrigger : MonoBehaviour {
 
     // Update is called once per frame
      void Update () {
+        if(m_textCounter == 5)
+        {
+            StartCoroutine("CountUp");
+        }
 
         if (Input.GetButtonDown("Decision"))
-        {
+        {           
             if (m_textCounter == 2)
             {
                 TextDisPlay();
@@ -53,7 +61,13 @@ public class TutorialTrigger : MonoBehaviour {
                 m_ImageDis[2].SetActive(m_imageCheck);//テキスト三角
 
             }
-            else if(m_textCounter == 5 || m_textCounter == 6 || m_textCounter == 9 )
+            else if(m_textCounter == 5)
+            {              
+                if (m_canGo == true)
+                {
+                    TextDisPlay();
+                }
+            }else if (m_textCounter == 6 || m_textCounter == 9)
             {
                 TextDisPlay();
             }
@@ -167,4 +181,10 @@ public class TutorialTrigger : MonoBehaviour {
         }
     }
    
+    IEnumerator CountUp()
+    {       
+        yield return new WaitForSecondsRealtime(0.5f);
+        m_canGo = true;
+    }
+
 }
