@@ -6098,6 +6098,7 @@ MonoBehaviour:
   - {fileID: 699977472}
   - {fileID: 1574049143}
   m_getPieceOfMemory: {fileID: 30869460}
+  camera: {fileID: 1096122020}
 --- !u!70 &644389901
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -10135,6 +10136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shinigami: {fileID: 879722898}
   m_size: 0
+  m_syoujo: {fileID: 644389898}
 --- !u!1 &1096221411
 GameObject:
   m_ObjectHideFlags: 0

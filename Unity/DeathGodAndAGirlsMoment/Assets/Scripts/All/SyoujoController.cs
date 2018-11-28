@@ -47,6 +47,8 @@ public class SyoujoController : CharacterBase
     GameObject[] m_pieceofMemoryUI;
     [SerializeField]
     GameObject m_getPieceOfMemory;
+    [SerializeField]
+    CameraController camera;
 
     // Use this for initialization
     private void Awake()
@@ -115,7 +117,7 @@ public class SyoujoController : CharacterBase
 
         if (m_hitPoint <= 0)
         {
-            SceneManager.LoadScene("GameOver");
+            StartCoroutine("DieS");
         }
 
         if (m_aFeelingOfBelieve >= 3)
@@ -405,13 +407,9 @@ public class SyoujoController : CharacterBase
         }
         if (collision.gameObject.tag == "Piece of memory")
         {
-            StartCoroutine("SetActiveEfect");
-            m_hitPoint = 6;
-            for (int i = 0; i < 6; i++)
-            {
-                m_life[i].SetActive(true);
-            }
+            StartCoroutine("SetActiveEfect");            
             Destroy(collision.gameObject);
+            StartCoroutine("LifeRecovery");
         }
     }
 
@@ -603,6 +601,24 @@ public class SyoujoController : CharacterBase
         m_getPieceOfMemory.SetActive(true);
         yield return new WaitForSeconds(2f);
         m_getPieceOfMemory.SetActive(false);
+    }
+
+    IEnumerator LifeRecovery()
+    {
+        m_hitPoint = 6;
+        for (int i = 0; i < 6; i++)
+        {
+            m_life[i].SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+
+    IEnumerator DieS()
+    {
+        Time.timeScale = 0;
+        camera.Set = true;       
+        yield return new WaitForSecondsRealtime(2f);
+        SceneManager.LoadScene("GameOver");
     }
 
     void Returnlayer()

@@ -11,6 +11,9 @@ public class CameraController : MonoBehaviour
     bool m_fixedTF = false;
     [SerializeField]
     float m_size;
+    bool m_die = false;
+    [SerializeField]
+    Transform m_syoujo;
 
     // Use this for initialization
     void Start()
@@ -22,7 +25,11 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (m_fixedTF == true)
+        if(m_die == true)
+        {
+            Die();
+        }
+        else if (m_fixedTF == true)
         {
 
             Fixed();
@@ -78,5 +85,17 @@ public class CameraController : MonoBehaviour
     {
         Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 5f, 0.1f);
         pos = Vector3.Lerp(pos, new Vector3(64.976f, 0.2f, pos.z), 0.05f);
+    }
+    void Die()
+    {
+        Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 1.2f, 0.1f);
+        pos = Vector3.Lerp(pos, new Vector3(m_syoujo.localPosition.x + 1f, m_syoujo.position.y, pos.z), 0.05f);
+    }
+    public bool Set
+    {
+        set
+        {
+            m_die = value;
+        }
     }
 }
