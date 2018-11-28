@@ -23,6 +23,7 @@ public class CursorController : MonoBehaviour {
     bool cancel;
     // Use this for initialization
     void Start () {
+        
         index = 0;
         Xindex = 0;
         cursorPos = m_cursor.GetComponent<RectTransform>().localPosition;
@@ -51,13 +52,12 @@ public class CursorController : MonoBehaviour {
             m_canSelect[2] = false;
             m_canSelect[3] = false;
         }
-        m_canSelect[0] = true;
-        button[index].Select();
+        m_canSelect[0] = true;       
+        button[0].Select();       
     }
 	
 	// Update is called once per frame
-	void Update () {  
-       
+	void Update () {         
 
         if (Input.GetButtonDown("Up"))
         {

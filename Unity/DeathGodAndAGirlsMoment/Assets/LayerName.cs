@@ -15,7 +15,8 @@ public static class LayerName
 	public const int Syoujoch = 12;
 	public const int Ground = 13;
 	public const int Enemies = 14;
-	public const int akuryou = 30;
+	public const int Gimmick = 15;
+	public const int DarkMass = 16;
 	public const int DefaultMask = 1;
 	public const int TransparentFXMask = 2;
 	public const int IgnoreRaycastMask = 4;
@@ -28,5 +29,6 @@ public static class LayerName
 	public const int SyoujochMask = 4096;
 	public const int GroundMask = 8192;
 	public const int EnemiesMask = 16384;
-	public const int akuryouMask = 1073741824;
+	public const int GimmickMask = 32768;
+	public const int DarkMassMask = 65536;
 }
