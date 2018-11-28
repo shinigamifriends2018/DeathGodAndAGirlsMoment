@@ -19,7 +19,7 @@ public class ClearTransition : MonoBehaviour {
 	void Update () {
         if (Input.GetButtonDown("Decision"))
         {
-                SceneManager.LoadScene("Title");
+            SceneManager.LoadScene("Title");
         }
     }
 //    public void loadscene()

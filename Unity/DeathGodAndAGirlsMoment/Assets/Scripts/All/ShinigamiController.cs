@@ -20,6 +20,7 @@ public class ShinigamiController : CharacterBase {
     [SerializeField]
     CameraController camera;
     bool m_canHint = true;
+    float m_turningPos;
 
     Vector3 m_shinigamisPos;
 
@@ -34,6 +35,15 @@ public class ShinigamiController : CharacterBase {
 
 	// Update is called once per frame
 	void Update () {       
+        if(Mathf.Abs(gameObject.transform.position.x - m_turningPos) > 0.5f)
+        {
+            camera.SetCanMove = true;
+        }
+        else
+        {
+            camera.SetCanMove = false;
+        }
+
         if(m_setActiveTime >= 0)
         {
             m_setActiveTime -= Time.deltaTime;
@@ -63,12 +73,14 @@ public class ShinigamiController : CharacterBase {
             if (scale.x < 0)
             {
                 scale.x *= -1f;
+                m_turningPos = gameObject.transform.position.x;
             }
         } else if(h < 0)
         {
             if (scale.x > 0)
             {
                 scale.x *= -1f;
+                m_turningPos = gameObject.transform.position.x;
             }
         }
         float s = Input.GetAxisRaw("S");
@@ -99,6 +111,7 @@ public class ShinigamiController : CharacterBase {
         }
         if (Input.GetButtonDown("Attack"))
         {
+            Debug.Log("aaa");
             Attack();  
         }
 		else if (m_onAttack == false)

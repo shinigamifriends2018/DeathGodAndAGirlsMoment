@@ -14,6 +14,7 @@ public class CameraController : MonoBehaviour
     bool m_die = false;
     [SerializeField]
     Transform m_syoujo;
+    bool m_canMove = true;
 
     // Use this for initialization
     void Start()
@@ -48,13 +49,17 @@ public class CameraController : MonoBehaviour
             {
                 Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, m_size, 0.1f);
             }
-            if (shinigami.Scale > 0)
+
+            if (m_canMove == true)
             {
-                pos = Vector3.Lerp(pos, new Vector3(shinigami.Posinvestigate.x + 2.4f, pos.y, pos.z), 0.05f);
-            }
-            else
-            {
-                pos = Vector3.Lerp(pos, new Vector3(shinigami.Posinvestigate.x - 2.4f, pos.y, pos.z), 0.05f);
+                if (shinigami.Scale > 0)
+                {
+                    pos = Vector3.Lerp(pos, new Vector3(shinigami.Posinvestigate.x + 2.4f, pos.y, pos.z), 0.05f);
+                }
+                else
+                {
+                    pos = Vector3.Lerp(pos, new Vector3(shinigami.Posinvestigate.x - 2.4f, pos.y, pos.z), 0.05f);
+                }
             }
 
             if (pos.y > shinigami.Posinvestigate.y)
@@ -96,6 +101,13 @@ public class CameraController : MonoBehaviour
         set
         {
             m_die = value;
+        }
+    }
+    public bool SetCanMove
+    {
+        set
+        {
+            m_canMove = value;
         }
     }
 }
