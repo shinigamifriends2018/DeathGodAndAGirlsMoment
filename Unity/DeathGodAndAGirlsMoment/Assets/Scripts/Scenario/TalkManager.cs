@@ -21,6 +21,9 @@ public class TalkManager : MonoBehaviour {
     [SerializeField]
     string m_LoadScene;
 
+    [SerializeField]
+    int m_Standingpicture;
+
     int m_line = 0;
 
     // Use this for initialization
