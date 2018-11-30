@@ -4118,7 +4118,7 @@ MonoBehaviour:
   m_Spline:
     m_IsOpenEnded: 0
     m_ControlPoints:
-    - position: {x: -2.1, y: -1, z: 0}
+    - position: {x: -2.3, y: -2, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -4127,7 +4127,7 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 0
-    - position: {x: -2.1, y: 2, z: 0}
+    - position: {x: -2.3, y: 2, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -4379,7 +4379,7 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 0
-    - position: {x: 5.25, y: 1.5, z: 0}
+    - position: {x: 6, y: 1.5, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -4388,7 +4388,7 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 0
-    - position: {x: 5.25, y: -11, z: 0}
+    - position: {x: 6, y: -13, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -4397,7 +4397,7 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 0
-    - position: {x: -0.5, y: -11, z: 0}
+    - position: {x: -1, y: -13, z: 0}
       leftTangent: {x: 0.06916404, y: 0.33537078, z: 0}
       rightTangent: {x: -0.05262208, y: -0.25516295, z: 0}
       mode: 0
@@ -4406,7 +4406,7 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 0
-    - position: {x: -0.5, y: -1, z: 0}
+    - position: {x: -1, y: -2, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -4462,8 +4462,8 @@ SpriteShapeRenderer:
   m_ShapeTexture: {fileID: 0}
   m_Sprites: []
   m_LocalAABB:
-    m_Center: {x: 1.575, y: -4, z: 0}
-    m_Extent: {x: 3.675, y: 7, z: 0}
+    m_Center: {x: 1.85, y: -5, z: 0}
+    m_Extent: {x: 4.15, y: 8, z: 0}
 --- !u!4 &443359197
 Transform:
   m_ObjectHideFlags: 0
@@ -4501,9 +4501,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -2.09999, y: -1}
-      - {x: -2.09999, y: 2}
-      - {x: -2.09999, y: 2}
+    - - {x: -2.3, y: -2}
+      - {x: -2.3, y: 2}
+      - {x: -2.3, y: 2}
       - {x: -0.10392, y: 2}
       - {x: -0.10392, y: 2}
       - {x: -0.0846, y: 2.00362}
@@ -4579,15 +4579,15 @@ PolygonCollider2D:
       - {x: 4.75, y: 3}
       - {x: 4.93864, y: 1.5}
       - {x: 4.93864, y: 1.5}
-      - {x: 5.25, y: 1.5}
-      - {x: 5.25, y: 1.5}
-      - {x: 5.25, y: -11}
-      - {x: 5.25, y: -11}
-      - {x: -0.5, y: -11}
-      - {x: -0.5, y: -11}
-      - {x: -0.5, y: -1}
-      - {x: -0.5, y: -1}
-      - {x: -2.09999, y: -1}
+      - {x: 6, y: 1.5}
+      - {x: 6, y: 1.5}
+      - {x: 6, y: -13}
+      - {x: 6, y: -13}
+      - {x: -1, y: -13}
+      - {x: -1, y: -13}
+      - {x: -1, y: -2}
+      - {x: -1, y: -2}
+      - {x: -2.3, y: -2}
 --- !u!1 &447183091
 GameObject:
   m_ObjectHideFlags: 0
@@ -4993,7 +4993,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 499376154}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.22, y: 2.89, z: 0}
+  m_LocalPosition: {x: -15.7, y: 2.89, z: 0}
   m_LocalScale: {x: 1, y: 66.397156, z: 1}
   m_Children: []
   m_Father: {fileID: 2066623938}
@@ -5323,7 +5323,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 510535697}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 133.2, y: 1.33, z: 0}
+  m_LocalPosition: {x: 136.8, y: 1.33, z: 0}
   m_LocalScale: {x: 1, y: 59.542557, z: 1}
   m_Children: []
   m_Father: {fileID: 2066623938}
@@ -5411,7 +5411,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4938059501980042, guid: 25848c83f0b53ab49a817ab7446f04fb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 102.71
+      value: 106.21
       objectReference: {fileID: 0}
     - target: {fileID: 4938059501980042, guid: 25848c83f0b53ab49a817ab7446f04fb, type: 2}
       propertyPath: m_LocalPosition.y
@@ -10094,7 +10094,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.5
+  orthographic size: 5.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -10117,7 +10117,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1096122016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.6, y: 1.8, z: -10}
+  m_LocalPosition: {x: -5.612, y: 2.891456, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -20,7 +20,7 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         pos = transform.position;
-        m_size = 3.5f;
+        m_size = 5.5f;
     }
 
     // Update is called once per frame
@@ -64,9 +64,9 @@ public class CameraController : MonoBehaviour
 
             if (pos.y > shinigami.Posinvestigate.y)
             {
-                if (Mathf.Abs(pos.y - shinigami.Posinvestigate.y) > 1.145f)
+                if (Mathf.Abs(pos.y - shinigami.Posinvestigate.y) > 2.145f)
                 {
-                    pos.y = shinigami.Posinvestigate.y + 1.145f;
+                    pos.y = shinigami.Posinvestigate.y + 2.145f;
                 }
             }
             else
