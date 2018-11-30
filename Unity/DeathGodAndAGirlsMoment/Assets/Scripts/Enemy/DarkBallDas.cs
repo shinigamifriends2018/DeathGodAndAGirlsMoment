@@ -24,7 +24,7 @@ public class DarkBallDas : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == ("syoujo")|| collision.gameObject.tag == ("Ground"))
+        if (collision.gameObject.tag == "syoujo"|| collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Sickle")
         {
             Destroy( gameObject, 0.1f);
         }
