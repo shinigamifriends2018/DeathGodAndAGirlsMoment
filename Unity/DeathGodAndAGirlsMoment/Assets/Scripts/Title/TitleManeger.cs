@@ -27,6 +27,7 @@ public class TitleManeger : MonoBehaviour {
         {
             m_Button_Stage2.SetActive(true);
         }
+/*
         if (ProgressManager.m_clearedStage2 == true)
         {
             m_Button_Stage3.SetActive(true);
@@ -35,6 +36,6 @@ public class TitleManeger : MonoBehaviour {
         {
             m_Button_Stage4.SetActive(true);
         }
-       
+ */      
     }
 }
