@@ -21,6 +21,10 @@ public class ShinigamiController : CharacterBase {
     CameraController camera;
     bool m_canHint = true;
     float m_beforePos;
+    [SerializeField]
+    LayerMask m_layer;
+    [SerializeField]
+    Transform m_ray;
 
     Vector3 m_shinigamisPos;
 
@@ -34,8 +38,20 @@ public class ShinigamiController : CharacterBase {
     }
 
 	// Update is called once per frame
-	void Update () {       
-        if(Mathf.Abs(gameObject.transform.position.x - m_beforePos) > 0.5f)
+	void Update () {
+
+        Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 0.8f, m_layer);     
+        if (hit.collider)
+        {
+            m_jump = true;
+        }
+        else
+        {
+            m_jump = false;
+        }
+
+        if (Mathf.Abs(gameObject.transform.position.x - m_beforePos) > 0.5f)
         {
             camera.SetCanMove = true;
         }
@@ -181,20 +197,7 @@ public class ShinigamiController : CharacterBase {
             }
         }
     }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Switch")
-        {
-            m_jump = true;
-        }
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Switch")
-        {
-            m_jump = false;
-        }
-    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
