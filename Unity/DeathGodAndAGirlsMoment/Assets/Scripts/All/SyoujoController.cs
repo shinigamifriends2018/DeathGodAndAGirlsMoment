@@ -21,7 +21,7 @@ public class SyoujoController : CharacterBase
     GameObject[] m_life;
     bool m_onDamage = false;
     [SerializeField]
-    LayerMask m_layer;
+    LayerMask[] m_layer;
     [SerializeField]
     Transform m_ray;
     Vector3 m_rayRot;
@@ -108,7 +108,19 @@ public class SyoujoController : CharacterBase
 
     // Update is called once per frame
     void Update()
-    {        
+    {
+
+        Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 0.8f, m_layer[0]);
+        if (hit.collider)
+        {
+            m_jump = true;
+        }
+        else
+        {
+            m_jump = false;
+        }
+
         if (m_canAI == true)
         {
             m_canAI = false;
@@ -185,7 +197,7 @@ public class SyoujoController : CharacterBase
         for (int i = 0; i < 18; ++i)
         {
             Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 5.0f, m_layer);           
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 5.0f, m_layer[1]);           
             if (hit.collider)
             {
                 m_rightCount++;
@@ -202,7 +214,7 @@ public class SyoujoController : CharacterBase
         for (int i = 0; i < 18; ++i)
         {
             Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 5.0f, m_layer);           
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 5.0f, m_layer[1]);           
 
             if (hit.collider)
             {
@@ -263,7 +275,7 @@ public class SyoujoController : CharacterBase
             transform.position = pos;
 
             Ray mray = new Ray(m_ray.position, m_ray.transform.forward);
-            RaycastHit2D mhit = Physics2D.Raycast(mray.origin, mray.direction, 1.0f, m_layer);          
+            RaycastHit2D mhit = Physics2D.Raycast(mray.origin, mray.direction, 1.0f, m_layer[1]);          
             if (mhit.collider == null)
             {
                 break;
@@ -315,7 +327,7 @@ public class SyoujoController : CharacterBase
                         if (transform.position.y - shinigami.Posinvestigate.y > 1f)
                         {
                             Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
-                            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 1.0f, m_layer);
+                            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 1.0f, m_layer[1]);
                             if (hit.collider)
                             {
                                 m_canAI = true;
@@ -386,13 +398,6 @@ public class SyoujoController : CharacterBase
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Switch")
-        {
-            m_jump = true;
-        }
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
