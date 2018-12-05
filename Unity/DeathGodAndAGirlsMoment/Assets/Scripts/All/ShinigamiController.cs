@@ -99,8 +99,8 @@ public class ShinigamiController : CharacterBase {
                 m_beforePos = gameObject.transform.position.x;
             }
         }
-        float s = Input.GetAxisRaw("S");
-        if(s < 0)
+        float s = Input.GetAxis("S");
+        if(s < -0.9f)
         {
             Fall();
             Invoke("Returnlayer", 0.35f);
