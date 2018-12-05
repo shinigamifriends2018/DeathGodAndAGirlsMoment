@@ -8,19 +8,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c10c0be6d28fe4d539c4a39822fe301c, type: 3}
+  m_Script: {fileID: 0}
   m_Name: atlas_0
   m_EditorClassIdentifier: 
-  m_ApiVersion: 4
-  m_Sprite: {fileID: 21300054, guid: dd105a39e474c4706aba36b8be4febd9, type: 3}
-  m_SharedMesh: {fileID: 43997738454950060}
-  pivotPoint: {x: 0, y: 0}
-  texVertices: []
-  edges: []
-  holes: []
-  indices: 
-  bindPoses: []
-  m_SharedMaterials: []
 --- !u!43 &43997738454950060
 Mesh:
   m_ObjectHideFlags: 1
