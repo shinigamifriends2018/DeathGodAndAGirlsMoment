@@ -37,7 +37,6 @@ public class TutorialTrigger : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        ProgressManager = GetComponent<ProgressManager>();
         if (ProgressManager.m_nowStage == 1)
         {
             m_textUI.text = m_text[m_textCounter];
