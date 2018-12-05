@@ -25,6 +25,8 @@ public class TutorialTrigger : MonoBehaviour {
 
     bool m_enemyTextCounter = true;
 
+    [SerializeField]
+    ProgressManager ProgressManager;
 
     bool m_canGo = false;
 
@@ -35,7 +37,11 @@ public class TutorialTrigger : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        m_textUI.text = m_text[m_textCounter];
+        ProgressManager = GetComponent<ProgressManager>();
+        if (ProgressManager.m_nowStage == 1)
+        {
+            m_textUI.text = m_text[m_textCounter];
+        }
     }
 
     // Update is called once per frame
