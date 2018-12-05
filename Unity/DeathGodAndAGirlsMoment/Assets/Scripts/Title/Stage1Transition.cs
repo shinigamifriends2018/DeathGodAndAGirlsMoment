@@ -10,6 +10,7 @@ public class Stage1Transition : MonoBehaviour {
     Text m_scoreText;
     // Use this for initialization
     void Start () {
+
         int score = PlayerPrefs.GetInt("m_acquisitions",0);
         PlayerPrefs.SetInt("score", score);
         m_scoreText.text = "recovery" + "   " + score + "%";
