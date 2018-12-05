@@ -3747,7 +3747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ab108a16940394ca47d9cb20a8a982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_cage: {fileID: 0}
+  m_cage: {fileID: 1200125169}
   m_this:
   - {fileID: 884312242}
   - {fileID: 475996120}
@@ -6655,6 +6655,7 @@ MonoBehaviour:
     \ "
   m_textUI: {fileID: 449621592}
   m_returnCheck: 0
+  ProgressManager: {fileID: 0}
   farEnemyContoller: {fileID: 0}
 --- !u!1 &884312242
 GameObject:
@@ -6776,7 +6777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ab108a16940394ca47d9cb20a8a982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_cage: {fileID: 0}
+  m_cage: {fileID: 1200125169}
   m_this:
   - {fileID: 884312242}
   - {fileID: 475996120}
@@ -7142,6 +7143,10 @@ Prefab:
     - target: {fileID: 4673755319000162, guid: 6b85ea91331e0a944aba1d437289fb96, type: 2}
       propertyPath: m_LocalScale.y
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511447972714220, guid: 6b85ea91331e0a944aba1d437289fb96, type: 2}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b85ea91331e0a944aba1d437289fb96, type: 2}
@@ -8231,7 +8236,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4148826134308030, guid: d6e5281718458884c87aaf857f628e2b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.61
+      value: 3.47
       objectReference: {fileID: 0}
     - target: {fileID: 4148826134308030, guid: d6e5281718458884c87aaf857f628e2b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8267,11 +8272,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4148826134308030, guid: d6e5281718458884c87aaf857f628e2b, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.8
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4148826134308030, guid: d6e5281718458884c87aaf857f628e2b, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428922153656672, guid: d6e5281718458884c87aaf857f628e2b, type: 2}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 212558798512605132, guid: d6e5281718458884c87aaf857f628e2b,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6e5281718458884c87aaf857f628e2b, type: 2}
@@ -10013,6 +10027,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_syoujo: {fileID: 644389897}
   m_akuryou: {fileID: 1190388418}
+--- !u!1 &1200125164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1511447972714220, guid: 6b85ea91331e0a944aba1d437289fb96,
+    type: 2}
+  m_PrefabInternal: {fileID: 915024778}
+--- !u!114 &1200125169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1200125164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6862ce4240c026e4583d87206abd7665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_swichCheck: 0000
 --- !u!1 &1211148418
 GameObject:
   m_ObjectHideFlags: 0
@@ -10337,6 +10368,15 @@ Prefab:
     - target: {fileID: 1428922153656672, guid: d6e5281718458884c87aaf857f628e2b, type: 2}
       propertyPath: m_Name
       value: stump (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428922153656672, guid: d6e5281718458884c87aaf857f628e2b, type: 2}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 212558798512605132, guid: d6e5281718458884c87aaf857f628e2b,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6e5281718458884c87aaf857f628e2b, type: 2}
@@ -11930,7 +11970,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 84a73f464d2c8044fa4a2dd6e698c880, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12571,6 +12611,15 @@ Prefab:
     - target: {fileID: 4148826134308030, guid: d6e5281718458884c87aaf857f628e2b, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428922153656672, guid: d6e5281718458884c87aaf857f628e2b, type: 2}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 212558798512605132, guid: d6e5281718458884c87aaf857f628e2b,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6e5281718458884c87aaf857f628e2b, type: 2}
@@ -15193,11 +15242,11 @@ MonoBehaviour:
   m_canMove: 1
   m_syoujo: {fileID: 644389897}
   m_akuryou: {fileID: 1903909738}
-  m_tutorialToriger: {fileID: 0}
+  m_tutorialToriger: {fileID: 879722895}
   m_ChaseEnemy:
   - {fileID: 2132930465}
   - {fileID: 76803860}
-  cage: {fileID: 0}
+  cage: {fileID: 1200125164}
 --- !u!4 &1903909740
 Transform:
   m_ObjectHideFlags: 0
@@ -15824,6 +15873,15 @@ Prefab:
     - target: {fileID: 4148826134308030, guid: d6e5281718458884c87aaf857f628e2b, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428922153656672, guid: d6e5281718458884c87aaf857f628e2b, type: 2}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 212558798512605132, guid: d6e5281718458884c87aaf857f628e2b,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6e5281718458884c87aaf857f628e2b, type: 2}
@@ -16686,6 +16744,15 @@ Prefab:
     - target: {fileID: 1428922153656672, guid: d6e5281718458884c87aaf857f628e2b, type: 2}
       propertyPath: m_Name
       value: stump (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428922153656672, guid: d6e5281718458884c87aaf857f628e2b, type: 2}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 212558798512605132, guid: d6e5281718458884c87aaf857f628e2b,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6e5281718458884c87aaf857f628e2b, type: 2}
