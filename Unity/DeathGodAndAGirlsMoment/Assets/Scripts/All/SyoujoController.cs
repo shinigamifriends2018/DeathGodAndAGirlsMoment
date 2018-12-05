@@ -163,8 +163,8 @@ public class SyoujoController : CharacterBase
                 Invoke("Returnlayer", 0.5f);
             }
         }
-        float s = Input.GetAxisRaw("S");
-        if (s < 0)
+        float s = Input.GetAxis("S");
+        if (s < -0.9f)
         {
             if (m_onConnectHands == true)
             {
