@@ -23,12 +23,13 @@ public class CursorController : MonoBehaviour {
     bool cancel;
     // Use this for initialization
     void Start () {
-        
+ 
         index = 0;
         Xindex = 0;
         cursorPos = m_cursor.GetComponent<RectTransform>().localPosition;
         cursorPos.y = -10f;
         m_cursor.GetComponent<RectTransform>().localPosition = cursorPos;   
+/*
         if(ProgressManager.m_clearedStage3 == true)
         {
             m_canSelect[1] = true;
@@ -40,7 +41,9 @@ public class CursorController : MonoBehaviour {
             m_canSelect[2] = true;
             m_canSelect[3] = false;
         }
-        else if(ProgressManager.m_clearedStage1 == true)
+        else
+*/
+        if(ProgressManager.m_clearedStage1 == true)
         {
             m_canSelect[1] = true;
             m_canSelect[2] = false;
@@ -89,7 +92,7 @@ public class CursorController : MonoBehaviour {
         {
             index--;
             cursorPos = m_cursor.GetComponent<RectTransform>().localPosition;
-            cursorPos.y += 60f;
+            cursorPos.y += 220f;
             m_cursor.GetComponent<RectTransform>().localPosition = cursorPos;
         }     
         if (m_canSelect[index] == true)
@@ -110,7 +113,7 @@ public class CursorController : MonoBehaviour {
         {
             index++;
             cursorPos = m_cursor.GetComponent<RectTransform>().localPosition;
-            cursorPos.y -= 60f;
+            cursorPos.y -= 220f;
             m_cursor.GetComponent<RectTransform>().localPosition = cursorPos;
         }
 
