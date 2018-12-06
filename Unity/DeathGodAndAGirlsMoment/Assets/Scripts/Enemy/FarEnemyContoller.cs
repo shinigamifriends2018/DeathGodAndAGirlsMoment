@@ -8,6 +8,8 @@ public class FarEnemyContoller : GhostController {
 
     [SerializeField]
     float m_shutePower = 4.5f;
+    [SerializeField]
+    SimpleAnimation m_sim;
 
     public GameObject m_bulletPrefab;
     public Transform m_spawnPoint;
@@ -50,10 +52,14 @@ public class FarEnemyContoller : GhostController {
         }
         if (m_shuteCount < 0)
         {
+            m_sim.Play("Attack");
             m_shuteCount = 3f;
             GameObject obj = Instantiate(m_bulletPrefab, m_spawnPoint.position, m_spawnPoint.rotation);
             Rigidbody2D rb = obj.GetComponent<Rigidbody2D>();
             rb.AddForce(obj.transform.right * -m_shutePower, ForceMode2D.Impulse);
+        }if(m_shuteCount  < 2)
+        {
+            m_sim.Play("Default");
         }
         transform.localScale = scale;
         if (damageCheck == false)
