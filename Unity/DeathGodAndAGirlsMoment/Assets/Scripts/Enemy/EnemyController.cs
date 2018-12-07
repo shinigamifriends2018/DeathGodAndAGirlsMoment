@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-
+        
     }
     // Update is called once per frame
     void Update()
@@ -20,6 +20,7 @@ public class EnemyController : MonoBehaviour {
         Vector2 syoujoPos  = m_syoujo.transform.position; 
         Vector2 akuryouPos = m_akuryou.transform.position;
         float moveDis = m_enemyMove * Time.deltaTime;
+
 
         if (akuryouPos.x > syoujoPos.x)
         {
