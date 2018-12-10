@@ -1,8 +1,13 @@
 fileFormatVersion: 2
-guid: ce6b896daff9d9c4bb234fce3be646ef
+guid: 38093cb90e387a7408874744056e91fb
 TextureImporter:
   fileIDToRecycleName:
     21300000: Boss_0
+    21300002: Boss_1
+    21300004: Boss_2
+    21300006: Boss_3
+    21300008: Boss_4
+    21300010: Boss_5
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -41,11 +46,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.49999997, y: 0.5}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -88,18 +93,118 @@ TextureImporter:
       name: Boss_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1006
-        height: 939
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 58
+        y: 713
+        width: 144
+        height: 158
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01733b6a991c00c4aad958945488e7c4
+      spriteID: 11fbdb974387c894fba6b266c66503d5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_1
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 588
+        width: 272
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88940ad387027144ea75ea45a398b8ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_2
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 708
+        width: 184
+        height: 188
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763f25bb3da7af84b97d328572265d21
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 152
+        width: 221
+        height: 271
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae3111610d7d5c49b574cd2c0c25511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_4
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 195
+        width: 152
+        height: 185
+      alignment: 9
+      pivot: {x: 0.50328946, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35573767373a98d4aac2884e2bc495ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_5
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 137
+        width: 215
+        height: 250
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcae04c172985634aa96e08157503c83
       vertices: []
       indices: 
       edges: []
@@ -107,7 +212,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 71b6c990dab52354583d3eda3b177fa3
+    spriteID: 3297f22ade24e2345a25c1d2f113df30
     vertices: []
     indices: 
     edges: []
@@ -115,6 +220,6 @@ TextureImporter:
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData: 636796539021959239
+  userData: 636797866349082371
   assetBundleName: 
   assetBundleVariant: 
