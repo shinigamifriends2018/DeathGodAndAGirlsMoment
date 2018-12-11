@@ -45,7 +45,7 @@ public class GhostController : CharacterBase {
     CharacterBase m_charcterBese;
 
     public GameObject m_syoujo;
-    public GameObject m_akuryou;
+   // public GameObject m_akuryou;
     public GameObject m_tutorialToriger;
 
     // Use this for initialization
@@ -139,7 +139,7 @@ public class GhostController : CharacterBase {
         if (m_canMove == true)
         {
             Vector2 syoujoPos = m_syoujo.transform.position;
-            Vector2 akuryouPos = m_akuryou.transform.position;
+            Vector2 akuryouPos = gameObject.transform.position;
             Vector2 scale = transform.localScale;
             float moveDis = m_moveSpeed * Time.deltaTime;
             
