@@ -14,9 +14,20 @@ public class BossController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(m_hitPoint == 0)
+
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == ("Sickle"))//鎌に当たるとダメージ
         {
-            SceneManager.LoadScene("Clear");
+            --m_hitPoint;
+            if (m_hitPoint == 0)
+            {
+                Destroy(gameObject, 0.3f);
+                SceneManager.LoadScene("Clear");
+            }
+
         }
-	}
+
+    }
 }

@@ -19,6 +19,7 @@ public class DoorAkuryouDisPlay : MonoBehaviour {
             m_gimmickAkuryou[3].SetActive(true);
             m_gimmickAkuryou[4].SetActive(true);
             m_gimmickAkuryou[5].SetActive(true);
+            Destroy(this);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimaTest : MonoBehaviour {
+public class EnemyActionController : MonoBehaviour {
 
     SimpleAnimation m_simple;
     float m_difference;
