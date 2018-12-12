@@ -315,6 +315,7 @@ public class SyoujoController : CharacterBase
                         else if (shinigami.Posinvestigate.x < transform.position.x)
                         {
                             transform.Translate(new Vector2(-m_moveSpeed * Time.deltaTime, 0f));
+                            m_simpleAnimation.CrossFade("Walk", 0.2f);
                             if (scale.x > 0)
                             {
                                 scale.x *= -1;
@@ -355,6 +356,7 @@ public class SyoujoController : CharacterBase
             else if (shinigami.Posinvestigate.x < transform.position.x)
             {
                 transform.Translate(new Vector2(-m_moveSpeed * Time.deltaTime, 0f));
+                m_simpleAnimation.CrossFade("Walk", 0.2f);
                 if (scale.x > 0)
                 {
                     scale.x *= -1;
