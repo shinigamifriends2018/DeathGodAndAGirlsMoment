@@ -18,6 +18,7 @@ public class CheckEnemyDisPlay : MonoBehaviour {
         if (m_desEnemy[0] == null && m_desEnemy[1] == null)
         {
             m_disPlayEnemy.SetActive(true);
+            Destroy(this);
         }
     }
 }

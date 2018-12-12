@@ -16,7 +16,7 @@ public class EnemyDisPlayGimmick :GhostController {
 	// Update is called once per frame
 	void Update () {
         Vector2 syoujoPos = m_syoujo.transform.position;
-        Vector2 akuryouPos = m_akuryou.transform.position;
+        Vector2 akuryouPos = gameObject.transform.position;
         if (cage == null)
         {
             if (m_enemyDisCheck == true)

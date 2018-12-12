@@ -29,7 +29,7 @@ public class FarEnemyContoller : GhostController {
     void Update()
     {
         Vector2 syoujoPos   = m_syoujo.transform.position;
-        Vector2 akuryouPos  = m_akuryou.transform.position;
+        Vector2 akuryouPos  = gameObject.transform.position;
         Vector2 scale = transform.localScale;
         
         base.m_moveSpeed = 2f;

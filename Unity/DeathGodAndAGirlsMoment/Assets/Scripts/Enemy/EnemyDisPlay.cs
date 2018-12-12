@@ -18,7 +18,7 @@ public class EnemyDisPlay : GhostController {
 	// Update is called once per frame
 	void Update () {
         Vector2 syoujoPos = m_syoujo.transform.position;
-        Vector2 akuryouPos = m_akuryou.transform.position;
+        Vector2 akuryouPos = gameObject.transform.position;
         if (akuryouPos.x - syoujoPos.x <= 5 && akuryouPos.x - syoujoPos.x >= -5)
         {
             if(m_switchCheck == true)

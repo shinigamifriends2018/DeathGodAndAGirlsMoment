@@ -7,6 +7,8 @@ public class EnemySpot : MonoBehaviour {
     [SerializeField]
     GameObject[] m_EneDis;
 
+    [SerializeField]
+    int m_enemyPoint;
 	// Use this for initialization
 	void Start () {
 		
@@ -21,8 +23,18 @@ public class EnemySpot : MonoBehaviour {
     {
         if (collision.gameObject.tag == "shinigami" || collision.gameObject.tag == "syoujo")
         {
-            m_EneDis[0].SetActive(true);
-            m_EneDis[1].SetActive(true);
+            switch (m_enemyPoint)
+            {
+                case 0:
+                    m_EneDis[0].SetActive(true);
+                    m_EneDis[1].SetActive(true);
+                    break;
+                case 1:
+                    m_EneDis[2].SetActive(true);
+                    break;
+            }
+                
+
         }
     }
 }
