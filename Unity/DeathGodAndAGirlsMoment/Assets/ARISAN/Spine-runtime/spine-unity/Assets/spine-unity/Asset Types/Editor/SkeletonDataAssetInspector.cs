@@ -545,11 +545,11 @@ namespace Spine.Unity.Editor {
 			if (this.m_previewUtility == null) {
 				this.m_lastTime = Time.realtimeSinceStartup;
 				this.m_previewUtility = new PreviewRenderUtility(true);
-				this.m_previewUtility.m_Camera.orthographic = true;
-				this.m_previewUtility.m_Camera.orthographicSize = 1;
-				this.m_previewUtility.m_Camera.cullingMask = -2147483648;
-				this.m_previewUtility.m_Camera.nearClipPlane = 0.01f;
-				this.m_previewUtility.m_Camera.farClipPlane = 1000f;
+				this.m_previewUtility.camera.orthographic = true;
+				this.m_previewUtility.camera.orthographicSize = 1;
+				this.m_previewUtility.camera.cullingMask = -2147483648;
+				this.m_previewUtility.camera.nearClipPlane = 0.01f;
+				this.m_previewUtility.camera.farClipPlane = 1000f;
 				this.CreatePreviewInstances();
 			}
 		}
@@ -600,7 +600,7 @@ namespace Spine.Unity.Editor {
 			return skeletonJSON.objectReferenceValue != null;
 		}
 
-		Texture m_previewTex = new Texture();
+		Texture m_previewTex;// = new Texture();
 
 		public override void OnInteractivePreviewGUI (Rect r, GUIStyle background) {
 			this.InitPreview();
@@ -653,16 +653,16 @@ namespace Spine.Unity.Editor {
 			if (EditorApplication.timeSinceStartup < m_adjustFrameEndTime)
 				AdjustCameraGoals();
 
-			float orthoSet = Mathf.Lerp(this.m_previewUtility.m_Camera.orthographicSize, m_orthoGoal, 0.1f);
+			float orthoSet = Mathf.Lerp(this.m_previewUtility.camera.orthographicSize, m_orthoGoal, 0.1f);
 
-			this.m_previewUtility.m_Camera.orthographicSize = orthoSet;
+			this.m_previewUtility.camera.orthographicSize = orthoSet;
 
-			float dist = Vector3.Distance(m_previewUtility.m_Camera.transform.position, m_posGoal);
+			float dist = Vector3.Distance(m_previewUtility.camera.transform.position, m_posGoal);
 			if(dist > 0f) {
-				Vector3 pos = Vector3.Lerp(this.m_previewUtility.m_Camera.transform.position, m_posGoal, 0.1f);
+				Vector3 pos = Vector3.Lerp(this.m_previewUtility.camera.transform.position, m_posGoal, 0.1f);
 				pos.x = 0;
-				this.m_previewUtility.m_Camera.transform.position = pos;
-				this.m_previewUtility.m_Camera.transform.rotation = Quaternion.identity;
+				this.m_previewUtility.camera.transform.position = pos;
+				this.m_previewUtility.camera.transform.rotation = Quaternion.identity;
 				m_requireRefresh = true;
 			}
 		}
@@ -682,17 +682,17 @@ namespace Spine.Unity.Editor {
 					m_skeletonAnimation.LateUpdate();
 
 				if (drawHandles) {			
-					Handles.SetCamera(m_previewUtility.m_Camera);
+					Handles.SetCamera(m_previewUtility.camera);
 					Handles.color = m_originColor;
 
 					Handles.DrawLine(new Vector3(-1000 * m_skeletonDataAsset.scale, 0, 0), new Vector3(1000 * m_skeletonDataAsset.scale, 0, 0));
 					Handles.DrawLine(new Vector3(0, 1000 * m_skeletonDataAsset.scale, 0), new Vector3(0, -1000 * m_skeletonDataAsset.scale, 0));
 				}
 
-				this.m_previewUtility.m_Camera.Render();
+				this.m_previewUtility.camera.Render();
 
 				if (drawHandles) {
-					Handles.SetCamera(m_previewUtility.m_Camera);
+					Handles.SetCamera(m_previewUtility.camera);
 					foreach (var slot in m_skeletonAnimation.skeleton.Slots) {
 						var boundingBoxAttachment = slot.Attachment as BoundingBoxAttachment;
 						if (boundingBoxAttachment != null)
@@ -909,15 +909,15 @@ namespace Spine.Unity.Editor {
 
 			this.InitPreview();
 
-			if (this.m_previewUtility.m_Camera == null)
+			if (this.m_previewUtility.camera == null)
 				return null;
 
 			m_requireRefresh = true;
 			this.DoRenderPreview(false);
 			AdjustCameraGoals(false);
 
-			this.m_previewUtility.m_Camera.orthographicSize = m_orthoGoal / 2;
-			this.m_previewUtility.m_Camera.transform.position = m_posGoal;
+			this.m_previewUtility.camera.orthographicSize = m_orthoGoal / 2;
+			this.m_previewUtility.camera.transform.position = m_posGoal;
 			this.m_previewUtility.BeginStaticPreview(new Rect(0, 0, width, height));
 			this.DoRenderPreview(false);
 
