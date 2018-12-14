@@ -12,7 +12,7 @@ public class ShinigamiController : CharacterBase {
     GameObject m_sickle;
     [SerializeField]
     SyoujoController syoujo;
-    float m_interval = 0.2f;
+    float m_interval = 0.1f;
     [SerializeField]
     GameObject[] m_efect;
     bool m_onSetAvtive = false;
@@ -38,8 +38,11 @@ public class ShinigamiController : CharacterBase {
     }
 
 	// Update is called once per frame
-	void Update () {
-
+	void Update () {     
+        if(m_jump == false)
+        {
+            m_simpleAnimation.Play("Jump");
+        }
         Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 0.8f, m_layer);     
         if (hit.collider)
@@ -83,23 +86,41 @@ public class ShinigamiController : CharacterBase {
 
         m_shinigamisPos = gameObject.transform.position;
         float h = Input.GetAxisRaw("Horizontal");
-        transform.Translate(new Vector2(m_moveSpeed * h * Time.deltaTime, 0f));
-        if(h > 0)
-        {
-            if (scale.x < 0)
+        if (m_onAttack == false)
+        {           
+            transform.Translate(new Vector2(m_moveSpeed * h * Time.deltaTime, 0f));
+            if (h != 0)
             {
-                scale.x *= -1f;
-                m_beforePos = gameObject.transform.position.x;
+                if (m_jump == true)
+                {
+                    m_simpleAnimation.Play("Dash");
+                }
             }
-        } else if(h < 0)
-        {
-            if (scale.x > 0)
+            if (h > 0)
             {
-                scale.x *= -1f;
-                m_beforePos = gameObject.transform.position.x;
+                if (scale.x > 0)
+                {
+                    scale.x *= -1f;
+                    m_beforePos = gameObject.transform.position.x;
+                }
+            }
+            else if (h < 0)
+            {
+                if (scale.x < 0)
+                {
+                    scale.x *= -1f;
+                    m_beforePos = gameObject.transform.position.x;
+                }
             }
         }
         float s = Input.GetAxis("S");
+        if (s != 0)
+        {
+            if (h == 0)
+            {
+                m_simpleAnimation.Play("Squat");
+            }
+        }
         if(s < -0.9f)
         {
             Fall();
@@ -121,7 +142,7 @@ public class ShinigamiController : CharacterBase {
             }
         }
         if (Input.GetButtonDown("Jump"))
-        {
+        {          
             Jump(rb);
             Invoke("Returnlayer", 0.5f);
         }
@@ -131,7 +152,7 @@ public class ShinigamiController : CharacterBase {
         }
 		else if (m_onAttack == false)
 		{
-			m_simpleAnimation.CrossFade("Idle", m_interval);
+			m_simpleAnimation.CrossFade("Default", m_interval);
 		}
         if (Input.GetButtonDown("ConnectHands"))
         {
@@ -162,7 +183,7 @@ public class ShinigamiController : CharacterBase {
                 syoujo.OnConnectHands = false;
             }
 
-            m_sickle.SetActive(true);
+          //  m_sickle.SetActive(true);
             if (m_jump == false)
             {
                 m_onAttack = true;
@@ -171,14 +192,14 @@ public class ShinigamiController : CharacterBase {
             else
             {
                 m_onAttack = true;
-                m_simpleAnimation.CrossFade("Attack", 0.05f);
+                m_simpleAnimation.Play("Attack1");
             }
         }
     }
 
     void AttackActive()
     {
-        m_sickle.GetComponent<PolygonCollider2D>().enabled = true;
+      //  m_sickle.GetComponent<PolygonCollider2D>().enabled = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -225,14 +246,11 @@ public class ShinigamiController : CharacterBase {
 
     public void OnAnimationFinished()
     {
-        {
-            m_sickle.SetActive(false);
-            m_sickle.GetComponent<PolygonCollider2D>().enabled = false;
-            Invoke("Interval", m_interval+0.1f);
-			m_simpleAnimation.CrossFade("Idle", m_interval);
+        {          
+            Invoke("Interval", m_interval + 0.2f);            
         }
     }
-
+  
     void Interval()
     {
         m_onAttack = false;
