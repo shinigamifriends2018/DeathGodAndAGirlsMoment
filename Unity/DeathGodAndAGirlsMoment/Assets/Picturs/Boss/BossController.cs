@@ -12,7 +12,7 @@ public class BossController : GhostController {
     public GameObject m_kamaitachi;
     public GameObject m_LeftKmaitachi;
     public GameObject m_RightKmaitachi;
-    public GameObject m_bossEnemy;
+    public GameObject[] m_bossEnemy;
     public Transform[] m_spawnPoint;
     float m_AttackTimer = 0f;
     float m_kamaitachiTimer = 0f;
@@ -22,6 +22,7 @@ public class BossController : GhostController {
     float m_YmoveSpeed = 0f;
     bool m_verCheck = false;
     int m_bossPattern = 1;
+    public bool[] m_enemyCheck;
     // Use this for initialization
     void Start () {
         m_hitPoint = 3;
@@ -35,34 +36,17 @@ public class BossController : GhostController {
         Vector2 scale = transform.localScale;
         Move();
         m_AttackTimer += Time.deltaTime;
+        if (m_movePoint[0].position.x > gameObject.transform.position.x)
+        {
+            m_moveSpeed = 3f;
+
+        }
+        if (m_movePoint[1].position.x < gameObject.transform.position.x)
+        {
+            m_moveSpeed = -3f;
+        }
         switch (m_bossPattern)
         { case 1:
-                if (m_bossMoveCheck != 8)
-                {
-                    if (m_movePoint[0].position.x > gameObject.transform.position.x)
-                    {
-                        m_moveSpeed = 3f;
-                        if (scale.x > 0)
-                        {
-                            scale.x *= -1f;
-                        }
-                        m_kamaitachiBox = m_RightKmaitachi;
-                        m_RightKmaitachi = m_LeftKmaitachi;
-                        m_LeftKmaitachi = m_kamaitachiBox;
-
-                    }
-                    if (m_movePoint[1].position.x < gameObject.transform.position.x)
-                    {
-                        m_moveSpeed = -3f;
-                        if (scale.x < 0)
-                        {
-                            scale.x *= -1f;
-                        }
-                        m_kamaitachiBox = m_RightKmaitachi;
-                        m_RightKmaitachi = m_LeftKmaitachi;
-                        m_LeftKmaitachi = m_kamaitachiBox;
-                    }
-                }
                 if (m_bossMoveCheck == 0)
                 {
                     if (m_AttackTimer > 2)
@@ -130,7 +114,7 @@ public class BossController : GhostController {
                 }
                 else if (m_bossMoveCheck == 7)
                 {
-                    if (m_AttackTimer > 15 && GameObject.FindWithTag("akuryou2") == null)
+                    if (m_enemyCheck[0] == true && m_enemyCheck[1] == true)
                     {
                         m_moveSpeed = 0f;
                         m_YmoveSpeed = -3f;
@@ -141,6 +125,8 @@ public class BossController : GhostController {
                         else
                         {
                             m_bossMoveCheck = 8;
+                            m_enemyCheck[0] = false;
+                            m_enemyCheck[1] = false;
                             GetComponent<CapsuleCollider2D>().enabled = true;
                         }
                     }
@@ -194,25 +180,12 @@ public class BossController : GhostController {
                     if (m_movePoint[0].position.x > gameObject.transform.position.x)
                     {
                         m_moveSpeed = 3.5f;
-                        if (scale.x > 0)
-                        {
-                            scale.x *= -1f;
-                        }
-                        m_kamaitachiBox = m_RightKmaitachi;
-                        m_RightKmaitachi = m_LeftKmaitachi;
-                        m_LeftKmaitachi = m_kamaitachiBox;
-
+                     
                     }
                     if (m_movePoint[1].position.x < gameObject.transform.position.x)
                     {
                         m_moveSpeed = -3.5f;
-                        if (scale.x < 0)
-                        {
-                            scale.x *= -1f;
-                        }
-                        m_kamaitachiBox = m_RightKmaitachi;
-                        m_RightKmaitachi = m_LeftKmaitachi;
-                        m_LeftKmaitachi = m_kamaitachiBox;
+                      
                     }
                 }
                 if (m_bossMoveCheck == 0)
@@ -282,7 +255,7 @@ public class BossController : GhostController {
                 }
                 else if (m_bossMoveCheck == 7)
                 {
-                    if (m_AttackTimer > 15 && GameObject.FindWithTag("akuryou2") == null)
+                    if (m_enemyCheck[0] == true && m_enemyCheck[1] == true)
                     {
                         m_moveSpeed = 0f;
                         m_YmoveSpeed = -3f;
@@ -294,6 +267,8 @@ public class BossController : GhostController {
                         {
                             m_bossMoveCheck = 8;
                             GetComponent<CapsuleCollider2D>().enabled = true;
+                            m_enemyCheck[0] = false;
+                            m_enemyCheck[1] = false;
                         }
                     }
                 }
@@ -346,25 +321,14 @@ public class BossController : GhostController {
                     if (m_movePoint[0].position.x > gameObject.transform.position.x)
                     {
                         m_moveSpeed = 4f;
-                        if (scale.x > 0)
-                        {
-                            scale.x *= -1f;
-                        }
-                        m_kamaitachiBox = m_RightKmaitachi;
-                        m_RightKmaitachi = m_LeftKmaitachi;
-                        m_LeftKmaitachi = m_kamaitachiBox;
+                  
+
 
                     }
                     if (m_movePoint[1].position.x < gameObject.transform.position.x)
                     {
                         m_moveSpeed = -4f;
-                        if (scale.x < 0)
-                        {
-                            scale.x *= -1f;
-                        }
-                        m_kamaitachiBox = m_RightKmaitachi;
-                        m_RightKmaitachi = m_LeftKmaitachi;
-                        m_LeftKmaitachi = m_kamaitachiBox;
+                     
                     }
                 }
                 if (m_bossMoveCheck == 0)
@@ -434,7 +398,7 @@ public class BossController : GhostController {
                 }
                 else if (m_bossMoveCheck == 7)
                 {
-                    if (m_AttackTimer > 15 && GameObject.FindWithTag("akuryou2") == null)
+                    if (m_enemyCheck[0] == true && m_enemyCheck[1] == true)
                     {
                         m_moveSpeed = 0f;
                         m_YmoveSpeed = -3f;
@@ -446,6 +410,8 @@ public class BossController : GhostController {
                         {
                             m_bossMoveCheck = 8;
                             GetComponent<CapsuleCollider2D>().enabled = true;
+                            m_enemyCheck[0] = false;
+                            m_enemyCheck[1] = false;
                         }
                     }
                 }
@@ -519,11 +485,12 @@ public class BossController : GhostController {
     }
     void EnemyDis1()
     {
-        GameObject obj = Instantiate(m_bossEnemy, m_spawnPoint[3].position,m_spawnPoint[3].rotation);
+        GameObject obj = Instantiate(m_bossEnemy[0], m_spawnPoint[3].position,m_spawnPoint[3].rotation);
+
     }
     void EnemyDis2()
     {
-        GameObject obj = Instantiate(m_bossEnemy, m_spawnPoint[4].position,m_spawnPoint[3].rotation);
+        GameObject obj = Instantiate(m_bossEnemy[1], m_spawnPoint[4].position,m_spawnPoint[3].rotation);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -536,7 +503,7 @@ public class BossController : GhostController {
             if (m_hitPoint == 0)
             {
                 Destroy(gameObject, 0.3f);
-                SceneManager.LoadScene("Clear");
+                SceneManager.LoadScene("Ending");
             }
         }
     }
