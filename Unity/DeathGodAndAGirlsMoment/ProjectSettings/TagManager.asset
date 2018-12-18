@@ -26,6 +26,7 @@ TagManager:
   - Hint4Trigger
   - FixedRelease
   - Switch
+  - SoundManager
   layers:
   - Default
   - TransparentFX

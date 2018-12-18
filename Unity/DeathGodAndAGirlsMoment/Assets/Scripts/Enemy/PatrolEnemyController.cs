@@ -42,6 +42,7 @@ public class PatrolEnemyController : GhostController {
         {
             if (damageCheck == true)
             {
+               // SoundManager.Instance.PlaySE((int)Common.SEList.EnemyDamage);
                 --m_hitPoint;
                 damageCheck = false;
             }
@@ -52,6 +53,7 @@ public class PatrolEnemyController : GhostController {
                     syoujoController.AddFeelingOfBelieve = m_feelingBelieve;
                     damageCheck = true;
                 }
+              //  SoundManager.Instance.PlaySE((int)Common.SEList.EnemyDestroy);
                 Destroy(this.gameObject, 0.3f);
             }
             
