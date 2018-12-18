@@ -8,6 +8,7 @@ public class CheckEnemyDisPlay : MonoBehaviour {
     GameObject m_disPlayEnemy;
     [SerializeField]
     GameObject[] m_desEnemy;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -17,6 +18,7 @@ public class CheckEnemyDisPlay : MonoBehaviour {
 	void Update () {
         if (m_desEnemy[0] == null && m_desEnemy[1] == null)
         {
+            //SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
             m_disPlayEnemy.SetActive(true);
             Destroy(this);
         }

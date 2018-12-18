@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BossController : GhostController {
 
@@ -24,15 +26,22 @@ public class BossController : GhostController {
     public bool[] m_enemyCheck;
     [SerializeField]
     SimpleAnimation simpleAnimation;
+    GameObject obj;
+    Rigidbody2D rb;
+    GameObject obj2;
+    Rigidbody2D rb2;
+    GameObject obj3;
+    Rigidbody2D rb3;
     [SerializeField]
-    BossFade m_fade;
-
+    GameObject ui;
     // Use this for initialization
     void Start () {
         m_hitPoint = 3;
         m_moveSpeed = -3f;
         m_YmoveSpeed = -3f;
-	}
+        m_RightKmaitachi.SetActive(true);
+        m_LeftKmaitachi.SetActive(true);
+    }
 
     // Update is called once per frame
     void Update() {
@@ -114,6 +123,7 @@ public class BossController : GhostController {
                 {
                     if (m_AttackTimer > 15)
                     {
+                       // SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
                         EnemyDis1();
                         EnemyDis2();
                         m_bossMoveCheck = 7;
@@ -209,64 +219,55 @@ public class BossController : GhostController {
                 
                 if (m_bossMoveCheck == 0)
                 {
+                    m_RightKmaitachi.SetActive(false);
                     if (m_AttackTimer > 2)
                     {
-                        KamaitachiAttack1();
-                        KamaitachiAttack2();
-                        m_bossMoveCheck = 1;
+                        simpleAnimation.Play("Kamaitachi");
                     }
                 }
                 else if (m_bossMoveCheck == 1)
                 {
+                    m_LeftKmaitachi.SetActive(false);
                     if (m_AttackTimer > 4)
                     {
-                        KamaitachiAttack2();
-                        KamaitachiAttack3();
-                        m_bossMoveCheck = 2;
+                        simpleAnimation.Play("Kamaitachi");
                     }
                 }
                 else if (m_bossMoveCheck == 2)
                 {
                     if (m_AttackTimer > 6)
                     {
-                        KamaitachiAttack1();
-                        KamaitachiAttack2();
-                        KamaitachiAttack3();
-                        m_bossMoveCheck = 3;
+                        simpleAnimation.Play("Kamaitachi");
                     }
                 }
                 else if (m_bossMoveCheck == 3)
                 {
+                    m_LeftKmaitachi.SetActive(false);
                     if (m_AttackTimer > 8)
                     {
-                        KamaitachiAttack2();
-                        KamaitachiAttack3();
-                        m_bossMoveCheck = 4;
+                        simpleAnimation.Play("Kamaitachi");
                     }
                 }
                 else if (m_bossMoveCheck == 4)
                 {
+                    m_RightKmaitachi.SetActive(false);
                     if (m_AttackTimer > 10)
                     {
-                        KamaitachiAttack1();
-                        KamaitachiAttack2();
-                        m_bossMoveCheck = 5;
+                        simpleAnimation.Play("Kamaitachi");
                     }
                 }
                 else if (m_bossMoveCheck == 5)
                 {
                     if (m_AttackTimer > 12)
                     {
-                        KamaitachiAttack1();
-                        KamaitachiAttack2();
-                        KamaitachiAttack3();
-                        m_bossMoveCheck = 6;
+                        simpleAnimation.Play("Kamaitachi");
                     }
                 }
                 else if (m_bossMoveCheck == 6)
                 {
                     if (m_AttackTimer > 14)
                     {
+                       // SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
                         EnemyDis1();
                         EnemyDis2();
                         m_bossMoveCheck = 7;
@@ -364,64 +365,56 @@ public class BossController : GhostController {
 
                     if (m_bossMoveCheck == 0)
                     {
+                        m_RightKmaitachi.SetActive(false);
                         if (m_AttackTimer > 2)
                         {
-                            KamaitachiAttack1();
-                            KamaitachiAttack2();
+                            simpleAnimation.Play("Kamaitachi");
                             m_bossMoveCheck = 1;
                         }
                     }
                     else if (m_bossMoveCheck == 1)
                     {
+                        m_LeftKmaitachi.SetActive(false);
                         if (m_AttackTimer > 4)
                         {
-                            KamaitachiAttack2();
-                            KamaitachiAttack3();
-                            m_bossMoveCheck = 2;
+                            simpleAnimation.Play("Kamaitachi");
                         }
                     }
                     else if (m_bossMoveCheck == 2)
                     {
                         if (m_AttackTimer > 6)
                         {
-                            KamaitachiAttack1();
-                            KamaitachiAttack2();
-                            KamaitachiAttack3();
-                            m_bossMoveCheck = 3;
+                            simpleAnimation.Play("Kamaitachi");
                         }
                     }
                     else if (m_bossMoveCheck == 3)
                     {
+                        m_LeftKmaitachi.SetActive(false);
                         if (m_AttackTimer > 8)
                         {
-                            KamaitachiAttack2();
-                            KamaitachiAttack3();
-                            m_bossMoveCheck = 4;
+                            simpleAnimation.Play("Kamaitachi");
                         }
                     }
                     else if (m_bossMoveCheck == 4)
                     {
+                        m_RightKmaitachi.SetActive(false);
                         if (m_AttackTimer > 10)
                         {
-                            KamaitachiAttack1();
-                            KamaitachiAttack2();
-                            m_bossMoveCheck = 5;
+                            simpleAnimation.Play("Kamaitachi");
                         }
                     }
                     else if (m_bossMoveCheck == 5)
                     {
                         if (m_AttackTimer > 12)
                         {
-                            KamaitachiAttack1();
-                            KamaitachiAttack2();
-                            KamaitachiAttack3();
-                            m_bossMoveCheck = 6;
+                            simpleAnimation.Play("Kamaitachi");
                         }
                     }
                     else if (m_bossMoveCheck == 6)
                     {
                         if (m_AttackTimer > 14)
                         {
+                          //  SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
                             EnemyDis1();
                             EnemyDis2();
                             m_bossMoveCheck = 7;
@@ -494,21 +487,36 @@ public class BossController : GhostController {
 
     void KamaitachiAttack1()
     {
-        GameObject obj = Instantiate(m_LeftKmaitachi, m_spawnPoint[0].position, m_LeftKmaitachi.transform.rotation);
-        Rigidbody2D rb = obj.GetComponent<Rigidbody2D>();
-        rb.AddForce(obj.transform.right * -m_shutePower, ForceMode2D.Impulse);
+        obj = Instantiate(m_LeftKmaitachi, m_spawnPoint[0].position, m_LeftKmaitachi.transform.rotation);
+        rb = obj.GetComponent<Rigidbody2D>();
+        Invoke("KamitachiShot1",0.2f);
     }
+
     void KamaitachiAttack2()
     {
-        GameObject obj = Instantiate(m_kamaitachi, m_spawnPoint[1].position, m_kamaitachi.transform.rotation);
-        Rigidbody2D rb = obj.GetComponent<Rigidbody2D>();
-        rb.AddForce(obj.transform.right * -m_shutePower, ForceMode2D.Impulse);
+        obj2 = Instantiate(m_kamaitachi, m_spawnPoint[1].position, m_kamaitachi.transform.rotation);
+        rb2 = obj2.GetComponent<Rigidbody2D>();
+        Invoke("KamitachiShot2", 0.2f);
     }
     void KamaitachiAttack3()
     {
-        GameObject obj = Instantiate(m_RightKmaitachi, m_spawnPoint[2].position, m_RightKmaitachi.transform.rotation);
-        Rigidbody2D rb = obj.GetComponent<Rigidbody2D>();
+        obj3 = Instantiate(m_RightKmaitachi, m_spawnPoint[2].position, m_RightKmaitachi.transform.rotation);
+        rb3 = obj3.GetComponent<Rigidbody2D>();
+        Invoke("KamitachiShot3", 0.2f);
+    }
+    void KamitachiShot1()
+    {
+        //SoundManager.Instance.PlaySE((int)Common.SEList.BossKamaitachi);
         rb.AddForce(obj.transform.right * -m_shutePower, ForceMode2D.Impulse);
+    }
+    void KamitachiShot2()
+    {
+       // SoundManager.Instance.PlaySE((int)Common.SEList.BossKamaitachi);
+        rb2.AddForce(obj2.transform.right * -m_shutePower, ForceMode2D.Impulse);
+    }    void KamitachiShot3()
+    {
+       // SoundManager.Instance.PlaySE((int)Common.SEList.BossKamaitachi);
+        rb3.AddForce(obj3.transform.right * -m_shutePower, ForceMode2D.Impulse);
     }
     void EnemyDis1()
     {
@@ -519,12 +527,6 @@ public class BossController : GhostController {
     {
         GameObject obj = Instantiate(m_bossEnemy[1], m_spawnPoint[4].position,m_spawnPoint[3].rotation);
     }
-    
-    void Fade()
-    {
-        m_fade.m_desCheck = true;
-    }
-
     void BossMove()
     {
         simpleAnimation.Play("Default");
@@ -532,19 +534,25 @@ public class BossController : GhostController {
         m_RightKmaitachi.SetActive(true);
         m_LeftKmaitachi.SetActive(true);
     }
-
+    void Ending()
+    {
+        SceneManager.LoadScene("Ending");
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == ("Sickle"))//鎌に当たるとダメージ
         {
             GetComponent<CapsuleCollider2D>().enabled = false;
+          //  SoundManager.Instance.PlaySE((int)Common.SEList.BossDamage);
             --m_hitPoint;
             m_moveSpeed = 0;
             m_verCheck = true;
             if (m_hitPoint == 0)
             {
+
+               // SoundManager.Instance.PlaySE((int)Common.SEList.BossDown);
                 simpleAnimation.Play("Down");
-                Invoke("Fade",2f);
+                ui.SetActive(false);
             }
         }
     }

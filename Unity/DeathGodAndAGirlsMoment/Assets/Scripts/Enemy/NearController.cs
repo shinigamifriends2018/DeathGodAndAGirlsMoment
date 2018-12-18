@@ -16,12 +16,6 @@ public class NearController : MonoBehaviour{
 	void Update ()
     {
 
-        if (m_enemyHP == 0)
-        {
-            TutorialTrigger testMove = m_testmove.GetComponent<TutorialTrigger>();
-            testMove.m_returnCheck = true;
-            Destroy(this.gameObject, 0.3f);
-        }
     }
 
 
@@ -29,7 +23,14 @@ public class NearController : MonoBehaviour{
     {
         if (collision.gameObject.tag == ("sinigami"))
         {
+         //   SoundManager.Instance.PlaySE((int)Common.SEList.EnemyDamage);
             --m_enemyHP;
+            if (m_enemyHP == 0)
+            {
+                TutorialTrigger testMove = m_testmove.GetComponent<TutorialTrigger>();
+                testMove.m_returnCheck = true;
+                Destroy(this.gameObject, 0.3f);
+            }
         }
     }
 }

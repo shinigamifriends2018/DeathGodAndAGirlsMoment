@@ -68,6 +68,7 @@ public class Stage2SwithController : MonoBehaviour
 
     void EnemyDisPlay()
     {
+        SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
         m_disPlayEnemy[0].SetActive(true);
         m_disPlayEnemy[1].SetActive(true);
         m_disPlayEnemy[2].SetActive(true);

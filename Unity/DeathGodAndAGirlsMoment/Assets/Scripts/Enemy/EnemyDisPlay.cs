@@ -25,15 +25,18 @@ public class EnemyDisPlay : GhostController {
             switch (m_arrayCheck)
             {
                 case 2:
-                    m_ChaseEnemy[2].SetActive(m_enemyDisCheck);
+                    //    SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
+                        m_ChaseEnemy[2].SetActive(m_enemyDisCheck);
                     m_arrayCheck--;
                     break;
                 case 1:
-                    m_ChaseEnemy[1].SetActive(m_enemyDisCheck);
+                      //  SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
+                        m_ChaseEnemy[1].SetActive(m_enemyDisCheck);
                     m_arrayCheck--;
                     break;
                 case 0:
-                    m_ChaseEnemy[0].SetActive(m_enemyDisCheck);
+                       // SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
+                        m_ChaseEnemy[0].SetActive(m_enemyDisCheck);
                     m_switchCheck = false;
                     break;
             }

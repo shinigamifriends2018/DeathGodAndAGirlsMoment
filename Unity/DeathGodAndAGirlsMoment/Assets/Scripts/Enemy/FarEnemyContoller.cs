@@ -92,6 +92,7 @@ public class FarEnemyContoller : GhostController {
                     syoujoController.AddFeelingOfBelieve = m_feelingBelieve;
                     damageCheck = true;
                 }
+               // SoundManager.Instance.PlaySE((int)Common.SEList.EnemyDestroy);
                 Destroy(this.gameObject,0.3f);
                 Instantiate(m_heart, transform.position, transform.rotation);
             }

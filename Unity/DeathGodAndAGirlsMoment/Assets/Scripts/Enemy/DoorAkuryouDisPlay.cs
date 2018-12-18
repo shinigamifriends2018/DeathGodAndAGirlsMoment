@@ -15,6 +15,7 @@ public class DoorAkuryouDisPlay : MonoBehaviour {
 	void Update () {
         if (m_gimmickAkuryou[0] == null && m_gimmickAkuryou[1] == null && m_gimmickAkuryou[2] == null)
         {
+           // SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
             Destroy(gameObject);
             m_gimmickAkuryou[3].SetActive(true);
             m_gimmickAkuryou[4].SetActive(true);
@@ -26,6 +27,7 @@ public class DoorAkuryouDisPlay : MonoBehaviour {
     {
         if (collision.gameObject.tag == "shinigami")
         {
+          //  SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
             m_gimmickAkuryou[0].SetActive(true);
             m_gimmickAkuryou[1].SetActive(true);
             m_gimmickAkuryou[2].SetActive(true);
