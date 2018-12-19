@@ -52,7 +52,7 @@ public class CameraController : MonoBehaviour
 
             if (m_canMove == true)
             {
-                if (shinigami.Scale > 0)
+                if (shinigami.Scale < 0)
                 {
                     pos = Vector3.Lerp(pos, new Vector3(shinigami.Posinvestigate.x + 2.4f, pos.y, pos.z), 0.05f);
                 }
