@@ -49,6 +49,8 @@ public class SyoujoController : CharacterBase
     GameObject m_getPieceOfMemory;
     [SerializeField]
     CameraController camera;
+    SkeletonBone skeleton;
+  
 
     // Use this for initialization
     private void Awake()
@@ -67,6 +69,7 @@ public class SyoujoController : CharacterBase
 
     void Start()
     {
+        
         m_hitPoint = 6;
         scale = gameObject.transform.localScale;
         rb = GetComponent<Rigidbody2D>();

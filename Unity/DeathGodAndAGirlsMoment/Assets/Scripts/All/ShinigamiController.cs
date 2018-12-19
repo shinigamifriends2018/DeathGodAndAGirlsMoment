@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShinigamiController : CharacterBase {
 
-    Vector2 scale;
+    Vector3 scale;
     Rigidbody2D rb;
     bool m_toConnectHands;
     bool m_onAttack = false;
@@ -25,25 +25,33 @@ public class ShinigamiController : CharacterBase {
     LayerMask m_layer;
     [SerializeField]
     Transform m_ray;
+    [SerializeField]
+    GameObject shinigami;
+    Vector3 m_sSca;
+    bool m_canAttack2 = false;
 
     Vector3 m_shinigamisPos;
-
+    
     // Use this for initialization
-    void Start () {
-        m_simpleAnimation = GetComponent<SimpleAnimation>();
+    void Start () {    
+        m_simpleAnimation = shinigami.GetComponent<SimpleAnimation>();
         scale = transform.localScale;
         rb = GetComponent<Rigidbody2D>();
         m_jumpPower = 10.5f;
         m_shinigamisPos = gameObject.transform.position;
+        StartCoroutine("SickleF");
     }
 
 	// Update is called once per frame
-	void Update () {     
+	void Update () {
+        /*
         if(m_jump == false)
         {
             m_simpleAnimation.Play("Jump");
         }
+        */
         Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
+       
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 0.8f, m_layer);     
         if (hit.collider)
         {
@@ -86,9 +94,9 @@ public class ShinigamiController : CharacterBase {
 
         m_shinigamisPos = gameObject.transform.position;
         float h = Input.GetAxisRaw("Horizontal");
+        transform.Translate(new Vector2(m_moveSpeed * h * Time.deltaTime, 0f));
         if (m_onAttack == false)
-        {           
-            transform.Translate(new Vector2(m_moveSpeed * h * Time.deltaTime, 0f));
+        {            
             if (h != 0)
             {
                 if (m_jump == true)
@@ -142,17 +150,21 @@ public class ShinigamiController : CharacterBase {
             }
         }
         if (Input.GetButtonDown("Jump"))
-        {          
-            Jump(rb);
+        {
+            m_simpleAnimation.Play("Jump");           
+            Jump(rb);         
             Invoke("Returnlayer", 0.5f);
         }
         if (Input.GetButtonDown("Attack"))
-        {           
+        {                    
             Attack();  
         }
 		else if (m_onAttack == false)
 		{
-			m_simpleAnimation.CrossFade("Default", m_interval);
+            if (m_jump == true)
+            {
+                m_simpleAnimation.CrossFade("Default", m_interval);
+            }
 		}
         if (Input.GetButtonDown("ConnectHands"))
         {
@@ -183,23 +195,30 @@ public class ShinigamiController : CharacterBase {
                 syoujo.OnConnectHands = false;
             }
 
-          //  m_sickle.SetActive(true);
+            m_sickle.SetActive(true);
             if (m_jump == false)
             {
                 m_onAttack = true;
-				m_simpleAnimation.CrossFade("JumpAttack", 0.05f);
+                m_simpleAnimation.Stop();
+				m_simpleAnimation.Play("JumpAttack");
             }
             else
             {
                 m_onAttack = true;
-                m_simpleAnimation.Play("Attack1");
+                m_simpleAnimation.Stop();
+                m_simpleAnimation.Play("Attack1");             
             }
         }
+        else if(m_canAttack2 == true)
+        {           
+            m_simpleAnimation.Stop();
+            m_simpleAnimation.Play("Attack2");
+        }        
     }
 
     void AttackActive()
     {
-      //  m_sickle.GetComponent<PolygonCollider2D>().enabled = true;
+        m_sickle.GetComponent<PolygonCollider2D>().enabled = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -242,19 +261,7 @@ public class ShinigamiController : CharacterBase {
         {
             m_toConnectHands = false;
         }
-    }
-
-    public void OnAnimationFinished()
-    {
-        {          
-            Invoke("Interval", m_interval + 0.2f);            
-        }
-    }
-  
-    void Interval()
-    {
-        m_onAttack = false;
-    }
+    }    
 
     void Setactive()
     {
@@ -301,4 +308,32 @@ public class ShinigamiController : CharacterBase {
             return scale.x;
         }
     }   
+
+    IEnumerator SickleF()
+    {
+        m_canAttack2 = false;
+        yield return new WaitForSeconds(Time.deltaTime);
+        m_sickle.GetComponent<PolygonCollider2D>().enabled = false;
+        m_sSca = m_sickle.transform.localScale;
+        m_sSca.x *= -1;
+        m_sickle.transform.localScale = m_sSca;
+        yield return new WaitForSeconds(0.1f);      
+        m_onAttack = false;
+    }
+
+    public void SickleT()
+    {       
+        m_sickle.GetComponent<PolygonCollider2D>().enabled = true;
+        m_sSca = m_sickle.transform.localScale;
+        m_sSca.x *= -1;
+        m_sickle.transform.localScale = m_sSca;
+    }
+
+    public bool SetAttack2
+    {
+        set
+        {
+            m_canAttack2 = value;
+        }
+    }
 }
