@@ -18,7 +18,8 @@ public class DarkBallDas : MonoBehaviour {
 
         if (m_destroyPos >= 12||m_destroyPos <= -12)
         {
-            Destroy(this.gameObject, 0.1f);
+            SoundManager.Instance.PlaySE((int)Common.SEList.DarkMassDestroy);
+            Destroy(gameObject, 0.1f);
         }
 	}
 
@@ -26,6 +27,7 @@ public class DarkBallDas : MonoBehaviour {
     {
         if (collision.gameObject.tag == "syoujo"|| collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Sickle")
         {
+            SoundManager.Instance.PlaySE((int)Common.SEList.DarkMassDestroy);
             Destroy( gameObject, 0.1f);
         }
     }

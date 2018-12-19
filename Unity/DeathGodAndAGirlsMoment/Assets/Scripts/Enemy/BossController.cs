@@ -34,6 +34,8 @@ public class BossController : GhostController {
     Rigidbody2D rb3;
     [SerializeField]
     GameObject ui;
+    [SerializeField]
+    GameObject m_bossEnemys;
     // Use this for initialization
     void Start () {
         m_hitPoint = 3;
@@ -66,9 +68,8 @@ public class BossController : GhostController {
                     m_RightKmaitachi.SetActive(false);
                     if (m_AttackTimer > 3)
                     {
+                        SoundManager.Instance.PlaySE((int)Common.SEList.BossKamaitachi);
                         simpleAnimation.Play("Kamaitachi");
-
-                        
                     }
                 }
                 if (m_bossMoveCheck == 1)
@@ -76,9 +77,8 @@ public class BossController : GhostController {
                     m_LeftKmaitachi.SetActive(false);
                     if (m_AttackTimer > 5)
                     {
+                        SoundManager.Instance.PlaySE((int)Common.SEList.BossKamaitachi);
                         simpleAnimation.Play("Kamaitachi");
-                        
-   
                     }
                 }
                 if (m_bossMoveCheck == 2)
@@ -86,8 +86,8 @@ public class BossController : GhostController {
           
                     if (m_AttackTimer > 7)
                     {
+                        SoundManager.Instance.PlaySE((int)Common.SEList.BossKamaitachi);
                         simpleAnimation.Play("Kamaitachi");
-                        
                     }
                 }
                 if (m_bossMoveCheck == 3)
@@ -95,9 +95,8 @@ public class BossController : GhostController {
                     m_LeftKmaitachi.SetActive(false);
                     if (m_AttackTimer > 9)
                     {
+                        SoundManager.Instance.PlaySE((int)Common.SEList.BossKamaitachi);
                         simpleAnimation.Play("Kamaitachi");
-
-                
                     }
                 }
                 if (m_bossMoveCheck == 4)
@@ -106,26 +105,27 @@ public class BossController : GhostController {
                     m_RightKmaitachi.SetActive(false);
                     if (m_AttackTimer > 11)
                     {
+                        SoundManager.Instance.PlaySE((int)Common.SEList.BossKamaitachi);
                         simpleAnimation.Play("Kamaitachi");
-                 
-                     
                     }
                 }
                 if (m_bossMoveCheck == 5)
                 {
                     if (m_AttackTimer > 13)
                     {
+                        SoundManager.Instance.PlaySE((int)Common.SEList.BossKamaitachi);
                         simpleAnimation.Play("Kamaitachi");
-                    
                     }
                 }
                 else if (m_bossMoveCheck == 6)
                 {
                     if (m_AttackTimer > 15)
                     {
-                       // SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
+                        SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
+                        m_bossEnemys.SetActive(true);
                         EnemyDis1();
                         EnemyDis2();
+                        m_bossEnemys.SetActive(false);
                         m_bossMoveCheck = 7;
                     }
                 }
@@ -267,7 +267,7 @@ public class BossController : GhostController {
                 {
                     if (m_AttackTimer > 14)
                     {
-                       // SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
+                        SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
                         EnemyDis1();
                         EnemyDis2();
                         m_bossMoveCheck = 7;
@@ -414,7 +414,7 @@ public class BossController : GhostController {
                     {
                         if (m_AttackTimer > 14)
                         {
-                          //  SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
+                            SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
                             EnemyDis1();
                             EnemyDis2();
                             m_bossMoveCheck = 7;
@@ -506,16 +506,17 @@ public class BossController : GhostController {
     }
     void KamitachiShot1()
     {
-        //SoundManager.Instance.PlaySE((int)Common.SEList.BossKamaitachi);
+
         rb.AddForce(obj.transform.right * -m_shutePower, ForceMode2D.Impulse);
     }
     void KamitachiShot2()
     {
-       // SoundManager.Instance.PlaySE((int)Common.SEList.BossKamaitachi);
+   
         rb2.AddForce(obj2.transform.right * -m_shutePower, ForceMode2D.Impulse);
-    }    void KamitachiShot3()
+    }
+    void KamitachiShot3()
     {
-       // SoundManager.Instance.PlaySE((int)Common.SEList.BossKamaitachi);
+   
         rb3.AddForce(obj3.transform.right * -m_shutePower, ForceMode2D.Impulse);
     }
     void EnemyDis1()
@@ -543,15 +544,14 @@ public class BossController : GhostController {
         if (collision.gameObject.tag == ("Sickle"))//鎌に当たるとダメージ
         {
             GetComponent<CapsuleCollider2D>().enabled = false;
-          //  SoundManager.Instance.PlaySE((int)Common.SEList.BossDamage);
+            SoundManager.Instance.PlaySE((int)Common.SEList.BossDamage);
             --m_hitPoint;
             m_moveSpeed = 0;
             m_verCheck = true;
             if (m_hitPoint == 0)
             {
-
-               // SoundManager.Instance.PlaySE((int)Common.SEList.BossDown);
                 simpleAnimation.Play("Down");
+                SoundManager.Instance.PlaySE((int)Common.SEList.BossDown);
                 ui.SetActive(false);
             }
         }

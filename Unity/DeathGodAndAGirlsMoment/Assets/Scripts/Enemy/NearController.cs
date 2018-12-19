@@ -23,7 +23,7 @@ public class NearController : MonoBehaviour{
     {
         if (collision.gameObject.tag == ("sinigami"))
         {
-         //   SoundManager.Instance.PlaySE((int)Common.SEList.EnemyDamage);
+            SoundManager.Instance.PlaySE((int)Common.SEList.EnemyDamage);
             --m_enemyHP;
             if (m_enemyHP == 0)
             {

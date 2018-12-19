@@ -52,6 +52,7 @@ public class FarEnemyContoller : GhostController {
         }
         if (m_shuteCount < 0)
         {
+            SoundManager.Instance.PlaySE((int)Common.SEList.FarEnemyAttack);
             m_sim.Play("Attack");
             m_shuteCount = 3f;
             GameObject obj = Instantiate(m_bulletPrefab, m_spawnPoint.position, m_spawnPoint.rotation);
@@ -92,7 +93,7 @@ public class FarEnemyContoller : GhostController {
                     syoujoController.AddFeelingOfBelieve = m_feelingBelieve;
                     damageCheck = true;
                 }
-               // SoundManager.Instance.PlaySE((int)Common.SEList.EnemyDestroy);
+                SoundManager.Instance.PlaySE((int)Common.SEList.EnemyDestroy);
                 Destroy(this.gameObject,0.3f);
                 Instantiate(m_heart, transform.position, transform.rotation);
             }

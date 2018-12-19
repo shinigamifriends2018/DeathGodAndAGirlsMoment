@@ -28,6 +28,7 @@ public class Common{
        BossKamaitachi,
        BossDamage,
        BossDown,
+       Door,
     }
     
 }

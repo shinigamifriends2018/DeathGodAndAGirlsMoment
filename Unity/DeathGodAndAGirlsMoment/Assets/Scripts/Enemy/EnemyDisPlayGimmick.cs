@@ -23,14 +23,14 @@ public class EnemyDisPlayGimmick :GhostController {
             {
                 if (akuryouPos.x > syoujoPos.x)
                 {
-                  //  SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
+                    SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
                     m_enemyDisCheck = false;
                     m_ChaseEnemy[0].SetActive(true);
 
                 }
                 else
                 {
-                   // SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
+                    SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
                     m_enemyDisCheck = false;
                     m_ChaseEnemy[1].SetActive(true);
                 }

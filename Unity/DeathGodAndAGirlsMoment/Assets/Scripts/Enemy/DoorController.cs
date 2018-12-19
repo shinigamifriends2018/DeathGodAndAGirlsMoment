@@ -18,6 +18,7 @@ public class DoorController : MonoBehaviour {
 
         if (m_gimmickAkuryou[0] == null && m_gimmickAkuryou[1] == null && m_gimmickAkuryou[2] == null)
         {
+            SoundManager.Instance.PlaySE((int)Common.SEList.Door);
             Destroy(m_door);
         }
 	}
