@@ -43,13 +43,11 @@ public class ShinigamiController : CharacterBase {
     }
 
 	// Update is called once per frame
-	void Update () {
-        /*
-        if(m_jump == false)
-        {
+	void Update () {       
+        if(m_jump == false && m_onAttack == false)
+        {            
             m_simpleAnimation.Play("Jump");
-        }
-        */
+        }       
         Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
        
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 0.8f, m_layer);     
@@ -126,18 +124,27 @@ public class ShinigamiController : CharacterBase {
         {
             if (h == 0)
             {
-                m_simpleAnimation.Play("Squat");
+                if (m_onAttack == false)
+                {
+                    m_simpleAnimation.Play("Squat");
+                }
             }
         }
         if(s < -0.9f)
         {
-            Fall();
-            Invoke("Returnlayer", 0.35f);
+            if (m_onAttack == false)
+            {
+                Fall();
+                Invoke("Returnlayer", 0.35f);
+            }
         }
         if (Input.GetButtonDown("S"))
         {
-            Fall();
-            Invoke("Returnlayer", 0.35f);
+            if (m_onAttack == false)
+            {
+                Fall();
+                Invoke("Returnlayer", 0.35f);
+            }
         }
         if (Input.GetButtonDown("FollowSwitch"))
         {
@@ -151,9 +158,11 @@ public class ShinigamiController : CharacterBase {
         }
         if (Input.GetButtonDown("Jump"))
         {
-            m_simpleAnimation.Play("Jump");           
-            Jump(rb);         
-            Invoke("Returnlayer", 0.5f);
+            if (m_onAttack == false)
+            {
+                Jump(rb);
+                Invoke("Returnlayer", 0.5f);
+            }
         }
         if (Input.GetButtonDown("Attack"))
         {                    

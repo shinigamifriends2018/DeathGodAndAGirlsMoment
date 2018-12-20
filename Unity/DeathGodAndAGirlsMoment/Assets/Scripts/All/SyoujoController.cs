@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class SyoujoController : CharacterBase
 {
     Vector2 scale;
-    [SerializeField]
     int m_aFeelingOfBelieve = 0;
     bool m_followMode;
     bool m_followSwitch = true;
@@ -68,8 +67,7 @@ public class SyoujoController : CharacterBase
     }
 
     void Start()
-    {
-        
+    {        
         m_hitPoint = 6;
         scale = gameObject.transform.localScale;
         rb = GetComponent<Rigidbody2D>();
@@ -107,12 +105,21 @@ public class SyoujoController : CharacterBase
             m_pieceofMemoryUI[4].SetActive(true);
             m_pieceofMemory[4].SetActive(false);
         }
+
+        m_aFeelingOfBelieve = PlayerPrefs.GetInt("aFeelingOfBelieve", 0);
+        if (m_aFeelingOfBelieve != 0)
+        {
+            for (int i = m_aFeelingOfBelieve; i >= 0; i--)
+            {
+                Debug.Log(i);
+                m_AFeelingOfBelieveUI[i - 1].SetActive(true);
+            }
+        }     
     }
 
     // Update is called once per frame
     void Update()
     {
-
         Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 0.8f, m_layer[0]);
         if (hit.collider)
@@ -695,6 +702,8 @@ public class SyoujoController : CharacterBase
         PlayerPrefs.SetInt("m_getcheck[2]", m_getcheck[2]);
         PlayerPrefs.SetInt("m_getcheck[3]", m_getcheck[3]);
         PlayerPrefs.SetInt("m_getcheck[4]", m_getcheck[4]);
+        PlayerPrefs.SetInt("aFeelingOfBelieve", m_aFeelingOfBelieve);
+        PlayerPrefs.Save();
         if (ProgressManager.m_nowStage == 3)
         {
             ProgressManager.m_clearedStage3 = true;

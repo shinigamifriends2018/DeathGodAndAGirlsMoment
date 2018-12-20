@@ -34,8 +34,7 @@ public class CharacterBase : MonoBehaviour {
     protected void Jump(Rigidbody2D rb)
     {
         if (m_jump == true)
-        {
-            Debug.Log("a");
+        {            
             gameObject.layer = LayerName.S;
             rb.velocity = Vector2.zero;
             rb.AddForce(Vector2.up * m_jumpPower, ForceMode2D.Impulse);
