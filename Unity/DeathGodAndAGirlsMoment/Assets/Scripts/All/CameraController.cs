@@ -88,8 +88,16 @@ public class CameraController : MonoBehaviour
     }
     void Fixed()
     {
-        Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 5f, 0.1f);
-        pos = Vector3.Lerp(pos, new Vector3(64.976f, 0.2f, pos.z), 0.05f);
+        if (ProgressManager.m_nowStage == 1)
+        {
+            Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 5f, 0.1f);
+            pos = Vector3.Lerp(pos, new Vector3(64.976f, 0.2f, pos.z), 0.05f);
+        }
+        else
+        {
+            Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 5f, 0.1f);
+            pos = Vector3.Lerp(pos, new Vector3(64.976f, 0.2f, pos.z), 0.05f);
+        }
     }
     void Die()
     {

@@ -254,7 +254,7 @@ public class ShinigamiController : CharacterBase {
         {
             m_toConnectHands = true;
         }
-        if (collision.gameObject.tag == "Hint2Trigger")
+        if (collision.gameObject.tag == "Hint2Trigger" || collision.gameObject.tag == "FixedTrigger")
         {
             Destroy(collision.gameObject);
             camera.FixedSet = true;
