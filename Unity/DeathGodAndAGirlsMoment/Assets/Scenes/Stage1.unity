@@ -21594,7 +21594,6 @@ MonoBehaviour:
   - {fileID: 1923236018}
   m_acquisitions: 0
   m_acquisitionsBox: 0000000000000000000000000000000000000000
-  m_acquisitionsBox2: 0000000000000000000000000000000000000000
   m_pieceofMemory:
   - {fileID: 1503987569}
   - {fileID: 119920503}
@@ -21609,6 +21608,7 @@ MonoBehaviour:
   - {fileID: 1574049143}
   m_getPieceOfMemory: {fileID: 30869460}
   camera: {fileID: 1096122020}
+  getCheck: 0000000000
 --- !u!70 &644389901
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -30583,7 +30583,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1
+  m_Mass: 1.5176067
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -39952,7 +39952,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1
+  m_Mass: 1.5176067
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -40548,7 +40548,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1
+  m_Mass: 1.5176067
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -50700,7 +50700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1394562722
 Transform:
   m_ObjectHideFlags: 0
@@ -51111,7 +51111,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1
+  m_Mass: 1.5176067
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0

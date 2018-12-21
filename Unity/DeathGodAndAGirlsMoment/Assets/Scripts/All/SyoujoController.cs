@@ -38,8 +38,7 @@ public class SyoujoController : CharacterBase
     int m_acquisitions = 0;
     [SerializeField]
     int[] m_acquisitionsBox;
-    [SerializeField]
-    int[] m_acquisitionsBox2;
+
     [SerializeField]
     GameObject[] m_pieceofMemory;
     [SerializeField]
@@ -49,7 +48,8 @@ public class SyoujoController : CharacterBase
     [SerializeField]
     CameraController camera;
     SkeletonBone skeleton;
-  
+    [SerializeField]
+    bool[] getCheck;
 
     // Use this for initialization
     private void Awake()
@@ -65,6 +65,10 @@ public class SyoujoController : CharacterBase
 
     void Start()
     {        
+        if(m_acquisitionsBox[0] == 1)
+        {
+            getCheck[0] = true; 
+        }
         m_hitPoint = 6;
         scale = gameObject.transform.localScale;
         rb = GetComponent<Rigidbody2D>();
@@ -405,7 +409,10 @@ public class SyoujoController : CharacterBase
         set
         {
             m_acquisitionsBox[0] = 1;
-            m_acquisitions += m_acquisitionsBox[0];
+            if (getCheck[0] == false)
+            {
+                m_acquisitions += m_acquisitionsBox[0];
+            }
         }
     }
     public int PiecePercent3
@@ -417,7 +424,10 @@ public class SyoujoController : CharacterBase
         set
         {
             m_acquisitionsBox[1] = 1;
-            m_acquisitions += m_acquisitionsBox[1];
+            if (getCheck[1] == false)
+            {
+                m_acquisitions += m_acquisitionsBox[1];
+            }
         }
     }
     public int PiecePercent4
@@ -430,7 +440,10 @@ public class SyoujoController : CharacterBase
         {
             
             m_acquisitionsBox[2] = 1;
-            m_acquisitions += m_acquisitionsBox[2];
+            if (getCheck[2] == false)
+            {
+                m_acquisitions += m_acquisitionsBox[2];
+            }
         }
     }
     public int PiecePercent5
@@ -442,7 +455,10 @@ public class SyoujoController : CharacterBase
         set
         {
             m_acquisitionsBox[3] = 1;
-            m_acquisitions += m_acquisitionsBox[3];
+            if (getCheck[3] == false)
+            {
+                m_acquisitions += m_acquisitionsBox[3];
+            }
         }
     }
     public int PiecePercent6
@@ -454,7 +470,11 @@ public class SyoujoController : CharacterBase
         set
         {
             m_acquisitionsBox[4] = 1;
-            m_acquisitions += m_acquisitionsBox[4];
+
+            if (getCheck[4] == false)
+            {
+                m_acquisitions += m_acquisitionsBox[4];
+            }
         }
     }
     

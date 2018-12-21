@@ -12,7 +12,6 @@ public class ClearTransition : MonoBehaviour {
     // Use this for initialization
     void Start () {
         int score = PlayerPrefs.GetInt("m_acquisitions",0);
-        Debug.Log(score);
         PlayerPrefs.SetInt("score", score);
       //  m_scoreText.text = "recovery" + "   " + score * 20 + "%";
 	}
