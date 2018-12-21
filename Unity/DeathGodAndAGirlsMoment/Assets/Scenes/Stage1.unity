@@ -2178,7 +2178,7 @@ MonoBehaviour:
   - {fileID: 419163487}
   - {fileID: 398578751}
   - {fileID: 1079793760}
-  syoujo: {fileID: 0}
+  syoujo: {fileID: 644389900}
 --- !u!1 &122276127
 GameObject:
   m_ObjectHideFlags: 0
@@ -16523,7 +16523,7 @@ MonoBehaviour:
   - {fileID: 419163487}
   - {fileID: 398578751}
   - {fileID: 1079793760}
-  syoujo: {fileID: 0}
+  syoujo: {fileID: 644389900}
 --- !u!1 &402792498
 GameObject:
   m_ObjectHideFlags: 0
@@ -17112,7 +17112,7 @@ MonoBehaviour:
   - {fileID: 419163487}
   - {fileID: 398578751}
   - {fileID: 1079793760}
-  syoujo: {fileID: 0}
+  syoujo: {fileID: 644389900}
 --- !u!1 &419322262
 GameObject:
   m_ObjectHideFlags: 0
@@ -21593,14 +21593,14 @@ MonoBehaviour:
   - {fileID: 1972634295}
   - {fileID: 1923236018}
   m_acquisitions: 0
-  m_getcheck: 0000000000000000000000000000000000000000
-  pieceCheck: 0000000000000000000000000000000000000000
+  m_acquisitionsBox: 0000000000000000000000000000000000000000
+  m_acquisitionsBox2: 0000000000000000000000000000000000000000
   m_pieceofMemory:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1503987569}
+  - {fileID: 119920503}
+  - {fileID: 419163487}
+  - {fileID: 398578751}
+  - {fileID: 1079793760}
   m_pieceofMemoryUI:
   - {fileID: 2129605101}
   - {fileID: 367926494}
@@ -30583,7 +30583,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1.5176067
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -39952,7 +39952,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1.5176067
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -40317,7 +40317,7 @@ MonoBehaviour:
   - {fileID: 419163487}
   - {fileID: 398578751}
   - {fileID: 1079793760}
-  syoujo: {fileID: 0}
+  syoujo: {fileID: 644389900}
 --- !u!1 &1082186098
 GameObject:
   m_ObjectHideFlags: 0
@@ -40548,7 +40548,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1.5176067
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -50700,7 +50700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1394562722
 Transform:
   m_ObjectHideFlags: 0
@@ -51111,7 +51111,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1.5176067
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -52929,6 +52929,11 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114310748922751692, guid: 08505f68d3b55b04c89ed021b98b473a,
+        type: 2}
+      propertyPath: syoujo
+      value: 
+      objectReference: {fileID: 644389900}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08505f68d3b55b04c89ed021b98b473a, type: 2}
   m_IsPrefabAsset: 0

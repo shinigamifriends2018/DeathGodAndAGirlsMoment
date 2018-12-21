@@ -13,7 +13,7 @@ public class TitleManeger : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        PlayerPrefs.DeleteAll();
+    //    PlayerPrefs.DeleteAll();
         SetActiveButton();
 	}
 	
