@@ -33,9 +33,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1779348593188008}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.29322365, y: 1.942201, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -68,4 +68,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7db0b30ae1d442c4d80aac4e050e75fa, type: 3}
   - {fileID: 8300000, guid: 9a2fccceb63d3cb4ebbc11a36240386b, type: 3}
   - {fileID: 8300000, guid: f8ecf44ccf6eef74ca7f7c1fdab80b4d, type: 3}
+  - {fileID: 8300000, guid: c969176059d6e2b47b45e17dd6be96ea, type: 3}
   Voice: []

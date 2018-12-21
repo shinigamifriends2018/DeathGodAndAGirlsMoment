@@ -16185,6 +16185,7 @@ MonoBehaviour:
   m_enemyCheck: 0000
   simpleAnimation: {fileID: 424464451}
   ui: {fileID: 597595056}
+  m_bossEnemys: {fileID: 0}
 --- !u!114 &424464451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22370,7 +22371,6 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_hitPoint: 0
   m_jump: 1
-  m_aFeelingOfBelieve: 5
   shinigami: {fileID: 879722898}
   m_efect:
   - {fileID: 0}
@@ -28902,6 +28902,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   m_ray: {fileID: 598049677}
+  shinigami: {fileID: 0}
 --- !u!95 &879722899
 Animator:
   serializedVersion: 3
@@ -57973,7 +57974,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1779348593188008, guid: 18eb498f6c647f048a07773e8f9454d7, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18eb498f6c647f048a07773e8f9454d7, type: 2}
