@@ -8,12 +8,12 @@ public class Stage1Transition : MonoBehaviour {
 
     [SerializeField]
     Text m_scoreText;
+    int scores;
     // Use this for initialization
     void Start () {
-
-        int score = PlayerPrefs.GetInt("m_acquisitions",0);
-        PlayerPrefs.SetInt("score", score);
-        m_scoreText.text = "recovery" + "   " + score + "%";
+        scores = PlayerPrefs.GetInt("score", 0);
+        PlayerPrefs.SetInt("scores", scores);
+        m_scoreText.text = "recovery:" + scores * 20+ "%";
     }
 	
 	// Update is called once per frame

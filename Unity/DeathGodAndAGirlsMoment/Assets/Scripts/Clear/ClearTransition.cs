@@ -12,7 +12,8 @@ public class ClearTransition : MonoBehaviour {
     // Use this for initialization
     void Start () {
         int score = PlayerPrefs.GetInt("m_acquisitions",0);
-        m_scoreText.text = "recovery" + "   " + score + "%";
+        PlayerPrefs.SetInt("score", score);
+      //  m_scoreText.text = "recovery" + "   " + score * 20 + "%";
 	}
 	
 	// Update is called once per frame

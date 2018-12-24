@@ -37,9 +37,8 @@ public class SyoujoController : CharacterBase
     [SerializeField]
     int m_acquisitions = 0;
     [SerializeField]
-    int[] m_getcheck;
-    [SerializeField]
-    int[] pieceCheck;
+    int[] m_acquisitionsBox;
+
     [SerializeField]
     GameObject[] m_pieceofMemory;
     [SerializeField]
@@ -49,62 +48,33 @@ public class SyoujoController : CharacterBase
     [SerializeField]
     CameraController camera;
     SkeletonBone skeleton;
-  
+    [SerializeField]
+    bool[] getCheck;
 
     // Use this for initialization
     private void Awake()
     {
-        pieceCheck[0] = PlayerPrefs.GetInt("m_getcheck[0]", 0);
-        pieceCheck[1] = PlayerPrefs.GetInt("m_getcheck[1]", 0);
-        pieceCheck[2] = PlayerPrefs.GetInt("m_getcheck[2]", 0);
-        pieceCheck[3] = PlayerPrefs.GetInt("m_getcheck[3]", 0);
-        pieceCheck[4] = PlayerPrefs.GetInt("m_getcheck[4]", 0);
-        PlayerPrefs.SetInt("pieceCheck[0]", pieceCheck[0]);
-        PlayerPrefs.SetInt("pieceCheck[1]", pieceCheck[1]);
-        PlayerPrefs.SetInt("pieceCheck[2]", pieceCheck[2]);
-        PlayerPrefs.SetInt("pieceCheck[3]", pieceCheck[3]);
-        PlayerPrefs.SetInt("pieceCheck[4]", pieceCheck[4]);
+        m_acquisitionsBox[0] = PlayerPrefs.GetInt("m_acquisitionsBox[0]", 0);
+        m_acquisitionsBox[1] = PlayerPrefs.GetInt("m_acquisitionsBox[1]", 0);
+        m_acquisitionsBox[2] = PlayerPrefs.GetInt("m_acquisitionsBox[2]", 0);
+        m_acquisitionsBox[3] = PlayerPrefs.GetInt("m_acquisitionsBox[3]", 0);
+        m_acquisitionsBox[4] = PlayerPrefs.GetInt("m_acquisitionsBox[4]", 0);
+        m_acquisitions = PlayerPrefs.GetInt("scores",0);
+  
     }
 
     void Start()
     {        
+        if(m_acquisitionsBox[0] == 1)
+        {
+            getCheck[0] = true; 
+        }
         m_hitPoint = 6;
         scale = gameObject.transform.localScale;
         rb = GetComponent<Rigidbody2D>();
         m_jumpPower = 10.5f;
         m_simpleAnimation = GetComponent<SimpleAnimation>();
         m_rayRot = m_ray.transform.rotation.eulerAngles;
-        m_acquisitions = PlayerPrefs.GetInt("score",0);
-        m_getcheck[0] = PlayerPrefs.GetInt("pieceCheck[0]",0);
-        m_getcheck[1] = PlayerPrefs.GetInt("pieceCheck[1]",0);
-        m_getcheck[2] = PlayerPrefs.GetInt("pieceCheck[2]",0);
-        m_getcheck[3] = PlayerPrefs.GetInt("pieceCheck[3]",0);
-        m_getcheck[4] = PlayerPrefs.GetInt("pieceCheck[4]",0);
-        if(m_getcheck[0] == 1)
-        {
-            m_pieceofMemoryUI[0].SetActive(true);
-            m_pieceofMemory[0].SetActive(false);
-        }
-        if (m_getcheck[1] == 1)
-        {
-            m_pieceofMemoryUI[1].SetActive(true);
-            m_pieceofMemory[1].SetActive(false);
-        }
-        if (m_getcheck[2] == 1)
-        {
-            m_pieceofMemoryUI[2].SetActive(true);
-            m_pieceofMemory[2].SetActive(false);
-        }
-        if (m_getcheck[3] == 1)
-        {
-            m_pieceofMemoryUI[3].SetActive(true);
-            m_pieceofMemory[3].SetActive(false);
-        }
-        if (m_getcheck[4] == 1)
-        {
-            m_pieceofMemoryUI[4].SetActive(true);
-            m_pieceofMemory[4].SetActive(false);
-        }
 
         m_aFeelingOfBelieve = PlayerPrefs.GetInt("aFeelingOfBelieve", 0);
         if (m_aFeelingOfBelieve != 0)
@@ -113,7 +83,7 @@ public class SyoujoController : CharacterBase
             {              
                 m_AFeelingOfBelieveUI[i - 1].SetActive(true);
             }
-        }     
+        }
     }
 
     // Update is called once per frame
@@ -429,106 +399,84 @@ public class SyoujoController : CharacterBase
         }
     }
 
-    public int GetPieceCheck
-    {
-        set
-        {
-            m_getcheck[0] = value;
-        }
-    }
-    public int PiecePercent
-    {
-        set
-        {
-            if (m_acquisitions < 100)
-            {
-                if (m_getcheck[0] == 0)
-                {
-                    m_acquisitions += 20;
-                }
-            }
-        }
-    }
-    public int GetPieceCheck2
-    {
-        set
-        {
-            m_getcheck[1] = value;
-        }
-    }
     public int PiecePercent2
     {
-        set
+        get
         {
-            if (m_acquisitions < 100)
-            {
-                if (m_getcheck[1] == 0)
-                {
-                    m_acquisitions += 20;
-                }
-            }
+            return m_acquisitionsBox[0];
         }
-    }
-    public int GetPieceCheck3
-    {
         set
         {
-            m_getcheck[2] = value;
+            m_acquisitionsBox[0] = 1;
+            if (getCheck[0] == false)
+            {
+                m_acquisitions += m_acquisitionsBox[0];
+            }
         }
     }
     public int PiecePercent3
     {
-        set
+        get
         {
-            if (m_acquisitions < 100)
-            {
-                if (m_getcheck[2] == 0)
-                {
-                    m_acquisitions += 20;
-                }
-            }
+            return m_acquisitionsBox[1];
         }
-    }
-    public int GetPieceCheck4
-    {
         set
         {
-            m_getcheck[3] = value;
+            m_acquisitionsBox[1] = 1;
+            if (getCheck[1] == false)
+            {
+                m_acquisitions += m_acquisitionsBox[1];
+            }
         }
     }
     public int PiecePercent4
     {
-        set
+        get
         {
-            if (m_acquisitions < 100)
-            {
-                if (m_getcheck[3] == 0)
-                {
-                    m_acquisitions += 20;
-                }
-            }
+            return m_acquisitionsBox[2];
         }
-    }
-    public int GetPieceCheck5
-    {
         set
         {
-            m_getcheck[4] = value;
+            
+            m_acquisitionsBox[2] = 1;
+            if (getCheck[2] == false)
+            {
+                m_acquisitions += m_acquisitionsBox[2];
+            }
         }
     }
     public int PiecePercent5
     {
+        get
+        {
+            return m_acquisitionsBox[3];
+        }
         set
         {
-            if (m_acquisitions < 100)
+            m_acquisitionsBox[3] = 1;
+            if (getCheck[3] == false)
             {
-                if (m_getcheck[4] == 0)
-                {
-                    m_acquisitions += 20;
-                }
+                m_acquisitions += m_acquisitionsBox[3];
             }
         }
     }
+    public int PiecePercent6
+    {
+        get
+        {
+            return m_acquisitionsBox[4];
+        }
+        set
+        {
+            m_acquisitionsBox[4] = 1;
+
+            if (getCheck[4] == false)
+            {
+                m_acquisitions += m_acquisitionsBox[4];
+            }
+        }
+    }
+    
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (m_followSwitch == true)
@@ -696,11 +644,11 @@ public class SyoujoController : CharacterBase
     void Clear()
     {
         PlayerPrefs.SetInt("m_acquisitions", m_acquisitions);
-        PlayerPrefs.SetInt("m_getcheck[0]", m_getcheck[0]);
-        PlayerPrefs.SetInt("m_getcheck[1]", m_getcheck[1]);
-        PlayerPrefs.SetInt("m_getcheck[2]", m_getcheck[2]);
-        PlayerPrefs.SetInt("m_getcheck[3]", m_getcheck[3]);
-        PlayerPrefs.SetInt("m_getcheck[4]", m_getcheck[4]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[0]", m_acquisitionsBox[0]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[1]", m_acquisitionsBox[1]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[2]", m_acquisitionsBox[2]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[3]", m_acquisitionsBox[3]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[4]", m_acquisitionsBox[4]);
         PlayerPrefs.SetInt("aFeelingOfBelieve", m_aFeelingOfBelieve);
         PlayerPrefs.Save();
         if (ProgressManager.m_nowStage == 3)
