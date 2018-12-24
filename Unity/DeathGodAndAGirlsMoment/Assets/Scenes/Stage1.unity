@@ -21511,7 +21511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &644389898
 Transform:
   m_ObjectHideFlags: 0
@@ -50792,6 +50792,22 @@ MonoBehaviour:
     targetPosition: {x: 13.3550005, y: 1.005, z: 0}
     iterations: 10
     damping: 0.8
+--- !u!1 &1399192057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000012097898146, guid: 69bddac44b7c97c43a9da8d76b03d3c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1527464392}
+--- !u!114 &1399192062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1399192057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69bf46b9ebdf39940a3c993542b7926c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1403202146
 GameObject:
   m_ObjectHideFlags: 0
@@ -53675,7 +53691,7 @@ Prefab:
     - target: {fileID: 114000014035069998, guid: 69bddac44b7c97c43a9da8d76b03d3c5,
         type: 2}
       propertyPath: _animationName
-      value: 04. Jump
+      value: 01. Idle
       objectReference: {fileID: 0}
     - target: {fileID: 23000014229956044, guid: 69bddac44b7c97c43a9da8d76b03d3c5,
         type: 2}
@@ -53709,7 +53725,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 628de714b81664c489fcb72c682557a5, type: 2}
     - target: {fileID: 1000012097898146, guid: 69bddac44b7c97c43a9da8d76b03d3c5, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000014035069998, guid: 69bddac44b7c97c43a9da8d76b03d3c5,
         type: 2}
@@ -62584,6 +62600,10 @@ Prefab:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1096122020}
+    - target: {fileID: 1633874557366808, guid: bf21b2498896cce4ab05ba2008d86718, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf21b2498896cce4ab05ba2008d86718, type: 2}
   m_IsPrefabAsset: 0

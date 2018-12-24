@@ -110,8 +110,7 @@ public class SyoujoController : CharacterBase
         if (m_aFeelingOfBelieve != 0)
         {
             for (int i = m_aFeelingOfBelieve; i >= 0; i--)
-            {
-                Debug.Log(i);
+            {              
                 m_AFeelingOfBelieveUI[i - 1].SetActive(true);
             }
         }     

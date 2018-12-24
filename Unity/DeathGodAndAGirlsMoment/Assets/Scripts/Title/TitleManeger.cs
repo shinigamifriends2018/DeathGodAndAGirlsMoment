@@ -12,14 +12,16 @@ public class TitleManeger : MonoBehaviour {
     GameObject m_Button_Stage4;
 
     // Use this for initialization
-    void Start () {
-        PlayerPrefs.DeleteAll();
+    void Start () {       
         SetActiveButton();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            PlayerPrefs.DeleteAll();
+        }
 	}
     public void SetActiveButton()
     {
