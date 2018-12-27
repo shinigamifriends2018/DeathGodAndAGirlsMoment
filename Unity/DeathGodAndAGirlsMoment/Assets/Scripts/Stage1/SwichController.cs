@@ -44,11 +44,14 @@ public class SwichController : MonoBehaviour {
 
     void PushCheck()
     {
+
+        SoundManager.Instance.PlaySE((int)Common.SEList.Swich);
         m_cage.PushCheck = true;
 
     }
     void PushCheck2()
     {
+        SoundManager.Instance.PlaySE((int)Common.SEList.Swich);
         m_cage.PushCheck2 = true;
     }
     void ReversePushCheck()

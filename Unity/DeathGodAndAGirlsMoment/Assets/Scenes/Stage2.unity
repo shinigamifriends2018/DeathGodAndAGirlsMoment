@@ -16845,8 +16845,7 @@ MonoBehaviour:
   - {fileID: 1972634295}
   - {fileID: 1923236018}
   m_acquisitions: 0
-  m_getcheck: 0000000000000000000000000000000000000000
-  pieceCheck: 0000000000000000000000000000000000000000
+  m_acquisitionsBox: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_pieceofMemory:
   - {fileID: 1900249996}
   - {fileID: 59738998}
@@ -16861,6 +16860,7 @@ MonoBehaviour:
   - {fileID: 1574049143}
   m_getPieceOfMemory: {fileID: 30869460}
   camera: {fileID: 1096122020}
+  getCheck: 00000000000000000000
 --- !u!70 &644389901
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -30508,7 +30508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1154920651
 MonoBehaviour:
   m_ObjectHideFlags: 0

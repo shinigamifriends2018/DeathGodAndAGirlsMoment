@@ -29,6 +29,7 @@ public class Common{
        BossDamage,
        BossDown,
        Door,
+       Swich,
     }
     
 }

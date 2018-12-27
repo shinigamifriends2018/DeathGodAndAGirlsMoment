@@ -59,7 +59,29 @@ public class SyoujoController : CharacterBase
         m_acquisitionsBox[2] = PlayerPrefs.GetInt("m_acquisitionsBox[2]", 0);
         m_acquisitionsBox[3] = PlayerPrefs.GetInt("m_acquisitionsBox[3]", 0);
         m_acquisitionsBox[4] = PlayerPrefs.GetInt("m_acquisitionsBox[4]", 0);
-        m_acquisitions = PlayerPrefs.GetInt("scores",0);
+        m_acquisitionsBox[5] = PlayerPrefs.GetInt("m_acquisitionsBox[5]", 0);
+        m_acquisitionsBox[6] = PlayerPrefs.GetInt("m_acquisitionsBox[6]", 0);
+        m_acquisitionsBox[7] = PlayerPrefs.GetInt("m_acquisitionsBox[7]", 0);
+        m_acquisitionsBox[8] = PlayerPrefs.GetInt("m_acquisitionsBox[8]", 0);
+        m_acquisitionsBox[9] = PlayerPrefs.GetInt("m_acquisitionsBox[9]", 0);
+        if (ProgressManager.m_nowStage == 1)
+        {
+            m_acquisitions = 0;
+            m_acquisitions += m_acquisitionsBox[0];
+            m_acquisitions += m_acquisitionsBox[1];
+            m_acquisitions += m_acquisitionsBox[2];
+            m_acquisitions += m_acquisitionsBox[3];
+            m_acquisitions += m_acquisitionsBox[4];
+        }
+        if (ProgressManager.m_nowStage == 2)
+        {
+            m_acquisitions = 0;
+            m_acquisitions += m_acquisitionsBox[5];
+            m_acquisitions += m_acquisitionsBox[6];
+            m_acquisitions += m_acquisitionsBox[7];
+            m_acquisitions += m_acquisitionsBox[8];
+            m_acquisitions += m_acquisitionsBox[9];
+        }
   
     }
 
@@ -68,6 +90,42 @@ public class SyoujoController : CharacterBase
         if(m_acquisitionsBox[0] == 1)
         {
             getCheck[0] = true; 
+        }        
+        if(m_acquisitionsBox[1] == 1)
+        {
+            getCheck[1] = true; 
+        }        
+        if(m_acquisitionsBox[2] == 1)
+        {
+            getCheck[2] = true; 
+        }        
+        if(m_acquisitionsBox[3] == 1)
+        {
+            getCheck[3] = true; 
+        }        
+        if(m_acquisitionsBox[4] == 1)
+        {
+            getCheck[4] = true; 
+        }        
+        if(m_acquisitionsBox[5] == 1)
+        {
+            getCheck[5] = true; 
+        }        
+        if(m_acquisitionsBox[6] == 1)
+        {
+            getCheck[6] = true; 
+        }        
+        if(m_acquisitionsBox[7] == 1)
+        {
+            getCheck[7] = true; 
+        }        
+        if(m_acquisitionsBox[8] == 1)
+        {
+            getCheck[8] = true; 
+        }        
+        if(m_acquisitionsBox[9] == 1)
+        {
+            getCheck[9] = true; 
         }
         m_hitPoint = 6;
         scale = gameObject.transform.localScale;
@@ -400,7 +458,7 @@ public class SyoujoController : CharacterBase
         }
     }
 
-    public int PiecePercent2
+    public int PiecePercent
     {
         get
         {
@@ -408,14 +466,25 @@ public class SyoujoController : CharacterBase
         }
         set
         {
-            m_acquisitionsBox[0] = 1;
-            if (getCheck[0] == false)
+            if (ProgressManager.m_nowStage == 1)
             {
-                m_acquisitions += m_acquisitionsBox[0];
+                m_acquisitionsBox[0] = 1;
+                if (getCheck[0] == false)
+                {
+                    m_acquisitions += m_acquisitionsBox[0];
+                }
+            }
+            if (ProgressManager.m_nowStage == 2)
+            {
+                m_acquisitionsBox[5] = 1;
+                if (getCheck[5] == false)
+                {
+                    m_acquisitions += m_acquisitionsBox[0];
+                }
             }
         }
     }
-    public int PiecePercent3
+    public int PiecePercent2
     {
         get
         {
@@ -423,14 +492,25 @@ public class SyoujoController : CharacterBase
         }
         set
         {
-            m_acquisitionsBox[1] = 1;
-            if (getCheck[1] == false)
+            if (ProgressManager.m_nowStage == 1)
             {
-                m_acquisitions += m_acquisitionsBox[1];
+                m_acquisitionsBox[1] = 1;
+                if (getCheck[1] == false)
+                {
+                    m_acquisitions += m_acquisitionsBox[1];
+                }
+            }
+            if (ProgressManager.m_nowStage == 2)
+            {
+                m_acquisitionsBox[6] = 1;
+                if (getCheck[6] == false)
+                {
+                    m_acquisitions += m_acquisitionsBox[6];
+                }
             }
         }
     }
-    public int PiecePercent4
+    public int PiecePercent3
     {
         get
         {
@@ -438,15 +518,25 @@ public class SyoujoController : CharacterBase
         }
         set
         {
-            
-            m_acquisitionsBox[2] = 1;
-            if (getCheck[2] == false)
+            if (ProgressManager.m_nowStage == 1)
             {
-                m_acquisitions += m_acquisitionsBox[2];
+                m_acquisitionsBox[2] = 1;
+                if (getCheck[2] == false)
+                {
+                    m_acquisitions += m_acquisitionsBox[2];
+                }
+            }
+            if (ProgressManager.m_nowStage == 2)
+            {
+                m_acquisitionsBox[7] = 1;
+                if (getCheck[7] == false)
+                {
+                    m_acquisitions += m_acquisitionsBox[7];
+                }
             }
         }
     }
-    public int PiecePercent5
+    public int PiecePercent4
     {
         get
         {
@@ -454,14 +544,25 @@ public class SyoujoController : CharacterBase
         }
         set
         {
-            m_acquisitionsBox[3] = 1;
-            if (getCheck[3] == false)
+            if (ProgressManager.m_nowStage == 1)
             {
-                m_acquisitions += m_acquisitionsBox[3];
+                m_acquisitionsBox[3] = 1;
+                if (getCheck[3] == false)
+                {
+                    m_acquisitions += m_acquisitionsBox[3];
+                }
+            }
+            if (ProgressManager.m_nowStage == 2)
+            {
+                m_acquisitionsBox[8] = 1;
+                if (getCheck[8] == false)
+                {
+                    m_acquisitions += m_acquisitionsBox[8];
+                }
             }
         }
     }
-    public int PiecePercent6
+    public int PiecePercent5
     {
         get
         {
@@ -469,11 +570,21 @@ public class SyoujoController : CharacterBase
         }
         set
         {
-            m_acquisitionsBox[4] = 1;
-
-            if (getCheck[4] == false)
+            if (ProgressManager.m_nowStage == 1)
             {
-                m_acquisitions += m_acquisitionsBox[4];
+                m_acquisitionsBox[4] = 1;
+                if (getCheck[4] == false)
+                {
+                    m_acquisitions += m_acquisitionsBox[4];
+                }
+            }
+            if (ProgressManager.m_nowStage == 2)
+            {
+                m_acquisitionsBox[9] = 1;
+                if (getCheck[9] == false)
+                {
+                    m_acquisitions += m_acquisitionsBox[9];
+                }
             }
         }
     }
@@ -650,6 +761,11 @@ public class SyoujoController : CharacterBase
         PlayerPrefs.SetInt("m_acquisitionsBox[2]", m_acquisitionsBox[2]);
         PlayerPrefs.SetInt("m_acquisitionsBox[3]", m_acquisitionsBox[3]);
         PlayerPrefs.SetInt("m_acquisitionsBox[4]", m_acquisitionsBox[4]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[5]", m_acquisitionsBox[5]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[6]", m_acquisitionsBox[6]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[7]", m_acquisitionsBox[7]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[8]", m_acquisitionsBox[8]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[9]", m_acquisitionsBox[9]);
         PlayerPrefs.SetInt("aFeelingOfBelieve", m_aFeelingOfBelieve);
         PlayerPrefs.Save();
         if (ProgressManager.m_nowStage == 3)
