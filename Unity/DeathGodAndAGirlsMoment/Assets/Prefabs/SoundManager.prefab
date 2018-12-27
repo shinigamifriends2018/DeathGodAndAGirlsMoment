@@ -69,4 +69,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9a2fccceb63d3cb4ebbc11a36240386b, type: 3}
   - {fileID: 8300000, guid: f8ecf44ccf6eef74ca7f7c1fdab80b4d, type: 3}
   - {fileID: 8300000, guid: c969176059d6e2b47b45e17dd6be96ea, type: 3}
+  - {fileID: 8300000, guid: 5d7be62c2b019af4cbe0db559a8421dd, type: 3}
   Voice: []

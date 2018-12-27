@@ -27,23 +27,23 @@ public class PieceofMemoryController : MonoBehaviour {
             m_pieceofMemory.SetActive(true);
             if (gameObject == m_trigger[0])
             {
-                syoujo.PiecePercent2 += 1;
+                syoujo.PiecePercent = 1;
             }
             if (gameObject == m_trigger[1])
             {
-                syoujo.PiecePercent3 += 1;
+                syoujo.PiecePercent2 = 1;
             }
             if (gameObject == m_trigger[2])
             {
-                syoujo.PiecePercent4 += 1;
+                syoujo.PiecePercent3 = 1;
             }
             if (gameObject == m_trigger[3])
             {
-                syoujo.PiecePercent5 += 1;
+                syoujo.PiecePercent4 = 1;
             }
             if (gameObject == m_trigger[4])
             {
-                syoujo.PiecePercent6 += 1;
+                syoujo.PiecePercent5 = 1;
             } 
         }
     }
