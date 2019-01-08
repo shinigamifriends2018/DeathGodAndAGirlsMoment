@@ -94,6 +94,7 @@ public class FarEnemyContoller : GhostController {
                     damageCheck = true;
                 }
                 SoundManager.Instance.PlaySE((int)Common.SEList.EnemyDestroy);
+                SoundManager.Instance.PlaySE((int)Common.SEList.DropHeart);
                 Destroy(this.gameObject,0.3f);
                 Instantiate(m_heart, transform.position, transform.rotation);
             }

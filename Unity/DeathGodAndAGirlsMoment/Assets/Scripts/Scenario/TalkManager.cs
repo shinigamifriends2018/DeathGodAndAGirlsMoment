@@ -47,6 +47,7 @@ public class TalkManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        SoundManager.Instance.PlayBGM((int)Common.BGMList.Scenario1);
         m_name.text = m_nameArray[m_line];
         m_talk.text = m_talkArray[m_line];
         int leftFaceNo = m_leftFaceNoArray[m_line];
@@ -76,9 +77,11 @@ public class TalkManager : MonoBehaviour {
 	void Update () {
 		if(Input.GetButtonDown("Decision"))
         {
+            SoundManager.Instance.PlaySE((int)Common.SEList.Kaiwa);
             m_line++;
             if (m_line >= m_talkArray.Length)
             {
+                SoundManager.Instance.StopBGM();
                 SceneManager.LoadScene(m_LoadScene);
             }
             else

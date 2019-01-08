@@ -87,7 +87,8 @@ public class CursorController : MonoBehaviour {
     }
 
     void UpSetSelect()
-    {       
+    {
+        SoundManager.Instance.PlaySE((int)Common.SEList.Select);
         if (cursorPos.y <= -20)
         {
             index--;
@@ -108,7 +109,8 @@ public class CursorController : MonoBehaviour {
         cancel = true;
     }
     void DownSetSelect()
-    {        
+    {
+        SoundManager.Instance.PlaySE((int)Common.SEList.Select);
         if (cursorPos.y >= -180)
         {
             index++;

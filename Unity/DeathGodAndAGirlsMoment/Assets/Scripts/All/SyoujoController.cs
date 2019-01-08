@@ -94,6 +94,14 @@ public class SyoujoController : CharacterBase
 
     void Start()
     {
+        if(ProgressManager.m_nowStage == 1)
+        {
+            SoundManager.Instance.PlayBGM((int)Common.BGMList.Stage1);
+        }
+        if(ProgressManager.m_nowStage == 2)
+        {
+            SoundManager.Instance.PlayBGM((int)Common.BGMList.Stage2);
+        }
         if (m_acquisitionsBox[0] == 1)
         {
             getCheck[0] = true;
@@ -482,6 +490,7 @@ public class SyoujoController : CharacterBase
     {
         if (collision.gameObject.tag == "Heart")
         {
+            SoundManager.Instance.PlaySE((int)Common.SEList.GetHeart);
             if (m_hitPoint < 6)
             {
                 m_life[m_hitPoint].SetActive(true);
@@ -494,6 +503,7 @@ public class SyoujoController : CharacterBase
             StartCoroutine("SetActiveEfect");            
             Destroy(collision.gameObject);
             StartCoroutine("LifeRecovery");
+            SoundManager.Instance.PlaySE((int)Common.SEList.GetPiceofMemori);
         }
     }
 
@@ -820,6 +830,7 @@ public class SyoujoController : CharacterBase
         {
             ProgressManager.m_clearedStage1 = true;
         }
+        SoundManager.Instance.PlaySE((int)Common.SEList.Goal);
         SceneManager.LoadScene("Clear");
     }
 

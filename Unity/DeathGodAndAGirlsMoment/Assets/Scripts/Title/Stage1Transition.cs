@@ -20,11 +20,13 @@ public class Stage1Transition : MonoBehaviour {
 	}
     public void loadscene()
     {
+        SoundManager.Instance.PlaySE((int)Common.SEList.Decison);
         ProgressManager.m_nowStage = 1;
         Invoke("transition", 2f);
     }
     void transition()
     {
+        SoundManager.Instance.StopBGM();
         SceneManager.LoadScene("Scenario");
     }
 }

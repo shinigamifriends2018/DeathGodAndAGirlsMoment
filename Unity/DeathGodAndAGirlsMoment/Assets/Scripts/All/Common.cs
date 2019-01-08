@@ -10,7 +10,15 @@ public class Common{
     /// </summary>
     public enum BGMList
     {
-     
+        Title,
+        Scenario1,
+        Scenario2,
+        Stage1,
+        Stage2,
+        Clear,
+        GameOver,
+        Boss,
+        Ending,
     }
 
     /// <summary>
@@ -30,6 +38,14 @@ public class Common{
        BossDown,
        Door,
        Swich,
+       Cage,
+       Select,
+       Decison,
+       Kaiwa,
+       GetPiceofMemori,
+       GetHeart,
+       DropHeart,
+       Goal,
     }
     
 }

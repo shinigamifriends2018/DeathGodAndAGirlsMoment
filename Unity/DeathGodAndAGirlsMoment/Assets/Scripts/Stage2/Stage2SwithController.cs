@@ -81,10 +81,15 @@ public class Stage2SwithController : MonoBehaviour
     void CageChenge()
     {
         m_cageAnimations[0].Play("Down");
+
         m_cageAnimations[1].Play("Up");
     }
     void CageChenge2()
     {
         m_cageAnimations[0].Play("Down");
+    }
+    void CageSound()
+    {
+        SoundManager.Instance.PlaySE((int)Common.SEList.Cage);
     }
 }
