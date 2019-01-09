@@ -12,6 +12,8 @@ public class Stage2SwithController : MonoBehaviour
     [SerializeField]
     GameObject[] m_disPlayEnemy;
     bool m_onCollisionStay = false;
+    [SerializeField]
+    SimpleAnimation[] m_cageAnimations;
     // Use this for initialization
     void Start()
     {
@@ -74,5 +76,20 @@ public class Stage2SwithController : MonoBehaviour
         m_disPlayEnemy[1].SetActive(true);
         m_disPlayEnemy[2].SetActive(true);
         m_disPlayEnemy[3].SetActive(true);
+    }
+
+    void CageChenge()
+    {
+        m_cageAnimations[0].Play("Down");
+
+        m_cageAnimations[1].Play("Up");
+    }
+    void CageChenge2()
+    {
+        m_cageAnimations[0].Play("Down");
+    }
+    void CageSound()
+    {
+        SoundManager.Instance.PlaySE((int)Common.SEList.Cage);
     }
 }

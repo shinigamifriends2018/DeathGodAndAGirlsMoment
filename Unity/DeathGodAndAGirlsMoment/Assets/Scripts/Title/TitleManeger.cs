@@ -14,7 +14,8 @@ public class TitleManeger : MonoBehaviour {
     // Use this for initialization
     void Start () {       
         SetActiveButton();
-	}
+        SoundManager.Instance.PlayBGM((int)Common.BGMList.Title);
+    }
 	
 	// Update is called once per frame
 	void Update () {

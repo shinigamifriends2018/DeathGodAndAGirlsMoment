@@ -10,8 +10,7 @@ public class Stage1Transition : MonoBehaviour {
     Text m_scoreText;
     // Use this for initialization
     void Start () {
-        int score = PlayerPrefs.GetInt("m_acquisitions[1]", 0);
-        PlayerPrefs.SetInt("score", score);
+        int score = PlayerPrefs.GetInt("score", 0);
         m_scoreText.text = "recovery:" + score * 20+ "%";
     }
 	
@@ -21,11 +20,13 @@ public class Stage1Transition : MonoBehaviour {
 	}
     public void loadscene()
     {
+        SoundManager.Instance.PlaySE((int)Common.SEList.Decison);
         ProgressManager.m_nowStage = 1;
         Invoke("transition", 2f);
     }
     void transition()
     {
+        SoundManager.Instance.StopBGM();
         SceneManager.LoadScene("Scenario");
     }
 }

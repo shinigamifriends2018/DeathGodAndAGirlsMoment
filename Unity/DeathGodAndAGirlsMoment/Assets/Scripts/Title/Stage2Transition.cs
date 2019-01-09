@@ -10,7 +10,6 @@ public class Stage2Transition : MonoBehaviour {
     // Use this for initialization
     void Start () {
         int score = PlayerPrefs.GetInt("m_acquisitions[1]", 0);
-        PlayerPrefs.SetInt("score", score);
         m_scoreText.text = "recovery" + "   " + score + "%";
     }
 	
@@ -20,11 +19,13 @@ public class Stage2Transition : MonoBehaviour {
 	}
     public void loadscene()
     {
+        SoundManager.Instance.PlaySE((int)Common.SEList.Decison);
         ProgressManager.m_nowStage = 2;
         Invoke("transition", 2f);
     }
     void transition()
     {
+        SoundManager.Instance.StopBGM();
         SceneManager.LoadScene("Scenario2");
     }
 }

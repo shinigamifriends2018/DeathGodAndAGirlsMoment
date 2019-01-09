@@ -7,6 +7,7 @@ public class GameOverTransition : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        SoundManager.Instance.PlayBGM((int)Common.BGMList.GameOver);
         Time.timeScale = 1f;
 	}
 	
@@ -14,6 +15,7 @@ public class GameOverTransition : MonoBehaviour {
 	void Update () {
         if (Input.GetButtonDown("Decision"))
         {
+            SoundManager.Instance.StopBGM();
             SceneManager.LoadScene("Title");
         }
     }
