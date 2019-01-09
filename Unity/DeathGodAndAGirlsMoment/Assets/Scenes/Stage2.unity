@@ -2586,7 +2586,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 82520028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6862ce4240c026e4583d87206abd7665, type: 3}
   m_Name: 
@@ -6387,6 +6387,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_disPlayEnemy: []
+  m_cageAnimations:
+  - {fileID: 961865256}
+  - {fileID: 896505193}
 --- !u!114 &250478293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8752,6 +8755,8 @@ GameObject:
   - component: {fileID: 334305244}
   - component: {fileID: 334305243}
   - component: {fileID: 334305242}
+  - component: {fileID: 334305247}
+  - component: {fileID: 334305246}
   m_Layer: 0
   m_Name: cage (2)
   m_TagString: Untagged
@@ -8894,6 +8899,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &334305246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 334305240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3759e2aae0f7b9a47bb98fc64bf3c543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingMode: 1
+  m_WrapMode: 0
+  m_Clip: {fileID: 7400000, guid: 58877cbb2ef98074b8b02a5f53325ac9, type: 2}
+  m_States:
+  - clip: {fileID: 7400000, guid: 58877cbb2ef98074b8b02a5f53325ac9, type: 2}
+    name: Default
+    defaultState: 1
+  - clip: {fileID: 7400000, guid: 01a5c04b99840c44b811d14759fd279a, type: 2}
+    name: Down
+    defaultState: 0
+--- !u!95 &334305247
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 334305240}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 44a0898039544f24ca435e8ba8315bce, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &336293469
 GameObject:
   m_ObjectHideFlags: 0
@@ -17027,7 +17073,7 @@ MonoBehaviour:
   - {fileID: 191693279}
   - {fileID: 1972634295}
   - {fileID: 1923236018}
-  m_acquisitions: 0
+  m_acquisitions: 0000000000000000
   m_acquisitionsBox: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_pieceofMemory:
   - {fileID: 1900249996}
@@ -18608,7 +18654,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_Sprite: {fileID: 21300000, guid: 5ef3480347c12094da101485b48e8eef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
@@ -23141,6 +23187,8 @@ GameObject:
   - component: {fileID: 896505191}
   - component: {fileID: 896505190}
   - component: {fileID: 896505189}
+  - component: {fileID: 896505194}
+  - component: {fileID: 896505193}
   m_Layer: 0
   m_Name: cage (1)
   m_TagString: Untagged
@@ -23155,7 +23203,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 896505187}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.499989, y: 3.81, z: 0}
+  m_LocalPosition: {x: 27.49999, y: 3.81, z: 0}
   m_LocalScale: {x: 0.5, y: 0.4, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1903426641}
@@ -23282,6 +23330,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &896505193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 896505187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3759e2aae0f7b9a47bb98fc64bf3c543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingMode: 1
+  m_WrapMode: 0
+  m_Clip: {fileID: 7400000, guid: 5b735d8573889fd48833b8945363cb71, type: 2}
+  m_States:
+  - clip: {fileID: 7400000, guid: 5b735d8573889fd48833b8945363cb71, type: 2}
+    name: Default
+    defaultState: 1
+  - clip: {fileID: 7400000, guid: b44869e4daa4d04419c94d42ef49298c, type: 2}
+    name: Up
+    defaultState: 0
+--- !u!95 &896505194
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 896505187}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 768a6792fd784c1498713c3997f0d56d, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &896972686
 GameObject:
   m_ObjectHideFlags: 0
@@ -25212,6 +25301,8 @@ GameObject:
   - component: {fileID: 961865255}
   - component: {fileID: 961865254}
   - component: {fileID: 961865253}
+  - component: {fileID: 961865257}
+  - component: {fileID: 961865256}
   m_Layer: 0
   m_Name: cage
   m_TagString: Untagged
@@ -25353,6 +25444,47 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.70194435, y: 6.6716623}
   m_EdgeRadius: 0
+--- !u!114 &961865256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 961865250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3759e2aae0f7b9a47bb98fc64bf3c543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingMode: 1
+  m_WrapMode: 0
+  m_Clip: {fileID: 7400000, guid: 638b67ab4a5c2ca48b8fb38effc83533, type: 2}
+  m_States:
+  - clip: {fileID: 7400000, guid: 638b67ab4a5c2ca48b8fb38effc83533, type: 2}
+    name: Default
+    defaultState: 1
+  - clip: {fileID: 7400000, guid: 98be8f0705911b044b5ef5f0ef77ab97, type: 2}
+    name: Down
+    defaultState: 0
+--- !u!95 &961865257
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 961865250}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b30a7c8285c2b6145881163f32a9733e, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &962699249
 GameObject:
   m_ObjectHideFlags: 0
@@ -27849,6 +27981,8 @@ MonoBehaviour:
   - {fileID: 1740407300}
   - {fileID: 1740407300}
   - {fileID: 11938052}
+  m_cageAnimations:
+  - {fileID: 334305246}
 --- !u!114 &1063239926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35332,7 +35466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1307635037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40916,9 +41050,9 @@ GameObject:
   - component: {fileID: 1506995442}
   - component: {fileID: 1506995447}
   - component: {fileID: 1506995446}
-  - component: {fileID: 1506995445}
   - component: {fileID: 1506995444}
   - component: {fileID: 1506995443}
+  - component: {fileID: 1506995445}
   m_Layer: 15
   m_Name: Swich3
   m_TagString: Switch
@@ -40940,33 +41074,24 @@ Transform:
   m_Father: {fileID: 1766741242}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1506995443
-MonoBehaviour:
+--- !u!95 &1506995443
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114953662074316914, guid: ab5e8b773cbd1344bb74521886310863,
-    type: 2}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1506995441}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3759e2aae0f7b9a47bb98fc64bf3c543, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fba20494f45493149aa4110c8cfd23ad, type: 2}
   m_CullingMode: 1
-  m_WrapMode: 0
-  m_Clip: {fileID: 7400000, guid: 6c85716d9ce59e340b3ad36a531a46bd, type: 2}
-  m_States:
-  - clip: {fileID: 7400000, guid: 6c85716d9ce59e340b3ad36a531a46bd, type: 2}
-    name: Default
-    defaultState: 1
-  - clip: {fileID: 7400000, guid: 6427f29b9178ca845bb07d89ab3dd760, type: 2}
-    name: Change
-    defaultState: 0
-  - clip: {fileID: 7400000, guid: 4ca1832468c755441b287a75759d11cf, type: 2}
-    name: Reverse
-    defaultState: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1506995444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40983,25 +41108,32 @@ MonoBehaviour:
   m_this:
   - {fileID: 1506995441}
   - {fileID: 1506995441}
---- !u!95 &1506995445
-Animator:
-  serializedVersion: 3
+--- !u!114 &1506995445
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 95326328830141040, guid: ab5e8b773cbd1344bb74521886310863,
-    type: 2}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1506995441}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b780e65fb5a4bbc4687a55a519259fc4, type: 2}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3759e2aae0f7b9a47bb98fc64bf3c543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
   m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_WrapMode: 0
+  m_Clip: {fileID: 7400000, guid: d8de3e0baf21ce14d87483a97f706fca, type: 2}
+  m_States:
+  - clip: {fileID: 7400000, guid: d8de3e0baf21ce14d87483a97f706fca, type: 2}
+    name: Default
+    defaultState: 1
+  - clip: {fileID: 7400000, guid: 68da97c0c5e725d48bf7fe800965c34d, type: 2}
+    name: Change
+    defaultState: 0
+  - clip: {fileID: 7400000, guid: fc4099c1df3abd348a69eef2dfd5a3a1, type: 2}
+    name: Reverse
+    defaultState: 0
 --- !u!61 &1506995446
 BoxCollider2D:
   m_ObjectHideFlags: 0

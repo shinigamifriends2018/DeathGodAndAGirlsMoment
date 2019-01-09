@@ -11,6 +11,7 @@ public class ClearTransition : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        SoundManager.Instance.PlayBGM((int)Common.BGMList.Clear);
         int score = PlayerPrefs.GetInt("m_acquisitions[0]",0);
         PlayerPrefs.SetInt("score", score);
         m_scoreText.text = "recovery" + "   " + score * 20 + "%";
@@ -18,8 +19,10 @@ public class ClearTransition : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
         if (Input.GetButtonDown("Decision"))
         {
+            SoundManager.Instance.StopBGM();
             SceneManager.LoadScene("Title");
         }
 
