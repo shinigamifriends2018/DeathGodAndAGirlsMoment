@@ -57,6 +57,8 @@ public class SyoujoController : CharacterBase
     float m_beforePos;
     bool m_canWalk = false;
     bool m_nouWalk = false;
+    LineRenderer m_lineRenderer;
+    bool m_nowIdle = false;
 
     // Use this for initialization
     private void Awake()
@@ -75,12 +77,22 @@ public class SyoujoController : CharacterBase
         {
             getCheck[0] = true; 
         }
-        m_hitPoint = 6;
+        if(ProgressManager.m_clearStage1 == false)
+        {
+            m_hitPoint = 6;
+        }
+        else
+        {
+            m_life[6].SetActive(true);
+            m_life[7].SetActive(true);
+            m_hitPoint = 7;
+        }        
         scale = gameObject.transform.localScale;
         rb = GetComponent<Rigidbody2D>();
         m_jumpPower = 10.5f;
         m_simpleAnimation = GetComponent<SimpleAnimation>();
         m_rayRot = m_ray.transform.rotation.eulerAngles;
+        m_lineRenderer = GetComponent<LineRenderer>();
 
         m_aFeelingOfBelieve = PlayerPrefs.GetInt("aFeelingOfBelieve", 0);
         if (m_aFeelingOfBelieve != 0)
@@ -96,8 +108,7 @@ public class SyoujoController : CharacterBase
 
     // Update is called once per frame
     void Update()
-    {
-        Debug.Log(m_nouWalk);
+    {        
         if (m_beforePos != gameObject.transform.position.x)
         {
             m_canWalk = true;
@@ -109,8 +120,11 @@ public class SyoujoController : CharacterBase
         }
         if ((m_jump == true) && (m_canWalk == false))
         {
-            m_skeletonAnimation.state.SetAnimation(0, "01. Idle", true);
-            Debug.Log("II");
+            if (m_nowIdle == false)
+            {
+                m_nowIdle = true;
+                m_skeletonAnimation.state.SetAnimation(0, "01. Idle", true);
+            }
         }
         if (m_canWalk == true)
         {
@@ -118,8 +132,8 @@ public class SyoujoController : CharacterBase
             {
                 m_skeletonAnimation.state.SetAnimation(0, "03. Run", true);
             }
-            m_nouWalk = true;
-            Debug.Log("RR");
+            m_nowIdle = false;
+            m_nouWalk = true;          
         }
         m_beforePos = transform.position.x;
         Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
@@ -168,10 +182,13 @@ public class SyoujoController : CharacterBase
         {
             if (m_onConnectHands == true)
             {
-                Jump(rb);
-                StartCoroutine("Animation", 1.2f);
-                m_skeletonAnimation.state.SetAnimation(0, "04. Jump", false);
-                Invoke("Returnlayer", 0.5f);
+                if (m_jump == true)
+                {
+                    Jump(rb);
+                    StartCoroutine("Animation", 1.2f);
+                    m_skeletonAnimation.state.SetAnimation(0, "04. Jump", false);
+                    Invoke("Returnlayer", 0.5f);
+                }
             }
         }    
         float s = Input.GetAxis("S");
@@ -198,7 +215,7 @@ public class SyoujoController : CharacterBase
         else
         {
             Follow();
-        }        
+        }       
     }
 
 
@@ -323,6 +340,9 @@ public class SyoujoController : CharacterBase
                 {
                     if (Mathf.Abs(transform.position.x - shinigami.Posinvestigate.x) > 2f)
                     {
+                        m_lineRenderer.enabled = true;
+                        m_lineRenderer.SetPosition(0, transform.position);
+                        m_lineRenderer.SetPosition(1, shinigami.Posinvestigate);
                         if (shinigami.Posinvestigate.x > transform.position.x)
                         {
                             Move();
@@ -356,12 +376,25 @@ public class SyoujoController : CharacterBase
                         }
                     }
                 }
+                else
+                {
+                    m_lineRenderer.enabled = false;
+                }
             }
+            else
+            {
+                m_lineRenderer.enabled = false;
+            }
+        }
+        else
+        {
+            m_lineRenderer.enabled = false;
         }
     }
 
     void ConnectHands()
-    {        
+    {
+        m_lineRenderer.enabled = false;
         if (Mathf.Abs(transform.position.x - shinigami.Posinvestigate.x) > 1f)
         {
             if (shinigami.Posinvestigate.x > transform.position.x)
@@ -423,7 +456,7 @@ public class SyoujoController : CharacterBase
     {
         if (collision.gameObject.tag == "Heart")
         {
-            if (m_hitPoint < 6)
+            if ((ProgressManager.m_clearStage1 == false && m_hitPoint < 6) || (ProgressManager.m_clearStage1 == true && m_hitPoint < 7))
             {
                 m_life[m_hitPoint].SetActive(true);
                 m_hitPoint++;
@@ -438,7 +471,7 @@ public class SyoujoController : CharacterBase
         }
     }
 
-    public int PiecePercent2
+    public int PiecePercent
     {
         get
         {
@@ -453,7 +486,7 @@ public class SyoujoController : CharacterBase
             }
         }
     }
-    public int PiecePercent3
+    public int PiecePercent2
     {
         get
         {
@@ -468,7 +501,7 @@ public class SyoujoController : CharacterBase
             }
         }
     }
-    public int PiecePercent4
+    public int PiecePercent3
     {
         get
         {
@@ -484,7 +517,7 @@ public class SyoujoController : CharacterBase
             }
         }
     }
-    public int PiecePercent5
+    public int PiecePercent4
     {
         get
         {
@@ -499,7 +532,7 @@ public class SyoujoController : CharacterBase
             }
         }
     }
-    public int PiecePercent6
+    public int PiecePercent5
     {
         get
         {
@@ -608,7 +641,14 @@ public class SyoujoController : CharacterBase
 
     IEnumerator LifeRecovery()
     {
-        m_hitPoint = 6;
+        if(ProgressManager.m_clearStage1 == false)
+        {
+            m_hitPoint = 6;
+        }
+        else
+        {
+            m_hitPoint = 7;
+        }        
         for (int i = 0; i < 6; i++)
         {
             m_life[i].SetActive(true);

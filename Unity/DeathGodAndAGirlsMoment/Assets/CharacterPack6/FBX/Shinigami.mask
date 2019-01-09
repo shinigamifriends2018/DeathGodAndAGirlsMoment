@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Shinigami
+  m_Mask: 00000000000000000000000000000000000000000000000001000000000000000100000000000000000000000000000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: all_scale
+    m_Weight: 0
+  - m_Path: all_scale/sotai
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/kokansetsu1
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/kokansetsu1/kokansetsu2
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/kokansetsu1/kokansetsu2/R_l_kokansetsu
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/kokansetsu1/kokansetsu2/R_l_kokansetsu/l_ashi1
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/kokansetsu1/kokansetsu2/R_l_kokansetsu/l_ashi1/l_ashi2
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/kokansetsu1/kokansetsu2/R_l_kokansetsu/l_ashi1/l_ashi2/l_ashi3
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/kokansetsu1/kokansetsu2/R_r_kokansetsu
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/kokansetsu1/kokansetsu2/R_r_kokansetsu/r_ashi1
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/kokansetsu1/kokansetsu2/R_r_kokansetsu/r_ashi1/r_ashi2
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/kokansetsu1/kokansetsu2/R_r_kokansetsu/r_ashi1/r_ashi2/r_ashi3
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/koshi
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/koshi/se
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_kata
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_kata/kubi
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_kata/kubi/atama
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_l_kata
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_l_kata/l_ude1
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_l_kata/l_ude1/l_ude2
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_l_kata/l_ude1/l_ude2/l_ude3
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_l_kata/l_ude1/l_ude2/l_ude3/R_l_buki
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_l_kata/l_ude1/l_ude2/l_ude3/R_l_buki/l_buki_0
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_l_kata/l_ude1/l_ude2/l_ude3/R_l_buki/l_buki_0/l_buki_1
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_manto
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_manto/manto1
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_manto/manto1/manto2
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_manto/manto1/manto2/manto3
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_r_kata
+    m_Weight: 0
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_r_kata/r_ude1
+    m_Weight: 1
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_r_kata/r_ude1/r_ude2
+    m_Weight: 1
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_r_kata/r_ude1/r_ude2/r_ude3
+    m_Weight: 1
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_r_kata/r_ude1/r_ude2/r_ude3/R_r_buki
+    m_Weight: 1
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_r_kata/r_ude1/r_ude2/r_ude3/R_r_buki/r_buki_0
+    m_Weight: 1
+  - m_Path: all_scale/sotai/R_koshi/koshi/se/R_r_kata/r_ude1/r_ude2/r_ude3/R_r_buki/r_buki_0/r_buki_1
+    m_Weight: 1
+  - m_Path: p_sotai
+    m_Weight: 0

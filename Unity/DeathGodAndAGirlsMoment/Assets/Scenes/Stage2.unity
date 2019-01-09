@@ -29019,9 +29019,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39632b88d0496f74d8023e396203e659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shinigami: {fileID: 0}
+  shinigami: {fileID: 560525737}
   m_size: 0
-  m_syoujo: {fileID: 644389898}
+  m_syoujo: {fileID: 1309796970}
 --- !u!1 &1097571602
 GameObject:
   m_ObjectHideFlags: 0
@@ -35463,6 +35463,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &1309796970 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4673486302782026, guid: 2e2010a870976504e933aaed7ac8bca4,
+    type: 2}
+  m_PrefabInternal: {fileID: 276028548}
 --- !u!1 &1310768394
 GameObject:
   m_ObjectHideFlags: 0
