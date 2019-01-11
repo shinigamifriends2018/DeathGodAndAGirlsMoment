@@ -64,6 +64,14 @@ public class SyoujoController : CharacterBase
     // Use this for initialization
     private void Awake()
     {
+        if (ProgressManager.m_nowStage == 1)
+        {
+            SoundManager.Instance.PlayBGM((int)Common.BGMList.Stage1);
+        }
+        if (ProgressManager.m_nowStage == 2)
+        {
+            SoundManager.Instance.PlayBGM((int)Common.BGMList.Stage2);
+        }
         m_acquisitionsBox[0] = PlayerPrefs.GetInt("m_acquisitionsBox[0]", 0);
         m_acquisitionsBox[1] = PlayerPrefs.GetInt("m_acquisitionsBox[1]", 0);
         m_acquisitionsBox[2] = PlayerPrefs.GetInt("m_acquisitionsBox[2]", 0);
