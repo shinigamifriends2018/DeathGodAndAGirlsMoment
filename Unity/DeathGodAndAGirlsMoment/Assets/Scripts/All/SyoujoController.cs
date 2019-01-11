@@ -9,6 +9,7 @@ using Spine.Unity;
 public class SyoujoController : CharacterBase
 {
     Vector3 scale;
+    [SerializeField]
     int m_aFeelingOfBelieve = 0;
     bool m_followMode;
     bool m_followSwitch = true;
@@ -338,11 +339,11 @@ public class SyoujoController : CharacterBase
             {
                 if (m_onAI == false)
                 {
+                    m_lineRenderer.enabled = true;
+                    m_lineRenderer.SetPosition(0, transform.position);
+                    m_lineRenderer.SetPosition(1, shinigami.Posinvestigate);
                     if (Mathf.Abs(transform.position.x - shinigami.Posinvestigate.x) > 2f)
-                    {
-                        m_lineRenderer.enabled = true;
-                        m_lineRenderer.SetPosition(0, transform.position);
-                        m_lineRenderer.SetPosition(1, shinigami.Posinvestigate);
+                    {                        
                         if (shinigami.Posinvestigate.x > transform.position.x)
                         {
                             Move();
@@ -395,7 +396,7 @@ public class SyoujoController : CharacterBase
     void ConnectHands()
     {
         m_lineRenderer.enabled = false;
-        if (Mathf.Abs(transform.position.x - shinigami.Posinvestigate.x) > 1f)
+        if (Mathf.Abs(transform.position.x - shinigami.Posinvestigate.x) > 0.7f)
         {
             if (shinigami.Posinvestigate.x > transform.position.x)
             {                

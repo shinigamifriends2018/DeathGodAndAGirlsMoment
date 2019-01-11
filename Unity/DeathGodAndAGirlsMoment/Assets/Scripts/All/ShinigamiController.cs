@@ -32,8 +32,9 @@ public class ShinigamiController : CharacterBase {
     Vector3 m_sSca;
     bool m_canAttack2 = false;
     [SerializeField]
-    GameObject m_ude;
+    GameObject[] m_ude;
     bool m_nowConnectHand = false;
+    [SerializeField]
 
     Vector3 m_shinigamisPos;
     
@@ -213,7 +214,8 @@ public class ShinigamiController : CharacterBase {
 
     void Connect()
     {
-        m_ude.transform.Rotate(0, 0, 10);       
+        m_ude[0].transform.localEulerAngles = new Vector3(-180, 0, 45);
+        m_ude[1].transform.localEulerAngles = new Vector3(0 , 0, 10);
     }
     void Attack()
     {

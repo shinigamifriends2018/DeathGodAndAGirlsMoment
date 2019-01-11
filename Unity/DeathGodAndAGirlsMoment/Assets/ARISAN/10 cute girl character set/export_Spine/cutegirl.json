@@ -70,7 +70,7 @@
 			"leg_right_up": { "x": 14.79, "y": 0.13, "rotation": 449.22, "width": 14, "height": 33 }
 		},
 		"weapon_100": {
-			"weapon_100": { "x": 79.96, "y": -15.34, "rotation": -135.04, "width": 256, "height": 256 }
+			"weapon_100": { "x": 79.96, "y": -15.34, "rotation": -135.04, "width": 0, "height": 0 }
 		}
 	},
 	"hair_001": {

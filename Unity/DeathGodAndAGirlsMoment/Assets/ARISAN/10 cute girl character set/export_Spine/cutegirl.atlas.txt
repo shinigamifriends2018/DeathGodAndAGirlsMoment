@@ -196,8 +196,8 @@ leg_right_up
 weapon_100
   rotate: false
   xy: 2, 443
-  size: 256, 256
-  orig: 256, 256
+  size: 0, 0
+  orig: 0, 0
   offset: 0, 0
   index: -1
 
