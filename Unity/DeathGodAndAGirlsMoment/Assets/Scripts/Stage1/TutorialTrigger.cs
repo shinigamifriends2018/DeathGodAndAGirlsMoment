@@ -37,10 +37,8 @@ public class TutorialTrigger : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        if (ProgressManager.m_nowStage == 1)
-        {
-            m_textUI.text = m_text[m_textCounter];
-        }
+          m_textUI.text = m_text[m_textCounter];
+        
     }
 
     // Update is called once per frame

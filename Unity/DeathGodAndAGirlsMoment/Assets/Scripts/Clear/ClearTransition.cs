@@ -13,7 +13,6 @@ public class ClearTransition : MonoBehaviour {
     void Start () {
         SoundManager.Instance.PlayBGM((int)Common.BGMList.Clear);
         int score = PlayerPrefs.GetInt("m_acquisitions[0]",0);
-        PlayerPrefs.SetInt("score", score);
         m_scoreText.text = "recovery" + "   " + score * 20 + "%";
 	}
 	
