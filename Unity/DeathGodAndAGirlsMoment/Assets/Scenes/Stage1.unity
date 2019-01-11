@@ -516,7 +516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 26558710}
 --- !u!1 &27198935
 GameObject:
@@ -3002,7 +3002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 147887534}
 --- !u!1 &154510724
 GameObject:
@@ -3172,6 +3172,108 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 0}
   m_AttachedIK: {fileID: 0}
+--- !u!1 &176038645 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1732430601196934, guid: 2e2010a870976504e933aaed7ac8bca4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1587784249}
+--- !u!50 &176038647 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 50323605120986808, guid: 2e2010a870976504e933aaed7ac8bca4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1587784249}
+--- !u!120 &176038649
+LineRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 176038645}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 10, y: 0, z: 0}
+  m_Parameters:
+    serializedVersion: 2
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    generateLightingData: 0
+  m_UseWorldSpace: 1
+  m_Loop: 0
 --- !u!1 &178564483
 GameObject:
   m_ObjectHideFlags: 0
@@ -3938,7 +4040,7 @@ RectTransform:
   - {fileID: 1574049144}
   - {fileID: 647947928}
   m_Father: {fileID: 597595060}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10160,7 +10262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 297377986}
 --- !u!1 &310056981
 GameObject:
@@ -10277,9 +10379,9 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
   m_feelingOfBelieve: []
 --- !u!50 &311957156
 Rigidbody2D:
@@ -17613,7 +17715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 429457411}
 --- !u!1 &433286968
 GameObject:
@@ -19159,6 +19261,11 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 2, y: 2, z: 0}
+--- !u!1 &476729663 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1775041376649622, guid: bf21b2498896cce4ab05ba2008d86718,
+    type: 2}
+  m_PrefabInternal: {fileID: 2007691981}
 --- !u!1 &483860759
 GameObject:
   m_ObjectHideFlags: 0
@@ -20496,7 +20603,7 @@ RectTransform:
   - {fileID: 141092105}
   - {fileID: 2018012185}
   m_Father: {fileID: 597595060}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -20863,6 +20970,8 @@ RectTransform:
   - {fileID: 1313638660}
   - {fileID: 1545136906}
   - {fileID: 1599915523}
+  - {fileID: 1879532295}
+  - {fileID: 1859770727}
   - {fileID: 559884732}
   - {fileID: 205445550}
   - {fileID: 2128698895}
@@ -21064,7 +21173,7 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 0
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -21072,7 +21181,7 @@ MonoBehaviour:
   m_bulletPrefab: {fileID: 1824164674557216, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
     type: 2}
   m_spawnPoint: {fileID: 810150924}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
 --- !u!1 &620497568
 GameObject:
   m_ObjectHideFlags: 0
@@ -21592,7 +21701,7 @@ MonoBehaviour:
   - {fileID: 191693279}
   - {fileID: 1972634295}
   - {fileID: 1923236018}
-  m_acquisitions: 
+  m_acquisitions: 0
   m_acquisitionsBox: 0000000000000000000000000000000000000000
   m_pieceofMemory:
   - {fileID: 1503987569}
@@ -30107,7 +30216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 810150923}
 --- !u!1 &815057551
 GameObject:
@@ -30345,9 +30454,9 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
   m_feelingOfBelieve: []
 --- !u!50 &827367055
 Rigidbody2D:
@@ -30625,7 +30734,7 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 0
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -30633,7 +30742,7 @@ MonoBehaviour:
   m_bulletPrefab: {fileID: 1824164674557216, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
     type: 2}
   m_spawnPoint: {fileID: 297377987}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
 --- !u!1 &840301757
 GameObject:
   m_ObjectHideFlags: 0
@@ -31661,6 +31770,7 @@ MonoBehaviour:
     m_Bits: 41216
   m_ray: {fileID: 1604545598}
   shinigami: {fileID: 0}
+  m_ude: {fileID: 0}
 --- !u!4 &879722899
 Transform:
   m_ObjectHideFlags: 0
@@ -38167,7 +38277,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000232, y: 1.0000232, z: 1.0000232}
   m_Children: []
   m_Father: {fileID: 597595060}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -38667,7 +38777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 977022600}
 --- !u!1 &979342510
 GameObject:
@@ -39284,9 +39394,9 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
   m_feelingOfBelieve: []
 --- !u!50 &1027299223
 Rigidbody2D:
@@ -39741,7 +39851,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000232, y: 1.0000232, z: 1.0000232}
   m_Children: []
   m_Father: {fileID: 597595060}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -39994,7 +40104,7 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 0
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -40002,7 +40112,7 @@ MonoBehaviour:
   m_bulletPrefab: {fileID: 1824164674557216, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
     type: 2}
   m_spawnPoint: {fileID: 147887535}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
 --- !u!1 &1071192931
 GameObject:
   m_ObjectHideFlags: 0
@@ -40122,9 +40232,9 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
 --- !u!70 &1072497816
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -40590,7 +40700,7 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 0
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -40598,7 +40708,7 @@ MonoBehaviour:
   m_bulletPrefab: {fileID: 1824164674557216, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
     type: 2}
   m_spawnPoint: {fileID: 977022601}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
 --- !u!1 &1087144637
 GameObject:
   m_ObjectHideFlags: 0
@@ -48623,9 +48733,9 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
   m_feelingOfBelieve: []
 --- !u!50 &1255318358
 Rigidbody2D:
@@ -48885,7 +48995,7 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 0
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -48893,7 +49003,7 @@ MonoBehaviour:
   m_bulletPrefab: {fileID: 1824164674557216, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
     type: 2}
   m_spawnPoint: {fileID: 1866885409}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
 --- !u!1 &1281331981
 GameObject:
   m_ObjectHideFlags: 0
@@ -49047,60 +49157,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1587784249}
   m_Script: {fileID: 11500000, guid: 5640cb87ad4ed1147b119eca64a27795, type: 3}
-<<<<<<< HEAD
-=======
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_moveSpeed: 0
-  m_hitPoint: 0
-  m_jump: 1
-  shinigami: {fileID: 1667492808}
-  m_efect:
-  - {fileID: 1206714066}
-  - {fileID: 678180983}
-  m_life:
-  - {fileID: 1944831969}
-  - {fileID: 46473306}
-  - {fileID: 1179221897}
-  - {fileID: 368544847}
-  - {fileID: 939119131}
-  - {fileID: 1545136905}
-  m_layer:
-  - serializedVersion: 2
-    m_Bits: 41216
-  - serializedVersion: 2
-    m_Bits: 256
-  m_ray: {fileID: 1150367624}
-  m_AFeelingOfBelieveUI:
-  - {fileID: 960125607}
-  - {fileID: 1045334084}
-  - {fileID: 2038003825}
-  - {fileID: 1423101928}
-  - {fileID: 2128698894}
-  m_hints:
-  - {fileID: 1437346114}
-  - {fileID: 191693279}
-  - {fileID: 1972634295}
-  - {fileID: 1923236018}
-  m_acquisitions: 0000000000000000
-  m_acquisitionsBox: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_pieceofMemory:
-  - {fileID: 1503987569}
-  - {fileID: 119920503}
-  - {fileID: 419163487}
-  - {fileID: 398578751}
-  - {fileID: 1079793760}
-  m_pieceofMemoryUI:
-  - {fileID: 2129605101}
-  - {fileID: 367926494}
-  - {fileID: 905442620}
-  - {fileID: 699977472}
-  - {fileID: 1574049143}
-  m_getPieceOfMemory: {fileID: 1596963690}
-  camera: {fileID: 1096122020}
-  getCheck: 00000000000000000000
-  m_skeletonAnimation: {fileID: 1399192059}
->>>>>>> 8ed737c39d2711177038e1b9c83b254182b84f4f
 --- !u!1 &1303340465
 GameObject:
   m_ObjectHideFlags: 0
@@ -49463,7 +49519,7 @@ RelativeJoint2D:
   m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
+  m_ConnectedRigidBody: {fileID: 176038647}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_MaxForce: 10000
@@ -51213,7 +51269,7 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 0
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -51221,7 +51277,7 @@ MonoBehaviour:
   m_bulletPrefab: {fileID: 1824164674557216, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
     type: 2}
   m_spawnPoint: {fileID: 429457412}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
 --- !u!1 &1411138406
 GameObject:
   m_ObjectHideFlags: 0
@@ -51472,7 +51528,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000232, y: 1.0000232, z: 1.0000232}
   m_Children: []
   m_Father: {fileID: 597595060}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -51801,9 +51857,9 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
   m_feelingOfBelieve: []
 --- !u!50 &1436011379
 Rigidbody2D:
@@ -53583,9 +53639,9 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
 --- !u!70 &1523913841
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -54449,9 +54505,9 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
   m_feelingOfBelieve: []
 --- !u!50 &1578397829
 Rigidbody2D:
@@ -54583,6 +54639,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_life.Array.size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4673486302782026, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
       propertyPath: m_LocalPosition.x
       value: -8.609
@@ -54759,6 +54820,16 @@ Prefab:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1096122020}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_life.Array.data[6]
+      value: 
+      objectReference: {fileID: 1879532294}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_life.Array.data[7]
+      value: 
+      objectReference: {fileID: 1859770726}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
   m_IsPrefabAsset: 0
@@ -55670,9 +55741,9 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
   m_feelingOfBelieve: []
 --- !u!50 &1651316981
 Rigidbody2D:
@@ -56532,9 +56603,9 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
   m_feelingOfBelieve: []
 --- !u!50 &1696303420
 Rigidbody2D:
@@ -56796,9 +56867,9 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
   m_feelingOfBelieve: []
 --- !u!50 &1711730165
 Rigidbody2D:
@@ -57356,7 +57427,7 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
   m_ChaseEnemy:
   - {fileID: 1578397825}
@@ -59748,9 +59819,9 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
   m_feelingOfBelieve: []
 --- !u!50 &1858100454
 Rigidbody2D:
@@ -59773,6 +59844,75 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!1 &1859770726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1859770727}
+  - component: {fileID: 1859770729}
+  - component: {fileID: 1859770728}
+  m_Layer: 5
+  m_Name: LifeFrame (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1859770727
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1859770726}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999928, y: 0.9999928, z: 0.9999928}
+  m_Children: []
+  m_Father: {fileID: 597595060}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 680, y: -90}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1859770728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1859770726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: d2f090b139c8b4f478599bd3296d9d8b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1859770729
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1859770726}
+  m_CullTransparentMesh: 0
 --- !u!1 &1866885408
 GameObject:
   m_ObjectHideFlags: 0
@@ -59816,7 +59956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 1866885408}
 --- !u!1 &1868716888
 GameObject:
@@ -59967,6 +60107,75 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 1114658441}
   m_AttachedIK: {fileID: 1776651231}
+--- !u!1 &1879532294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1879532295}
+  - component: {fileID: 1879532297}
+  - component: {fileID: 1879532296}
+  m_Layer: 5
+  m_Name: Life (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1879532295
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1879532294}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999928, y: 0.9999928, z: 0.9999928}
+  m_Children: []
+  m_Father: {fileID: 597595060}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 680, y: -90}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1879532296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1879532294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 67924ec3ac279c34b90c19afa6d99803, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1879532297
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1879532294}
+  m_CullTransparentMesh: 0
 --- !u!1 &1881220181
 GameObject:
   m_ObjectHideFlags: 0
@@ -60957,7 +61166,7 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
   m_ChaseEnemy:
   - {fileID: 1255318354}
@@ -62164,9 +62373,9 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
 --- !u!70 &1973813508
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -62682,7 +62891,7 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -62690,7 +62899,7 @@ MonoBehaviour:
   m_bulletPrefab: {fileID: 1824164674557216, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
     type: 2}
   m_spawnPoint: {fileID: 26558711}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
 --- !u!1001 &2007691981
 Prefab:
   m_ObjectHideFlags: 0
@@ -62740,6 +62949,16 @@ Prefab:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1096122020}
+    - target: {fileID: 95043484360508344, guid: bf21b2498896cce4ab05ba2008d86718,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114375325586119286, guid: bf21b2498896cce4ab05ba2008d86718,
+        type: 2}
+      propertyPath: m_ude
+      value: 
+      objectReference: {fileID: 476729663}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf21b2498896cce4ab05ba2008d86718, type: 2}
   m_IsPrefabAsset: 0
@@ -63561,7 +63780,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000232, y: 1.0000232, z: 1.0000232}
   m_Children: []
   m_Father: {fileID: 597595060}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -64693,9 +64912,9 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
-  syoujoController: {fileID: 1300085331}
+  syoujoController: {fileID: 0}
   m_feelingOfBelieve: []
 --- !u!50 &2090401236
 Rigidbody2D:
@@ -64751,7 +64970,7 @@ MonoBehaviour:
   m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1300085327}
+  m_syoujo: {fileID: 0}
   m_tutorialToriger: {fileID: 879722895}
   m_ChaseEnemy:
   - {fileID: 1027299219}
@@ -65331,7 +65550,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 597595060}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}

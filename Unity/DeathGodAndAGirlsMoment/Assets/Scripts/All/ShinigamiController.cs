@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShinigamiController : CharacterBase {
 
+    const string kParameterConnect = "Connect";
+
     Vector3 scale;
     Rigidbody2D rb;
     bool m_toConnectHands;
@@ -29,12 +31,15 @@ public class ShinigamiController : CharacterBase {
     GameObject shinigami;
     Vector3 m_sSca;
     bool m_canAttack2 = false;
+    [SerializeField]
+    GameObject m_ude;
+    bool m_nowConnectHand = false;
 
     Vector3 m_shinigamisPos;
     
     // Use this for initialization
     void Start () {    
-        m_simpleAnimation = shinigami.GetComponent<SimpleAnimation>();
+        m_simpleAnimation = shinigami.GetComponent<SimpleAnimation>();       
         scale = transform.localScale;
         rb = GetComponent<Rigidbody2D>();
         m_jumpPower = 10.5f;
@@ -43,8 +48,9 @@ public class ShinigamiController : CharacterBase {
     }
 
 	// Update is called once per frame
-	void Update () {       
-        if(m_jump == false && m_onAttack == false)
+	void Update () {          
+
+        if (m_jump == false && m_onAttack == false)
         {            
             m_simpleAnimation.Play("Jump");
         }       
@@ -183,18 +189,32 @@ public class ShinigamiController : CharacterBase {
                 {
                     if (syoujo.GetOnFrightening == false)
                     {
+                        m_nowConnectHand = true;
                         syoujo.OnConnectHands = true;
                     }
                 }
             }
             else
             {
+                m_nowConnectHand = false;
                 syoujo.OnConnectHands = false;
             }
         }       
         transform.localScale = scale;      
 	}
 
+    private void LateUpdate()
+    {
+        if (m_nowConnectHand == true)
+        {
+            Connect();
+        }
+    }
+
+    void Connect()
+    {
+        m_ude.transform.Rotate(0, 0, 10);       
+    }
     void Attack()
     {
         if (m_onAttack == false)

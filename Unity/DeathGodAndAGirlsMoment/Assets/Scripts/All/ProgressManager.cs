@@ -9,6 +9,7 @@ public class ProgressManager : MonoBehaviour {
     public static bool m_clearedStage3 = false;
     public static bool m_clearedStage4 = false;
     public static int m_nowStage = 0;
+    public static bool m_clearStage1 = false;
 
     // Use this for initialization
     void Start () {

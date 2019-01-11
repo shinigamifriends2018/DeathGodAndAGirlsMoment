@@ -37,7 +37,7 @@ public class SyoujoController : CharacterBase
     GameObject[] m_hints;
     bool m_rightDirection;
     [SerializeField]
-    int[] m_acquisitions;
+    int m_acquisitions = 0;
     [SerializeField]
     int[] m_acquisitionsBox;
 
@@ -57,6 +57,8 @@ public class SyoujoController : CharacterBase
     float m_beforePos;
     bool m_canWalk = false;
     bool m_nouWalk = false;
+    LineRenderer m_lineRenderer;
+    bool m_nowIdle = false;
 
     // Use this for initialization
     private void Awake()
@@ -66,88 +68,31 @@ public class SyoujoController : CharacterBase
         m_acquisitionsBox[2] = PlayerPrefs.GetInt("m_acquisitionsBox[2]", 0);
         m_acquisitionsBox[3] = PlayerPrefs.GetInt("m_acquisitionsBox[3]", 0);
         m_acquisitionsBox[4] = PlayerPrefs.GetInt("m_acquisitionsBox[4]", 0);
-        m_acquisitionsBox[5] = PlayerPrefs.GetInt("m_acquisitionsBox[5]", 0);
-        m_acquisitionsBox[6] = PlayerPrefs.GetInt("m_acquisitionsBox[6]", 0);
-        m_acquisitionsBox[7] = PlayerPrefs.GetInt("m_acquisitionsBox[7]", 0);
-        m_acquisitionsBox[8] = PlayerPrefs.GetInt("m_acquisitionsBox[8]", 0);
-        m_acquisitionsBox[9] = PlayerPrefs.GetInt("m_acquisitionsBox[9]", 0);
-        if (ProgressManager.m_nowStage == 1)
-        {
-            m_acquisitions[0] = 0;
-            m_acquisitions[0] += m_acquisitionsBox[0];
-            m_acquisitions[0] += m_acquisitionsBox[1];
-            m_acquisitions[0] += m_acquisitionsBox[2];
-            m_acquisitions[0] += m_acquisitionsBox[3];
-            m_acquisitions[0] += m_acquisitionsBox[4];
-        }
-        if (ProgressManager.m_nowStage == 2)
-        {
-            m_acquisitions[1] = 0;
-            m_acquisitions[1] += m_acquisitionsBox[5];
-            m_acquisitions[1] += m_acquisitionsBox[6];
-            m_acquisitions[1] += m_acquisitionsBox[7];
-            m_acquisitions[1] += m_acquisitionsBox[8];
-            m_acquisitions[1] += m_acquisitionsBox[9];
-        }
-
+        m_acquisitions = PlayerPrefs.GetInt("scores",0);
     }
 
     void Start()
     {
-        if(ProgressManager.m_nowStage == 1)
-        {
-            SoundManager.Instance.PlayBGM((int)Common.BGMList.Stage1);
-        }
-        if(ProgressManager.m_nowStage == 2)
-        {
-            SoundManager.Instance.PlayBGM((int)Common.BGMList.Stage2);
-        }
         if (m_acquisitionsBox[0] == 1)
         {
-            getCheck[0] = true;
+            getCheck[0] = true; 
         }
-        if (m_acquisitionsBox[1] == 1)
+        if(ProgressManager.m_clearStage1 == false)
         {
-            getCheck[1] = true;
+            m_hitPoint = 6;
         }
-        if (m_acquisitionsBox[2] == 1)
+        else
         {
-            getCheck[2] = true;
-        }
-        if (m_acquisitionsBox[3] == 1)
-        {
-            getCheck[3] = true;
-        }
-        if (m_acquisitionsBox[4] == 1)
-        {
-            getCheck[4] = true;
-        }
-        if (m_acquisitionsBox[5] == 1)
-        {
-            getCheck[5] = true;
-        }
-        if (m_acquisitionsBox[6] == 1)
-        {
-            getCheck[6] = true;
-        }
-        if (m_acquisitionsBox[7] == 1)
-        {
-            getCheck[7] = true;
-        }
-        if (m_acquisitionsBox[8] == 1)
-        {
-            getCheck[8] = true;
-        }
-        if (m_acquisitionsBox[9] == 1)
-        {
-            getCheck[9] = true;
-        }
-        m_hitPoint = 6;
+            m_life[6].SetActive(true);
+            m_life[7].SetActive(true);
+            m_hitPoint = 7;
+        }        
         scale = gameObject.transform.localScale;
         rb = GetComponent<Rigidbody2D>();
         m_jumpPower = 10.5f;
         m_simpleAnimation = GetComponent<SimpleAnimation>();
         m_rayRot = m_ray.transform.rotation.eulerAngles;
+        m_lineRenderer = GetComponent<LineRenderer>();
 
         m_aFeelingOfBelieve = PlayerPrefs.GetInt("aFeelingOfBelieve", 0);
         if (m_aFeelingOfBelieve != 0)
@@ -163,8 +108,7 @@ public class SyoujoController : CharacterBase
 
     // Update is called once per frame
     void Update()
-    {
-        Debug.Log(m_nouWalk);
+    {        
         if (m_beforePos != gameObject.transform.position.x)
         {
             m_canWalk = true;
@@ -176,8 +120,11 @@ public class SyoujoController : CharacterBase
         }
         if ((m_jump == true) && (m_canWalk == false))
         {
-            m_skeletonAnimation.state.SetAnimation(0, "01. Idle", true);
-            Debug.Log("II");
+            if (m_nowIdle == false)
+            {
+                m_nowIdle = true;
+                m_skeletonAnimation.state.SetAnimation(0, "01. Idle", true);
+            }
         }
         if (m_canWalk == true)
         {
@@ -185,8 +132,8 @@ public class SyoujoController : CharacterBase
             {
                 m_skeletonAnimation.state.SetAnimation(0, "03. Run", true);
             }
-            m_nouWalk = true;
-            Debug.Log("RR");
+            m_nowIdle = false;
+            m_nouWalk = true;          
         }
         m_beforePos = transform.position.x;
         Ray ray = new Ray(m_ray.position, m_ray.transform.forward);
@@ -235,10 +182,13 @@ public class SyoujoController : CharacterBase
         {
             if (m_onConnectHands == true)
             {
-                Jump(rb);
-                StartCoroutine("Animation", 1.2f);
-                m_skeletonAnimation.state.SetAnimation(0, "04. Jump", false);
-                Invoke("Returnlayer", 0.5f);
+                if (m_jump == true)
+                {
+                    Jump(rb);
+                    StartCoroutine("Animation", 1.2f);
+                    m_skeletonAnimation.state.SetAnimation(0, "04. Jump", false);
+                    Invoke("Returnlayer", 0.5f);
+                }
             }
         }    
         float s = Input.GetAxis("S");
@@ -265,7 +215,7 @@ public class SyoujoController : CharacterBase
         else
         {
             Follow();
-        }        
+        }       
     }
 
 
@@ -390,6 +340,9 @@ public class SyoujoController : CharacterBase
                 {
                     if (Mathf.Abs(transform.position.x - shinigami.Posinvestigate.x) > 2f)
                     {
+                        m_lineRenderer.enabled = true;
+                        m_lineRenderer.SetPosition(0, transform.position);
+                        m_lineRenderer.SetPosition(1, shinigami.Posinvestigate);
                         if (shinigami.Posinvestigate.x > transform.position.x)
                         {
                             Move();
@@ -423,12 +376,25 @@ public class SyoujoController : CharacterBase
                         }
                     }
                 }
+                else
+                {
+                    m_lineRenderer.enabled = false;
+                }
             }
+            else
+            {
+                m_lineRenderer.enabled = false;
+            }
+        }
+        else
+        {
+            m_lineRenderer.enabled = false;
         }
     }
 
     void ConnectHands()
-    {        
+    {
+        m_lineRenderer.enabled = false;
         if (Mathf.Abs(transform.position.x - shinigami.Posinvestigate.x) > 1f)
         {
             if (shinigami.Posinvestigate.x > transform.position.x)
@@ -490,8 +456,7 @@ public class SyoujoController : CharacterBase
     {
         if (collision.gameObject.tag == "Heart")
         {
-            SoundManager.Instance.PlaySE((int)Common.SEList.GetHeart);
-            if (m_hitPoint < 6)
+            if ((ProgressManager.m_clearStage1 == false && m_hitPoint < 6) || (ProgressManager.m_clearStage1 == true && m_hitPoint < 7))
             {
                 m_life[m_hitPoint].SetActive(true);
                 m_hitPoint++;
@@ -503,7 +468,6 @@ public class SyoujoController : CharacterBase
             StartCoroutine("SetActiveEfect");            
             Destroy(collision.gameObject);
             StartCoroutine("LifeRecovery");
-            SoundManager.Instance.PlaySE((int)Common.SEList.GetPiceofMemori);
         }
     }
 
@@ -515,21 +479,10 @@ public class SyoujoController : CharacterBase
         }
         set
         {
-            if (ProgressManager.m_nowStage == 1)
+            m_acquisitionsBox[0] = 1;
+            if (getCheck[0] == false)
             {
-                m_acquisitionsBox[0] = 1;
-                if (getCheck[0] == false)
-                {
-                    m_acquisitions[0] += m_acquisitionsBox[0];
-                }
-            }
-            if (ProgressManager.m_nowStage == 2)
-            {
-                m_acquisitionsBox[5] = 1;
-                if (getCheck[5] == false)
-                {
-                    m_acquisitions[1] += m_acquisitionsBox[0];
-                }
+                m_acquisitions += m_acquisitionsBox[0];
             }
         }
     }
@@ -541,21 +494,10 @@ public class SyoujoController : CharacterBase
         }
         set
         {
-            if (ProgressManager.m_nowStage == 1)
+            m_acquisitionsBox[1] = 1;
+            if (getCheck[1] == false)
             {
-                m_acquisitionsBox[1] = 1;
-                if (getCheck[1] == false)
-                {
-                    m_acquisitions[0] += m_acquisitionsBox[1];
-                }
-            }
-            if (ProgressManager.m_nowStage == 2)
-            {
-                m_acquisitionsBox[6] = 1;
-                if (getCheck[6] == false)
-                {
-                    m_acquisitions[1] += m_acquisitionsBox[6];
-                }
+                m_acquisitions += m_acquisitionsBox[1];
             }
         }
     }
@@ -567,21 +509,11 @@ public class SyoujoController : CharacterBase
         }
         set
         {
-            if (ProgressManager.m_nowStage == 1)
+            
+            m_acquisitionsBox[2] = 1;
+            if (getCheck[2] == false)
             {
-                m_acquisitionsBox[2] = 1;
-                if (getCheck[2] == false)
-                {
-                    m_acquisitions[0] += m_acquisitionsBox[2];
-                }
-            }
-            if (ProgressManager.m_nowStage == 2)
-            {
-                m_acquisitionsBox[7] = 1;
-                if (getCheck[7] == false)
-                {
-                    m_acquisitions[1] += m_acquisitionsBox[7];
-                }
+                m_acquisitions += m_acquisitionsBox[2];
             }
         }
     }
@@ -593,21 +525,10 @@ public class SyoujoController : CharacterBase
         }
         set
         {
-            if (ProgressManager.m_nowStage == 1)
+            m_acquisitionsBox[3] = 1;
+            if (getCheck[3] == false)
             {
-                m_acquisitionsBox[3] = 1;
-                if (getCheck[3] == false)
-                {
-                    m_acquisitions[0] += m_acquisitionsBox[3];
-                }
-            }
-            if (ProgressManager.m_nowStage == 2)
-            {
-                m_acquisitionsBox[8] = 1;
-                if (getCheck[8] == false)
-                {
-                    m_acquisitions[1] += m_acquisitionsBox[8];
-                }
+                m_acquisitions += m_acquisitionsBox[3];
             }
         }
     }
@@ -619,25 +540,15 @@ public class SyoujoController : CharacterBase
         }
         set
         {
-            if (ProgressManager.m_nowStage == 1)
+            m_acquisitionsBox[4] = 1;
+
+            if (getCheck[4] == false)
             {
-                m_acquisitionsBox[4] = 1;
-                if (getCheck[4] == false)
-                {
-                    m_acquisitions[0] += m_acquisitionsBox[4];
-                }
-            }
-            if (ProgressManager.m_nowStage == 2)
-            {
-                m_acquisitionsBox[9] = 1;
-                if (getCheck[9] == false)
-                {
-                    m_acquisitions[1] += m_acquisitionsBox[9];
-                }
+                m_acquisitions += m_acquisitionsBox[4];
             }
         }
     }
-
+    
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (m_followSwitch == true)
@@ -730,7 +641,14 @@ public class SyoujoController : CharacterBase
 
     IEnumerator LifeRecovery()
     {
-        m_hitPoint = 6;
+        if(ProgressManager.m_clearStage1 == false)
+        {
+            m_hitPoint = 6;
+        }
+        else
+        {
+            m_hitPoint = 7;
+        }        
         for (int i = 0; i < 6; i++)
         {
             m_life[i].SetActive(true);
@@ -804,18 +722,12 @@ public class SyoujoController : CharacterBase
 
     void Clear()
     {
-        PlayerPrefs.SetInt("m_acquisitions[0]", m_acquisitions[0]);
-        PlayerPrefs.SetInt("m_acquisitions[1]", m_acquisitions[1]);
+        PlayerPrefs.SetInt("m_acquisitions", m_acquisitions);
         PlayerPrefs.SetInt("m_acquisitionsBox[0]", m_acquisitionsBox[0]);
         PlayerPrefs.SetInt("m_acquisitionsBox[1]", m_acquisitionsBox[1]);
         PlayerPrefs.SetInt("m_acquisitionsBox[2]", m_acquisitionsBox[2]);
         PlayerPrefs.SetInt("m_acquisitionsBox[3]", m_acquisitionsBox[3]);
         PlayerPrefs.SetInt("m_acquisitionsBox[4]", m_acquisitionsBox[4]);
-        PlayerPrefs.SetInt("m_acquisitionsBox[5]", m_acquisitionsBox[5]);
-        PlayerPrefs.SetInt("m_acquisitionsBox[6]", m_acquisitionsBox[6]);
-        PlayerPrefs.SetInt("m_acquisitionsBox[7]", m_acquisitionsBox[7]);
-        PlayerPrefs.SetInt("m_acquisitionsBox[8]", m_acquisitionsBox[8]);
-        PlayerPrefs.SetInt("m_acquisitionsBox[9]", m_acquisitionsBox[9]);
         PlayerPrefs.SetInt("aFeelingOfBelieve", m_aFeelingOfBelieve);
         PlayerPrefs.Save();
         if (ProgressManager.m_nowStage == 3)
@@ -829,8 +741,7 @@ public class SyoujoController : CharacterBase
         else if (ProgressManager.m_nowStage == 1)
         {
             ProgressManager.m_clearedStage1 = true;
-        }
-        SoundManager.Instance.PlaySE((int)Common.SEList.Goal);
+        }   
         SceneManager.LoadScene("Clear");
     }
 

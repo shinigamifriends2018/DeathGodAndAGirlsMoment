@@ -25,7 +25,13 @@ public class ClearTransition : MonoBehaviour {
             SoundManager.Instance.StopBGM();
             SceneManager.LoadScene("Title");
         }
+
+        if(ProgressManager.m_nowStage == 1)
+        {
+            ProgressManager.m_clearStage1 = true;
+        }
     }
+
 //    public void loadscene()
 //    {
 //        Invoke("transition", 2f);
