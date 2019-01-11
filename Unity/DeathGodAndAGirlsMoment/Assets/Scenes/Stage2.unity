@@ -6758,6 +6758,21 @@ Prefab:
       propertyPath: m_hints.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: getCheck.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_acquisitions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_acquisitionsBox.Array.size
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4673486302782026, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
       propertyPath: m_LocalPosition.x
       value: -8.609
@@ -17045,6 +17060,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_hitPoint: 0
   m_jump: 1
+  m_aFeelingOfBelieve: 0
   shinigami: {fileID: 879722898}
   m_efect:
   - {fileID: 323879578}
@@ -22554,6 +22570,8 @@ MonoBehaviour:
     m_Bits: 41216
   m_ray: {fileID: 778083846}
   shinigami: {fileID: 0}
+  m_ude: []
+  m_shinigamisPos: {x: 0, y: 0, z: 0}
 --- !u!4 &879722899
 Transform:
   m_ObjectHideFlags: 0

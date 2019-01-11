@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114505985928834934}
   m_Layer: 0
   m_Name: Kamaitathi
-  m_TagString: Untagged
+  m_TagString: akuryou
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
