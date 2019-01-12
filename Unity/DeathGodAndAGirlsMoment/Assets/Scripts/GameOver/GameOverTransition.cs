@@ -15,6 +15,7 @@ public class GameOverTransition : MonoBehaviour {
 	void Update () {
         if (Input.GetButtonDown("Decision"))
         {
+            SoundManager.Instance.PlaySE((int)Common.SEList.Decison);
             SoundManager.Instance.StopBGM();
             SceneManager.LoadScene("Title");
         }

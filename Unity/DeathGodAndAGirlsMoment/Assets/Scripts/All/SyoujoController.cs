@@ -842,6 +842,7 @@ public class SyoujoController : CharacterBase
 
     void Clear()
     {
+        SoundManager.Instance.PlaySE((int)Common.SEList.Goal);
         PlayerPrefs.SetInt("m_acquisitions[0]", m_acquisitions[0]);
         PlayerPrefs.SetInt("m_acquisitions[1]", m_acquisitions[1]);
         PlayerPrefs.SetInt("m_acquisitionsBox[0]", m_acquisitionsBox[0]);

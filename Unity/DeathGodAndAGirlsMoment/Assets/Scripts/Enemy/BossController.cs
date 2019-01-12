@@ -43,6 +43,7 @@ public class BossController : GhostController {
         m_YmoveSpeed = -3f;
         m_RightKmaitachi.SetActive(true);
         m_LeftKmaitachi.SetActive(true);
+        SoundManager.Instance.PlayBGM((int)Common.BGMList.Boss);
     }
 
     // Update is called once per frame

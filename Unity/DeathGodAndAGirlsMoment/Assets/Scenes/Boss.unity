@@ -1046,6 +1046,21 @@ Prefab:
       propertyPath: m_hints.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: getCheck.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_acquisitions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_acquisitionsBox.Array.size
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4673486302782026, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
       propertyPath: m_LocalPosition.x
       value: -8.609
@@ -2987,7 +3002,7 @@ MonoBehaviour:
   - {fileID: 191693279}
   - {fileID: 1972634295}
   - {fileID: 1923236018}
-  m_acquisitions: 0
+  m_acquisitions: 
   m_acquisitionsBox: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_pieceofMemory:
   - {fileID: 0}
