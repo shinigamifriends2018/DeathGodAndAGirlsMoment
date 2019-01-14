@@ -420,8 +420,7 @@ public class SyoujoController : CharacterBase
                         }
                         else if (shinigami.Posinvestigate.x < transform.position.x)
                         {
-                            transform.Translate(new Vector2(-m_moveSpeed * Time.deltaTime, 0f));
-                            m_simpleAnimation.CrossFade("Walk", 0.2f);
+                            transform.Translate(new Vector2(-m_moveSpeed * Time.deltaTime, 0f));                            
                             if (scale.x > 0)
                             {
                                 scale.x *= -1;
@@ -802,7 +801,7 @@ public class SyoujoController : CharacterBase
 
     void FinishDamage()
     {
-        m_simpleAnimation.Play("Default");
+        m_skeletonAnimation.state.SetAnimation(0, "01. Idle", true);
         if (m_onFrightening == true)
         {
             m_onFrightening = false;
@@ -816,8 +815,8 @@ public class SyoujoController : CharacterBase
     }
 
     void FinishFrightening()
-    {      
-        m_simpleAnimation.Play("Default");
+    {
+        m_skeletonAnimation.state.SetAnimation(0, "01. Idle", true);
         m_onFrightening = false;
     }
     
