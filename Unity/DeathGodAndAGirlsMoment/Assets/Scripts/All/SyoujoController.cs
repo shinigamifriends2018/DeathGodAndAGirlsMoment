@@ -44,8 +44,7 @@ public class SyoujoController : CharacterBase
 
     [SerializeField]
     GameObject[] m_pieceofMemory;
-    [SerializeField]
-    GameObject[] m_pieceofMemoryUI;
+
     [SerializeField]
     GameObject m_getPieceOfMemory;
     [SerializeField]
@@ -170,7 +169,7 @@ public class SyoujoController : CharacterBase
             }
         }
         m_beforePos = gameObject.transform.position.x;
-      
+
     }
 
     // Update is called once per frame
@@ -536,6 +535,7 @@ public class SyoujoController : CharacterBase
             StartCoroutine("SetActiveEfect");            
             Destroy(collision.gameObject);
             StartCoroutine("LifeRecovery");
+
         }
     }
 
@@ -550,12 +550,13 @@ public class SyoujoController : CharacterBase
             if (ProgressManager.m_nowStage == 1)
             {
                 m_acquisitionsBox[0] = 1;
+            
                 if (getCheck[0] == false)
                 {
                     m_acquisitions[0] += m_acquisitionsBox[0];
                 }
             }
-            if (ProgressManager.m_nowStage == 2)
+            else if (ProgressManager.m_nowStage == 2)
             {
                 m_acquisitionsBox[5] = 1;
                 if (getCheck[5] == false)
@@ -581,7 +582,7 @@ public class SyoujoController : CharacterBase
                     m_acquisitions[0] += m_acquisitionsBox[1];
                 }
             }
-            if (ProgressManager.m_nowStage == 2)
+            else if (ProgressManager.m_nowStage == 2)
             {
                 m_acquisitionsBox[6] = 1;
                 if (getCheck[6] == false)
@@ -607,7 +608,7 @@ public class SyoujoController : CharacterBase
                     m_acquisitions[0] += m_acquisitionsBox[2];
                 }
             }
-            if (ProgressManager.m_nowStage == 2)
+            else if (ProgressManager.m_nowStage == 2)
             {
                 m_acquisitionsBox[7] = 1;
                 if (getCheck[7] == false)
@@ -630,10 +631,10 @@ public class SyoujoController : CharacterBase
                 m_acquisitionsBox[3] = 1;
                 if (getCheck[3] == false)
                 {
-                    m_acquisitions[0] += m_acquisitionsBox[3];
+                    m_acquisitions[3] += m_acquisitionsBox[3];
                 }
             }
-            if (ProgressManager.m_nowStage == 2)
+            else if (ProgressManager.m_nowStage == 2)
             {
                 m_acquisitionsBox[8] = 1;
                 if (getCheck[8] == false)
@@ -659,7 +660,7 @@ public class SyoujoController : CharacterBase
                     m_acquisitions[0] += m_acquisitionsBox[4];
                 }
             }
-            if (ProgressManager.m_nowStage == 2)
+            else if (ProgressManager.m_nowStage == 2)
             {
                 m_acquisitionsBox[9] = 1;
                 if (getCheck[9] == false)

@@ -861,6 +861,48 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 0}
   m_AttachedIK: {fileID: 0}
+--- !u!1001 &30270167
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4589889730929412, guid: 18eb498f6c647f048a07773e8f9454d7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589889730929412, guid: 18eb498f6c647f048a07773e8f9454d7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589889730929412, guid: 18eb498f6c647f048a07773e8f9454d7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589889730929412, guid: 18eb498f6c647f048a07773e8f9454d7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589889730929412, guid: 18eb498f6c647f048a07773e8f9454d7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589889730929412, guid: 18eb498f6c647f048a07773e8f9454d7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589889730929412, guid: 18eb498f6c647f048a07773e8f9454d7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589889730929412, guid: 18eb498f6c647f048a07773e8f9454d7, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18eb498f6c647f048a07773e8f9454d7, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &30869460 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1939859722968148, guid: 50719c849f72bcd4daac18e070bb9675,
@@ -1831,7 +1873,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808715c6a3c9d094b9a05c4d02b289e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_pieceofMemory: {fileID: 367926494}
+  m_pieceofMemory:
+  - {fileID: 2129605101}
+  - {fileID: 367926494}
+  - {fileID: 905442620}
+  - {fileID: 699977472}
+  - {fileID: 1574049143}
   m_trigger:
   - {fileID: 1900249996}
   - {fileID: 59738998}
@@ -3770,7 +3817,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808715c6a3c9d094b9a05c4d02b289e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_pieceofMemory: {fileID: 1574049143}
+  m_pieceofMemory:
+  - {fileID: 2129605101}
+  - {fileID: 367926494}
+  - {fileID: 905442620}
+  - {fileID: 699977472}
+  - {fileID: 1574049143}
   m_trigger:
   - {fileID: 1900249996}
   - {fileID: 59738998}
@@ -17097,12 +17149,6 @@ MonoBehaviour:
   - {fileID: 2091884510}
   - {fileID: 1109991901}
   - {fileID: 139419197}
-  m_pieceofMemoryUI:
-  - {fileID: 2129605101}
-  - {fileID: 367926494}
-  - {fileID: 905442620}
-  - {fileID: 699977472}
-  - {fileID: 1574049143}
   m_getPieceOfMemory: {fileID: 30869460}
   camera: {fileID: 1096122020}
   getCheck: 00000000000000000000
@@ -29849,7 +29895,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808715c6a3c9d094b9a05c4d02b289e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_pieceofMemory: {fileID: 699977472}
+  m_pieceofMemory:
+  - {fileID: 2129605101}
+  - {fileID: 367926494}
+  - {fileID: 905442620}
+  - {fileID: 699977472}
+  - {fileID: 1574049143}
   m_trigger:
   - {fileID: 1900249996}
   - {fileID: 59738998}
@@ -50000,7 +50051,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808715c6a3c9d094b9a05c4d02b289e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_pieceofMemory: {fileID: 2129605101}
+  m_pieceofMemory:
+  - {fileID: 2129605101}
+  - {fileID: 367926494}
+  - {fileID: 905442620}
+  - {fileID: 699977472}
+  - {fileID: 1574049143}
   m_trigger:
   - {fileID: 1900249996}
   - {fileID: 59738998}
@@ -54887,7 +54943,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808715c6a3c9d094b9a05c4d02b289e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_pieceofMemory: {fileID: 905442620}
+  m_pieceofMemory:
+  - {fileID: 2129605101}
+  - {fileID: 367926494}
+  - {fileID: 905442620}
+  - {fileID: 699977472}
+  - {fileID: 1574049143}
   m_trigger:
   - {fileID: 1900249996}
   - {fileID: 59738998}
