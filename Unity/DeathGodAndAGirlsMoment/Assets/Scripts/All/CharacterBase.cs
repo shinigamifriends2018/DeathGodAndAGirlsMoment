@@ -6,7 +6,6 @@ public class CharacterBase : MonoBehaviour {
     [SerializeField]
     protected float m_moveSpeed;
     protected float m_jumpPower;
-    [SerializeField]
     protected int m_hitPoint;
     protected SimpleAnimation m_simpleAnimation;
     [SerializeField]

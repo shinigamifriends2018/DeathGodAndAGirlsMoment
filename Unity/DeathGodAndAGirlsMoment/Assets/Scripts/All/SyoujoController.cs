@@ -104,6 +104,7 @@ public class SyoujoController : CharacterBase
 
     void Start()
     {
+        Debug.Log("1");
         if (m_acquisitionsBox[0] == 1)
         {
             getCheck[0] = true;
@@ -144,16 +145,8 @@ public class SyoujoController : CharacterBase
         {
             getCheck[9] = true;
         }
-        if (ProgressManager.m_clearStage1 == false)
-        {
-            m_hitPoint = 6;
-        }
-        else
-        {
-            m_life[6].SetActive(true);
-            m_life[7].SetActive(true);
-            m_hitPoint = 7;
-        }        
+
+        Debug.Log("4");
         scale = gameObject.transform.localScale;
         rb = GetComponent<Rigidbody2D>();
         m_jumpPower = 10.5f;
@@ -170,12 +163,24 @@ public class SyoujoController : CharacterBase
             }
         }
         m_beforePos = gameObject.transform.position.x;
-      
+
+        m_hitPoint = 6;
+        Debug.Log("5");
+        if (ProgressManager.m_clearStage1 == true)
+        {
+            Debug.Log(m_hitPoint);
+            m_hitPoint += 1;
+            m_life[6].SetActive(true);
+            m_life[7].SetActive(true);
+            Debug.Log(m_hitPoint);
+        }
+   
     }
 
     // Update is called once per frame
     void Update()
-    {        
+    {
+      //  Debug.Log(m_hitPoint);
         if (m_beforePos != gameObject.transform.position.x)
         {
             m_canWalk = true;
@@ -868,6 +873,10 @@ public class SyoujoController : CharacterBase
         {
             ProgressManager.m_clearedStage1 = true;
         }   
+        if(ProgressManager.m_nowStage == 1)
+        {
+            ProgressManager.m_clearStage1 = true;
+        }
         SceneManager.LoadScene("Clear");
     }
 
