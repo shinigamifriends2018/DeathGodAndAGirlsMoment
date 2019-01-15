@@ -32,6 +32,7 @@ public class BossEnemyController : MonoBehaviour {
                     bossController.m_enemyCheck[1] = true;
                 }
             }
+
         }
     }
 }
