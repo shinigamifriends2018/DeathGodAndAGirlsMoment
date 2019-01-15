@@ -52,9 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volume:
-    BGM: 1
+    BGM: 0.5
     Voice: 1
-    SE: 1
+    SE: 0.5
     Mute: 0
   BGM:
   - {fileID: 8300000, guid: da00320e56fe0c941823cf5f42063091, type: 3}
