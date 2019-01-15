@@ -41,10 +41,6 @@ public class SyoujoController : CharacterBase
     int[] m_acquisitions;
     [SerializeField]
     int[] m_acquisitionsBox;
-
-    [SerializeField]
-    GameObject[] m_pieceofMemory;
-
     [SerializeField]
     GameObject m_getPieceOfMemory;
     [SerializeField]
