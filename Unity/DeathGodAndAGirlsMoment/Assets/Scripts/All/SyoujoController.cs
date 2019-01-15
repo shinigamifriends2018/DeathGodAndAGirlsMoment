@@ -522,6 +522,7 @@ public class SyoujoController : CharacterBase
     {
         if (collision.gameObject.tag == "Heart")
         {
+            SoundManager.Instance.PlaySE((int)Common.SEList.GetHeart);
             if ((ProgressManager.m_clearStage1 == false && m_hitPoint < 6) || (ProgressManager.m_clearStage1 == true && m_hitPoint < 7))
             {
                 m_life[m_hitPoint].SetActive(true);
@@ -531,6 +532,7 @@ public class SyoujoController : CharacterBase
         }
         if (collision.gameObject.tag == "Piece of memory")
         {
+            SoundManager.Instance.PlaySE((int)Common.SEList.GetPiceofMemori);
             StartCoroutine("SetActiveEfect");            
             Destroy(collision.gameObject);
             StartCoroutine("LifeRecovery");
@@ -746,6 +748,7 @@ public class SyoujoController : CharacterBase
 
     public IEnumerator SetActiveHint(int num)
     {
+        SoundManager.Instance.PlayVoice((int)Common.VoiceList.SyoujoNeenee);
         m_hints[num].SetActive(true);
         yield return new WaitForSeconds(3f);
         m_hints[num].SetActive(false);     
@@ -790,6 +793,7 @@ public class SyoujoController : CharacterBase
 
     void Damage()
     {
+        SoundManager.Instance.PlayVoice((int)Common.VoiceList.Syoujoku);
         m_life[m_hitPoint - 1].SetActive(false);
         m_hitPoint--;
         if (m_aFeelingOfBelieve > 0)
