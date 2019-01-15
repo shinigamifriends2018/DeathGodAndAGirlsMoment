@@ -231,20 +231,29 @@ public class ShinigamiController : CharacterBase {
             {
                 m_onAttack = true;
                 m_simpleAnimation.Stop();
-				m_simpleAnimation.Play("JumpAttack");
+                Invoke("AttackSE", 0.5f);
+                m_simpleAnimation.Play("JumpAttack");
             }
             else
             {
                 m_onAttack = true;
                 m_simpleAnimation.Stop();
+                AttackSE();
                 m_simpleAnimation.Play("Attack1");             
             }
         }
         else if(m_canAttack2 == true)
         {           
             m_simpleAnimation.Stop();
+            AttackSE();
+            SoundManager.Instance.PlayVoice((int)Common.VoiceList.ShinigamiVoice);
             m_simpleAnimation.Play("Attack2");
         }        
+    }
+
+    void AttackSE()
+    {
+        SoundManager.Instance.PlaySE((int)Common.SEList.ShinigamiAttack);
     }
 
     void AttackActive()

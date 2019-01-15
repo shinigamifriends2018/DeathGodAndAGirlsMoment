@@ -46,6 +46,18 @@ public class Common{
        GetHeart,
        DropHeart,
        Goal,
+       ShinigamiAttack,
+       ShinigamiMove,
+       SyoujoMove,
+       HandSheck,
     }
-    
+    /// <summary>
+    /// Voice List
+    /// </summary>
+    public enum VoiceList
+    {
+        ShinigamiVoice,
+        Syoujoku,
+        SyoujoNeenee,
+    }
 }
