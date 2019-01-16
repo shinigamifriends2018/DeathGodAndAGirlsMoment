@@ -136,7 +136,7 @@ public class BossController : GhostController {
                     {
                         m_moveSpeed = 0f;
                         m_YmoveSpeed = -3f;
-                        if (gameObject.transform.position.y > 3.5)
+                        if (gameObject.transform.position.y > 2)
                         {
                             transform.Translate(new Vector2(0f, m_YmoveSpeed * Time.deltaTime));
                         }
@@ -153,7 +153,7 @@ public class BossController : GhostController {
                 {
                     if (gameObject.transform.position.x > syoujoPos.x)
                     {
-                        if (gameObject.transform.position.x - syoujoPos.x > 5)
+                        if (gameObject.transform.position.x - syoujoPos.x > 3 )
                         {
                             simpleAnimation.Play("Default");
                             m_moveSpeed = -4f;
@@ -162,15 +162,16 @@ public class BossController : GhostController {
                                 scale.x *= -1f;
                             }
                         }
-                        else if (gameObject.transform.position.x - syoujoPos.x <= 5)
+                        else if (gameObject.transform.position.x - syoujoPos.x < 3)
                         {
                             m_moveSpeed = 0f;
                             simpleAnimation.Play("Assault");
                         }
                     }
                     else if (gameObject.transform.position.x < syoujoPos.x)
+  
                     {
-                        if (syoujoPos.x - gameObject.transform.position.x > 5)
+                        if (gameObject.transform.position.x - syoujoPos.x < -3)
                         {
                             simpleAnimation.Play("Default");
                             m_moveSpeed = 4f;
@@ -179,8 +180,10 @@ public class BossController : GhostController {
                                 scale.x *= -1f;
                             }
                         }
-                        else if (gameObject.transform.position.x - syoujoPos.x <= 5)
+                        else if (gameObject.transform.position.x - syoujoPos.x > -3 )
                         {
+
+                            m_moveSpeed = 0f;
                             simpleAnimation.Play("Assault");
                         }
                     }
@@ -189,6 +192,10 @@ public class BossController : GhostController {
                 {
                     m_moveSpeed = 0f;
                     simpleAnimation.Play("Default");
+                    if(scale.x < 0)
+                    {
+                        scale.x *= -1f;
+                    }
                     if (gameObject.transform.position.y < 7)
                     {
                         m_YmoveSpeed = 3f;
@@ -280,7 +287,7 @@ public class BossController : GhostController {
                     {
                         m_moveSpeed = 0f;
                         m_YmoveSpeed = -3f;
-                        if (gameObject.transform.position.y > 3.5)
+                        if (gameObject.transform.position.y > 2)
                         {
                             transform.Translate(new Vector2(0f, m_YmoveSpeed * Time.deltaTime));
                         }
@@ -293,11 +300,11 @@ public class BossController : GhostController {
                         }
                     }
                 }
-                else if (m_bossMoveCheck == 8)
+                if (m_bossMoveCheck == 8)
                 {
                     if (gameObject.transform.position.x > syoujoPos.x)
                     {
-                        if (gameObject.transform.position.x - syoujoPos.x > 5)
+                        if (gameObject.transform.position.x - syoujoPos.x > 3)
                         {
                             simpleAnimation.Play("Default");
                             m_moveSpeed = -4f;
@@ -306,15 +313,16 @@ public class BossController : GhostController {
                                 scale.x *= -1f;
                             }
                         }
-                        else if (gameObject.transform.position.x - syoujoPos.x <= 5)
+                        else if (gameObject.transform.position.x - syoujoPos.x < 3)
                         {
                             m_moveSpeed = 0f;
                             simpleAnimation.Play("Assault");
                         }
                     }
                     else if (gameObject.transform.position.x < syoujoPos.x)
+
                     {
-                        if (syoujoPos.x - gameObject.transform.position.x > 5)
+                        if (gameObject.transform.position.x - syoujoPos.x < -3)
                         {
                             simpleAnimation.Play("Default");
                             m_moveSpeed = 4f;
@@ -323,8 +331,9 @@ public class BossController : GhostController {
                                 scale.x *= -1f;
                             }
                         }
-                        else if (gameObject.transform.position.x - syoujoPos.x <= 5)
+                        else if (gameObject.transform.position.x - syoujoPos.x > -3)
                         {
+
                             m_moveSpeed = 0f;
                             simpleAnimation.Play("Assault");
                         }
@@ -427,7 +436,7 @@ public class BossController : GhostController {
                         {
                             m_moveSpeed = 0f;
                             m_YmoveSpeed = -3f;
-                            if (gameObject.transform.position.y > 3.5)
+                            if (gameObject.transform.position.y > 2)
                             {
                                 transform.Translate(new Vector2(0f, m_YmoveSpeed * Time.deltaTime));
                             }
@@ -440,11 +449,11 @@ public class BossController : GhostController {
                             }
                         }
                     }
-                    else if (m_bossMoveCheck == 8)
+                    if (m_bossMoveCheck == 8)
                     {
                         if (gameObject.transform.position.x > syoujoPos.x)
                         {
-                            if (gameObject.transform.position.x - syoujoPos.x > 5)
+                            if (gameObject.transform.position.x - syoujoPos.x > 3)
                             {
                                 simpleAnimation.Play("Default");
                                 m_moveSpeed = -4f;
@@ -453,15 +462,16 @@ public class BossController : GhostController {
                                     scale.x *= -1f;
                                 }
                             }
-                            else if (gameObject.transform.position.x - syoujoPos.x <= 5)
+                            else if (gameObject.transform.position.x - syoujoPos.x < 3)
                             {
                                 m_moveSpeed = 0f;
                                 simpleAnimation.Play("Assault");
                             }
                         }
                         else if (gameObject.transform.position.x < syoujoPos.x)
+
                         {
-                            if (syoujoPos.x - gameObject.transform.position.x > 5)
+                            if (gameObject.transform.position.x - syoujoPos.x < -3)
                             {
                                 simpleAnimation.Play("Default");
                                 m_moveSpeed = 4f;
@@ -470,11 +480,12 @@ public class BossController : GhostController {
                                     scale.x *= -1f;
                                 }
                             }
-                        }
-                        else if (gameObject.transform.position.x - syoujoPos.x <= 5)
-                        {
-                            m_moveSpeed = 0f;
-                            simpleAnimation.Play("Assault");
+                            else if (gameObject.transform.position.x - syoujoPos.x > -3)
+                            {
+
+                                m_moveSpeed = 0f;
+                                simpleAnimation.Play("Assault");
+                            }
                         }
                     }
                 }

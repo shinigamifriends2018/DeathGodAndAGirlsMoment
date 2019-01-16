@@ -190,8 +190,8 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 46357728}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.1999817, y: 0.9200134, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1486537032}
@@ -470,15 +470,15 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 0
-  m_syoujo: {fileID: 644389897}
-  m_tutorialToriger: {fileID: 879722895}
+  m_syoujo: {fileID: 1295380340}
+  m_tutorialToriger: {fileID: 507942279}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
   m_sim: {fileID: 73787305}
   m_bulletPrefab: {fileID: 1824164674557216, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
     type: 2}
   m_spawnPoint: {fileID: 1760983931}
-  syoujoController: {fileID: 644389900}
+  syoujoController: {fileID: 276028549}
 --- !u!50 &73787303
 Rigidbody2D:
   serializedVersion: 4
@@ -1107,11 +1107,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4673486302782026, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -15.01
+      value: -13.88
       objectReference: {fileID: 0}
     - target: {fileID: 4673486302782026, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.01368719
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4673486302782026, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1155,7 +1155,7 @@ Prefab:
         type: 2}
       propertyPath: camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1096122020}
     - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
         type: 2}
       propertyPath: m_life.Array.data[0]
@@ -2632,6 +2632,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114375325586119286, guid: bf21b2498896cce4ab05ba2008d86718,
+        type: 2}
+      propertyPath: m_ude.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4509181838359776, guid: bf21b2498896cce4ab05ba2008d86718, type: 2}
       propertyPath: m_LocalPosition.x
       value: -12.71
@@ -2678,6 +2683,24 @@ Prefab:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1096122020}
+    - target: {fileID: 114375325586119286, guid: bf21b2498896cce4ab05ba2008d86718,
+        type: 2}
+      propertyPath: m_ude.Array.data[0]
+      value: 
+      objectReference: {fileID: 878473405}
+    - target: {fileID: 114375325586119286, guid: bf21b2498896cce4ab05ba2008d86718,
+        type: 2}
+      propertyPath: m_ude.Array.data[1]
+      value: 
+      objectReference: {fileID: 1254433434}
+    - target: {fileID: 1571356350552904, guid: bf21b2498896cce4ab05ba2008d86718, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208328960776966, guid: bf21b2498896cce4ab05ba2008d86718, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf21b2498896cce4ab05ba2008d86718, type: 2}
   m_IsPrefabAsset: 0
@@ -2880,7 +2903,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: 0.049622316, w: 0.9987681}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: -2.100006, y: 6.42, z: 0}
+    targetPosition: {x: -2.1000185, y: 6.4200134, z: 0}
     flip: 0
 --- !u!4 &637131373
 Transform:
@@ -3429,7 +3452,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 700792738}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4, y: -2.8, z: 0}
+  m_LocalPosition: {x: 3.6000366, y: -1.8800049, z: 0}
   m_LocalScale: {x: 1.5, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1307635038}
@@ -3496,7 +3519,7 @@ GameObject:
   - component: {fileID: 737502488}
   - component: {fileID: 737502487}
   - component: {fileID: 737502486}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: BossFarEnemy2
   m_TagString: akuryou2
   m_Icon: {fileID: 0}
@@ -3534,15 +3557,15 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 0
-  m_syoujo: {fileID: 644389897}
-  m_tutorialToriger: {fileID: 879722895}
+  m_syoujo: {fileID: 1295380340}
+  m_tutorialToriger: {fileID: 507942279}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
   m_sim: {fileID: 737502490}
   m_bulletPrefab: {fileID: 1824164674557216, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
     type: 2}
   m_spawnPoint: {fileID: 1260550296}
-  syoujoController: {fileID: 644389900}
+  syoujoController: {fileID: 276028549}
 --- !u!50 &737502488
 Rigidbody2D:
   serializedVersion: 4
@@ -4103,6 +4126,11 @@ MonoBehaviour:
   m_Bones: []
   m_BoneTransforms:
   - {fileID: 1588362690}
+--- !u!1 &878473405 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1775041376649622, guid: bf21b2498896cce4ab05ba2008d86718,
+    type: 2}
+  m_PrefabInternal: {fileID: 560525736}
 --- !u!1 &879722895
 GameObject:
   m_ObjectHideFlags: 0
@@ -4165,7 +4193,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 879722895}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7dee4e5209493344b019f8189c03d35, type: 3}
   m_Name: 
@@ -5744,13 +5772,18 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1224430614}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -3.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.6999817, y: -2.5800018, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1307635038}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1254433434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1105472131455480, guid: bf21b2498896cce4ab05ba2008d86718,
+    type: 2}
+  m_PrefabInternal: {fileID: 560525736}
 --- !u!1 &1260550295
 GameObject:
   m_ObjectHideFlags: 0
@@ -5794,7 +5827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 644389897}
+  m_syoujo: {fileID: 1295380340}
   m_akuryou: {fileID: 1260550295}
 --- !u!1 &1282508249
 GameObject:
@@ -6113,7 +6146,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1307635036}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.199994, y: 7.92, z: 0}
+  m_LocalPosition: {x: 0, y: 7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1492202395}
@@ -6362,7 +6395,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1331370703}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: -4, z: 0}
+  m_LocalPosition: {x: 1.1999817, y: -3.0800018, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1307635038}
@@ -6391,8 +6424,8 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1332467162}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5, y: -3.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.2999878, y: -2.5800018, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1307635038}
@@ -6930,8 +6963,8 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1492202394}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5, y: -3.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.2999878, y: -2.5800018, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1307635038}
@@ -7635,7 +7668,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: 0.8256839, w: 0.56413305}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: -0.8000059, y: 8.32, z: 0}
+    targetPosition: {x: -0.8000183, y: 8.320013, z: 0}
     iterations: 10
     damping: 0.8
 --- !u!4 &1630251519
@@ -8069,7 +8102,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: -0.046895318, w: 0.9988998}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: 1.6999941, y: 5.42, z: 0}
+    targetPosition: {x: 1.6999817, y: 5.4200134, z: 0}
     iterations: 10
     damping: 0.8
 --- !u!1 &1704166709
@@ -8437,7 +8470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 644389897}
+  m_syoujo: {fileID: 1295380340}
   m_akuryou: {fileID: 1760983930}
 --- !u!1 &1819111260
 GameObject:
@@ -8463,7 +8496,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1819111260}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.1999817, y: 0.9200134, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 873542014}
@@ -8859,7 +8892,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1968965913}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: -4, z: 0}
+  m_LocalPosition: {x: -0.8000183, y: -3.0800018, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1307635038}

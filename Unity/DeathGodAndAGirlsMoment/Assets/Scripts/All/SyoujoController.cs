@@ -720,6 +720,13 @@ public class SyoujoController : CharacterBase
                 Invoke("Clear", 0.5f);
             }
         }
+        if (collision.gameObject.tag == "BossWarp")
+        {
+            if (m_onConnectHands == true)
+            {
+                Invoke("BossWarp", 0.5f);
+            }
+        }
         if (m_onConnectHands == true)
         {
             if (m_aFeelingOfBelieve >= 5)
@@ -745,6 +752,10 @@ public class SyoujoController : CharacterBase
 
     public IEnumerator SetActiveHint(int num)
     {
+        if (m_hints == null || num >= m_hints.Length)
+        {
+            yield break;
+        }
         SoundManager.Instance.PlayVoice((int)Common.VoiceList.SyoujoNeenee);
         m_hints[num].SetActive(true);
         yield return new WaitForSeconds(3f);
@@ -870,6 +881,11 @@ public class SyoujoController : CharacterBase
             ProgressManager.m_clearedStage1 = true;
         }   
         SceneManager.LoadScene("Clear");
+    }
+
+    void BossWarp()
+    {
+        SceneManager.LoadScene("Boss");
     }
 
     public bool GetOnFrightening
