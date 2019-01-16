@@ -103,8 +103,7 @@ public class SyoujoController : CharacterBase
     }
 
     void Start()
-    {
-        Debug.Log("1");
+    {      
         if (m_acquisitionsBox[0] == 1)
         {
             getCheck[0] = true;
@@ -145,8 +144,7 @@ public class SyoujoController : CharacterBase
         {
             getCheck[9] = true;
         }
-
-        Debug.Log("4");
+       
         scale = gameObject.transform.localScale;
         rb = GetComponent<Rigidbody2D>();
         m_jumpPower = 10.5f;
@@ -164,11 +162,9 @@ public class SyoujoController : CharacterBase
         }
         m_beforePos = gameObject.transform.position.x;
 
-        m_hitPoint = 6;
-        Debug.Log("5");
+        m_hitPoint = 6;        
         if (ProgressManager.m_clearStage1 == true)
-        {
-            Debug.Log(m_hitPoint);
+        {            
             m_hitPoint += 1;
             m_life[6].SetActive(true);
             m_life[7].SetActive(true);
@@ -799,6 +795,7 @@ public class SyoujoController : CharacterBase
     void Damage()
     {
         SoundManager.Instance.PlayVoice((int)Common.VoiceList.Syoujoku);
+        Debug.Log(m_hitPoint);
         m_life[m_hitPoint - 1].SetActive(false);
         m_hitPoint--;
         if (m_aFeelingOfBelieve > 0)
@@ -806,6 +803,7 @@ public class SyoujoController : CharacterBase
             m_AFeelingOfBelieveUI[m_aFeelingOfBelieve - 1].SetActive(false);
             m_aFeelingOfBelieve--;
         }
+        Debug.Log(m_hitPoint);
     }
 
     void FinishDamage()

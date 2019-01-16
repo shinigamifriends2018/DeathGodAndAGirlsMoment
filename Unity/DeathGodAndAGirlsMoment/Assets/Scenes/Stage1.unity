@@ -5043,7 +5043,7 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 0
-  m_SpriteShape: {fileID: 0}
+  m_SpriteShape: {fileID: 11400000, guid: 0dd807d98dac6a74ba334bdff06f9b74, type: 2}
   m_SplineDetail: 16
   m_AdaptiveUV: 1
   m_UpdateCollider: 1
@@ -5087,8 +5087,16 @@ SpriteShapeRenderer:
   m_SortingOrder: 4
   m_Color: {r: 0.26290876, g: 0.5943396, b: 0, a: 1}
   m_MaskInteraction: 0
-  m_ShapeTexture: {fileID: 0}
-  m_Sprites: []
+  m_ShapeTexture: {fileID: 2800000, guid: c604d7fdc6d0b924e835e0a52a6b29cf, type: 3}
+  m_Sprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   m_LocalAABB:
     m_Center: {x: 0.6707175, y: -0.96272814, z: 0}
     m_Extent: {x: 0.6634805, y: 0.63993585, z: 0}
@@ -5837,7 +5845,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -16709,7 +16716,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -17210,7 +17216,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_aFeelingOfBelieve: 0
   shinigami: {fileID: 1667492808}
@@ -26075,7 +26080,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -26355,7 +26359,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 0
   m_syoujo: {fileID: 176038645}
@@ -27380,7 +27383,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 4
-  m_hitPoint: 0
   m_jump: 1
   m_sickle: {fileID: 1498058727}
   syoujo: {fileID: 0}
@@ -34908,7 +34910,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -35618,7 +35619,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 0
   m_syoujo: {fileID: 176038645}
@@ -35746,7 +35746,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -36195,7 +36194,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 0
   m_syoujo: {fileID: 176038645}
@@ -38239,7 +38237,7 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 0
-  m_SpriteShape: {fileID: 0}
+  m_SpriteShape: {fileID: 11400000, guid: 0dd807d98dac6a74ba334bdff06f9b74, type: 2}
   m_SplineDetail: 16
   m_AdaptiveUV: 1
   m_UpdateCollider: 1
@@ -38283,8 +38281,16 @@ SpriteShapeRenderer:
   m_SortingOrder: 3
   m_Color: {r: 0.49056602, g: 0.32071313, b: 0, a: 1}
   m_MaskInteraction: 0
-  m_ShapeTexture: {fileID: 0}
-  m_Sprites: []
+  m_ShapeTexture: {fileID: 2800000, guid: c604d7fdc6d0b924e835e0a52a6b29cf, type: 3}
+  m_Sprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   m_LocalAABB:
     m_Center: {x: 2.8472805, y: -0.6620858, z: 0}
     m_Extent: {x: 4.8423176, y: 1.3225399, z: 0}
@@ -39650,7 +39656,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -39912,7 +39917,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -41520,7 +41524,7 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 0
-  m_SpriteShape: {fileID: 0}
+  m_SpriteShape: {fileID: 11400000, guid: 0dd807d98dac6a74ba334bdff06f9b74, type: 2}
   m_SplineDetail: 16
   m_AdaptiveUV: 1
   m_UpdateCollider: 1
@@ -41564,8 +41568,16 @@ SpriteShapeRenderer:
   m_SortingOrder: 4
   m_Color: {r: 0.26290876, g: 0.5943396, b: 0, a: 1}
   m_MaskInteraction: 0
-  m_ShapeTexture: {fileID: 0}
-  m_Sprites: []
+  m_ShapeTexture: {fileID: 2800000, guid: c604d7fdc6d0b924e835e0a52a6b29cf, type: 3}
+  m_Sprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   m_LocalAABB:
     m_Center: {x: 1.0564888, y: -0.8059922, z: 0}
     m_Extent: {x: 0.560051, y: 0.8264449, z: 0}
@@ -42186,7 +42198,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 0
   m_syoujo: {fileID: 176038645}
@@ -42774,7 +42785,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -44564,7 +44574,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -45430,7 +45439,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -45831,6 +45839,14 @@ Prefab:
         type: 2}
       propertyPath: _animationName
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345698668055132, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345698668055132, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
@@ -46740,7 +46756,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -47602,7 +47617,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -47866,7 +47880,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -48426,7 +48439,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -50818,7 +50830,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -51862,7 +51873,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -52170,7 +52180,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -53377,7 +53386,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -53895,7 +53903,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -55979,7 +55986,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -56037,7 +56043,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
