@@ -31,7 +31,7 @@ public class FarEnemyContoller : GhostController {
         Vector2 syoujoPos   = m_syoujo.transform.position;
         Vector2 akuryouPos  = gameObject.transform.position;
         Vector2 scale = transform.localScale;
-        
+
         base.m_moveSpeed = 2f;
         base.Chase();
         m_shuteCount -= Time.deltaTime;
@@ -52,7 +52,10 @@ public class FarEnemyContoller : GhostController {
         }
         if (m_shuteCount < 0)
         {
-            SoundManager.Instance.PlaySE((int)Common.SEList.FarEnemyAttack);
+            if (akuryouPos.x - syoujoPos.x < 10)
+            {
+                SoundManager.Instance.PlaySE((int)Common.SEList.FarEnemyAttack);
+            }
             m_sim.Play("Attack");
             m_shuteCount = 3f;
             GameObject obj = Instantiate(m_bulletPrefab, m_spawnPoint.position, m_spawnPoint.rotation);
