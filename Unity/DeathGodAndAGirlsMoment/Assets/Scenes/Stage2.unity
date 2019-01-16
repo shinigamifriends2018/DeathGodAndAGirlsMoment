@@ -314,7 +314,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -626,7 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 21491661}
 --- !u!1 &23458716
 GameObject:
@@ -3514,7 +3514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963fb4732abf0654f9868d52741a7a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
 --- !u!114 &152194818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3623,7 +3623,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   syoujoController: {fileID: 276028549}
 --- !u!50 &153784930
@@ -3711,7 +3711,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   syoujoController: {fileID: 276028549}
 --- !u!50 &161747341
@@ -7015,7 +7015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 300052607}
 --- !u!1 &302825349
 GameObject:
@@ -7291,7 +7291,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   syoujoController: {fileID: 276028549}
 --- !u!50 &307588784
@@ -11473,7 +11473,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   syoujoController: {fileID: 276028549}
 --- !u!50 &445828996
@@ -12660,7 +12660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963fb4732abf0654f9868d52741a7a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
 --- !u!114 &509267795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12958,7 +12958,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -15496,7 +15496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963fb4732abf0654f9868d52741a7a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
 --- !u!114 &619115432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16208,7 +16208,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -16537,7 +16537,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   syoujoController: {fileID: 276028549}
 --- !u!50 &659617162
@@ -17273,7 +17273,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -18297,7 +18297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963fb4732abf0654f9868d52741a7a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
 --- !u!114 &760798229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19004,7 +19004,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -20753,7 +20753,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   syoujoController: {fileID: 276028549}
 --- !u!50 &869512587
@@ -22522,7 +22522,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   syoujoController: {fileID: 276028549}
 --- !u!50 &923416987
@@ -23015,7 +23015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963fb4732abf0654f9868d52741a7a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
 --- !u!114 &948218605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24830,7 +24830,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -25179,7 +25179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 1039065837}
 --- !u!1 &1045334084
 GameObject:
@@ -25549,7 +25549,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   syoujoController: {fileID: 276028549}
 --- !u!50 &1051047047
@@ -26443,7 +26443,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -28516,7 +28516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963fb4732abf0654f9868d52741a7a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
 --- !u!114 &1142270797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28619,7 +28619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 1142800652}
 --- !u!1 &1148866200
 GameObject:
@@ -30815,7 +30815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963fb4732abf0654f9868d52741a7a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
 --- !u!114 &1223999055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31884,7 +31884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 1255611328}
 --- !u!1 &1258982813
 GameObject:
@@ -32049,7 +32049,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -33147,7 +33147,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -33818,7 +33818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963fb4732abf0654f9868d52741a7a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
 --- !u!114 &1322496588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34029,7 +34029,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   syoujoController: {fileID: 276028549}
 --- !u!50 &1324789149
@@ -34224,7 +34224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963fb4732abf0654f9868d52741a7a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
 --- !u!114 &1335896736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34478,7 +34478,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   syoujoController: {fileID: 276028549}
 --- !u!50 &1345040890
@@ -35024,7 +35024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 1368754550}
 --- !u!1 &1368949057
 GameObject:
@@ -35572,7 +35572,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   syoujoController: {fileID: 276028549}
 --- !u!50 &1389612220
@@ -35639,7 +35639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 1390802061}
 --- !u!1 &1390844387
 GameObject:
@@ -35733,7 +35733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 1392836994}
 --- !u!1 &1396762092
 GameObject:
@@ -35778,7 +35778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 1396762092}
 --- !u!1 &1404937023
 GameObject:
@@ -36137,7 +36137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963fb4732abf0654f9868d52741a7a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
 --- !u!114 &1418228314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36417,7 +36417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963fb4732abf0654f9868d52741a7a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
 --- !u!114 &1423844416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36975,7 +36975,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   syoujoController: {fileID: 276028549}
 --- !u!50 &1452034551
@@ -37668,7 +37668,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -38997,7 +38997,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -39200,7 +39200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 1534713173}
 --- !u!1 &1535131767
 GameObject:
@@ -39900,7 +39900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 1568338181}
 --- !u!1 &1568872108
 GameObject:
@@ -40434,7 +40434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963fb4732abf0654f9868d52741a7a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
 --- !u!114 &1586702699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41748,7 +41748,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   syoujoController: {fileID: 276028549}
 --- !u!50 &1658832010
@@ -44833,7 +44833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 1807455520}
 --- !u!1 &1808592405
 GameObject:
@@ -45358,7 +45358,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   syoujoController: {fileID: 276028549}
 --- !u!50 &1843090451
@@ -45445,7 +45445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963fb4732abf0654f9868d52741a7a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
 --- !u!114 &1844077329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47978,7 +47978,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -48072,7 +48072,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -48329,7 +48329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 1950583512}
 --- !u!1 &1950833503
 GameObject:
@@ -48374,7 +48374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 0}
   m_akuryou: {fileID: 1950833503}
 --- !u!1 &1952710168
 GameObject:
@@ -48678,11 +48678,6 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 0}
   m_AttachedIK: {fileID: 2120970388}
---- !u!1 &1967888343 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1732430601196934, guid: 2e2010a870976504e933aaed7ac8bca4,
-    type: 2}
-  m_PrefabInternal: {fileID: 276028548}
 --- !u!1 &1968965913
 GameObject:
   m_ObjectHideFlags: 0
@@ -51848,7 +51843,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
   m_tutorialToriger: {fileID: 278424528}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -52627,7 +52622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963fb4732abf0654f9868d52741a7a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 276028550}
 --- !u!114 &2143779768
 MonoBehaviour:
   m_ObjectHideFlags: 0

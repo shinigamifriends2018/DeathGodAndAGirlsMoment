@@ -87,7 +87,10 @@ public class FarEnemyContoller : GhostController {
             if (m_hitPoint == 0)
             {
                 TutorialTrigger tutorialToriger = m_tutorialToriger.GetComponent<TutorialTrigger>();
-                tutorialToriger.m_returnCheck = true;
+                if (tutorialToriger != null)
+                {
+                    tutorialToriger.m_returnCheck = true;
+                }
                 if (damageCheck == false)
                 {
                     syoujoController.AddFeelingOfBelieve = m_feelingBelieve;

@@ -745,6 +745,10 @@ public class SyoujoController : CharacterBase
 
     public IEnumerator SetActiveHint(int num)
     {
+        if (m_hints == null || num >= m_hints.Length)
+        {
+            yield break;
+        }
         SoundManager.Instance.PlayVoice((int)Common.VoiceList.SyoujoNeenee);
         m_hints[num].SetActive(true);
         yield return new WaitForSeconds(3f);
