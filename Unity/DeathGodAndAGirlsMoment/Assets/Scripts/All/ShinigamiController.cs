@@ -67,6 +67,7 @@ public class ShinigamiController : CharacterBase {
             m_jump = false;
         }
 
+
         if (Mathf.Abs(gameObject.transform.position.x - m_beforePos) > 0.5f)
         {
             camera.SetCanMove = true;
@@ -224,6 +225,7 @@ public class ShinigamiController : CharacterBase {
             if(syoujo.ConnectHandsTF == true)
             {
                 syoujo.OnConnectHands = false;
+                m_nowConnectHand = false;
             }
 
             m_sickle.SetActive(true);
