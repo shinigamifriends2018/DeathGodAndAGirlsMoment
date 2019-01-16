@@ -27,6 +27,7 @@ TagManager:
   - FixedRelease
   - Switch
   - SoundManager
+  - BossWarp
   layers:
   - Default
   - TransparentFX

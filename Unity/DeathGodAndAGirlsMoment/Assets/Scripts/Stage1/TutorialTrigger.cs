@@ -43,7 +43,7 @@ public class TutorialTrigger : MonoBehaviour {
 
     // Update is called once per frame
      void Update () {
-        if(m_textCounter == 5)
+        if (m_textCounter == 5)
         {
             StartCoroutine("CountUp");
         }
@@ -77,6 +77,7 @@ public class TutorialTrigger : MonoBehaviour {
             else if (m_textCounter == 7)
             {
                 TextDisPlay();
+                
                 m_imageCheck = false;
                 m_ImageDis[1].SetActive(m_imageCheck);//右向き矢印
                 Time.timeScale = 1;
