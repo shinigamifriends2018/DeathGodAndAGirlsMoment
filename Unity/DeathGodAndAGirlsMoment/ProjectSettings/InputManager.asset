@@ -163,7 +163,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 5
+    axis: 4
     joyNum: 1
   - serializedVersion: 3
     m_Name: S
@@ -378,7 +378,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: joystick button 1
+    positiveButton: joystick button 2
     altNegativeButton: 
     altPositiveButton: return
     gravity: 1000
@@ -403,7 +403,7 @@ InputManager:
     snap: 0
     invert: 1
     type: 2
-    axis: 6
+    axis: 5
     joyNum: 1
   - serializedVersion: 3
     m_Name: Up
@@ -413,12 +413,12 @@ InputManager:
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: up
-    gravity: 1000
-    dead: 0.001
-    sensitivity: 1000
+    gravity: 0
+    dead: 0.19
+    sensitivity: 1
     snap: 0
     invert: 0
-    type: 0
+    type: 2
     axis: 1
     joyNum: 1
   - serializedVersion: 3
@@ -435,7 +435,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 6
+    axis: 5
     joyNum: 1
   - serializedVersion: 3
     m_Name: Down
@@ -445,13 +445,13 @@ InputManager:
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: down
-    gravity: 1000
-    dead: 0.001
-    sensitivity: 1000
+    gravity: 0
+    dead: 0.19
+    sensitivity: 1
     snap: 0
-    invert: 0
-    type: 0
-    axis: 0
+    invert: 1
+    type: 2
+    axis: 1
     joyNum: 1
   - serializedVersion: 3
     m_Name: Horizontal
