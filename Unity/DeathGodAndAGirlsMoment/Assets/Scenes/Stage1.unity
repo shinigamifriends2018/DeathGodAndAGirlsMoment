@@ -5837,7 +5837,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -16709,7 +16708,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -17210,7 +17208,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_aFeelingOfBelieve: 0
   shinigami: {fileID: 1667492808}
@@ -26075,7 +26072,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -26355,7 +26351,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 0
   m_syoujo: {fileID: 176038645}
@@ -27380,7 +27375,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 4
-  m_hitPoint: 0
   m_jump: 1
   m_sickle: {fileID: 1498058727}
   syoujo: {fileID: 0}
@@ -34908,7 +34902,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -35618,7 +35611,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 0
   m_syoujo: {fileID: 176038645}
@@ -35746,7 +35738,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -36195,7 +36186,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 0
   m_syoujo: {fileID: 176038645}
@@ -36334,7 +36324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shinigami: {fileID: 1667492808}
   m_size: 0
-  m_syoujo: {fileID: 0}
+  m_syoujo: {fileID: 1587784250}
 --- !u!1 &1096221411
 GameObject:
   m_ObjectHideFlags: 0
@@ -39650,7 +39640,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -39912,7 +39901,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -42186,7 +42174,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 0
   m_syoujo: {fileID: 176038645}
@@ -42774,7 +42761,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -44564,7 +44550,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -45430,7 +45415,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -45835,6 +45819,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &1587784250 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4673486302782026, guid: 2e2010a870976504e933aaed7ac8bca4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1587784249}
 --- !u!1 &1595803355
 GameObject:
   m_ObjectHideFlags: 0
@@ -46740,7 +46729,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -47602,7 +47590,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -47866,7 +47853,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -48426,7 +48412,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -50818,7 +50803,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -51862,7 +51846,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -52170,7 +52153,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -53377,7 +53359,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -53895,7 +53876,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -55979,7 +55959,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
@@ -56037,7 +56016,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
-  m_hitPoint: 0
   m_jump: 1
   m_canMove: 1
   m_syoujo: {fileID: 176038645}
