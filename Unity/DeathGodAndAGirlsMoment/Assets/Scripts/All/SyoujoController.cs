@@ -756,8 +756,8 @@ public class SyoujoController : CharacterBase
         {
             yield break;
         }
-        SoundManager.Instance.PlayVoice((int)Common.VoiceList.SyoujoNeenee);
         m_hints[num].SetActive(true);
+        SoundManager.Instance.PlayVoice((int)Common.VoiceList.SyoujoNeenee);
         yield return new WaitForSeconds(3f);
         m_hints[num].SetActive(false);     
     }
@@ -801,6 +801,7 @@ public class SyoujoController : CharacterBase
 
     void Damage()
     {
+
         SoundManager.Instance.PlayVoice((int)Common.VoiceList.Syoujoku);
         m_life[m_hitPoint - 1].SetActive(false);
         m_hitPoint--;
