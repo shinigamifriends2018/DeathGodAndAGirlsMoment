@@ -6143,6 +6143,147 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 276028548}
   m_Script: {fileID: 11500000, guid: 5640cb87ad4ed1147b119eca64a27795, type: 3}
+--- !u!1 &276028550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1732430601196934, guid: 2e2010a870976504e933aaed7ac8bca4,
+    type: 2}
+  m_PrefabInternal: {fileID: 276028548}
+--- !u!120 &276028551
+LineRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 276028550}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
+  m_Parameters:
+    serializedVersion: 2
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    generateLightingData: 0
+  m_UseWorldSpace: 1
+  m_Loop: 0
+--- !u!114 &276028552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 276028550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3759e2aae0f7b9a47bb98fc64bf3c543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingMode: 1
+  m_WrapMode: 0
+  m_Clip: {fileID: 0}
+  m_States:
+  - clip: {fileID: 0}
+    name: Default
+    defaultState: 1
+  - clip: {fileID: 7400000, guid: 3623aa1ae39fc57499057e8f08c4bd7d, type: 2}
+    name: Damage
+    defaultState: 0
+  - clip: {fileID: 7400000, guid: 206eb358b0e1bdc4da8d022ca3461dea, type: 2}
+    name: Frightening
+    defaultState: 0
+--- !u!95 &276028553
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 276028550}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &276199283
 GameObject:
   m_ObjectHideFlags: 0
@@ -13771,6 +13912,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114375325586119286, guid: bf21b2498896cce4ab05ba2008d86718,
+        type: 2}
+      propertyPath: m_ude.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4509181838359776, guid: bf21b2498896cce4ab05ba2008d86718, type: 2}
       propertyPath: m_LocalPosition.x
       value: -6.41
@@ -13817,6 +13963,16 @@ Prefab:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1096122020}
+    - target: {fileID: 114375325586119286, guid: bf21b2498896cce4ab05ba2008d86718,
+        type: 2}
+      propertyPath: m_ude.Array.data[0]
+      value: 
+      objectReference: {fileID: 560525738}
+    - target: {fileID: 114375325586119286, guid: bf21b2498896cce4ab05ba2008d86718,
+        type: 2}
+      propertyPath: m_ude.Array.data[1]
+      value: 
+      objectReference: {fileID: 560525739}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf21b2498896cce4ab05ba2008d86718, type: 2}
   m_IsPrefabAsset: 0
@@ -13826,6 +13982,16 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 560525736}
   m_Script: {fileID: 11500000, guid: c7dee4e5209493344b019f8189c03d35, type: 3}
+--- !u!1 &560525738 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1775041376649622, guid: bf21b2498896cce4ab05ba2008d86718,
+    type: 2}
+  m_PrefabInternal: {fileID: 560525736}
+--- !u!1 &560525739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1105472131455480, guid: bf21b2498896cce4ab05ba2008d86718,
+    type: 2}
+  m_PrefabInternal: {fileID: 560525736}
 --- !u!1 &560842896
 GameObject:
   m_ObjectHideFlags: 0
@@ -43061,7 +43227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.8753844
+  m_Length: 0.8753794
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 520361871}
   m_AttachedIK: {fileID: 637131372}

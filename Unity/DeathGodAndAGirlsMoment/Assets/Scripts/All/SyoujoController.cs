@@ -161,7 +161,7 @@ public class SyoujoController : CharacterBase
         {
             for (int i = m_aFeelingOfBelieve; i >= 0; i--)
             {              
-                m_AFeelingOfBelieveUI[i - 1].SetActive(true);
+//                m_AFeelingOfBelieveUI[i - 1].SetActive(true);
             }
         }
         m_beforePos = gameObject.transform.position.x;
