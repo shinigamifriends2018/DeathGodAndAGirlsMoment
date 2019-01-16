@@ -15,6 +15,10 @@ public class ShuteRotation : MonoBehaviour{
     // Update is called once per frame
     void Update()
     {
+        if (m_syoujo == null || m_akuryou == null)
+        {
+            return;
+        }
         var vec = (m_syoujo.transform.position - m_akuryou.transform.position).normalized;
         m_akuryou.transform.rotation = Quaternion.FromToRotation(Vector2.left, vec);
     }
