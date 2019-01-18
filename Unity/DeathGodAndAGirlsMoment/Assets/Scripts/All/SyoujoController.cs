@@ -55,6 +55,8 @@ public class SyoujoController : CharacterBase
     bool m_nouWalk = false;
     LineRenderer m_lineRenderer;
     bool m_nowIdle = false;
+    [SerializeField]
+    GameObject[] m_PiceofMemory;
 
     // Use this for initialization
     private void Awake()
@@ -101,42 +103,52 @@ public class SyoujoController : CharacterBase
     {
         if (m_acquisitionsBox[0] == 1)
         {
+            m_PiceofMemory[0].SetActive(false);
             getCheck[0] = true;
         }
         if (m_acquisitionsBox[1] == 1)
         {
+            m_PiceofMemory[1].SetActive(false);
             getCheck[1] = true;
         }
         if (m_acquisitionsBox[2] == 1)
         {
+            m_PiceofMemory[2].SetActive(false);
             getCheck[2] = true;
         }
         if (m_acquisitionsBox[3] == 1)
         {
+            m_PiceofMemory[3].SetActive(false);
             getCheck[3] = true;
         }
         if (m_acquisitionsBox[4] == 1)
         {
+            m_PiceofMemory[4].SetActive(false);
             getCheck[4] = true;
         }
         if (m_acquisitionsBox[5] == 1)
         {
+            m_PiceofMemory[0].SetActive(false);
             getCheck[5] = true;
         }
         if (m_acquisitionsBox[6] == 1)
         {
+            m_PiceofMemory[1].SetActive(false);
             getCheck[6] = true;
         }
         if (m_acquisitionsBox[7] == 1)
         {
+            m_PiceofMemory[2].SetActive(false);
             getCheck[7] = true;
         }
         if (m_acquisitionsBox[8] == 1)
         {
+            m_PiceofMemory[3].SetActive(false);
             getCheck[8] = true;
         }
         if (m_acquisitionsBox[9] == 1)
         {
+            m_PiceofMemory[4].SetActive(false);
             getCheck[9] = true;
         }
         if (ProgressManager.m_clearStage1 == false)
@@ -165,7 +177,6 @@ public class SyoujoController : CharacterBase
             }
         }
         m_beforePos = gameObject.transform.position.x;
-
     }
 
     // Update is called once per frame
