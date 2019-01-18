@@ -17100,7 +17100,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
   m_jump: 1
-  m_aFeelingOfBelieve: 0
   shinigami: {fileID: 1667492808}
   m_efect:
   - {fileID: 323879578}
@@ -17135,6 +17134,7 @@ MonoBehaviour:
   camera: {fileID: 1096122020}
   getCheck: 0000000000
   m_skeletonAnimation: {fileID: 0}
+  m_PiceofMemory: []
 --- !u!70 &644389901
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -45576,13 +45576,18 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_PiceofMemory.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4673486302782026, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -8.609
+      value: -8.01
       objectReference: {fileID: 0}
     - target: {fileID: 4673486302782026, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.01368719
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4673486302782026, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -45774,6 +45779,31 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_PiceofMemory.Array.data[0]
+      value: 
+      objectReference: {fileID: 1503987569}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_PiceofMemory.Array.data[1]
+      value: 
+      objectReference: {fileID: 119920503}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_PiceofMemory.Array.data[2]
+      value: 
+      objectReference: {fileID: 419163487}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_PiceofMemory.Array.data[3]
+      value: 
+      objectReference: {fileID: 398578751}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_PiceofMemory.Array.data[4]
+      value: 
+      objectReference: {fileID: 1079793760}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
   m_IsPrefabAsset: 0
@@ -46663,7 +46693,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -1.3, y: 0.15}
