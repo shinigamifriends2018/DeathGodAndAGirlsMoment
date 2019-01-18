@@ -8,6 +8,7 @@ public class DoorController : MonoBehaviour {
     GameObject[] m_gimmickAkuryou;
     [SerializeField]
     GameObject m_door;
+    bool m_seCheck = true;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,7 +19,11 @@ public class DoorController : MonoBehaviour {
 
         if (m_gimmickAkuryou[0] == null && m_gimmickAkuryou[1] == null && m_gimmickAkuryou[2] == null)
         {
-            SoundManager.Instance.PlaySE((int)Common.SEList.Door);
+            if (m_seCheck == true)
+            {
+                SoundManager.Instance.PlaySE((int)Common.SEList.Door);
+                m_seCheck = false;
+            }
             Destroy(m_door);
         }
 	}
