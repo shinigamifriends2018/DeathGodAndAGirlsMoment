@@ -779,7 +779,7 @@ public class SyoujoController : CharacterBase
         {
             m_hitPoint = 7;
         }        
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < m_hitPoint; i++)
         {
             m_life[i].SetActive(true);
             yield return new WaitForSeconds(0.1f);
