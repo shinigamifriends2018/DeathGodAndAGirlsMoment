@@ -104,6 +104,7 @@ public class SyoujoController : CharacterBase
         if (m_acquisitionsBox[0] == 1)
         {
             m_PiceofMemory[0].SetActive(false);
+            
             getCheck[0] = true;
         }
         if (m_acquisitionsBox[1] == 1)
