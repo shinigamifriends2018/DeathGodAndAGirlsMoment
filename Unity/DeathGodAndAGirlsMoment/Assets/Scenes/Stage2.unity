@@ -1982,7 +1982,7 @@ GameObject:
   - component: {fileID: 82520031}
   - component: {fileID: 82520030}
   - component: {fileID: 82520034}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: cage (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5830,6 +5830,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1208328960776966, guid: bf21b2498896cce4ab05ba2008d86718,
     type: 2}
   m_PrefabInternal: {fileID: 560525736}
+--- !u!114 &278424532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 278424528}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ad4822ff893fd1438be3a1a7369603e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_textCounter: 0
+  m_ImageDis: []
+  m_enemyDisPlay: []
+  m_text: []
+  m_textUI: {fileID: 0}
+  m_returnCheck: 0
+  ProgressManager: {fileID: 0}
+  farEnemyContoller: {fileID: 0}
 --- !u!1 &278822896
 GameObject:
   m_ObjectHideFlags: 0
@@ -7394,7 +7413,7 @@ GameObject:
   - component: {fileID: 334305247}
   - component: {fileID: 334305246}
   - component: {fileID: 334305248}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: cage (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -19763,7 +19782,7 @@ GameObject:
   - component: {fileID: 896505189}
   - component: {fileID: 896505194}
   - component: {fileID: 896505193}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: cage (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -21403,7 +21422,7 @@ GameObject:
   - component: {fileID: 961865257}
   - component: {fileID: 961865256}
   - component: {fileID: 961865258}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: cage
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -29693,7 +29712,7 @@ GameObject:
   - component: {fileID: 1281508728}
   - component: {fileID: 1281508730}
   - component: {fileID: 1281508729}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: stump (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -35799,7 +35818,7 @@ GameObject:
   - component: {fileID: 1535131768}
   - component: {fileID: 1535131770}
   - component: {fileID: 1535131769}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: stump (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -45167,7 +45186,7 @@ GameObject:
   - component: {fileID: 2027741487}
   - component: {fileID: 2027741486}
   - component: {fileID: 2027741489}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: stump
   m_TagString: Ground
   m_Icon: {fileID: 0}
