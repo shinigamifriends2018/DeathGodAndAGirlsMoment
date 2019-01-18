@@ -5471,6 +5471,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
         type: 2}
+      propertyPath: m_PiceofMemory.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
       propertyPath: m_acquisitionsBox.Array.size
       value: 10
       objectReference: {fileID: 0}
@@ -5648,6 +5653,31 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_PiceofMemory.Array.data[0]
+      value: 
+      objectReference: {fileID: 1900249996}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_PiceofMemory.Array.data[1]
+      value: 
+      objectReference: {fileID: 59738998}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_PiceofMemory.Array.data[2]
+      value: 
+      objectReference: {fileID: 2091884510}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_PiceofMemory.Array.data[3]
+      value: 
+      objectReference: {fileID: 1109991901}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_PiceofMemory.Array.data[4]
+      value: 
+      objectReference: {fileID: 139419197}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
   m_IsPrefabAsset: 0
@@ -14710,7 +14740,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
   m_jump: 1
-  m_aFeelingOfBelieve: 0
   shinigami: {fileID: 879722898}
   m_efect:
   - {fileID: 323879578}
@@ -14745,6 +14774,7 @@ MonoBehaviour:
   camera: {fileID: 1096122020}
   getCheck: 00000000000000000000
   m_skeletonAnimation: {fileID: 0}
+  m_PiceofMemory: []
 --- !u!70 &644389901
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
