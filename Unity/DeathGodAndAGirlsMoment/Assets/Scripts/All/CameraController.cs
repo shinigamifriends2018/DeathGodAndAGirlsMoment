@@ -41,10 +41,21 @@ public class CameraController : MonoBehaviour
             if (pos.x <= -5.6f)
             {
                 pos.x = -5.6f;
-            }else if(pos.x >= 126.6)
-            {
-                pos.x = 126.6f;
             }
+            if(ProgressManager.m_nowStage == 1)
+            {
+                if (pos.x >= 126.6)
+                {
+                    pos.x = 126.6f;
+                }
+            }
+            else
+            {
+                if (pos.x >= 168f)
+                {
+                    pos.x = 168f;
+                }
+            }            
             if (Camera.main.orthographicSize != m_size)
             {
                 Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, m_size, 0.1f);
