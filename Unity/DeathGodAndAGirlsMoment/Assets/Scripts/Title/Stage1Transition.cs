@@ -8,6 +8,7 @@ public class Stage1Transition : MonoBehaviour {
 
     [SerializeField]
     Text m_scoreText;
+    bool m_celected = false;
     // Use this for initialization
     void Start () {
         int score = PlayerPrefs.GetInt("m_acquisitions[0]", 0);
@@ -20,9 +21,13 @@ public class Stage1Transition : MonoBehaviour {
 	}
     public void loadscene()
     {
-        SoundManager.Instance.PlaySE((int)Common.SEList.Decison);
-        ProgressManager.m_nowStage = 1;
-        Invoke("transition", 2f);
+        if (m_celected == false)
+        {
+            m_celected = true;
+            SoundManager.Instance.PlaySE((int)Common.SEList.Decison);
+            ProgressManager.m_nowStage = 1;
+            Invoke("transition", 2f);
+        }
     }
     void transition()
     {

@@ -5640,6 +5640,14 @@ Prefab:
       propertyPath: m_life.Array.data[7]
       value: 
       objectReference: {fileID: 1596278560}
+    - target: {fileID: 4113996381869472, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113996381869472, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
   m_IsPrefabAsset: 0
