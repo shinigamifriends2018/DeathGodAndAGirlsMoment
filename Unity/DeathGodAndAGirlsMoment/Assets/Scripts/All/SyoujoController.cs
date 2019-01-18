@@ -9,8 +9,8 @@ using Spine.Unity;
 public class SyoujoController : CharacterBase
 {
     Vector3 scale;
-    [SerializeField]
-    int m_aFeelingOfBelieve = 0;
+   
+    int m_aFeelingOfBelieve;
     bool m_followMode;
     bool m_followSwitch = true;
     [SerializeField]
@@ -159,9 +159,9 @@ public class SyoujoController : CharacterBase
         m_aFeelingOfBelieve = PlayerPrefs.GetInt("aFeelingOfBelieve", 0);
         if (m_aFeelingOfBelieve != 0)
         {
-            for (int i = m_aFeelingOfBelieve; i >= 0; i--)
+            for (int i = m_aFeelingOfBelieve; i > 0; --i)
             {              
-//                m_AFeelingOfBelieveUI[i - 1].SetActive(true);
+                m_AFeelingOfBelieveUI[i - 1].SetActive(true);
             }
         }
         m_beforePos = gameObject.transform.position.x;
