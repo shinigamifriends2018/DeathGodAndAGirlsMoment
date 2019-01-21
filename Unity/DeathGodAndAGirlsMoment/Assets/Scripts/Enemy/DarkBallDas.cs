@@ -9,6 +9,7 @@ public class DarkBallDas : MonoBehaviour {
     GameObject m_syoujo;
     Vector2 m_darkBollPos;
     Vector2 syoujoPos;
+    public bool m_seCheck = false;
     // Use this for initialization
     void Start () {
        m_farstPosition = this.transform.position;
@@ -23,10 +24,10 @@ public class DarkBallDas : MonoBehaviour {
 
         if (m_destroyPos >= 12||m_destroyPos <= -12)
         {
-            if (m_darkBollPos.x - syoujoPos.x < 10)
+            if (m_seCheck == true)
             {
                 SoundManager.Instance.PlaySE((int)Common.SEList.DarkMassDestroy);
-            }
+            } 
             Destroy(gameObject, 0.1f);
         }
 	}
@@ -35,8 +36,10 @@ public class DarkBallDas : MonoBehaviour {
     {
         if (collision.gameObject.tag == "syoujo"|| collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Sickle")
         {
-            SoundManager.Instance.PlaySE((int)Common.SEList.DarkMassDestroy);
-            
+            if (m_seCheck == true)
+            {
+                SoundManager.Instance.PlaySE((int)Common.SEList.DarkMassDestroy);
+            }
             Destroy(gameObject, 0.1f);
         }
     }

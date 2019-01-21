@@ -16610,6 +16610,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 810150924}
   syoujoController: {fileID: 1300085331}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!1 &620497568
 GameObject:
   m_ObjectHideFlags: 0
@@ -26240,6 +26242,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 297377987}
   syoujoController: {fileID: 1300085331}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!1 &840301757
 GameObject:
   m_ObjectHideFlags: 0
@@ -35499,6 +35503,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 147887535}
   syoujoController: {fileID: 1300085331}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!1 &1071192931
 GameObject:
   m_ObjectHideFlags: 0
@@ -36134,6 +36140,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 977022601}
   syoujoController: {fileID: 1300085331}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!1 &1089752476
 GameObject:
   m_ObjectHideFlags: 0
@@ -39856,6 +39864,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 1866885409}
   syoujoController: {fileID: 1300085331}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!1 &1281331981
 GameObject:
   m_ObjectHideFlags: 0
@@ -42152,6 +42162,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 429457412}
   syoujoController: {fileID: 1300085331}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!1 &1411138406
 GameObject:
   m_ObjectHideFlags: 0
@@ -53866,6 +53878,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 26558711}
   syoujoController: {fileID: 1300085331}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!1001 &2007691981
 Prefab:
   m_ObjectHideFlags: 0

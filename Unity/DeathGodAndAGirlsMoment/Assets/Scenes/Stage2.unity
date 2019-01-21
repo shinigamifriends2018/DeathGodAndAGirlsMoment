@@ -323,6 +323,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 1950583513}
   syoujoController: {fileID: 276028549}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!4 &11938055
 Transform:
   m_ObjectHideFlags: 0
@@ -11870,6 +11872,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 21491662}
   syoujoController: {fileID: 276028549}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!70 &534492192
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -14986,6 +14990,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 1396762093}
   syoujoController: {fileID: 276028549}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!70 &648618962
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -16002,6 +16008,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 1807455521}
   syoujoController: {fileID: 276028549}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!70 &684257621
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -17433,6 +17441,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 1568338182}
   syoujoController: {fileID: 276028549}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!4 &812240291
 Transform:
   m_ObjectHideFlags: 0
@@ -22543,6 +22553,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 1368754551}
   syoujoController: {fileID: 276028549}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!70 &1007033221
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -24054,6 +24066,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 1039065838}
   syoujoController: {fileID: 276028549}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!70 &1066184312
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -29339,6 +29353,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 1534713174}
   syoujoController: {fileID: 276028549}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!4 &1261780760
 Transform:
   m_ObjectHideFlags: 0
@@ -30233,6 +30249,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 1142800653}
   syoujoController: {fileID: 276028549}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!70 &1297108337
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -34441,6 +34459,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 1950833504}
   syoujoController: {fileID: 276028549}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!70 &1481871110
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -35642,6 +35662,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 1392836995}
   syoujoController: {fileID: 276028549}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!70 &1530820152
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -43725,6 +43747,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 1255611329}
   syoujoController: {fileID: 276028549}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!70 &1939627000
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -43819,6 +43843,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 300052608}
   syoujoController: {fileID: 276028549}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!70 &1940670922
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -47375,6 +47401,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 1390802062}
   syoujoController: {fileID: 276028549}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!70 &2120928258
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

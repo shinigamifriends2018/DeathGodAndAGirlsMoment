@@ -20,6 +20,8 @@ public class FarEnemyContoller : GhostController {
     float damageCounter = 0.3f;
     bool damageCheck = true;
     int m_feelingBelieve = 0;
+    [SerializeField]
+    DarkBallDas m_darkBallDas;
     // Use this for initialization
     void Start () {
         m_hitPoint = 2;
@@ -55,6 +57,11 @@ public class FarEnemyContoller : GhostController {
             if (akuryouPos.x - syoujoPos.x < 10)
             {
                 SoundManager.Instance.PlaySE((int)Common.SEList.FarEnemyAttack);
+                m_darkBallDas.m_seCheck = true;
+            }
+            else
+            {
+                m_darkBallDas.m_seCheck = false;
             }
             m_sim.Play("Attack");
             m_shuteCount = 3f;

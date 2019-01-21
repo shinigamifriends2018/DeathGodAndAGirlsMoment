@@ -479,6 +479,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 1760983931}
   syoujoController: {fileID: 276028549}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!50 &73787303
 Rigidbody2D:
   serializedVersion: 4
@@ -3624,6 +3626,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 1260550296}
   syoujoController: {fileID: 276028549}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!50 &737502488
 Rigidbody2D:
   serializedVersion: 4
