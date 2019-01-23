@@ -6,6 +6,7 @@ public class DoorAkuryouDisPlay : MonoBehaviour {
 
     [SerializeField]
     GameObject[] m_gimmickAkuryou;
+    bool m_seChecl = true;
 	// Use this for initialization
 	void Start () {
 		
@@ -15,8 +16,12 @@ public class DoorAkuryouDisPlay : MonoBehaviour {
 	void Update () {
         if (m_gimmickAkuryou[0] == null && m_gimmickAkuryou[1] == null && m_gimmickAkuryou[2] == null)
         {
-            SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
-            SoundManager.Instance.PlaySE((int)Common.SEList.Door);
+            if (m_seChecl == true)
+            {
+                SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
+                SoundManager.Instance.PlaySE((int)Common.SEList.Door);
+                m_seChecl = false;
+            }
             Destroy(gameObject);
             m_gimmickAkuryou[3].SetActive(true);
             m_gimmickAkuryou[4].SetActive(true);
