@@ -243,6 +243,13 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.49626866
+        functionName: JumpAttackEfect
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 0.922449
         functionName: OnAnimationFinished
         data: 
@@ -369,6 +376,13 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.1716418
+        functionName: Attack1Efect
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 0.5061224
         functionName: OnAttackFinished
         data: 
@@ -376,7 +390,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 1
+      - time: 0.91791046
         functionName: OnAnimationFinished
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -411,15 +425,22 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.922449
-        functionName: OnAnimationFinished
+      - time: 0
+        functionName: OnAttack2Start
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0
-        functionName: OnAttack2Start
+      - time: 0.1649863
+        functionName: Attack2Efect
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.91791046
+        functionName: OnAnimationFinished
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

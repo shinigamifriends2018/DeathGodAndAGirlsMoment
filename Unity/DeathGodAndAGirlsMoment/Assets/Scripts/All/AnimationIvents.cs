@@ -7,6 +7,8 @@ public class AnimationIvents : MonoBehaviour {
     float m_interval = 0.1f;
     [SerializeField]
     ShinigamiController Shinigami;
+    [SerializeField]
+    GameObject[] m_attackEfect;
 
     // Use this for initialization
     void Start () {
@@ -38,4 +40,24 @@ public class AnimationIvents : MonoBehaviour {
     {
         Shinigami.SetAttack2 = false;
     }
+
+    public void Attack1Efect()
+    {
+        StartCoroutine("AttackEfect", new Vector2(0f, 0.3f));
+    }
+    public void Attack2Efect()
+    {
+        StartCoroutine("AttackEfect", new Vector2(1f, 0.4f));
+    }
+    public void JumpAttackEfect()
+    {
+        StartCoroutine("AttackEfect", new Vector2(2f, 0.3f));
+    }
+    IEnumerator AttackEfect(Vector2 num)
+    {
+        m_attackEfect[(int)num.x].SetActive(true);
+        yield return new WaitForSeconds(num.y);
+        m_attackEfect[(int)num.x].SetActive(false);
+    }
+
 }
