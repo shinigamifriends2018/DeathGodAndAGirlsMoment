@@ -516,7 +516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 176038645}
+  m_syoujo: {fileID: 161603009}
   m_akuryou: {fileID: 26558710}
 --- !u!1 &27198935
 GameObject:
@@ -3044,7 +3044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 176038645}
+  m_syoujo: {fileID: 161603009}
   m_akuryou: {fileID: 147887534}
 --- !u!1 &154510724
 GameObject:
@@ -3214,6 +3214,34 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 0}
   m_AttachedIK: {fileID: 0}
+--- !u!1 &161603009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 161603010}
+  m_Layer: 12
+  m_Name: syoujoLook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &161603010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 161603009}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 176038646}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &176038645 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1732430601196934, guid: 2e2010a870976504e933aaed7ac8bca4,
@@ -5605,7 +5633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 176038645}
+  m_syoujo: {fileID: 161603009}
   m_akuryou: {fileID: 297377986}
 --- !u!1 &310056981
 GameObject:
@@ -13144,7 +13172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 176038645}
+  m_syoujo: {fileID: 161603009}
   m_akuryou: {fileID: 429457411}
 --- !u!1 &433286968
 GameObject:
@@ -16605,7 +16633,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 810150924}
   syoujoController: {fileID: 1300085331}
-  m_darkBallDas: {fileID: 0}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!1 &620497568
 GameObject:
   m_ObjectHideFlags: 0
@@ -25658,7 +25687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 176038645}
+  m_syoujo: {fileID: 161603009}
   m_akuryou: {fileID: 810150923}
 --- !u!1 &815057551
 GameObject:
@@ -26182,7 +26211,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 297377987}
   syoujoController: {fileID: 1300085331}
-  m_darkBallDas: {fileID: 0}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!1 &840301757
 GameObject:
   m_ObjectHideFlags: 0
@@ -34217,7 +34247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 176038645}
+  m_syoujo: {fileID: 161603009}
   m_akuryou: {fileID: 977022600}
 --- !u!1 &979342510
 GameObject:
@@ -35442,7 +35472,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 147887535}
   syoujoController: {fileID: 1300085331}
-  m_darkBallDas: {fileID: 0}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!1 &1071192931
 GameObject:
   m_ObjectHideFlags: 0
@@ -36078,7 +36109,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 977022601}
   syoujoController: {fileID: 1300085331}
-  m_darkBallDas: {fileID: 0}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!1 &1089752476
 GameObject:
   m_ObjectHideFlags: 0
@@ -39801,7 +39833,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 1866885409}
   syoujoController: {fileID: 1300085331}
-  m_darkBallDas: {fileID: 0}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!1 &1281331981
 GameObject:
   m_ObjectHideFlags: 0
@@ -42098,7 +42131,8 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 429457412}
   syoujoController: {fileID: 1300085331}
-  m_darkBallDas: {fileID: 0}
+  m_darkBallDas: {fileID: 114062106561708358, guid: c04b0b80f6e8fdc41b2e5f340794a1ee,
+    type: 2}
 --- !u!1 &1411138406
 GameObject:
   m_ObjectHideFlags: 0
@@ -45754,6 +45788,26 @@ Prefab:
     - target: {fileID: 1732430601196934, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973602117016664, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113996381869472, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345698668055132, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207957777907852, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702636329082660, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
@@ -50872,7 +50926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 176038645}
+  m_syoujo: {fileID: 161603009}
   m_akuryou: {fileID: 1866885408}
 --- !u!1 &1868716888
 GameObject:
