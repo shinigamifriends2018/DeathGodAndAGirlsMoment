@@ -850,7 +850,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4589889730929412, guid: 18eb498f6c647f048a07773e8f9454d7, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18eb498f6c647f048a07773e8f9454d7, type: 2}
@@ -5139,6 +5139,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 246181424}
   m_CullTransparentMesh: 0
+--- !u!1 &246570997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1460133547411758, guid: 2e2010a870976504e933aaed7ac8bca4,
+    type: 2}
+  m_PrefabInternal: {fileID: 276028548}
 --- !u!1 &250478290
 GameObject:
   m_ObjectHideFlags: 0
@@ -5478,6 +5483,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
         type: 2}
+      propertyPath: m_piceOfMemoryUI.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
       propertyPath: m_acquisitionsBox.Array.size
       value: 10
       objectReference: {fileID: 0}
@@ -5680,6 +5690,31 @@ Prefab:
       propertyPath: m_PiceofMemory.Array.data[4]
       value: 
       objectReference: {fileID: 139419197}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_piceOfMemoryUI.Array.data[0]
+      value: 
+      objectReference: {fileID: 2129605101}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_piceOfMemoryUI.Array.data[1]
+      value: 
+      objectReference: {fileID: 367926494}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_piceOfMemoryUI.Array.data[2]
+      value: 
+      objectReference: {fileID: 905442620}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_piceOfMemoryUI.Array.data[3]
+      value: 
+      objectReference: {fileID: 699977472}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_piceOfMemoryUI.Array.data[4]
+      value: 
+      objectReference: {fileID: 1574049143}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
   m_IsPrefabAsset: 0
@@ -6396,7 +6431,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &302861864
 GameObject:
@@ -14779,6 +14814,7 @@ MonoBehaviour:
   getCheck: 00000000000000000000
   m_skeletonAnimation: {fileID: 0}
   m_PiceofMemory: []
+  m_piceOfMemoryUI: []
 --- !u!70 &644389901
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -15688,7 +15724,7 @@ GameObject:
   - component: {fileID: 676285588}
   - component: {fileID: 676285590}
   - component: {fileID: 676285589}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: stump (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -29344,7 +29380,7 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 246570997}
   m_tutorialToriger: {fileID: 278424528}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
   m_shutePower: 4.5
@@ -35858,7 +35894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 246570997}
   m_akuryou: {fileID: 1534713173}
 --- !u!1 &1535131767
 GameObject:

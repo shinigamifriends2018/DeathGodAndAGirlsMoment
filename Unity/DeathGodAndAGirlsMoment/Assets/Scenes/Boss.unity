@@ -1137,6 +1137,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
         type: 2}
+      propertyPath: m_piceOfMemoryUI.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
       propertyPath: m_acquisitionsBox.Array.size
       value: 10
       objectReference: {fileID: 0}
@@ -1321,6 +1326,31 @@ Prefab:
       propertyPath: m_PiceofMemory.Array.data[4]
       value: 
       objectReference: {fileID: 140786885}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_piceOfMemoryUI.Array.data[0]
+      value: 
+      objectReference: {fileID: 2129605101}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_piceOfMemoryUI.Array.data[1]
+      value: 
+      objectReference: {fileID: 367926494}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_piceOfMemoryUI.Array.data[2]
+      value: 
+      objectReference: {fileID: 905442620}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_piceOfMemoryUI.Array.data[3]
+      value: 
+      objectReference: {fileID: 699977472}
+    - target: {fileID: 114181916810131446, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_piceOfMemoryUI.Array.data[4]
+      value: 
+      objectReference: {fileID: 1574049143}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
   m_IsPrefabAsset: 0
@@ -3160,6 +3190,7 @@ MonoBehaviour:
   getCheck: 00000000000000000000
   m_skeletonAnimation: {fileID: 0}
   m_PiceofMemory: []
+  m_piceOfMemoryUI: []
 --- !u!70 &644389901
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -8314,7 +8345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.87538046
+  m_Length: 0.87538064
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 520361871}
   m_AttachedIK: {fileID: 637131372}
