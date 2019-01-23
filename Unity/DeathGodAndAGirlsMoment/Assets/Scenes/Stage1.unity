@@ -16605,6 +16605,7 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 810150924}
   syoujoController: {fileID: 1300085331}
+  m_darkBallDas: {fileID: 0}
 --- !u!1 &620497568
 GameObject:
   m_ObjectHideFlags: 0
@@ -17130,6 +17131,7 @@ MonoBehaviour:
   getCheck: 0000000000
   m_skeletonAnimation: {fileID: 0}
   m_PiceofMemory: []
+  m_piceOfMemoryUI: []
 --- !u!70 &644389901
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -26180,6 +26182,7 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 297377987}
   syoujoController: {fileID: 1300085331}
+  m_darkBallDas: {fileID: 0}
 --- !u!1 &840301757
 GameObject:
   m_ObjectHideFlags: 0
@@ -35439,6 +35442,7 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 147887535}
   syoujoController: {fileID: 1300085331}
+  m_darkBallDas: {fileID: 0}
 --- !u!1 &1071192931
 GameObject:
   m_ObjectHideFlags: 0
@@ -36074,6 +36078,7 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 977022601}
   syoujoController: {fileID: 1300085331}
+  m_darkBallDas: {fileID: 0}
 --- !u!1 &1089752476
 GameObject:
   m_ObjectHideFlags: 0
@@ -39796,6 +39801,7 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 1866885409}
   syoujoController: {fileID: 1300085331}
+  m_darkBallDas: {fileID: 0}
 --- !u!1 &1281331981
 GameObject:
   m_ObjectHideFlags: 0
@@ -42092,6 +42098,7 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 429457412}
   syoujoController: {fileID: 1300085331}
+  m_darkBallDas: {fileID: 0}
 --- !u!1 &1411138406
 GameObject:
   m_ObjectHideFlags: 0
@@ -45746,7 +45753,7 @@ Prefab:
       objectReference: {fileID: 1079793760}
     - target: {fileID: 1732430601196934, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
@@ -53805,6 +53812,7 @@ MonoBehaviour:
     type: 2}
   m_spawnPoint: {fileID: 26558711}
   syoujoController: {fileID: 1300085331}
+  m_darkBallDas: {fileID: 0}
 --- !u!1001 &2007691981
 Prefab:
   m_ObjectHideFlags: 0
