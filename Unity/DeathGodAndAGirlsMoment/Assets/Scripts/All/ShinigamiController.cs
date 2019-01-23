@@ -363,6 +363,8 @@ public class ShinigamiController : CharacterBase {
         m_onAttack = false;
     }
 
+  
+
     public void SickleT()
     {       
         m_sickle.GetComponent<PolygonCollider2D>().enabled = true;
