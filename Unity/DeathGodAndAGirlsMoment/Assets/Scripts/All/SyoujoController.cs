@@ -258,6 +258,7 @@ public class SyoujoController : CharacterBase
             if (Mathf.Abs(transform.position.y - shinigami.Posinvestigate.y) > 1.35f)
             {
                 m_onConnectHands = false;
+                shinigami.SetnowHand = false;
             }
             m_efect[0].SetActive(true);
             m_moveSpeed = 4.5f;

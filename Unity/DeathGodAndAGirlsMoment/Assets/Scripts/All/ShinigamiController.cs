@@ -380,4 +380,12 @@ public class ShinigamiController : CharacterBase {
             m_canAttack2 = value;
         }
     }
+
+    public bool SetnowHand
+    {
+        set
+        {
+            m_nowConnectHand = value;
+        }
+    }
 }
