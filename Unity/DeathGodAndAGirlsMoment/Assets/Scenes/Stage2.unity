@@ -579,7 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 21491661}
 --- !u!1 &23458716
 GameObject:
@@ -5790,6 +5790,26 @@ Prefab:
       propertyPath: m_piceOfMemoryUI.Array.data[4]
       value: 
       objectReference: {fileID: 1574049143}
+    - target: {fileID: 4207957777907852, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113996381869472, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345698668055132, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973602117016664, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702636329082660, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
   m_IsPrefabAsset: 0
@@ -6431,7 +6451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 300052607}
 --- !u!1 &302825349
 GameObject:
@@ -14225,6 +14245,34 @@ Transform:
   - {fileID: 2087026255}
   m_Father: {fileID: 2064252341}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &617524420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 617524421}
+  m_Layer: 11
+  m_Name: syoujoLook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &617524421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 617524420}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1309796970}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &618904086
 GameObject:
@@ -23007,7 +23055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1039065837}
 --- !u!1 &1045334084
 GameObject:
@@ -26245,7 +26293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1142800652}
 --- !u!1 &1148866200
 GameObject:
@@ -29282,7 +29330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1255611328}
 --- !u!1 &1258982813
 GameObject:
@@ -31928,7 +31976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1368754550}
 --- !u!1 &1368949057
 GameObject:
@@ -32602,7 +32650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1390802061}
 --- !u!1 &1390844387
 GameObject:
@@ -32696,7 +32744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1392836994}
 --- !u!1 &1396762092
 GameObject:
@@ -32741,7 +32789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1396762092}
 --- !u!1 &1404937023
 GameObject:
@@ -35938,7 +35986,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1534713174}
   - component: {fileID: 1534713175}
-  - component: {fileID: 1534713176}
   m_Layer: 14
   m_Name: spawnPoint
   m_TagString: Untagged
@@ -35972,28 +36019,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 246570997}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1534713173}
---- !u!50 &1534713176
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1534713173}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!1 &1535131767
 GameObject:
   m_ObjectHideFlags: 0
@@ -36692,7 +36719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1568338181}
 --- !u!1 &1568872108
 GameObject:
@@ -40931,7 +40958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1807455520}
 --- !u!1 &1808592405
 GameObject:
@@ -44286,7 +44313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1950583512}
 --- !u!1 &1950833503
 GameObject:
@@ -44331,7 +44358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1950833503}
 --- !u!1 &1952710168
 GameObject:
