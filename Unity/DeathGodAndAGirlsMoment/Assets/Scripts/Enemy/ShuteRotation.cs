@@ -6,7 +6,6 @@ public class ShuteRotation : MonoBehaviour{
 
     public GameObject m_syoujo;
     public GameObject m_akuryou;
-
     // Use this for initialization
     void Start () {
 
@@ -20,7 +19,8 @@ public class ShuteRotation : MonoBehaviour{
             return;
         }
         var vec = (m_syoujo.transform.position - m_akuryou.transform.position).normalized;
-        m_akuryou.transform.rotation = Quaternion.FromToRotation(Vector2.left, vec);
+        m_akuryou.transform.rotation = Quaternion.FromToRotation(Vector3.left,vec);
+        
     }
 
 }
