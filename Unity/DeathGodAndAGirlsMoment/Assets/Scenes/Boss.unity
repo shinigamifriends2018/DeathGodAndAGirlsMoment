@@ -2821,6 +2821,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114308043282627426, guid: bf21b2498896cce4ab05ba2008d86718,
+        type: 2}
+      propertyPath: m_textUI
+      value: 
+      objectReference: {fileID: 449621592}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf21b2498896cce4ab05ba2008d86718, type: 2}
   m_IsPrefabAsset: 0

@@ -9,7 +9,7 @@ public class EnemyDisPlay : GhostController {
     public GameObject[] m_ChaseEnemy;
     [SerializeField]
     int m_arrayCheck;
-    bool m_switchCheck = true;
+    public bool m_switchCheck = true;
 	// Use this for initialization
 	void Start () {
 
