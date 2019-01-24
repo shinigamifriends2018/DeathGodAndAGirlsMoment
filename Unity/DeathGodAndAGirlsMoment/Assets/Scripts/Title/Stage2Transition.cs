@@ -11,7 +11,7 @@ public class Stage2Transition : MonoBehaviour {
     // Use this for initialization
     void Start () {
         int score = PlayerPrefs.GetInt("m_acquisitions[1]", 0);
-        m_scoreText.text = "recovery" + "   " + score  * 20 + "%";
+        m_scoreText.text = "recovery:" + score  * 20 + "%";
     }
 	
 	// Update is called once per frame
