@@ -36,6 +36,8 @@ public class BossController : GhostController {
     GameObject ui;
     [SerializeField]
     GameObject m_bossEnemys;
+    [SerializeField]
+    GameObject m_shinigami;
     // Use this for initialization
     void Start () {
         m_hitPoint = 3;
@@ -336,7 +338,11 @@ public class BossController : GhostController {
                 if (m_verCheck == true)
                 {
                     m_moveSpeed = 0f;
-
+                    simpleAnimation.Play("Default");
+                    if (scale.x < 0)
+                    {
+                        scale.x *= -1f;
+                    }
                     if (gameObject.transform.position.y < 7)
                     {
                         m_YmoveSpeed = 3f;
@@ -356,6 +362,9 @@ public class BossController : GhostController {
             case 3:
                 if (m_hitPoint != 0)
                 {
+           
+                    m_LeftKmaitachi.SetActive(true);
+                    m_kamaitachi.SetActive(true);
                     if (m_movePoint[0].position.x > gameObject.transform.position.x)
                     {
                         m_moveSpeed = 4f;
@@ -369,7 +378,6 @@ public class BossController : GhostController {
 
                     if (m_bossMoveCheck == 0)
                     {
-                        m_LeftKmaitachi.SetActive(true);
                         m_RightKmaitachi.SetActive(false);
                         if (m_AttackTimer > 2)
                         {
@@ -565,6 +573,7 @@ public class BossController : GhostController {
             {
                 simpleAnimation.Play("Down");
                 SoundManager.Instance.PlaySE((int)Common.SEList.BossDown);
+                m_shinigami.SetActive(false);
                 ui.SetActive(false);
             }
         }
