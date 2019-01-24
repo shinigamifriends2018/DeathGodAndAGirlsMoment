@@ -38,7 +38,7 @@ public class SyoujoController : CharacterBase
     GameObject[] m_hints;
     bool m_rightDirection;
     [SerializeField]
-    int[] m_acquisitions;
+    public int[] m_acquisitions;
     [SerializeField]
     int[] m_acquisitionsBox;
     [SerializeField]
@@ -915,6 +915,20 @@ public class SyoujoController : CharacterBase
 
     void BossWarp()
     {
+        PlayerPrefs.SetInt("m_acquisitions[0]", m_acquisitions[0]);
+        PlayerPrefs.SetInt("m_acquisitions[1]", m_acquisitions[1]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[0]", m_acquisitionsBox[0]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[1]", m_acquisitionsBox[1]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[2]", m_acquisitionsBox[2]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[3]", m_acquisitionsBox[3]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[4]", m_acquisitionsBox[4]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[5]", m_acquisitionsBox[5]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[6]", m_acquisitionsBox[6]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[7]", m_acquisitionsBox[7]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[8]", m_acquisitionsBox[8]);
+        PlayerPrefs.SetInt("m_acquisitionsBox[9]", m_acquisitionsBox[9]);
+        PlayerPrefs.SetInt("aFeelingOfBelieve", m_aFeelingOfBelieve);
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Boss");
     }
 
@@ -925,4 +939,5 @@ public class SyoujoController : CharacterBase
             return m_onFrightening;
         }
     }
+
 }

@@ -523,8 +523,8 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 0}
-  m_tutorialToriger: {fileID: 0}
+  m_syoujo: {fileID: 1295380340}
+  m_tutorialToriger: {fileID: 507942279}
   bossController: {fileID: 1307635037}
   m_bossEnemy:
   - {fileID: 73787300}
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
   m_jump: 1
-  m_canMove: 0
+  m_canMove: 1
   m_syoujo: {fileID: 1295380340}
   m_tutorialToriger: {fileID: 507942279}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
@@ -1457,7 +1457,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1732430601196934, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
@@ -3748,8 +3748,8 @@ MonoBehaviour:
   m_moveSpeed: 0
   m_jump: 1
   m_canMove: 1
-  m_syoujo: {fileID: 0}
-  m_tutorialToriger: {fileID: 0}
+  m_syoujo: {fileID: 1295380340}
+  m_tutorialToriger: {fileID: 507942279}
   bossController: {fileID: 1307635037}
   m_bossEnemy:
   - {fileID: 73787300}
@@ -3768,7 +3768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_moveSpeed: 0
   m_jump: 1
-  m_canMove: 0
+  m_canMove: 1
   m_syoujo: {fileID: 1295380340}
   m_tutorialToriger: {fileID: 507942279}
   m_heart: {fileID: 1077853769323346, guid: 366060db61b3b3d4c822a812a270b48b, type: 2}
