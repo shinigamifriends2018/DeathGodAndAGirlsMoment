@@ -4,37 +4,52 @@ using UnityEngine;
 
 public class BossEnemyController :  GhostController{
 
-    int m_desCheck = 0;
     [SerializeField]
     BossController bossController;
     [SerializeField]
     GameObject[] m_bossEnemy;
+    float damageCounter = 0.3f;
+    bool damageCheck = true;
     // Use this for initialization
     void Start () {
-
+        m_hitPoint = 2;
     }
 	
 	// Update is called once per frame
 	void Update () {
- 
+        if (damageCheck == false)
+        {
+            damageCounter -= Time.deltaTime;
+        }
+        if (damageCounter < 0)
+        {
+            damageCounter = 1f;
+            damageCheck = true;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == ("Sickle"))
         {
-            ++m_desCheck;
-            if(m_hitPoint == 0)
+            if (damageCheck == true)
             {
-                if (m_bossEnemy[0] == gameObject)
+                --m_hitPoint;
+                damageCheck = false;
+            }
+            if (m_hitPoint == 0)
+            {
+                if (this.gameObject == m_bossEnemy[0])
                 {
                     bossController.m_enemyCheck[0] = true;
                 }
-                else if (m_bossEnemy[1] == gameObject)
+            }
+            if (m_hitPoint == 0)
+            {
+                if (this.gameObject == m_bossEnemy[1])
                 {
                     bossController.m_enemyCheck[1] = true;
                 }
             }
-
         }
     }
 }

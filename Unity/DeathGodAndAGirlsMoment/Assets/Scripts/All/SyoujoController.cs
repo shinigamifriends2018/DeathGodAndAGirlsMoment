@@ -102,65 +102,71 @@ public class SyoujoController : CharacterBase
 
     void Start()
     {
-        if (m_acquisitionsBox[0] == 1)
+        if (ProgressManager.m_nowStage == 1)
         {
-            m_PiceofMemory[0].SetActive(false);
-            m_piceOfMemoryUI[0].SetActive(true);
-            getCheck[0] = true;
+            if (m_acquisitionsBox[0] == 1)
+            {
+                m_PiceofMemory[0].SetActive(false);
+                m_piceOfMemoryUI[0].SetActive(true);
+                getCheck[0] = true;
+            }
+            if (m_acquisitionsBox[1] == 1)
+            {
+                m_PiceofMemory[1].SetActive(false);
+                m_piceOfMemoryUI[1].SetActive(true);
+                getCheck[1] = true;
+            }
+            if (m_acquisitionsBox[2] == 1)
+            {
+                m_PiceofMemory[2].SetActive(false);
+                m_piceOfMemoryUI[2].SetActive(true);
+                getCheck[2] = true;
+            }
+            if (m_acquisitionsBox[3] == 1)
+            {
+                m_PiceofMemory[3].SetActive(false);
+                m_piceOfMemoryUI[3].SetActive(true);
+                getCheck[3] = true;
+            }
+            if (m_acquisitionsBox[4] == 1)
+            {
+                m_PiceofMemory[4].SetActive(false);
+                m_piceOfMemoryUI[4].SetActive(true);
+                getCheck[4] = true;
+            }
         }
-        if (m_acquisitionsBox[1] == 1)
+        else if (ProgressManager.m_nowStage == 2)
         {
-            m_PiceofMemory[1].SetActive(false);
-            m_piceOfMemoryUI[1].SetActive(true);
-            getCheck[1] = true;
-        }
-        if (m_acquisitionsBox[2] == 1)
-        {
-            m_PiceofMemory[2].SetActive(false);
-            m_piceOfMemoryUI[2].SetActive(true);
-            getCheck[2] = true;
-        }
-        if (m_acquisitionsBox[3] == 1)
-        {
-            m_PiceofMemory[3].SetActive(false);
-            m_piceOfMemoryUI[3].SetActive(true);
-            getCheck[3] = true;
-        }
-        if (m_acquisitionsBox[4] == 1)
-        {
-            m_PiceofMemory[4].SetActive(false);
-            m_piceOfMemoryUI[4].SetActive(true);
-            getCheck[4] = true;
-        }
-        if (m_acquisitionsBox[5] == 1)
-        {
-            m_PiceofMemory[0].SetActive(false);
-            m_piceOfMemoryUI[0].SetActive(true);
-            getCheck[5] = true;
-        }
-        if (m_acquisitionsBox[6] == 1)
-        {
-            m_PiceofMemory[1].SetActive(false);
-            m_piceOfMemoryUI[1].SetActive(true);
-            getCheck[6] = true;
-        }
-        if (m_acquisitionsBox[7] == 1)
-        {
-            m_PiceofMemory[2].SetActive(false);
-            m_piceOfMemoryUI[2].SetActive(true);
-            getCheck[7] = true;
-        }
-        if (m_acquisitionsBox[8] == 1)
-        {
-            m_PiceofMemory[3].SetActive(false);
-            m_piceOfMemoryUI[3].SetActive(true);
-            getCheck[8] = true;
-        }
-        if (m_acquisitionsBox[9] == 1)
-        {
-            m_PiceofMemory[4].SetActive(false);
-            m_piceOfMemoryUI[4].SetActive(true);
-            getCheck[9] = true;
+            if (m_acquisitionsBox[5] == 1)
+            {
+                m_PiceofMemory[0].SetActive(false);
+                m_piceOfMemoryUI[0].SetActive(true);
+                getCheck[5] = true;
+            }
+            if (m_acquisitionsBox[6] == 1)
+            {
+                m_PiceofMemory[1].SetActive(false);
+                m_piceOfMemoryUI[1].SetActive(true);
+                getCheck[6] = true;
+            }
+            if (m_acquisitionsBox[7] == 1)
+            {
+                m_PiceofMemory[2].SetActive(false);
+                m_piceOfMemoryUI[2].SetActive(true);
+                getCheck[7] = true;
+            }
+            if (m_acquisitionsBox[8] == 1)
+            {
+                m_PiceofMemory[3].SetActive(false);
+                m_piceOfMemoryUI[3].SetActive(true);
+                getCheck[8] = true;
+            }
+            if (m_acquisitionsBox[9] == 1)
+            {
+                m_PiceofMemory[4].SetActive(false);
+                m_piceOfMemoryUI[4].SetActive(true);
+                getCheck[9] = true;
+            }
         }
         if (ProgressManager.m_clearStage1 == false)
         {

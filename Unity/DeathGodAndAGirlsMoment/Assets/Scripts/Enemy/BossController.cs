@@ -210,6 +210,9 @@ public class BossController : GhostController {
                 break;
             case 2:
 
+                m_RightKmaitachi.SetActive(true);
+                m_LeftKmaitachi.SetActive(true);
+                m_kamaitachi.SetActive(true);
                 if (m_movePoint[0].position.x > gameObject.transform.position.x)
                 {
                     m_moveSpeed = 3.5f;
@@ -360,11 +363,12 @@ public class BossController : GhostController {
                 }
                 break;
             case 3:
+
+                m_RightKmaitachi.SetActive(true);
+                m_LeftKmaitachi.SetActive(true);
+                m_kamaitachi.SetActive(true);
                 if (m_hitPoint != 0)
                 {
-           
-                    m_LeftKmaitachi.SetActive(true);
-                    m_kamaitachi.SetActive(true);
                     if (m_movePoint[0].position.x > gameObject.transform.position.x)
                     {
                         m_moveSpeed = 4f;
@@ -558,6 +562,7 @@ public class BossController : GhostController {
     }
     void Ending()
     {
+        m_shinigami.SetActive(false);
         SceneManager.LoadScene("Ending");
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -573,7 +578,6 @@ public class BossController : GhostController {
             {
                 simpleAnimation.Play("Down");
                 SoundManager.Instance.PlaySE((int)Common.SEList.BossDown);
-                m_shinigami.SetActive(false);
                 ui.SetActive(false);
             }
         }

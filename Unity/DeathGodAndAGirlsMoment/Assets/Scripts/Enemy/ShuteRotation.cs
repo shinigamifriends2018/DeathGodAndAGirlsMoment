@@ -18,6 +18,7 @@ public class ShuteRotation : MonoBehaviour{
         {
             return;
         }
+
         var vec = (m_syoujo.transform.position - m_akuryou.transform.position).normalized;
         m_akuryou.transform.rotation = Quaternion.FromToRotation(Vector3.left,vec);
         
