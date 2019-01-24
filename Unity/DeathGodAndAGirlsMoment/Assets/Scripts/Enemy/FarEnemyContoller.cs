@@ -59,7 +59,7 @@ public class FarEnemyContoller : GhostController {
                 SoundManager.Instance.PlaySE((int)Common.SEList.FarEnemyAttack);
                 m_darkBallDas.m_seCheck = true;
             }
-            else
+            else if (akuryouPos.x - syoujoPos.x > 10)
             {
                 m_darkBallDas.m_seCheck = false;
             }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyDisPlayPoint : MonoBehaviour {
+public class Stage1EnemyDisPlayPoint : MonoBehaviour {
 
     [SerializeField]
     GameObject[] m_disPlayEnemy;
@@ -23,6 +23,7 @@ public class EnemyDisPlayPoint : MonoBehaviour {
             SoundManager.Instance.PlaySE((int)Common.SEList.EnemySporn);
             m_disPlayEnemy[0].SetActive(true);
             m_disPlayEnemy[1].SetActive(true);
+            m_disPlayEnemy[2].SetActive(true);
         }
     }
 }

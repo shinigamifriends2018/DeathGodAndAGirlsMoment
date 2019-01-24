@@ -8,7 +8,7 @@ public class DoorController : MonoBehaviour {
     GameObject[] m_gimmickAkuryou;
     [SerializeField]
     GameObject m_door;
-    bool m_seCheck = true;
+    public bool m_seCheck = true;
 	// Use this for initialization
 	void Start () {
 		

@@ -369,6 +369,7 @@ public class BossController : GhostController {
 
                     if (m_bossMoveCheck == 0)
                     {
+                        m_LeftKmaitachi.SetActive(true);
                         m_RightKmaitachi.SetActive(false);
                         if (m_AttackTimer > 2)
                         {

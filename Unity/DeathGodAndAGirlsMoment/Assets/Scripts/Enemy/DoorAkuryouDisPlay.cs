@@ -6,7 +6,7 @@ public class DoorAkuryouDisPlay : MonoBehaviour {
 
     [SerializeField]
     GameObject[] m_gimmickAkuryou;
-    bool m_seChecl = true;
+    public bool m_seChecl = true;
 	// Use this for initialization
 	void Start () {
 		
