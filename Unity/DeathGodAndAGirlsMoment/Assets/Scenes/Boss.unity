@@ -2532,6 +2532,10 @@ Prefab:
       propertyPath: m_textUI
       value: 
       objectReference: {fileID: 449621592}
+    - target: {fileID: 4509181838359776, guid: bf21b2498896cce4ab05ba2008d86718, type: 2}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf21b2498896cce4ab05ba2008d86718, type: 2}
   m_IsPrefabAsset: 0
@@ -5372,7 +5376,7 @@ LineRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4c6d6fb3e97388a4fa1013a9dedc2e2a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5391,7 +5395,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
