@@ -80,24 +80,21 @@ public class SyoujoController : CharacterBase
         m_acquisitionsBox[7] = PlayerPrefs.GetInt("m_acquisitionsBox[7]", 0);
         m_acquisitionsBox[8] = PlayerPrefs.GetInt("m_acquisitionsBox[8]", 0);
         m_acquisitionsBox[9] = PlayerPrefs.GetInt("m_acquisitionsBox[9]", 0);
-        if (ProgressManager.m_nowStage == 1)
-        {
+
             m_acquisitions[0] = 0;
             m_acquisitions[0] += m_acquisitionsBox[0];
             m_acquisitions[0] += m_acquisitionsBox[1];
             m_acquisitions[0] += m_acquisitionsBox[2];
             m_acquisitions[0] += m_acquisitionsBox[3];
             m_acquisitions[0] += m_acquisitionsBox[4];
-        }
-        if (ProgressManager.m_nowStage == 2)
-        {
+
             m_acquisitions[1] = 0;
             m_acquisitions[1] += m_acquisitionsBox[5];
             m_acquisitions[1] += m_acquisitionsBox[6];
             m_acquisitions[1] += m_acquisitionsBox[7];
             m_acquisitions[1] += m_acquisitionsBox[8];
             m_acquisitions[1] += m_acquisitionsBox[9];
-        }
+        
     }
 
     void Start()
