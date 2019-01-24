@@ -24,8 +24,7 @@ public class DarkBallDas : MonoBehaviour {
 
         if(gameObject.transform.rotation.x != 0 || gameObject.transform.rotation.y != 0)
         {
-            Debug.Log("a");
-            gameObject.transform.Rotate(0f, 0f, 0f);
+            gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         }
         if (m_destroyPos >= 12||m_destroyPos <= -12)
         {
