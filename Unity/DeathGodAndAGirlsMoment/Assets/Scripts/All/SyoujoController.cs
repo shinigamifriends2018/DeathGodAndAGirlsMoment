@@ -728,6 +728,7 @@ public class SyoujoController : CharacterBase
                 if(m_aFeelingOfBelieve <= 3)
                 {
                     m_onFrightening = true;
+                    shinigami.SetnowHand = false;
                     if (m_onConnectHands == true)
                     {
                         m_onConnectHands = false;
