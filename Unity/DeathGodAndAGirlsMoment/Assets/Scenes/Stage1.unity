@@ -44022,6 +44022,46 @@ Prefab:
       propertyPath: m_piceOfMemoryUI.Array.data[4]
       value: 
       objectReference: {fileID: 1574049143}
+    - target: {fileID: 120493656215250154, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4c6d6fb3e97388a4fa1013a9dedc2e2a, type: 2}
+    - target: {fileID: 23870923679098670, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 628de714b81664c489fcb72c682557a5, type: 2}
+    - target: {fileID: 23870923679098670, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: a1aa30d4187896d4795744f682f619a8, type: 2}
+    - target: {fileID: 23870923679098670, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 628de714b81664c489fcb72c682557a5, type: 2}
+    - target: {fileID: 23870923679098670, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: a1aa30d4187896d4795744f682f619a8, type: 2}
+    - target: {fileID: 23870923679098670, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b43757ec2f65a14597dce5585bffa5e, type: 2}
+    - target: {fileID: 23870923679098670, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_Materials.Array.data[5]
+      value: 
+      objectReference: {fileID: 2100000, guid: 628de714b81664c489fcb72c682557a5, type: 2}
+    - target: {fileID: 120493656215250154, guid: 2e2010a870976504e933aaed7ac8bca4,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
   m_IsPrefabAsset: 0
