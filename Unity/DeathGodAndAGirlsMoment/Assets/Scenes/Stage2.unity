@@ -579,7 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 21491661}
 --- !u!1 &23458716
 GameObject:
@@ -5248,8 +5248,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 250478290}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.2, y: 0.47, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.12, z: 1}
+  m_LocalPosition: {x: 44.2, y: 0.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1766741242}
   m_RootOrder: 0
@@ -5326,18 +5326,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05, y: 1.78}
+  m_Offset: {x: -0.6, y: 0.37}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 6.4}
+    oldSize: {x: 10, y: 7.5}
     newSize: {x: 6.4, y: 6.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 0.6, y: 0.3}
   m_EdgeRadius: 0
 --- !u!212 &250478296
 SpriteRenderer:
@@ -5375,7 +5375,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: af1aa61b14b42ec4ea31c02168d4bf8f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 41b955917f989f04abd768040c060039, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5790,6 +5790,26 @@ Prefab:
       propertyPath: m_piceOfMemoryUI.Array.data[4]
       value: 
       objectReference: {fileID: 1574049143}
+    - target: {fileID: 4207957777907852, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113996381869472, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345698668055132, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973602117016664, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702636329082660, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2010a870976504e933aaed7ac8bca4, type: 2}
   m_IsPrefabAsset: 0
@@ -6431,7 +6451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 300052607}
 --- !u!1 &302825349
 GameObject:
@@ -12864,6 +12884,11 @@ Prefab:
       propertyPath: m_ude.Array.data[1]
       value: 
       objectReference: {fileID: 1657999477}
+    - target: {fileID: 114308043282627426, guid: bf21b2498896cce4ab05ba2008d86718,
+        type: 2}
+      propertyPath: m_textUI
+      value: 
+      objectReference: {fileID: 449621592}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf21b2498896cce4ab05ba2008d86718, type: 2}
   m_IsPrefabAsset: 0
@@ -13975,8 +14000,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 606970131}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 104.7, y: 0.51, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.2, z: 1}
+  m_LocalPosition: {x: 104.7, y: 1.03, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1766741242}
   m_RootOrder: 3
@@ -13994,18 +14019,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.24}
+  m_Offset: {x: -0.6, y: -0.7}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 6.4}
+    oldSize: {x: 10, y: 7.5}
     newSize: {x: 6.4, y: 6.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.5, y: 2.8}
+  m_Size: {x: 1.35, y: 0.6}
   m_EdgeRadius: 0
 --- !u!212 &606970134
 SpriteRenderer:
@@ -14043,7 +14068,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 5fe6633e5edda38429453cc2d214ace2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd4fb4d4883748642988569601e78aa2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14225,6 +14250,34 @@ Transform:
   - {fileID: 2087026255}
   m_Father: {fileID: 2064252341}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &617524420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 617524421}
+  m_Layer: 11
+  m_Name: syoujoLook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &617524421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 617524420}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1309796970}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &618904086
 GameObject:
@@ -21634,7 +21687,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 961865250}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.29399, y: 6.88, z: 0}
+  m_LocalPosition: {x: 19.5, y: 7, z: 0}
   m_LocalScale: {x: 0.5, y: 0.4, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1903426641}
@@ -23007,7 +23060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1039065837}
 --- !u!1 &1045334084
 GameObject:
@@ -23813,8 +23866,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1063239923}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 104.7, y: 0.47, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.12, z: 1}
+  m_LocalPosition: {x: 104.7, y: 0.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1766741242}
   m_RootOrder: 2
@@ -23894,18 +23947,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05, y: 1.78}
+  m_Offset: {x: -0.6, y: 0.37}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 6.4}
+    oldSize: {x: 10, y: 7.5}
     newSize: {x: 6.4, y: 6.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 0.6, y: 0.3}
   m_EdgeRadius: 0
 --- !u!212 &1063239929
 SpriteRenderer:
@@ -23943,7 +23996,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: af1aa61b14b42ec4ea31c02168d4bf8f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 41b955917f989f04abd768040c060039, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -24497,8 +24550,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1083582293}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.2, y: 0.51, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.2, z: 1}
+  m_LocalPosition: {x: 44.2, y: 1.03, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1766741242}
   m_RootOrder: 1
@@ -24516,18 +24569,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.24}
+  m_Offset: {x: -0.6, y: -0.7}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 6.4}
+    oldSize: {x: 10, y: 7.5}
     newSize: {x: 6.4, y: 6.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.5, y: 2.8}
+  m_Size: {x: 1.35, y: 0.6}
   m_EdgeRadius: 0
 --- !u!212 &1083582296
 SpriteRenderer:
@@ -24565,7 +24618,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 5fe6633e5edda38429453cc2d214ace2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd4fb4d4883748642988569601e78aa2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -26245,7 +26298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1142800652}
 --- !u!1 &1148866200
 GameObject:
@@ -29282,7 +29335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1255611328}
 --- !u!1 &1258982813
 GameObject:
@@ -29584,8 +29637,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1271303707}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 145.7, y: 0.51, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.2, z: 1}
+  m_LocalPosition: {x: 145.7, y: 1.03, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1766741242}
   m_RootOrder: 5
@@ -29603,18 +29656,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.24}
+  m_Offset: {x: -0.6, y: -0.7}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 6.4}
+    oldSize: {x: 10, y: 7.5}
     newSize: {x: 6.4, y: 6.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.5, y: 2.8}
+  m_Size: {x: 1.35, y: 0.6}
   m_EdgeRadius: 0
 --- !u!212 &1271303710
 SpriteRenderer:
@@ -29652,7 +29705,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 8881cf09e8bf0ed40b03e3c682d75e77, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd4fb4d4883748642988569601e78aa2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -31928,7 +31981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1368754550}
 --- !u!1 &1368949057
 GameObject:
@@ -32602,7 +32655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1390802061}
 --- !u!1 &1390844387
 GameObject:
@@ -32696,7 +32749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1392836994}
 --- !u!1 &1396762092
 GameObject:
@@ -32741,7 +32794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1396762092}
 --- !u!1 &1404937023
 GameObject:
@@ -35356,8 +35409,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1506995441}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 145.7, y: 0.47, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.12, z: 1}
+  m_LocalPosition: {x: 145.7, y: 0.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1766741242}
   m_RootOrder: 4
@@ -35435,18 +35488,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05, y: 1.78}
+  m_Offset: {x: -0.6, y: 0.37}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 6.4}
+    oldSize: {x: 10, y: 7.5}
     newSize: {x: 6.4, y: 6.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 0.6, y: 0.3}
   m_EdgeRadius: 0
 --- !u!212 &1506995447
 SpriteRenderer:
@@ -35484,7 +35537,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: ffb3591b242866e48ac458615f0292cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 046bdeda4d0b7554c99fe300a92a941c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -35938,7 +35991,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1534713174}
   - component: {fileID: 1534713175}
-  - component: {fileID: 1534713176}
   m_Layer: 14
   m_Name: spawnPoint
   m_TagString: Untagged
@@ -35972,28 +36024,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 246570997}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1534713173}
---- !u!50 &1534713176
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1534713173}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!1 &1535131767
 GameObject:
   m_ObjectHideFlags: 0
@@ -36692,7 +36724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1568338181}
 --- !u!1 &1568872108
 GameObject:
@@ -40931,7 +40963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1807455520}
 --- !u!1 &1808592405
 GameObject:
@@ -44286,7 +44318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1950583512}
 --- !u!1 &1950833503
 GameObject:
@@ -44331,7 +44363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20857667785aaf4c936b40da84508bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_syoujo: {fileID: 1967888343}
+  m_syoujo: {fileID: 617524420}
   m_akuryou: {fileID: 1950833503}
 --- !u!1 &1952710168
 GameObject:
