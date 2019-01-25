@@ -12302,6 +12302,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 212707204707203678, guid: 08505f68d3b55b04c89ed021b98b473a,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 114929358294439504, guid: 08505f68d3b55b04c89ed021b98b473a, type: 2}
@@ -26643,7 +26648,7 @@ Prefab:
     - target: {fileID: 212121625427403576, guid: 6b85ea91331e0a944aba1d437289fb96,
         type: 2}
       propertyPath: m_SortingOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4673755319000162, guid: 6b85ea91331e0a944aba1d437289fb96, type: 2}
       propertyPath: m_LocalScale.x
